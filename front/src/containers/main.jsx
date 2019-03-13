@@ -48,6 +48,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
+//la tercera es la ultima
 export default connect(
   mapStateToProps,
   mapDispatchToProps
