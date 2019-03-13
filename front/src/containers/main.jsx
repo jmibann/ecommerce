@@ -31,6 +31,7 @@ class Main extends React.Component {
       );
     }
   }
+  // ESTO ES UNA PRUEBA
   
   function mapStateToProps(state) {
     return {
