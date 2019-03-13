@@ -28,7 +28,7 @@ export default () => {
           />
           <Button type="submit">sign in</Button>
           <InputGroup.Prepend>
-            <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+            <InputGroup.Text id="basic-addon1">New Customer?Click here!</InputGroup.Text>
           </InputGroup.Prepend>
         </Form>
       </div>

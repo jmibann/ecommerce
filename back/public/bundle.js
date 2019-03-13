@@ -43464,7 +43464,7 @@ __webpack_require__.r(__webpack_exports__);
     type: "submit"
   }, "sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_InputGroup__WEBPACK_IMPORTED_MODULE_5___default.a.Prepend, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_InputGroup__WEBPACK_IMPORTED_MODULE_5___default.a.Text, {
     id: "basic-addon1"
-  }, "@")))));
+  }, "New Customer?Click here!")))));
 });
 
 /***/ }),
@@ -43545,16 +43545,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-<<<<<<< HEAD
 /* harmony import */ var _store_actions_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/actions/actions */ "./src/store/actions/actions.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/SearchBar.jsx */ "./src/components/SearchBar.jsx");
+/* harmony import */ var _components_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/SearchBar.jsx */ "./src/components/SearchBar.jsx");
 /* harmony import */ var _components_Header_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Header.jsx */ "./src/components/Header.jsx");
-=======
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
->>>>>>> 49fd44cec589d12d80870bc5c52ccc27a4474ba2
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -43574,7 +43569,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
- // import { } from '../store/actions/actions'
+
 
 
 
@@ -43592,26 +43587,57 @@ function (_React$Component) {
   }
 
   _createClass(Main, [{
+    key: "handleChange",
+    value: function handleChange(e) {
+      this.props.setSearch(e.target.value);
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevState) {
+      var _this = this;
+
+      if (this.state.search == prevState.search) axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://www.omdbapi.com/?apikey=8c8bfbdc&s=".concat(this.props.search)).then(function (books) {
+        console.log(books);
+
+        _this.props.setBookFound(books);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-<<<<<<< HEAD
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null));
-=======
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hola Titanes de nuevo!!!"));
->>>>>>> 49fd44cec589d12d80870bc5c52ccc27a4474ba2
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null));
     }
   }]);
 
   return Main;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // ESTO ES UNA PRUEBA
+
 
 function mapStateToProps(state) {
-  return {// Lo dejo vacio para que cada uno lo use como quiera
+  return {
+    search: state.search,
+    find: state.find
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return {// Lo dejo vacio para que cada uno lo use como quiera
+  return {
+    setSearch: function setSearch(text) {
+      return dispatch(Object(_store_actions_actions__WEBPACK_IMPORTED_MODULE_2__["setSearch"])(text));
+    },
+    setBookFound: function (_setBookFound) {
+      function setBookFound(_x) {
+        return _setBookFound.apply(this, arguments);
+      }
+
+      setBookFound.toString = function () {
+        return _setBookFound.toString();
+      };
+
+      return setBookFound;
+    }(function (ArrayBOoks) {
+      return dispatch(setBookFound(ArrayBOoks));
+    })
   };
 }
 
@@ -43648,6 +43674,34 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
   to: "/",
   component: _containers_main__WEBPACK_IMPORTED_MODULE_4__["default"]
 }))), document.getElementById('app'));
+
+/***/ }),
+
+/***/ "./src/store/actions/actions.js":
+/*!**************************************!*\
+  !*** ./src/store/actions/actions.js ***!
+  \**************************************/
+/*! exports provided: setSearch, setBookFound */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setSearch", function() { return setSearch; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setBookFound", function() { return setBookFound; });
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/store/constants.js");
+
+var setSearch = function setSearch(text) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_0__["SET_SEARCH"],
+    text: text
+  };
+};
+var setBookFound = function setBookFound(array) {
+  return {
+    type: _constants__WEBPACK_IMPORTED_MODULE_0__["SET_BOOKSFOUND"],
+    find: array
+  };
+};
 
 /***/ }),
 
