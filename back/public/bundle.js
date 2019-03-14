@@ -43412,7 +43412,8 @@ var test = [{
 }, {
   name: "test"
 }];
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  console.log(props);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default.a, {
     bg: "light",
     expand: "lg"

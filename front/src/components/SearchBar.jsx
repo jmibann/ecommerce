@@ -12,7 +12,8 @@ const test = [
   { name: "test" }
 ];
 
-export default () => {
+export default (props) => {
+  console.log(props)
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -31,7 +32,7 @@ export default () => {
             placeholder="Search"
             className="mr-sm-2"
           />
-          <Button variant="outline-success">Search</Button>
+          <Button  variant="outline-success">Search</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>
