@@ -12,4 +12,5 @@ const Shopcart = db.define('shopcart', {
 
 Shopcart.belongsToMany(Books, { through: 'shopBooks' });
 
+
 module.exports = Shopcart;
