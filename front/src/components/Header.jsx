@@ -1,21 +1,17 @@
-import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
+import React from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/FormControl";
+import Button from "react-bootstrap/Button";
 
 export default () => {
   return (
-    <Navbar bg="light" expand="lg" className='space-between'>
-      <Navbar.Brand href="#home" className='mr-auto'>
-        <img
-          src="./Logo.jpg"
-          alt=""
-        />
+    <Navbar bg="light" expand="lg" className="space-between">
+      <Navbar.Brand href="#home" className="mr-auto">
+        <img width="35%" src="./Logo.jpg" alt="" />
       </Navbar.Brand>
       <div>
-        <Form>
+        <Form inline>
           <FormControl
             placeholder="Username"
             aria-label="Username"
@@ -24,12 +20,13 @@ export default () => {
           <FormControl
             type="text"
             placeholder="Password"
-            className=" mr-sm-2"
+            className=" mr-sm-4"
           />
           <Button type="submit">sign in</Button>
-          <InputGroup.Prepend>
-            <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-          </InputGroup.Prepend>
+
+          <div>
+            <a href="www.gooogle.com">New Customer?Click here</a>
+          </div>
         </Form>
       </div>
     </Navbar>
