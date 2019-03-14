@@ -23,6 +23,7 @@ class Main extends React.Component {
     render() {
       return (
         <div>
+          {/* Odio a Ramiro */}
           <section>
             <Header />
             </section>
