@@ -6,8 +6,36 @@ import SearchBar from "../components/SearchBar.jsx";
 import Header from "../components/Header.jsx";
 
 class Main extends React.Component {
+<<<<<<< HEAD
   handleChange(e) {
     this.props.setSearch(e.target.value);
+=======
+    handleChange(e) {
+      this.props.setSearch(e.target.value);
+    }
+  
+    componentDidUpdate(prevState) {
+      if (this.state.search == prevState.search)
+        Axios.get(
+          `http://www.omdbapi.com/?apikey=8c8bfbdc&s=${this.props.search}`
+        ).then(books => {
+          console.log(books);
+          this.props.setBookFound(books);
+        });
+    }
+  
+    render() {
+      return (
+        <div>
+          {/* Odio a Ramiro */}
+          <section>
+            <Header />
+            </section>
+            <SearchBar />
+        </div>
+      );
+    }
+>>>>>>> 887c8904bd53fa70d6ec3d539afb3c8d5cd7e801
   }
 
   componentDidUpdate(prevState) {

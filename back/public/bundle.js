@@ -43450,21 +43450,24 @@ __webpack_require__.r(__webpack_exports__);
     href: "#home",
     className: "mr-auto"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    width: "35%",
     src: "./Logo.jpg",
     alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2___default.a, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    inline: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3___default.a, {
     placeholder: "Username",
     "aria-label": "Username",
     "aria-describedby": "basic-addon1"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3___default.a, {
     type: "text",
     placeholder: "Password",
-    className: " mr-sm-2"
+    className: " mr-sm-4"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_4___default.a, {
     type: "submit"
-  }, "sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_InputGroup__WEBPACK_IMPORTED_MODULE_5___default.a.Prepend, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_InputGroup__WEBPACK_IMPORTED_MODULE_5___default.a.Text, {
-    id: "basic-addon1"
-  }, "New Customer?Click here!")))));
+  }, "sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "www.gooogle.com"
+  }, "New Customer?Click here")))));
 });
 
 /***/ }),
@@ -43611,6 +43614,7 @@ function (_React$Component) {
 
   return Main;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // ESTO ES UNA PRUEBA
+//practica
 
 
 function mapStateToProps(state) {
@@ -43639,7 +43643,8 @@ function mapDispatchToProps(dispatch) {
       return dispatch(setBookFound(ArrayBOoks));
     })
   };
-}
+} //la tercera es la ultima
+
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Main));
 
