@@ -1,6 +1,8 @@
 const express= require('express');
 const bodyParser = require("body-parser");
 var morgan= require('morgan');
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20')
 
 //Local imports
 const db = require('./configure/db');
@@ -14,38 +16,16 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/pepe', (req,res,next) => {
-    Book.create({
-        name: "LEo Carrocio y sus amantes",
-        author: "JAvi LAnger",
-        year: 1998,
-        editorial: "Arturo PRod",
-        description:"Ramiro clavo un clavito, que clavito clavo ramiro",
-        sold: 450,
-        price: 16.60,
-        stock: 15,
-    },
-    {
-        include: [Category]
-    })
-    .then(book => {
-        book.setCategories([1,2])
-        res.send('ok')
-    })
-})
+passport.use(
+    new GoogleStrategy({
+        callbackURL: '/auth/google/redirect',
+        ClientID: '166580733119-fi5aod04fpu0qp9vtm8pdi1s99so6qqn.apps.googleusercontent.com',
+        clientSecret :'binbUJ0LnnAuvVRD5NT5ndPe'
+    }, () => {
+        
+    }
+)
 
-app.get('/cat', (req, res) => {
-    Category.bulkCreate([
-        {category: "erotico"},
-        {category:"terror"},
-        {category:"autoyuda"}
-    ])
-    .then(() => res.send('ok'))
-})
-
-app.get('/find', (req, res) => {
-    res.send('ok')
-})
 
 app.get('/*', (req,res,next) => {
     res.sendFile(__dirname + '/public/index.html');
