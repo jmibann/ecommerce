@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
 
 export default () => {
   return (
@@ -24,12 +23,10 @@ export default () => {
             className=" mr-sm-4"
           />
           <Button type="submit">sign in</Button>
-          {/* <InputGroup.Prepend> */}
+
           <div>
             <a href="www.gooogle.com">New Customer?Click here</a>
           </div>
-
-          {/* </InputGroup.Prepend> */}
         </Form>
       </div>
     </Navbar>

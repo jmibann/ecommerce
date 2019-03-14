@@ -6,31 +6,8 @@ import SearchBar from "../components/SearchBar.jsx";
 import Header from "../components/Header.jsx";
 
 class Main extends React.Component {
-    handleChange(e) {
-      this.props.setSearch(e.target.value);
-    }
-  
-    componentDidUpdate(prevState) {
-      if (this.state.search == prevState.search)
-        Axios.get(
-          `http://www.omdbapi.com/?apikey=8c8bfbdc&s=${this.props.search}`
-        ).then(books => {
-          console.log(books);
-          this.props.setBookFound(books);
-        });
-    }
-  
-    render() {
-      return (
-        <div>
-          {/* Odio a Ramiro */}
-          <section>
-            <Header />
-            </section>
-            <SearchBar />
-        </div>
-      );
-    }
+  handleChange(e) {
+    this.props.setSearch(e.target.value);
   }
 
   componentDidUpdate(prevState) {
@@ -54,8 +31,6 @@ class Main extends React.Component {
     );
   }
 }
-// ESTO ES UNA PRUEBA
-//practica
 
 function mapStateToProps(state) {
   return {

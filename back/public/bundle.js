@@ -10827,102 +10827,6 @@ module.exports = exports["default"];
 
 /***/ }),
 
-/***/ "./node_modules/react-bootstrap/InputGroup.js":
-/*!****************************************************!*\
-  !*** ./node_modules/react-bootstrap/InputGroup.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports.default = void 0;
-
-var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js"));
-
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"));
-
-var _inheritsLoose2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js"));
-
-var _classnames = _interopRequireDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _createWithBsPrefix = _interopRequireDefault(__webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/utils/createWithBsPrefix.js"));
-
-var _ThemeProvider = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/ThemeProvider.js");
-
-/**
- *
- * @property {InputGroupAppend} Append
- * @property {InputGroupPrepend} Prepend
- * @property {InputGroupText} Text
- * @property {InputGroupRadio} Radio
- * @property {InputGroupCheckbox} Checkbox
- */
-var InputGroup =
-/*#__PURE__*/
-function (_React$Component) {
-  (0, _inheritsLoose2.default)(InputGroup, _React$Component);
-
-  function InputGroup() {
-    return _React$Component.apply(this, arguments) || this;
-  }
-
-  var _proto = InputGroup.prototype;
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        bsPrefix = _this$props.bsPrefix,
-        size = _this$props.size,
-        className = _this$props.className,
-        Component = _this$props.as,
-        props = (0, _objectWithoutPropertiesLoose2.default)(_this$props, ["bsPrefix", "size", "className", "as"]);
-    return _react.default.createElement(Component, (0, _extends2.default)({}, props, {
-      className: (0, _classnames.default)(className, bsPrefix, size && bsPrefix + "-" + size)
-    }));
-  };
-
-  return InputGroup;
-}(_react.default.Component);
-
-InputGroup.defaultProps = {
-  as: 'div'
-};
-var InputGroupAppend = (0, _createWithBsPrefix.default)('input-group-append');
-var InputGroupPrepend = (0, _createWithBsPrefix.default)('input-group-prepend');
-var InputGroupText = (0, _createWithBsPrefix.default)('input-group-text', {
-  Component: 'span'
-});
-
-var InputGroupCheckbox = function InputGroupCheckbox(props) {
-  return _react.default.createElement(InputGroupText, null, _react.default.createElement("input", (0, _extends2.default)({
-    type: "checkbox"
-  }, props)));
-};
-
-var InputGroupRadio = function InputGroupRadio(props) {
-  return _react.default.createElement(InputGroupText, null, _react.default.createElement("input", (0, _extends2.default)({
-    type: "radio"
-  }, props)));
-};
-
-var DecoratedInputGroup = (0, _ThemeProvider.createBootstrapComponent)(InputGroup, 'input-group');
-DecoratedInputGroup.Text = InputGroupText;
-DecoratedInputGroup.Radio = InputGroupRadio;
-DecoratedInputGroup.Checkbox = InputGroupCheckbox;
-DecoratedInputGroup.Append = InputGroupAppend;
-DecoratedInputGroup.Prepend = InputGroupPrepend;
-var _default = DecoratedInputGroup;
-exports.default = _default;
-module.exports = exports["default"];
-
-/***/ }),
-
 /***/ "./node_modules/react-bootstrap/Nav.js":
 /*!*********************************************!*\
   !*** ./node_modules/react-bootstrap/Nav.js ***!
@@ -43433,9 +43337,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/Button.js");
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_bootstrap_InputGroup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap/InputGroup */ "./node_modules/react-bootstrap/InputGroup.js");
-/* harmony import */ var react_bootstrap_InputGroup__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_InputGroup__WEBPACK_IMPORTED_MODULE_5__);
-
 
 
 
@@ -43502,6 +43403,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var test = [{
+  name: "test1"
+}, {
+  name: "test2"
+}, {
+  name: "test3"
+}, {
+  name: "test"
+}];
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default.a, {
     bg: "light",
@@ -43515,17 +43425,16 @@ __webpack_require__.r(__webpack_exports__);
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_3___default.a, {
     title: "categories",
     id: "basic-nav-dropdown"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_3___default.a.Item, {
-    href: "#action/3.1"
-  }, "Action"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_3___default.a.Item, {
-    href: "#action/3.2"
-  }, "Another action"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_3___default.a.Item, {
-    href: "#action/3.3"
-  }, "Something"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_3___default.a.Divider, null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_3___default.a.Item, {
-    href: "#action/3.4"
-  }, "Separated link"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }, test.map(function (items) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_2___default.a.Link, {
+      href: "#home"
+    }, items.name);
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_4___default.a, {
     inline: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    style: {
+      width: "190px"
+    },
     type: "text",
     placeholder: "Search",
     className: "mr-sm-2"
@@ -43613,9 +43522,7 @@ function (_React$Component) {
   }]);
 
   return Main;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // ESTO ES UNA PRUEBA
-//practica
-
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 function mapStateToProps(state) {
   return {
