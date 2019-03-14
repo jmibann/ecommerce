@@ -10,12 +10,13 @@ export default () => {
     <Navbar bg="light" expand="lg" className='space-between'>
       <Navbar.Brand href="#home" className='mr-auto'>
         <img
+        width="35%"
           src="./Logo.jpg"
           alt=""
         />
       </Navbar.Brand>
       <div>
-        <Form>
+        <Form inline> 
           <FormControl
             placeholder="Username"
             aria-label="Username"

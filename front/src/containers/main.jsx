@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setSearch, setBookFund } from "../store/actions/actions";
-import Axios from "axios";
+import axios from "axios";
 import SearchBar from "../components/SearchBar.jsx";
 import Header from "../components/Header.jsx";
 
@@ -12,7 +12,7 @@ class Main extends React.Component {
   
     componentDidUpdate(prevState) {
       if (this.state.search == prevState.search)
-        Axios.get(
+        axios.get(
           `http://www.omdbapi.com/?apikey=8c8bfbdc&s=${this.props.search}`
         ).then(books => {
           console.log(books);
