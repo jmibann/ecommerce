@@ -6,10 +6,6 @@ import SearchBar from "../components/SearchBar.jsx";
 import Header from "../components/Header.jsx";
 
 class Main extends React.Component {
-<<<<<<< HEAD
-  handleChange(e) {
-    this.props.setSearch(e.target.value);
-=======
     handleChange(e) {
       this.props.setSearch(e.target.value);
     }
@@ -35,7 +31,6 @@ class Main extends React.Component {
         </div>
       );
     }
->>>>>>> 887c8904bd53fa70d6ec3d539afb3c8d5cd7e801
   }
 
   componentDidUpdate(prevState) {
