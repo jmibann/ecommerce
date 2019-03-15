@@ -16,11 +16,13 @@ class Main extends React.Component {
         <section>
           <Header />
         </section>
+
         <Switch>
           <Route path='/home' render={() => <Home />} />
           <Route path='/log' render={() => <Log />} />
           {/* <Route path='/search' Component={SearchContainer} /> */}
         </Switch>
+
       </div>
     );
   }
@@ -39,6 +41,8 @@ function mapDispatchToProps(dispatch) {
     setBookFound: ArrayBOoks => dispatch(setBookFound(ArrayBOoks))
   };
 }
+
+
 
 export default connect(
   mapStateToProps,

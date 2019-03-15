@@ -1,9 +1,12 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
+
 import { Link } from 'react-router-dom'
+
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
+
 
 class Header extends React.Component {
 
@@ -29,6 +32,7 @@ class Header extends React.Component {
       </Navbar>
     );
   }
+
 };
 
 

@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
+
 var morgan = require('morgan');
 const LocalStrategy = require('passport-local').Strategy;
 const passport = require('passport');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+
 
 
 //Local imports
@@ -24,6 +26,7 @@ app.use(session({ secret: 'titans' })); // Cookie session middleware
 
 app.use(express.static(__dirname + '/public'));
 
+
 app.use(passport.initialize()); // passport configuration & session connection
 app.use(passport.session());
 
@@ -39,3 +42,4 @@ app.get('/*', (req, res, next) => {
 db.sync({ force: false }).then((con) => {
     app.listen(3000, () => console.log('SERVER LISTENING AT PORT 3000'))
 })
+
