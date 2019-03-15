@@ -5,7 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 const test = [
   { name: "test1" },
   { name: "test2" },
@@ -13,7 +13,7 @@ const test = [
   { name: "test" }
 ];
 export default props => {
-  console.log(props)
+  console.log(props);
   const SetChange = e => {
     this.props.setSearch(e.target.value);
   };
@@ -26,15 +26,17 @@ export default props => {
             {test.map(items => {
               return (
                 <div>
-                  <Nav.Link href="#home">{items.name}</Nav.Link>
+                  <Nav.Link key={items.id} href="#home">
+                    {items.name}
+                  </Nav.Link>
                 </div>
               );
             })}
           </NavDropdown>
         </Nav>
-        <Form  inline onSubmit={props.handleSubmit}> 
+        <Form inline onSubmit={props.handleSubmit}>
           <FormControl
-          size="sm"
+            size="sm"
             value={props.SearchQuery}
             onChange={SetChange}
             style={{ width: "190px" }}
@@ -43,8 +45,9 @@ export default props => {
             className="mr-sm-2"
           />
           <Link to="/Search">
-          <Button size="sm"
-          type="submit"variant="outline-success">Search</Button>
+            <Button size="sm" type="submit" variant="outline-success">
+              Search
+            </Button>
           </Link>
         </Form>
       </Navbar.Collapse>

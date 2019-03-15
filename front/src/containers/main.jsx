@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 // import { setSearch, setBookFund } from "../store/actions/actions";
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Axios from "axios";
 import Home from "../components/home.jsx";
 import Log from './log'
@@ -21,7 +21,8 @@ class Main extends React.Component {
         <Switch>
           <Route path='/home' render={() => <Home />} />
           <Route path='/log' render={() => <Log />} />
-          <Route path='/search' Component={SearchContainer} />
+          <Route path='/search' render={()=><SearchContainer/>} />
+          <Redirect from='/' to='/home' />
         </Switch>
 
       </div>
