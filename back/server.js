@@ -17,6 +17,11 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
 
+
+app.get('/api/Search/:search', (req,res) => {
+ res.send( [{objeto1},{obj2},{obj3},{},{} ])
+})
+
 app.get('/pepe', (req,res,next) => {
     Book.create({
         name: "LEo Carrocio y sus amantes",

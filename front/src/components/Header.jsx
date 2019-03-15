@@ -6,27 +6,15 @@ import Button from "react-bootstrap/Button";
 
 export default () => {
   return (
-    <Navbar bg="light" expand="lg" className="space-between">
-      <Navbar.Brand href="#home" className="mr-auto">
-        <img width="35%" src="./Logo.jpg" alt="" />
+    <Navbar bg="dark" expand="lg" >
+      <Navbar.Brand href="/home" className="mr-auto">
+        <img   width="25%" src="./Logo.jpg" alt="" />
       </Navbar.Brand>
       <div>
         <Form inline>
-          <FormControl
-            placeholder="Username"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-          <FormControl
-            type="text"
-            placeholder="Password"
-            className=" mr-sm-4"
-          />
-          <Button type="submit">sign in</Button>
-
-          <div>
-            <a href="www.gooogle.com">New Customer?Click here</a>
-          </div>
+          <Button 
+          size="sm"
+          type="submit">Sign in/sign Up</Button>
         </Form>
       </div>
     </Navbar>
