@@ -8,7 +8,7 @@ class SearchContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      SearchBarQuery:""
+      SearchBarQuery: ""
     };
     this.handleSearchInput = this.handleSearchInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
