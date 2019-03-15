@@ -1,6 +1,7 @@
 const S= require('sequelize');
 
 const db= require('../configure/db');
+const Book = require('./book')
 
 const Shopcart= db.define('shopcart',{
     quantity: {
@@ -9,6 +10,6 @@ const Shopcart= db.define('shopcart',{
     },
 })
 
-Shopcart.belongsToMany(Books, {through: 'shopBooks'})
+Shopcart.belongsToMany(Book, {through: 'shopBooks'})
 
 module.exports= Shopcart;
