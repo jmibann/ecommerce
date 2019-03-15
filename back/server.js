@@ -7,9 +7,6 @@ const LocalStrategy = require('passport-local').Strategy;
 const passport = require('passport');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-
-
-
 //Local imports
 const db = require('./configure/db');
 const authRoutes = require('./routes/authRoutes');
