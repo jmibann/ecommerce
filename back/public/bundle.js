@@ -12352,15 +12352,23 @@ DecoratedDropdown.Divider = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_M
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/react-bootstrap/es/DropdownButton.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-bootstrap/es/DropdownButton.js ***!
   \***********************************************************/
+=======
+/***/ "./node_modules/react-bootstrap/es/AbstractNav.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/AbstractNav.js ***!
+  \********************************************************/
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -12421,9 +12429,30 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (DropdownButton);
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var dom_helpers_query_querySelectorAll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dom-helpers/query/querySelectorAll */ "./node_modules/dom-helpers/query/querySelectorAll.js");
+/* harmony import */ var dom_helpers_query_querySelectorAll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_query_querySelectorAll__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-context-toolbox/mapContextToProps */ "./node_modules/react-context-toolbox/mapContextToProps.js");
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/react-bootstrap/es/SelectableContext.js");
+/* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavContext */ "./node_modules/react-bootstrap/es/NavContext.js");
+/* harmony import */ var _TabContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./TabContext */ "./node_modules/react-bootstrap/es/TabContext.js");
 
-/***/ }),
 
+
+
+
+
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+<<<<<<< HEAD
 /***/ "./node_modules/react-bootstrap/es/DropdownItem.js":
 /*!*********************************************************!*\
   !*** ./node_modules/react-bootstrap/es/DropdownItem.js ***!
@@ -12447,8 +12476,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/react-bootstrap/es/SelectableContext.js");
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
 /* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./NavContext */ "./node_modules/react-bootstrap/es/NavContext.js");
+=======
 
+var noop = function noop() {};
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
+var AbstractNav =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(AbstractNav, _React$Component);
+
+<<<<<<< HEAD
 
 
 
@@ -12493,6 +12531,148 @@ function (_React$Component) {
   }
 
   var _proto = DropdownItem.prototype;
+=======
+  function AbstractNav() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.handleSelect = function (key, event) {
+      var _this$props = _this.props,
+          onSelect = _this$props.onSelect,
+          parentOnSelect = _this$props.parentOnSelect;
+      if (key == null) return;
+      if (onSelect) onSelect(key, event);
+      if (parentOnSelect) parentOnSelect(key, event);
+    };
+
+    _this.handleKeyDown = function (event) {
+      var onKeyDown = _this.props.onKeyDown;
+      if (onKeyDown) onKeyDown(event);
+      var nextActiveChild;
+
+      switch (event.key) {
+        case 'ArrowLeft':
+        case 'ArrowUp':
+          nextActiveChild = _this.getNextActiveChild(-1);
+          break;
+
+        case 'ArrowRight':
+        case 'ArrowDown':
+          nextActiveChild = _this.getNextActiveChild(1);
+          break;
+
+        default:
+          return;
+      }
+
+      if (!nextActiveChild) return;
+      event.preventDefault();
+
+      _this.handleSelect(nextActiveChild.dataset.rbEventKey, event);
+
+      _this._needsRefocus = true;
+    };
+
+    _this.attachRef = function (ref) {
+      _this.listNode = ref;
+    };
+
+    _this.state = {
+      navContext: null
+    };
+    return _this;
+  }
+
+  AbstractNav.getDerivedStateFromProps = function getDerivedStateFromProps(_ref) {
+    var activeKey = _ref.activeKey,
+        getControlledId = _ref.getControlledId,
+        getControllerId = _ref.getControllerId,
+        role = _ref.role;
+    return {
+      navContext: {
+        role: role,
+        // used by NavLink to determine it's role
+        activeKey: Object(_SelectableContext__WEBPACK_IMPORTED_MODULE_6__["makeEventKey"])(activeKey),
+        getControlledId: getControlledId || noop,
+        getControllerId: getControllerId || noop
+      }
+    };
+  };
+
+  var _proto = AbstractNav.prototype;
+
+  _proto.componentDidUpdate = function componentDidUpdate() {
+    if (!this._needsRefocus || !this.listNode) return;
+    var activeChild = this.listNode.querySelector('[data-rb-event-key].active');
+    if (activeChild) activeChild.focus();
+  };
+
+  _proto.getNextActiveChild = function getNextActiveChild(offset) {
+    if (!this.listNode) return null;
+    var items = dom_helpers_query_querySelectorAll__WEBPACK_IMPORTED_MODULE_4___default()(this.listNode, '[data-rb-event-key]:not(.disabled)');
+    var activeChild = this.listNode.querySelector('.active');
+    var index = items.indexOf(activeChild);
+    if (index === -1) return null;
+    var nextIndex = index + offset;
+    if (nextIndex >= items.length) nextIndex = 0;
+    if (nextIndex < 0) nextIndex = items.length - 1;
+    return items[nextIndex];
+  };
+
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        Component = _this$props2.as,
+        _ = _this$props2.onSelect,
+        _0 = _this$props2.parentOnSelect,
+        _1 = _this$props2.getControlledId,
+        _2 = _this$props2.getControllerId,
+        _3 = _this$props2.activeKey,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props2, ["as", "onSelect", "parentOnSelect", "getControlledId", "getControllerId", "activeKey"]);
+
+    if (props.role === 'tablist') {
+      props.onKeyDown = this.handleKeyDown;
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_SelectableContext__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
+      value: this.handleSelect
+    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_7__["default"].Provider, {
+      value: this.state.navContext
+    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      onKeyDown: this.handleKeyDown,
+      ref: this.attachRef
+    }))));
+  };
+
+  return AbstractNav;
+}(react__WEBPACK_IMPORTED_MODULE_3___default.a.Component);
+
+AbstractNav.defaultProps = {
+  as: 'ul'
+};
+/* harmony default export */ __webpack_exports__["default"] = (react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5___default()([_SelectableContext__WEBPACK_IMPORTED_MODULE_6__["default"], _TabContext__WEBPACK_IMPORTED_MODULE_8__["default"]], function (parentOnSelect, tabContext, _ref2) {
+  var role = _ref2.role;
+  if (!tabContext) return {
+    parentOnSelect: parentOnSelect
+  };
+  var activeKey = tabContext.activeKey,
+      getControllerId = tabContext.getControllerId,
+      getControlledId = tabContext.getControlledId;
+  return {
+    activeKey: activeKey,
+    parentOnSelect: parentOnSelect,
+    role: role || 'tablist',
+    // pass these two through to avoid having to listen to
+    // both Tab and Nav contexts in NavLink
+    getControllerId: getControllerId,
+    getControlledId: getControlledId
+  };
+}, AbstractNav));
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
   _proto.render = function render() {
     var _this$props2 = this.props,
@@ -12505,6 +12685,7 @@ function (_React$Component) {
         Component = _this$props2.as,
         props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props2, ["bsPrefix", "active", "className", "children", "eventKey", "onSelect", "as"]);
 
+<<<<<<< HEAD
     return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, active && 'active', props.disabled && 'disabled'),
       onClick: this.handleClick
@@ -12513,6 +12694,26 @@ function (_React$Component) {
 
   return DropdownItem;
 }(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+=======
+/***/ "./node_modules/react-bootstrap/es/AbstractNavItem.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/AbstractNavItem.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavContext */ "./node_modules/react-bootstrap/es/NavContext.js");
+/* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/react-bootstrap/es/SelectableContext.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 DropdownItem.defaultProps = {
   as: _SafeAnchor__WEBPACK_IMPORTED_MODULE_7__["default"],
@@ -12522,15 +12723,20 @@ DropdownItem.defaultProps = {
   var _ref = navContext || {},
       activeKey = _ref.activeKey;
 
+<<<<<<< HEAD
   var key = Object(_SelectableContext__WEBPACK_IMPORTED_MODULE_8__["makeEventKey"])(props.eventKey, props.href);
   return {
     onSelect: Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_6__["default"])(props.onSelect, onSelect),
     active: props.active == null && key != null ? Object(_SelectableContext__WEBPACK_IMPORTED_MODULE_8__["makeEventKey"])(activeKey) === key : props.active
   };
 }, Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_9__["createBootstrapComponent"])(DropdownItem, 'dropdown-item')));
+=======
 
-/***/ }),
 
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+<<<<<<< HEAD
 /***/ "./node_modules/react-bootstrap/es/DropdownMenu.js":
 /*!*********************************************************!*\
   !*** ./node_modules/react-bootstrap/es/DropdownMenu.js ***!
@@ -12553,8 +12759,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_overlays_DropdownMenu__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_overlays_DropdownMenu__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavbarContext */ "./node_modules/react-bootstrap/es/NavbarContext.js");
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+=======
 
+var defaultProps = {
+  disabled: false
+};
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
+var AbstractNavItem =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(AbstractNavItem, _React$Component);
+
+<<<<<<< HEAD
 
 
 
@@ -12569,10 +12786,68 @@ var wrapRef = function wrapRef(props) {
   props.ref = ref.__wrapped || (ref.__wrapped = function (r) {
     return ref(Object(react_dom__WEBPACK_IMPORTED_MODULE_4__["findDOMNode"])(r));
   });
+=======
+  function AbstractNavItem() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = AbstractNavItem.prototype;
+
+  _proto.render = function render() {
+    var _this = this;
+
+    var _this$props = this.props,
+        active = _this$props.active,
+        className = _this$props.className,
+        tabIndex = _this$props.tabIndex,
+        eventKey = _this$props.eventKey,
+        onSelect = _this$props.onSelect,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["active", "className", "tabIndex", "eventKey", "onSelect", "as"]);
+
+    var navKey = Object(_SelectableContext__WEBPACK_IMPORTED_MODULE_6__["makeEventKey"])(eventKey, props.href);
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_SelectableContext__WEBPACK_IMPORTED_MODULE_6__["default"].Consumer, null, function (parentOnSelect) {
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (navContext) {
+        var isActive = active;
+
+        if (navContext) {
+          if (!props.role && navContext.role === 'tablist') props.role = 'tab';
+          props['data-rb-event-key'] = navKey;
+          props.id = navContext.getControllerId(navKey);
+          props['aria-controls'] = navContext.getControlledId(navKey);
+          isActive = active == null && navKey != null ? navContext.activeKey === navKey : active;
+        }
+
+        if (props.role === 'tab') {
+          props.tabIndex = isActive ? tabIndex : -1;
+          props['aria-selected'] = isActive;
+        }
+
+        return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+          className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, isActive && 'active'),
+          onClick: function onClick(e) {
+            var onClick = _this.props.onClick;
+            if (onClick) onClick(e);
+            if (navKey == null) return;
+            if (onSelect) onSelect(navKey, e);
+            if (parentOnSelect) parentOnSelect(navKey, e);
+          }
+        }));
+      });
+    });
+  };
+
+  return AbstractNavItem;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+AbstractNavItem.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (AbstractNavItem);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
   return props;
 };
 
+<<<<<<< HEAD
 var DropdownMenu =
 /*#__PURE__*/
 function (_React$Component) {
@@ -12581,9 +12856,36 @@ function (_React$Component) {
   function DropdownMenu() {
     return _React$Component.apply(this, arguments) || this;
   }
+=======
+/***/ "./node_modules/react-bootstrap/es/Alert.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Alert.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/index.js");
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(uncontrollable__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _utils_divWithClassName__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/divWithClassName */ "./node_modules/react-bootstrap/es/utils/divWithClassName.js");
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _Fade__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Fade */ "./node_modules/react-bootstrap/es/Fade.js");
+/* harmony import */ var _CloseButton__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CloseButton */ "./node_modules/react-bootstrap/es/CloseButton.js");
+/* harmony import */ var _SafeAnchor__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./SafeAnchor */ "./node_modules/react-bootstrap/es/SafeAnchor.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
   var _proto = DropdownMenu.prototype;
 
+<<<<<<< HEAD
   _proto.render = function render() {
     var _this$props = this.props,
         bsPrefix = _this$props.bsPrefix,
@@ -12681,22 +12983,131 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+=======
+
+
+
+
+
+
+
+
+
+
+/**
+ * @property {AlertHeading} Heading
+ * @property {AlertLink} Link
+ */
+
+var Alert =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Alert, _React$Component);
+
+  function Alert() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.handleClose = function (e) {
+      _this.props.onClose(false, e);
+    };
+
+    return _this;
+  }
+
+  var _proto = Alert.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        show = _this$props.show,
+        closeLabel = _this$props.closeLabel,
+        className = _this$props.className,
+        children = _this$props.children,
+        variant = _this$props.variant,
+        dismissible = _this$props.dismissible,
+        Transition = _this$props.transition,
+        _ = _this$props.onClose,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "show", "closeLabel", "className", "children", "variant", "dismissible", "transition", "onClose"]);
+
+    var alert = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      role: "alert"
+    }, Transition ? props : undefined, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, variant && bsPrefix + "-" + variant, dismissible && bsPrefix + "-dismissible")
+    }), dismissible && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_CloseButton__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      onClick: this.handleClose,
+      label: closeLabel
+    }), children);
+    if (!Transition) return show ? alert : null;
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Transition, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      unmountOnExit: true
+    }, props, {
+      in: show
+    }), alert);
+  };
+
+  return Alert;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Alert.defaultProps = {
+  show: true,
+  transition: _Fade__WEBPACK_IMPORTED_MODULE_9__["default"],
+  closeLabel: 'Close alert'
+};
+var DecoratedAlert = uncontrollable__WEBPACK_IMPORTED_MODULE_5___default()(Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_8__["createBootstrapComponent"])(Alert, 'alert'), {
+  show: 'onClose'
+});
+var DivStyledAsH4 = Object(_utils_divWithClassName__WEBPACK_IMPORTED_MODULE_6__["default"])('h4');
+DecoratedAlert.Link = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_7__["default"])('alert-link', {
+  Component: _SafeAnchor__WEBPACK_IMPORTED_MODULE_11__["default"]
+});
+DecoratedAlert.Heading = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_7__["default"])('alert-heading', {
+  Component: DivStyledAsH4
+});
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedAlert);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 var wrapRef = function wrapRef(props) {
   var ref = props.ref;
 
+<<<<<<< HEAD
   props.ref = ref.__wrapped || (ref.__wrapped = function (r) {
     return ref(Object(react_dom__WEBPACK_IMPORTED_MODULE_4__["findDOMNode"])(r));
   });
 
   return props;
 };
+=======
+/***/ "./node_modules/react-bootstrap/es/Badge.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Badge.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 var DropdownToggle =
 /*#__PURE__*/
 function (_React$Component) {
   Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(DropdownToggle, _React$Component);
 
+<<<<<<< HEAD
   function DropdownToggle() {
     return _React$Component.apply(this, arguments) || this;
   }
@@ -12740,6 +13151,51 @@ DropdownToggle.defaultProps = {
 /*!*************************************************!*\
   !*** ./node_modules/react-bootstrap/es/Fade.js ***!
   \*************************************************/
+=======
+
+
+
+
+
+var Badge =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Badge, _React$Component);
+
+  function Badge() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Badge.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        variant = _this$props.variant,
+        pill = _this$props.pill,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "variant", "pill", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, pill && bsPrefix + "-pill", variant && bsPrefix + "-" + variant)
+    }));
+  };
+
+  return Badge;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Badge.defaultProps = {
+  pill: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Badge, 'badge'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Breadcrumb.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Breadcrumb.js ***!
+  \*******************************************************/
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12752,11 +13208,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+<<<<<<< HEAD
 /* harmony import */ var react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-transition-group/Transition */ "./node_modules/react-transition-group/Transition.js");
 /* harmony import */ var react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dom-helpers/transition/end */ "./node_modules/dom-helpers/transition/end.js");
 /* harmony import */ var dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _utils_triggerBrowserReflow__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/triggerBrowserReflow */ "./node_modules/react-bootstrap/es/utils/triggerBrowserReflow.js");
+=======
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _BreadcrumbItem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./BreadcrumbItem */ "./node_modules/react-bootstrap/es/BreadcrumbItem.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 
 
@@ -12765,6 +13226,7 @@ var _fadeStyles;
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -12842,10 +13304,79 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+=======
+
+var Breadcrumb =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Breadcrumb, _React$Component);
+
+  function Breadcrumb() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Breadcrumb.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        listProps = _this$props.listProps,
+        children = _this$props.children,
+        label = _this$props.label,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "listProps", "children", "label", "as"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      "aria-label": label,
+      className: className
+    }, props), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("ol", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, listProps, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(bsPrefix, listProps.className)
+    }), children));
+  };
+
+  return Breadcrumb;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Breadcrumb.defaultProps = {
+  label: 'breadcrumb',
+  listProps: {},
+  as: 'nav'
+};
+var DecoratedBreadcrumb = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Breadcrumb, 'breadcrumb');
+DecoratedBreadcrumb.Item = _BreadcrumbItem__WEBPACK_IMPORTED_MODULE_6__["default"];
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedBreadcrumb);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/BreadcrumbItem.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/BreadcrumbItem.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _SafeAnchor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SafeAnchor */ "./node_modules/react-bootstrap/es/SafeAnchor.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
 
 
 
 
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+<<<<<<< HEAD
 
 
 var Feedback =
@@ -12901,6 +13432,79 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
 /* harmony import */ var _FigureImage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FigureImage */ "./node_modules/react-bootstrap/es/FigureImage.js");
 /* harmony import */ var _FigureCaption__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FigureCaption */ "./node_modules/react-bootstrap/es/FigureCaption.js");
+=======
+var BreadcrumbItem =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(BreadcrumbItem, _React$Component);
+
+  function BreadcrumbItem() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = BreadcrumbItem.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        active = _this$props.active,
+        className = _this$props.className,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "active", "className", "as"]);
+
+    var href = props.href,
+        title = props.title,
+        target = props.target,
+        elementProps = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["href", "title", "target"]);
+
+    var linkProps = {
+      href: href,
+      title: title,
+      target: target
+    };
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(bsPrefix, className, {
+        active: active
+      }),
+      "aria-current": active ? 'page' : undefined
+    }, active ? react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, elementProps, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()({
+        active: active
+      })
+    })) : react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_SafeAnchor__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, elementProps, linkProps)));
+  };
+
+  return BreadcrumbItem;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+BreadcrumbItem.defaultProps = {
+  active: false,
+  as: 'li'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_6__["createBootstrapComponent"])(BreadcrumbItem, 'breadcrumb-item'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Button.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Button.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _SafeAnchor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SafeAnchor */ "./node_modules/react-bootstrap/es/SafeAnchor.js");
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 
 
@@ -12908,6 +13512,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+<<<<<<< HEAD
 
 
 var Figure =
@@ -12963,11 +13568,91 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+=======
+var Button =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Button, _React$Component);
+
+  function Button() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Button.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        variant = _this$props.variant,
+        size = _this$props.size,
+        active = _this$props.active,
+        className = _this$props.className,
+        block = _this$props.block,
+        type = _this$props.type,
+        as = _this$props.as,
+        innerRef = _this$props.innerRef,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "variant", "size", "active", "className", "block", "type", "as", "innerRef"]);
+
+    var classes = classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, active && 'active', bsPrefix + "-" + variant, block && bsPrefix + "-block", size && bsPrefix + "-" + size);
+
+    if (props.href) {
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_SafeAnchor__WEBPACK_IMPORTED_MODULE_6__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+        as: as,
+        innerRef: innerRef,
+        className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(classes, props.disabled && 'disabled')
+      }));
+    }
+
+    var Component = as || 'button';
+    if (innerRef) props.ref = innerRef;
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      type: type,
+      className: classes
+    }));
+  };
+
+  return Button;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Button.defaultProps = {
+  variant: 'primary',
+  active: false,
+  disabled: false,
+  type: 'button'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Button, {
+  prefix: 'btn',
+  forwardRefAs: 'innerRef'
+}));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ButtonGroup.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ButtonGroup.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 
 
 
 
+<<<<<<< HEAD
 
 
 var FigureCaption =
@@ -13007,6 +13692,53 @@ FigureCaption.defaultProps = {
 /*!********************************************************!*\
   !*** ./node_modules/react-bootstrap/es/FigureImage.js ***!
   \********************************************************/
+=======
+var ButtonGroup =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ButtonGroup, _React$Component);
+
+  function ButtonGroup() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ButtonGroup.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        size = _this$props.size,
+        toggle = _this$props.toggle,
+        vertical = _this$props.vertical,
+        className = _this$props.className,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "size", "toggle", "vertical", "className", "as"]);
+
+    var baseClass = bsPrefix;
+    if (vertical) baseClass = bsPrefix + "-vertical";
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, baseClass, size && bsPrefix + "-" + size, toggle && bsPrefix + "-toggle")
+    }));
+  };
+
+  return ButtonGroup;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ButtonGroup.defaultProps = {
+  vertical: false,
+  toggle: false,
+  role: 'group',
+  as: 'div'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(ButtonGroup, 'btn-group'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ButtonToolbar.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ButtonToolbar.js ***!
+  \**********************************************************/
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -13019,11 +13751,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+<<<<<<< HEAD
 /* harmony import */ var _Image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Image */ "./node_modules/react-bootstrap/es/Image.js");
+=======
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -13042,12 +13779,16 @@ function (_React$Component) {
     var _this$props = this.props,
         className = _this$props.className,
         props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["className"]);
+=======
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
     return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_Image__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, 'figure-img')
     }));
   };
 
+<<<<<<< HEAD
   return FigureImage;
 }(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
 
@@ -13254,8 +13995,214 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+=======
+var ButtonToolbar =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ButtonToolbar, _React$Component);
+
+  function ButtonToolbar() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ButtonToolbar.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }));
+  };
+
+  return ButtonToolbar;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ButtonToolbar.defaultProps = {
+  role: 'toolbar'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(ButtonToolbar, 'btn-toolbar'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Card.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Card.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+/* harmony import */ var _utils_divWithClassName__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/divWithClassName */ "./node_modules/react-bootstrap/es/utils/divWithClassName.js");
+/* harmony import */ var _CardContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./CardContext */ "./node_modules/react-bootstrap/es/CardContext.js");
+/* harmony import */ var _CardImg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./CardImg */ "./node_modules/react-bootstrap/es/CardImg.js");
 
 
+
+
+
+
+
+
+
+
+var CardBody = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__["default"])('card-body');
+
+var Card =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Card, _React$Component);
+
+  function Card() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+    _this.state = {};
+    return _this;
+  }
+
+  Card.getDerivedStateFromProps = function getDerivedStateFromProps(_ref) {
+    var bsPrefix = _ref.bsPrefix;
+    return {
+      cardContext: {
+        cardHeaderBsPrefix: bsPrefix + "-header"
+      }
+    };
+  };
+
+  var _proto = Card.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        Component = _this$props.as,
+        bg = _this$props.bg,
+        text = _this$props.text,
+        border = _this$props.border,
+        body = _this$props.body,
+        children = _this$props.children,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "as", "bg", "text", "border", "body", "children"]);
+
+    var classes = classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, bg && "bg-" + bg, text && "text-" + text, border && "border-" + border);
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_CardContext__WEBPACK_IMPORTED_MODULE_8__["default"].Provider, {
+      value: this.state.cardContext
+    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      className: classes
+    }, props), body ? react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(CardBody, null, children) : children));
+  };
+
+  return Card;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Card.defaultProps = {
+  as: 'div',
+  body: false
+};
+var DivStyledAsH5 = Object(_utils_divWithClassName__WEBPACK_IMPORTED_MODULE_7__["default"])('h5');
+var DivStyledAsH6 = Object(_utils_divWithClassName__WEBPACK_IMPORTED_MODULE_7__["default"])('h6');
+var DecoratedCard = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Card, 'card');
+DecoratedCard.Img = _CardImg__WEBPACK_IMPORTED_MODULE_9__["default"];
+DecoratedCard.Title = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__["default"])('card-title', {
+  Component: DivStyledAsH5
+});
+DecoratedCard.Subtitle = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__["default"])('card-subtitle', {
+  Component: DivStyledAsH6
+});
+DecoratedCard.Body = CardBody;
+DecoratedCard.Link = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__["default"])('card-link', {
+  Component: 'a'
+});
+DecoratedCard.Text = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__["default"])('card-text', {
+  Component: 'p'
+});
+DecoratedCard.Header = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__["default"])('card-header');
+DecoratedCard.Footer = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__["default"])('card-footer');
+DecoratedCard.ImgOverlay = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__["default"])('card-img-overlay');
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedCard);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/CardColumns.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/CardColumns.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__["default"])('card-columns'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/CardContext.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/CardContext.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/CardDeck.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/CardDeck.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__["default"])('card-deck'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/CardGroup.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/CardGroup.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_0__["default"])('card-group'));
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+/***/ }),
+
+<<<<<<< HEAD
 var defaultProps = {
   type: 'checkbox'
 };
@@ -13307,8 +14254,52 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+=======
+/***/ "./node_modules/react-bootstrap/es/CardImg.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/CardImg.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
 
 
+
+
+
+
+
+var CardImg =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(CardImg, _React$Component);
+
+  function CardImg() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = CardImg.prototype;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        variant = _this$props.variant,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "variant", "as"]);
+
+<<<<<<< HEAD
 var defaultProps = {
   type: 'checkbox'
 };
@@ -13390,8 +14381,135 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+=======
+    var baseClass = variant ? bsPrefix + "-" + variant : bsPrefix;
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(baseClass, className)
+    }, props));
+  };
+
+  return CardImg;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+CardImg.defaultProps = {
+  as: 'img',
+  variant: null
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(CardImg, 'card-img'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Carousel.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Carousel.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var dom_helpers_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dom-helpers/style */ "./node_modules/dom-helpers/style/index.js");
+/* harmony import */ var dom_helpers_style__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_style__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var dom_helpers_transition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dom-helpers/transition */ "./node_modules/dom-helpers/transition/index.js");
+/* harmony import */ var dom_helpers_transition__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_transition__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/index.js");
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(uncontrollable__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _CarouselCaption__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./CarouselCaption */ "./node_modules/react-bootstrap/es/CarouselCaption.js");
+/* harmony import */ var _CarouselItem__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./CarouselItem */ "./node_modules/react-bootstrap/es/CarouselItem.js");
+/* harmony import */ var _SafeAnchor__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SafeAnchor */ "./node_modules/react-bootstrap/es/SafeAnchor.js");
+/* harmony import */ var _utils_ElementChildren__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./utils/ElementChildren */ "./node_modules/react-bootstrap/es/utils/ElementChildren.js");
+/* harmony import */ var _utils_triggerBrowserReflow__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./utils/triggerBrowserReflow */ "./node_modules/react-bootstrap/es/utils/triggerBrowserReflow.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+var countChildren = function countChildren(c) {
+  return react__WEBPACK_IMPORTED_MODULE_6___default.a.Children.toArray(c).filter(react__WEBPACK_IMPORTED_MODULE_6___default.a.isValidElement).length;
+}; // TODO: `slide` should be `animate`.
+
+
+var defaultProps = {
+  slide: true,
+  fade: false,
+  interval: 5000,
+  keyboard: true,
+  pauseOnHover: true,
+  wrap: true,
+  indicators: true,
+  controls: true,
+  activeIndex: 0,
+  prevIcon: react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+    "aria-hidden": "true",
+    className: "carousel-control-prev-icon"
+  }),
+  prevLabel: 'Previous',
+  nextIcon: react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+    "aria-hidden": "true",
+    className: "carousel-control-next-icon"
+  }),
+  nextLabel: 'Next'
+};
+
+var Carousel =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Carousel, _React$Component);
+
+  function Carousel(props, context) {
+    var _this;
+
+    _this = _React$Component.call(this, props, context) || this;
+
+    _this.handleSlideEnd = function () {
+      var pendingIndex = _this._pendingIndex;
+      _this._isSliding = false;
+      _this._pendingIndex = null;
+      if (pendingIndex != null) _this.to(pendingIndex);else _this.cycle();
+    };
+
+    _this.handleMouseOut = function () {
+      _this.cycle();
+    };
+
+    _this.handleMouseOver = function () {
+      if (_this.props.pauseOnHover) _this.pause();
+    };
+
+    _this.handleKeyDown = function (event) {
+      if (/input|textarea/i.test(event.target.tagName)) return;
+
+      switch (event.key) {
+        case 'ArrowLeft':
+          event.preventDefault();
+
+          _this.handlePrev(event);
+
+          break;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+        case 'ArrowRight':
+          event.preventDefault();
+
+<<<<<<< HEAD
 var defaultProps = {
   as: 'input'
 };
@@ -13509,6 +14627,179 @@ function FormGroup(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_FormContext__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
     value: {
       controlId: controlId
+=======
+          _this.handleNext(event);
+
+          break;
+
+        default:
+          break;
+      }
+    };
+
+    _this.handleNextWhenVisible = function () {
+      if (!_this.isUnmounted && !document.hidden && dom_helpers_style__WEBPACK_IMPORTED_MODULE_4___default()(_this.carousel.current, 'visibility') !== 'hidden') {
+        _this.handleNext();
+      }
+    };
+
+    _this.handleNext = function (e) {
+      if (_this._isSliding) return;
+      var _this$props = _this.props,
+          wrap = _this$props.wrap,
+          activeIndex = _this$props.activeIndex;
+      var index = activeIndex + 1;
+      var count = countChildren(_this.props.children);
+
+      if (index > count - 1) {
+        if (!wrap) return;
+        index = 0;
+      }
+
+      _this.select(index, e, 'next');
+    };
+
+    _this.handlePrev = function (e) {
+      if (_this._isSliding) return;
+      var _this$props2 = _this.props,
+          wrap = _this$props2.wrap,
+          activeIndex = _this$props2.activeIndex;
+      var index = activeIndex - 1;
+
+      if (index < 0) {
+        if (!wrap) return;
+        index = countChildren(_this.props.children) - 1;
+      }
+
+      _this.select(index, e, 'prev');
+    };
+
+    _this.state = {
+      prevClasses: '',
+      currentClasses: 'active'
+    };
+    _this.isUnmounted = false;
+    _this.carousel = react__WEBPACK_IMPORTED_MODULE_6___default.a.createRef();
+    return _this;
+  }
+
+  var _proto = Carousel.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    this.cycle();
+  };
+
+  Carousel.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps, _ref) {
+    var previousActiveIndex = _ref.activeIndex;
+
+    if (nextProps.activeIndex !== previousActiveIndex) {
+      var lastPossibleIndex = countChildren(nextProps.children) - 1;
+      var nextIndex = Math.max(0, Math.min(nextProps.activeIndex, lastPossibleIndex));
+      var direction;
+
+      if (nextIndex === 0 && previousActiveIndex >= lastPossibleIndex || previousActiveIndex <= nextIndex) {
+        direction = 'next';
+      } else {
+        direction = 'prev';
+      }
+
+      return {
+        direction: direction,
+        previousActiveIndex: previousActiveIndex,
+        activeIndex: nextIndex
+      };
+    }
+
+    return null;
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(_, prevState) {
+    var _this2 = this;
+
+    var _this$props3 = this.props,
+        bsPrefix = _this$props3.bsPrefix,
+        slide = _this$props3.slide;
+    if (!slide || this.state.activeIndex === prevState.activeIndex || this._isSliding) return;
+    var _this$state = this.state,
+        activeIndex = _this$state.activeIndex,
+        direction = _this$state.direction;
+    var orderClassName, directionalClassName;
+
+    if (direction === 'next') {
+      orderClassName = bsPrefix + "-item-next";
+      directionalClassName = bsPrefix + "-item-left";
+    } else if (direction === 'prev') {
+      orderClassName = bsPrefix + "-item-prev";
+      directionalClassName = bsPrefix + "-item-right";
+    }
+
+    this._isSliding = true;
+    this.pause(); // eslint-disable-next-line react/no-did-update-set-state
+
+    this.safeSetState({
+      prevClasses: 'active',
+      currentClasses: orderClassName
+    }, function () {
+      var items = _this2.carousel.current.children;
+      var nextElement = items[activeIndex];
+      Object(_utils_triggerBrowserReflow__WEBPACK_IMPORTED_MODULE_12__["default"])(nextElement);
+
+      _this2.safeSetState({
+        prevClasses: classnames__WEBPACK_IMPORTED_MODULE_3___default()('active', directionalClassName),
+        currentClasses: classnames__WEBPACK_IMPORTED_MODULE_3___default()(orderClassName, directionalClassName)
+      }, function () {
+        return dom_helpers_transition__WEBPACK_IMPORTED_MODULE_5___default.a.end(nextElement, function () {
+          return _this2.safeSetState({
+            prevClasses: '',
+            currentClasses: 'active'
+          }, _this2.handleSlideEnd);
+        });
+      });
+    });
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    clearTimeout(this.timeout);
+    this.isUnmounted = true;
+  };
+
+  _proto.safeSetState = function safeSetState(state, cb) {
+    var _this3 = this;
+
+    if (this.isUnmounted) return;
+    this.setState(state, function () {
+      return !_this3.isUnmounted && cb();
+    });
+  } // This might be a public API.
+  ;
+
+  _proto.pause = function pause() {
+    this._isPaused = true;
+    clearInterval(this._interval);
+    this._interval = null;
+  };
+
+  _proto.cycle = function cycle() {
+    this._isPaused = false;
+    clearInterval(this._interval);
+    this._interval = null;
+
+    if (this.props.interval && !this._isPaused) {
+      this._interval = setInterval(document.visibilityState ? this.handleNextWhenVisible : this.handleNext, this.props.interval);
+    }
+  };
+
+  _proto.to = function to(index, event) {
+    var children = this.props.children;
+
+    if (index < 0 || index > countChildren(children) - 1) {
+      return;
+    }
+
+    if (this._isSliding) {
+      this._pendingIndex = index;
+      return;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     }
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     ref: innerRef,
@@ -13516,6 +14807,7 @@ function FormGroup(_ref) {
   }), children));
 }
 
+<<<<<<< HEAD
 FormGroup.defaultProps = defaultProps;
 /* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(FormGroup, 'form-group'));
 
@@ -13548,10 +14840,163 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+=======
+    this.select(index, event);
+  };
+
+  _proto.select = function select(index, event, direction) {
+    var _this4 = this;
+
+    clearTimeout(this.selectThrottle);
+    if (event && event.persist) event.persist(); // The timeout throttles fast clicks, in order to give any pending state
+    // a chance to update and propagate back through props
+
+    this.selectThrottle = setTimeout(function () {
+      clearTimeout(_this4.timeout);
+      var _this4$props = _this4.props,
+          activeIndex = _this4$props.activeIndex,
+          onSelect = _this4$props.onSelect;
+      if (index === activeIndex || _this4._isSliding || _this4.isUnmounted) return;
+      onSelect(index, direction || (index < activeIndex ? 'prev' : 'next'), event);
+    }, 50);
+  };
+
+  _proto.renderControls = function renderControls(properties) {
+    var bsPrefix = this.props.bsPrefix;
+    var wrap = properties.wrap,
+        children = properties.children,
+        activeIndex = properties.activeIndex,
+        prevIcon = properties.prevIcon,
+        nextIcon = properties.nextIcon,
+        prevLabel = properties.prevLabel,
+        nextLabel = properties.nextLabel;
+    var count = countChildren(children);
+    return [(wrap || activeIndex !== 0) && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SafeAnchor__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      key: "prev",
+      className: bsPrefix + "-control-prev",
+      onClick: this.handlePrev
+    }, prevIcon, prevLabel && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+      className: "sr-only"
+    }, prevLabel)), (wrap || activeIndex !== count - 1) && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SafeAnchor__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      key: "next",
+      className: bsPrefix + "-control-next",
+      onClick: this.handleNext
+    }, nextIcon, nextLabel && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+      className: "sr-only"
+    }, nextLabel))];
+  };
+
+  _proto.renderIndicators = function renderIndicators(children, activeIndex) {
+    var _this5 = this;
+
+    var bsPrefix = this.props.bsPrefix;
+    var indicators = [];
+    Object(_utils_ElementChildren__WEBPACK_IMPORTED_MODULE_11__["forEach"])(children, function (child, index) {
+      indicators.push(react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+        key: index,
+        className: index === activeIndex ? 'active' : null,
+        onClick: function onClick(e) {
+          return _this5.to(index, e);
+        }
+      }), // Force whitespace between indicator elements. Bootstrap requires
+      // this for correct spacing of elements.
+      ' ');
+    });
+    return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ol", {
+      className: bsPrefix + "-indicators"
+    }, indicators);
+  };
+
+  _proto.render = function render() {
+    var _this$props4 = this.props,
+        bsPrefix = _this$props4.bsPrefix,
+        slide = _this$props4.slide,
+        fade = _this$props4.fade,
+        indicators = _this$props4.indicators,
+        controls = _this$props4.controls,
+        wrap = _this$props4.wrap,
+        prevIcon = _this$props4.prevIcon,
+        prevLabel = _this$props4.prevLabel,
+        nextIcon = _this$props4.nextIcon,
+        nextLabel = _this$props4.nextLabel,
+        className = _this$props4.className,
+        children = _this$props4.children,
+        keyboard = _this$props4.keyboard,
+        _5 = _this$props4.activeIndex,
+        _4 = _this$props4.pauseOnHover,
+        _3 = _this$props4.interval,
+        _2 = _this$props4.onSelect,
+        _1 = _this$props4.onSlideEnd,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props4, ["bsPrefix", "slide", "fade", "indicators", "controls", "wrap", "prevIcon", "prevLabel", "nextIcon", "nextLabel", "className", "children", "keyboard", "activeIndex", "pauseOnHover", "interval", "onSelect", "onSlideEnd"]);
+
+    var _this$state2 = this.state,
+        activeIndex = _this$state2.activeIndex,
+        previousActiveIndex = _this$state2.previousActiveIndex,
+        prevClasses = _this$state2.prevClasses,
+        currentClasses = _this$state2.currentClasses;
+    return (// eslint-disable-next-line jsx-a11y/no-static-element-interactions
+      react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+        className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, slide && 'slide', fade && bsPrefix + "-fade"),
+        onKeyDown: keyboard ? this.handleKeyDown : undefined,
+        onMouseOver: this.handleMouseOver,
+        onMouseOut: this.handleMouseOut
+      }), indicators && this.renderIndicators(children, activeIndex), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: bsPrefix + "-inner",
+        ref: this.carousel
+      }, Object(_utils_ElementChildren__WEBPACK_IMPORTED_MODULE_11__["map"])(children, function (child, index) {
+        var current = index === activeIndex;
+        var previous = index === previousActiveIndex;
+        return Object(react__WEBPACK_IMPORTED_MODULE_6__["cloneElement"])(child, {
+          className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(child.props.className, bsPrefix + "-item", current && currentClasses, previous && prevClasses)
+        });
+      })), controls && this.renderControls({
+        wrap: wrap,
+        children: children,
+        activeIndex: activeIndex,
+        prevIcon: prevIcon,
+        prevLabel: prevLabel,
+        nextIcon: nextIcon,
+        nextLabel: nextLabel
+      }))
+    );
+  };
+
+  return Carousel;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+Carousel.defaultProps = defaultProps;
+var DecoratedCarousel = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_13__["createBootstrapComponent"])(uncontrollable__WEBPACK_IMPORTED_MODULE_7___default()(Carousel, {
+  activeIndex: 'onSelect'
+}), 'carousel');
+DecoratedCarousel.Caption = _CarouselCaption__WEBPACK_IMPORTED_MODULE_8__["default"];
+DecoratedCarousel.Item = _CarouselItem__WEBPACK_IMPORTED_MODULE_9__["default"];
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedCarousel);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/CarouselCaption.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/CarouselCaption.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 
 
 
+<<<<<<< HEAD
 var defaultProps = {
   column: false,
   srOnly: false
@@ -13779,8 +15224,234 @@ var InputGroupRadio = function InputGroupRadio(props) {
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(InputGroupText, null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     type: "radio"
   }, props)));
+=======
+
+
+var defaultProps = {
+  as: 'div'
 };
 
+var CarouselCaption =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(CarouselCaption, _React$Component);
+
+  function CarouselCaption() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = CarouselCaption.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        Component = _this$props.as,
+        className = _this$props.className,
+        bsPrefix = _this$props.bsPrefix,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "className", "bsPrefix"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }));
+  };
+
+  return CarouselCaption;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+CarouselCaption.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(CarouselCaption, 'carousel-caption'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/CarouselItem.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/CarouselItem.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+var CarouselItem =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(CarouselItem, _React$Component);
+
+  function CarouselItem() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = CarouselItem.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        children = _this$props.children,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "children", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }), children);
+  };
+
+  return CarouselItem;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(CarouselItem, 'carousel-item'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/CloseButton.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/CloseButton.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var defaultProps = {
+  label: 'Close'
+};
+
+var CloseButton =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(CloseButton, _React$Component);
+
+  function CloseButton() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = CloseButton.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        label = _this$props.label,
+        onClick = _this$props.onClick;
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+      type: "button",
+      className: "close",
+      onClick: onClick
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      "aria-hidden": "true"
+    }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      className: "sr-only"
+    }, label));
+  };
+
+  return CloseButton;
+}(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
+
+CloseButton.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (CloseButton);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Col.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Col.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+var DEVICE_SIZES = ['xl', 'lg', 'md', 'sm', 'xs'];
+
+var Col =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Col, _React$Component);
+
+  function Col() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Col.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "as"]);
+
+    var spans = [];
+    var classes = [];
+    DEVICE_SIZES.forEach(function (brkPoint) {
+      var propValue = props[brkPoint];
+      delete props[brkPoint];
+      var span, offset, order;
+
+      if (propValue != null && typeof propValue === 'object') {
+        var _propValue$span = propValue.span;
+        span = _propValue$span === void 0 ? true : _propValue$span;
+        offset = propValue.offset;
+        order = propValue.order;
+      } else {
+        span = propValue;
+      }
+
+      var infix = brkPoint !== 'xs' ? "-" + brkPoint : '';
+      if (span != null) spans.push(span === true ? "" + bsPrefix + infix : "" + bsPrefix + infix + "-" + span);
+      if (order != null) classes.push("order" + infix + "-" + order);
+      if (offset != null) classes.push("offset" + infix + "-" + offset);
+    });
+
+    if (!spans.length) {
+      spans.push(bsPrefix); // plain 'col'
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default.a.apply(void 0, [className].concat(spans, classes))
+    }));
+  };
+
+  return Col;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Col.defaultProps = {
+  as: 'div'
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Col, 'col'));
+
+<<<<<<< HEAD
 var DecoratedInputGroup = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_6__["createBootstrapComponent"])(InputGroup, 'input-group');
 DecoratedInputGroup.Text = InputGroupText;
 DecoratedInputGroup.Radio = InputGroupRadio;
@@ -13829,6 +15500,44 @@ function (_React$Component) {
   }
 
   var _proto = Jumbotron.prototype;
+=======
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Collapse.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Collapse.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var dom_helpers_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dom-helpers/style */ "./node_modules/dom-helpers/style/index.js");
+/* harmony import */ var dom_helpers_style__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_style__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dom-helpers/transition/end */ "./node_modules/dom-helpers/transition/end.js");
+/* harmony import */ var dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-transition-group/Transition */ "./node_modules/react-transition-group/Transition.js");
+/* harmony import */ var react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _utils_triggerBrowserReflow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./utils/triggerBrowserReflow */ "./node_modules/react-bootstrap/es/utils/triggerBrowserReflow.js");
+/* harmony import */ var _utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utils/createChainedFunction */ "./node_modules/react-bootstrap/es/utils/createChainedFunction.js");
+
+
+
+
+var _collapseStyles;
+
+
+
+
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
   _proto.render = function render() {
     var _classes;
@@ -13840,6 +15549,7 @@ function (_React$Component) {
         bsPrefix = _this$props.bsPrefix,
         props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "className", "fluid", "bsPrefix"]);
 
+<<<<<<< HEAD
     var classes = (_classes = {}, _classes[bsPrefix] = true, _classes[bsPrefix + "-fluid"] = fluid, _classes);
     return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
       className: classnames__WEBPACK_IMPORTED_MODULE_4___default()(className, classes)
@@ -13892,8 +15602,82 @@ function (_React$Component) {
 
   function ListGroup() {
     return _React$Component.apply(this, arguments) || this;
+=======
+var MARGINS = {
+  height: ['marginTop', 'marginBottom'],
+  width: ['marginLeft', 'marginRight']
+};
+
+function getDimensionValue(dimension, elem) {
+  var offset = "offset" + dimension[0].toUpperCase() + dimension.slice(1);
+  var value = elem[offset];
+  var margins = MARGINS[dimension];
+  return value + parseInt(dom_helpers_style__WEBPACK_IMPORTED_MODULE_4___default()(elem, margins[0]), 10) + parseInt(dom_helpers_style__WEBPACK_IMPORTED_MODULE_4___default()(elem, margins[1]), 10);
+}
+
+var collapseStyles = (_collapseStyles = {}, _collapseStyles[react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_7__["EXITED"]] = 'collapse', _collapseStyles[react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_7__["EXITING"]] = 'collapsing', _collapseStyles[react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_7__["ENTERING"]] = 'collapsing', _collapseStyles[react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_7__["ENTERED"]] = 'collapse show', _collapseStyles);
+var defaultProps = {
+  in: false,
+  timeout: 300,
+  mountOnEnter: false,
+  unmountOnExit: false,
+  appear: false,
+  dimension: 'height',
+  getDimensionValue: getDimensionValue
+};
+
+var Collapse =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Collapse, _React$Component);
+
+  function Collapse() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.handleEnter = function (elem) {
+      elem.style[_this.getDimension()] = '0';
+    };
+
+    _this.handleEntering = function (elem) {
+      var dimension = _this.getDimension();
+
+      elem.style[dimension] = _this._getScrollDimensionValue(elem, dimension);
+    };
+
+    _this.handleEntered = function (elem) {
+      elem.style[_this.getDimension()] = null;
+    };
+
+    _this.handleExit = function (elem) {
+      var dimension = _this.getDimension();
+
+      elem.style[dimension] = _this.props.getDimensionValue(dimension, elem) + "px";
+      Object(_utils_triggerBrowserReflow__WEBPACK_IMPORTED_MODULE_8__["default"])(elem);
+    };
+
+    _this.handleExiting = function (elem) {
+      elem.style[_this.getDimension()] = '0';
+    };
+
+    return _this;
   }
 
+  var _proto = Collapse.prototype;
+
+  _proto.getDimension = function getDimension() {
+    return typeof this.props.dimension === 'function' ? this.props.dimension() : this.props.dimension;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+  /* -- Expanding -- */
+  ;
+
+<<<<<<< HEAD
   var _proto = ListGroup.prototype;
 
   _proto.render = function render() {
@@ -14035,12 +15819,158 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
 /* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+=======
+  // for testing
+  _proto._getScrollDimensionValue = function _getScrollDimensionValue(elem, dimension) {
+    var scroll = "scroll" + dimension[0].toUpperCase() + dimension.slice(1);
+    return elem[scroll] + "px";
+  };
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    var _this$props = this.props,
+        onEnter = _this$props.onEnter,
+        onEntering = _this$props.onEntering,
+        onEntered = _this$props.onEntered,
+        onExit = _this$props.onExit,
+        onExiting = _this$props.onExiting,
+        className = _this$props.className,
+        children = _this$props.children,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["onEnter", "onEntering", "onEntered", "onExit", "onExiting", "className", "children"]);
+
+    delete props.dimension;
+    delete props.getDimensionValue;
+    var handleEnter = Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_9__["default"])(this.handleEnter, onEnter);
+    var handleEntering = Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_9__["default"])(this.handleEntering, onEntering);
+    var handleEntered = Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_9__["default"])(this.handleEntered, onEntered);
+    var handleExit = Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_9__["default"])(this.handleExit, onExit);
+    var handleExiting = Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_9__["default"])(this.handleExiting, onExiting);
+    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_7___default.a, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      addEndListener: dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6___default.a
+    }, props, {
+      "aria-expanded": props.role ? props.in : null,
+      onEnter: handleEnter,
+      onEntering: handleEntering,
+      onEntered: handleEntered,
+      onExit: handleExit,
+      onExiting: handleExiting
+    }), function (state, innerProps) {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.cloneElement(children, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, innerProps, {
+        className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, children.props.className, collapseStyles[state], _this2.getDimension() === 'width' && 'width')
+      }));
+    });
+  };
+
+  return Collapse;
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+
+Collapse.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Collapse);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Container.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Container.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
 
 
 
 
 
 
+
+var Container =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Container, _React$Component);
+
+  function Container() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Container.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        fluid = _this$props.fluid,
+        Component = _this$props.as,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "fluid", "as", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, fluid ? bsPrefix + "-fluid" : bsPrefix)
+    }));
+  };
+
+  return Container;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Container.defaultProps = {
+  as: 'div',
+  fluid: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Container, 'container'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Dropdown.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Dropdown.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-context-toolbox/mapContextToProps */ "./node_modules/react-context-toolbox/mapContextToProps.js");
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_overlays_Dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-overlays/Dropdown */ "./node_modules/react-overlays/Dropdown.js");
+/* harmony import */ var react_overlays_Dropdown__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_overlays_Dropdown__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/createChainedFunction */ "./node_modules/react-bootstrap/es/utils/createChainedFunction.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _DropdownMenu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./DropdownMenu */ "./node_modules/react-bootstrap/es/DropdownMenu.js");
+/* harmony import */ var _DropdownToggle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./DropdownToggle */ "./node_modules/react-bootstrap/es/DropdownToggle.js");
+/* harmony import */ var _DropdownItem__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./DropdownItem */ "./node_modules/react-bootstrap/es/DropdownItem.js");
+/* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/react-bootstrap/es/SelectableContext.js");
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+
+
+
+
+
+
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+
+<<<<<<< HEAD
 
 var defaultProps = {
   as: 'div'
@@ -14123,6 +16053,203 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+=======
+
+var defaultProps = {
+  as: 'div',
+  navbar: false
+};
+
+var Dropdown =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Dropdown, _React$Component);
+
+  function Dropdown() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.handleSelect = function (key, event) {
+      if (_this.props.onSelect) _this.props.onSelect(key, event);
+
+      _this.handleToggle(false, event, 'select');
+    };
+
+    _this.handleToggle = function (show, event, source) {
+      if (source === void 0) {
+        source = event.type;
+      }
+
+      if (event.currentTarget === document) source = 'rootClose';
+
+      _this.props.onToggle(show, event, {
+        source: source
+      });
+    };
+
+    return _this;
+  }
+
+  var _proto = Dropdown.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        drop = _this$props.drop,
+        show = _this$props.show,
+        className = _this$props.className,
+        Component = _this$props.as,
+        alignRight = _this$props.alignRight,
+        _1 = _this$props.onSelect,
+        _3 = _this$props.onToggle,
+        _4 = _this$props.navbar,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "drop", "show", "className", "as", "alignRight", "onSelect", "onToggle", "navbar"]);
+
+    delete props.onToggle;
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_SelectableContext__WEBPACK_IMPORTED_MODULE_12__["default"].Provider, {
+      value: this.handleSelect
+    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react_overlays_Dropdown__WEBPACK_IMPORTED_MODULE_6___default.a.ControlledComponent, {
+      drop: drop,
+      show: show,
+      alignEnd: alignRight,
+      onToggle: this.handleToggle,
+      itemSelector: "." + bsPrefix + "-item:not(.disabled):not(:disabled)"
+    }, function (_ref) {
+      var dropdownProps = _ref.props;
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, dropdownProps, {
+        className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, show && 'show', (!drop || drop === 'down') && bsPrefix, drop === 'up' && 'dropup', drop === 'right' && 'dropright', drop === 'left' && 'dropleft')
+      }));
+    }));
+  };
+
+  return Dropdown;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Dropdown.defaultProps = defaultProps;
+var UncontrolledDropdown = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_8__["createBootstrapComponent"])(react_overlays_Dropdown__WEBPACK_IMPORTED_MODULE_6___default.a.deferControlTo(Dropdown), 'dropdown');
+var DecoratedDropdown = react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5___default()(_SelectableContext__WEBPACK_IMPORTED_MODULE_12__["default"], function (onSelect, props) {
+  return {
+    onSelect: Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_7__["default"])(props.onSelect, onSelect)
+  };
+}, UncontrolledDropdown);
+DecoratedDropdown.Toggle = _DropdownToggle__WEBPACK_IMPORTED_MODULE_10__["default"];
+DecoratedDropdown.Menu = _DropdownMenu__WEBPACK_IMPORTED_MODULE_9__["default"];
+DecoratedDropdown.Item = _DropdownItem__WEBPACK_IMPORTED_MODULE_11__["default"];
+DecoratedDropdown.Header = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_13__["default"])('dropdown-header', {
+  defaultProps: {
+    role: 'heading'
+  }
+});
+DecoratedDropdown.Divider = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_13__["default"])('dropdown-divider', {
+  defaultProps: {
+    role: 'separator'
+  }
+});
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedDropdown);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/DropdownButton.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/DropdownButton.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Dropdown */ "./node_modules/react-bootstrap/es/Dropdown.js");
+
+
+
+
+
+/**
+ * A convenience component for simple or general use dropdowns. Renders a `Button` toggle and all `children`
+ * are passed directly to the default `Dropdown.Menu`.
+ *
+ * _All unknown props are passed through to the `Dropdown` component._ Only
+ * the Button `variant`, `size` and `bsPrefix` props are passed to the toggle,
+ * along with menu related props are passed to the `Dropdown.Menu`
+ */
+var DropdownButton =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(DropdownButton, _React$Component);
+
+  function DropdownButton() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = DropdownButton.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        title = _this$props.title,
+        children = _this$props.children,
+        bsPrefix = _this$props.bsPrefix,
+        rootCloseEvent = _this$props.rootCloseEvent,
+        variant = _this$props.variant,
+        size = _this$props.size,
+        menuRole = _this$props.menuRole,
+        disabled = _this$props.disabled,
+        href = _this$props.href,
+        id = _this$props.id,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props, ["title", "children", "bsPrefix", "rootCloseEvent", "variant", "size", "menuRole", "disabled", "href", "id"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"], props, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"].Toggle, {
+      id: id,
+      href: href,
+      size: size,
+      variant: variant,
+      disabled: disabled,
+      childBsPrefix: bsPrefix
+    }, title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"].Menu, {
+      role: menuRole,
+      rootCloseEvent: rootCloseEvent
+    }, children));
+  };
+
+  return DropdownButton;
+}(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (DropdownButton);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/DropdownItem.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/DropdownItem.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-context-toolbox/mapContextToProps */ "./node_modules/react-context-toolbox/mapContextToProps.js");
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/createChainedFunction */ "./node_modules/react-bootstrap/es/utils/createChainedFunction.js");
+/* harmony import */ var _SafeAnchor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SafeAnchor */ "./node_modules/react-bootstrap/es/SafeAnchor.js");
+/* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/react-bootstrap/es/SelectableContext.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./NavContext */ "./node_modules/react-bootstrap/es/NavContext.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 
 
@@ -14133,6 +16260,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+<<<<<<< HEAD
 var defaultProps = {
   show: false,
   backdrop: true,
@@ -14414,6 +16542,3971 @@ ModalBody.defaultProps = {
   as: 'div'
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(ModalBody, 'modal-body'));
+=======
+
+
+var DropdownItem =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(DropdownItem, _React$Component);
+
+  function DropdownItem() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.handleClick = function (event) {
+      var _this$props = _this.props,
+          disabled = _this$props.disabled,
+          onSelect = _this$props.onSelect,
+          onClick = _this$props.onClick,
+          eventKey = _this$props.eventKey,
+          href = _this$props.href;
+      var key = Object(_SelectableContext__WEBPACK_IMPORTED_MODULE_8__["makeEventKey"])(eventKey, href); // SafeAnchor handles the disabled case, but be handle it here
+      // for other components
+
+      if (disabled) return;
+      if (onClick) onClick(event);
+      if (onSelect) onSelect(key, event);
+      if (key !== null && _this.contextSelect) _this.contextSelect(key, event);
+    };
+
+    return _this;
+  }
+
+  var _proto = DropdownItem.prototype;
+
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        bsPrefix = _this$props2.bsPrefix,
+        active = _this$props2.active,
+        className = _this$props2.className,
+        children = _this$props2.children,
+        _ = _this$props2.eventKey,
+        _1 = _this$props2.onSelect,
+        Component = _this$props2.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props2, ["bsPrefix", "active", "className", "children", "eventKey", "onSelect", "as"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, active && 'active', props.disabled && 'disabled'),
+      onClick: this.handleClick
+    }), children);
+  };
+
+  return DropdownItem;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+DropdownItem.defaultProps = {
+  as: _SafeAnchor__WEBPACK_IMPORTED_MODULE_7__["default"],
+  disabled: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5___default()([_SelectableContext__WEBPACK_IMPORTED_MODULE_8__["default"], _NavContext__WEBPACK_IMPORTED_MODULE_10__["default"]], function (onSelect, navContext, props) {
+  var _ref = navContext || {},
+      activeKey = _ref.activeKey;
+
+  var key = Object(_SelectableContext__WEBPACK_IMPORTED_MODULE_8__["makeEventKey"])(props.eventKey, props.href);
+  return {
+    onSelect: Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_6__["default"])(props.onSelect, onSelect),
+    active: props.active == null && key != null ? Object(_SelectableContext__WEBPACK_IMPORTED_MODULE_8__["makeEventKey"])(activeKey) === key : props.active
+  };
+}, Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_9__["createBootstrapComponent"])(DropdownItem, 'dropdown-item')));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/DropdownMenu.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/DropdownMenu.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_overlays_DropdownMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-overlays/DropdownMenu */ "./node_modules/react-overlays/DropdownMenu.js");
+/* harmony import */ var react_overlays_DropdownMenu__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_overlays_DropdownMenu__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavbarContext */ "./node_modules/react-bootstrap/es/NavbarContext.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+
+
+
+var wrapRef = function wrapRef(props) {
+  var ref = props.ref;
+
+  props.ref = ref.__wrapped || (ref.__wrapped = function (r) {
+    return ref(Object(react_dom__WEBPACK_IMPORTED_MODULE_4__["findDOMNode"])(r));
+  });
+
+  return props;
+};
+
+var DropdownMenu =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(DropdownMenu, _React$Component);
+
+  function DropdownMenu() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = DropdownMenu.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        alignRight = _this$props.alignRight,
+        rootCloseEvent = _this$props.rootCloseEvent,
+        flip = _this$props.flip,
+        popperConfig = _this$props.popperConfig,
+        showProps = _this$props.show,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "alignRight", "rootCloseEvent", "flip", "popperConfig", "show", "as"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_7__["default"].Consumer, null, function (isNavbar) {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_overlays_DropdownMenu__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        flip: flip,
+        show: showProps,
+        alignEnd: alignRight,
+        usePopper: !isNavbar,
+        popperConfig: popperConfig,
+        rootCloseEvent: rootCloseEvent
+      }, function (_ref) {
+        var placement = _ref.placement,
+            show = _ref.show,
+            alignEnd = _ref.alignEnd,
+            close = _ref.close,
+            menuProps = _ref.props;
+        wrapRef(menuProps); // For custom components provide additional, non-DOM, props;
+
+        if (typeof Component !== 'string') {
+          menuProps.show = show;
+          menuProps.close = close;
+          menuProps.alignRight = alignEnd;
+        }
+
+        var style = props.style;
+
+        if (placement) {
+          // we don't need the default popper style,
+          // menus are display: none when not shown.
+          style = Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, style, menuProps.style);
+          props['x-placement'] = placement;
+        }
+
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, menuProps, {
+          style: style,
+          className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, show && 'show', alignEnd && bsPrefix + "-right")
+        }));
+      });
+    });
+  };
+
+  return DropdownMenu;
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+
+DropdownMenu.defaultProps = {
+  alignRight: false,
+  as: 'div',
+  flip: true
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_8__["createBootstrapComponent"])(DropdownMenu, 'dropdown-menu'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/DropdownToggle.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/DropdownToggle.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types_extra_lib_isRequiredForA11y__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types-extra/lib/isRequiredForA11y */ "./node_modules/prop-types-extra/lib/isRequiredForA11y.js");
+/* harmony import */ var prop_types_extra_lib_isRequiredForA11y__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types_extra_lib_isRequiredForA11y__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_overlays_DropdownToggle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-overlays/DropdownToggle */ "./node_modules/react-overlays/DropdownToggle.js");
+/* harmony import */ var react_overlays_DropdownToggle__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_overlays_DropdownToggle__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Button */ "./node_modules/react-bootstrap/es/Button.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+/***/ }),
+
+<<<<<<< HEAD
+/***/ "./node_modules/react-bootstrap/es/ModalContext.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ModalContext.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+=======
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+<<<<<<< HEAD
+var ModalContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
+  onHide: function onHide() {}
+});
+/* harmony default export */ __webpack_exports__["default"] = (ModalContext);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ModalDialog.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ModalDialog.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+var ModalDialog =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ModalDialog, _React$Component);
+
+  function ModalDialog() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ModalDialog.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        centered = _this$props.centered,
+        size = _this$props.size,
+        children = _this$props.children,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "centered", "size", "children"]);
+
+    var bsClass = bsPrefix + "-dialog";
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(bsClass, className, size && bsPrefix + "-" + size, centered && bsClass + "-centered")
+    }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(bsPrefix + "-content")
+    }, children));
+  };
+
+  return ModalDialog;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(ModalDialog, 'modal'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ModalFooter.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ModalFooter.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+=======
+
+
+var wrapRef = function wrapRef(props) {
+  var ref = props.ref;
+
+  props.ref = ref.__wrapped || (ref.__wrapped = function (r) {
+    return ref(Object(react_dom__WEBPACK_IMPORTED_MODULE_4__["findDOMNode"])(r));
+  });
+
+  return props;
+};
+
+var DropdownToggle =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(DropdownToggle, _React$Component);
+
+  function DropdownToggle() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = DropdownToggle.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        split = _this$props.split,
+        className = _this$props.className,
+        children = _this$props.children,
+        childBsPrefix = _this$props.childBsPrefix,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "split", "className", "children", "childBsPrefix", "as"]); // This intentionally forwards size and variant (if set) to the
+    // underlying component, to allow it to render size and style variants.
+
+
+    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_overlays_DropdownToggle__WEBPACK_IMPORTED_MODULE_6___default.a, null, function (_ref) {
+      var toggle = _ref.toggle,
+          toggleProps = _ref.props;
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        onClick: toggle,
+        bsPrefix: childBsPrefix,
+        className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, split && bsPrefix + "-split")
+      }, wrapRef(toggleProps), props), children);
+    });
+  };
+
+  return DropdownToggle;
+}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
+
+DropdownToggle.defaultProps = {
+  as: _Button__WEBPACK_IMPORTED_MODULE_8__["default"]
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_9__["createBootstrapComponent"])(DropdownToggle, 'dropdown-toggle'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Fade.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Fade.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-transition-group/Transition */ "./node_modules/react-transition-group/Transition.js");
+/* harmony import */ var react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dom-helpers/transition/end */ "./node_modules/dom-helpers/transition/end.js");
+/* harmony import */ var dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _utils_triggerBrowserReflow__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/triggerBrowserReflow */ "./node_modules/react-bootstrap/es/utils/triggerBrowserReflow.js");
+
+
+
+
+var _fadeStyles;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+
+<<<<<<< HEAD
+
+var ModalFooter =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ModalFooter, _React$Component);
+
+  function ModalFooter() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ModalFooter.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        Component = _this$props.as,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "bsPrefix", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }));
+  };
+
+  return ModalFooter;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ModalFooter.defaultProps = {
+  as: 'div'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(ModalFooter, 'modal-footer'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ModalHeader.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ModalHeader.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/createChainedFunction */ "./node_modules/react-bootstrap/es/utils/createChainedFunction.js");
+/* harmony import */ var _CloseButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./CloseButton */ "./node_modules/react-bootstrap/es/CloseButton.js");
+/* harmony import */ var _ModalContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ModalContext */ "./node_modules/react-bootstrap/es/ModalContext.js");
+
+
+
+
+
+
+
+
+
+var defaultProps = {
+  closeLabel: 'Close',
+  closeButton: false
+};
+
+var ModalHeader =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ModalHeader, _React$Component);
+
+  function ModalHeader() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ModalHeader.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        closeLabel = _this$props.closeLabel,
+        closeButton = _this$props.closeButton,
+        onHide = _this$props.onHide,
+        className = _this$props.className,
+        children = _this$props.children,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "closeLabel", "closeButton", "onHide", "className", "children"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_ModalContext__WEBPACK_IMPORTED_MODULE_8__["default"].Consumer, null, function (context) {
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+        className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+      }), children, closeButton && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_CloseButton__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        label: closeLabel,
+        onClick: Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_6__["default"])(context && context.onHide, onHide)
+      }));
+    });
+  };
+
+  return ModalHeader;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ModalHeader.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(ModalHeader, 'modal-header'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ModalTitle.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ModalTitle.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_divWithClassName__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/divWithClassName */ "./node_modules/react-bootstrap/es/utils/divWithClassName.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+var DivStyledAsH4 = Object(_utils_divWithClassName__WEBPACK_IMPORTED_MODULE_5__["default"])('h4');
+
+var ModalTitle =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ModalTitle, _React$Component);
+
+  function ModalTitle() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ModalTitle.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        Component = _this$props.as,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "bsPrefix", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }));
+  };
+
+  return ModalTitle;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ModalTitle.defaultProps = {
+  as: DivStyledAsH4
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_6__["createBootstrapComponent"])(ModalTitle, 'modal-title'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Nav.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Nav.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types_extra_lib_all__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types-extra/lib/all */ "./node_modules/prop-types-extra/lib/all.js");
+/* harmony import */ var prop_types_extra_lib_all__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types_extra_lib_all__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-context-toolbox/mapContextToProps */ "./node_modules/react-context-toolbox/mapContextToProps.js");
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/index.js");
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(uncontrollable__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./NavbarContext */ "./node_modules/react-bootstrap/es/NavbarContext.js");
+/* harmony import */ var _CardContext__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./CardContext */ "./node_modules/react-bootstrap/es/CardContext.js");
+/* harmony import */ var _AbstractNav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./AbstractNav */ "./node_modules/react-bootstrap/es/AbstractNav.js");
+/* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./NavItem */ "./node_modules/react-bootstrap/es/NavItem.js");
+/* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./NavLink */ "./node_modules/react-bootstrap/es/NavLink.js");
+
+
+=======
+var defaultProps = {
+  in: false,
+  timeout: 300,
+  mountOnEnter: false,
+  unmountOnExit: false,
+  appear: false
+};
+var fadeStyles = (_fadeStyles = {}, _fadeStyles[react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_5__["ENTERING"]] = 'show', _fadeStyles[react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_5__["ENTERED"]] = 'show', _fadeStyles);
+
+var Fade =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Fade, _React$Component);
+
+  function Fade() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.handleEnter = function (node) {
+      Object(_utils_triggerBrowserReflow__WEBPACK_IMPORTED_MODULE_7__["default"])(node);
+      if (_this.props.onEnter) _this.props.onEnter(node);
+    };
+
+    return _this;
+  }
+
+  var _proto = Fade.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        className = _this$props.className,
+        children = _this$props.children,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["className", "children"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react_transition_group_Transition__WEBPACK_IMPORTED_MODULE_5___default.a, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      addEndListener: dom_helpers_transition_end__WEBPACK_IMPORTED_MODULE_6___default.a
+    }, props, {
+      onEnter: this.handleEnter
+    }), function (status, innerProps) {
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.cloneElement(children, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, innerProps, {
+        className: classnames__WEBPACK_IMPORTED_MODULE_3___default()('fade', className, children.props.className, fadeStyles[status])
+      }));
+    });
+  };
+
+  return Fade;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Fade.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Fade);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Feedback.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Feedback.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+var Feedback =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Feedback, _React$Component);
+
+  function Feedback() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Feedback.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        Component = _this$props.as,
+        className = _this$props.className,
+        type = _this$props.type,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "className", "type"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, type && type + "-feedback")
+    }));
+  };
+
+  return Feedback;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Feedback.defaultProps = {
+  type: 'valid',
+  as: 'div'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Feedback);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Figure.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Figure.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _FigureImage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FigureImage */ "./node_modules/react-bootstrap/es/FigureImage.js");
+/* harmony import */ var _FigureCaption__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FigureCaption */ "./node_modules/react-bootstrap/es/FigureCaption.js");
+
+
+
+
+
+
+
+
+
+var Figure =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Figure, _React$Component);
+
+  function Figure() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Figure.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        Component = _this$props.as,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "bsPrefix", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }));
+  };
+
+  return Figure;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Figure.defaultProps = {
+  as: 'figure'
+};
+var DecoratedFigure = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Figure, 'figure');
+DecoratedFigure.Image = _FigureImage__WEBPACK_IMPORTED_MODULE_6__["default"];
+DecoratedFigure.Caption = _FigureCaption__WEBPACK_IMPORTED_MODULE_7__["default"];
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedFigure);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/FigureCaption.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FigureCaption.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+var FigureCaption =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(FigureCaption, _React$Component);
+
+  function FigureCaption() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = FigureCaption.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        Component = _this$props.as,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "bsPrefix", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }));
+  };
+
+  return FigureCaption;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+FigureCaption.defaultProps = {
+  as: 'figcaption'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(FigureCaption, 'figure-caption'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/FigureImage.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FigureImage.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Image__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Image */ "./node_modules/react-bootstrap/es/Image.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+
+
+<<<<<<< HEAD
+
+
+
+
+
+
+var Nav =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Nav, _React$Component);
+
+  function Nav() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Nav.prototype;
+
+  _proto.render = function render() {
+    var _classNames;
+
+    var _this$props = this.props,
+        as = _this$props.as,
+        bsPrefix = _this$props.bsPrefix,
+        navbarBsPrefix = _this$props.navbarBsPrefix,
+        cardHeaderBsPrefix = _this$props.cardHeaderBsPrefix,
+        variant = _this$props.variant,
+        fill = _this$props.fill,
+        justify = _this$props.justify,
+        navbar = _this$props.navbar,
+        className = _this$props.className,
+        children = _this$props.children,
+        activeKey = _this$props.activeKey,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "bsPrefix", "navbarBsPrefix", "cardHeaderBsPrefix", "variant", "fill", "justify", "navbar", "className", "children", "activeKey"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_AbstractNav__WEBPACK_IMPORTED_MODULE_11__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      as: as,
+      activeKey: activeKey,
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, (_classNames = {}, _classNames[bsPrefix] = !navbar, _classNames[navbarBsPrefix + "-nav"] = navbar, _classNames[cardHeaderBsPrefix + "-" + variant] = !!cardHeaderBsPrefix, _classNames[bsPrefix + "-" + variant] = !!variant, _classNames[bsPrefix + "-fill"] = fill, _classNames[bsPrefix + "-justified"] = justify, _classNames))
+    }, props), children);
+  };
+
+  return Nav;
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+
+Nav.defaultProps = {
+  justify: false,
+  fill: false,
+  as: 'div'
+};
+var UncontrolledNav = uncontrollable__WEBPACK_IMPORTED_MODULE_7___default()(Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_8__["createBootstrapComponent"])(Nav, 'nav'), {
+  activeKey: 'onSelect'
+});
+var DecoratedNav = react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_6___default()([_NavbarContext__WEBPACK_IMPORTED_MODULE_9__["default"], _CardContext__WEBPACK_IMPORTED_MODULE_10__["default"]], function (navbarContext, cardContext, _ref) {
+  var navbar = _ref.navbar;
+  if (!navbarContext && !cardContext) return {};
+  if (navbarContext) return {
+    navbarBsPrefix: navbarContext.bsPrefix,
+    navbar: navbar == null ? true : navbar
+  };
+  return {
+    cardHeaderBsPrefix: cardContext.cardHeaderBsPrefix
+  };
+}, UncontrolledNav);
+DecoratedNav.Item = _NavItem__WEBPACK_IMPORTED_MODULE_12__["default"];
+DecoratedNav.Link = _NavLink__WEBPACK_IMPORTED_MODULE_13__["default"];
+DecoratedNav._Nav = Nav; // for Testing until enzyme is working with context
+
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedNav);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/NavContext.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/NavContext.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var NavContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+/* harmony default export */ __webpack_exports__["default"] = (NavContext);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/NavDropdown.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/NavDropdown.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Dropdown */ "./node_modules/react-bootstrap/es/Dropdown.js");
+/* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NavItem */ "./node_modules/react-bootstrap/es/NavItem.js");
+/* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./NavLink */ "./node_modules/react-bootstrap/es/NavLink.js");
+
+
+
+
+=======
+var FigureImage =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(FigureImage, _React$Component);
+
+  function FigureImage() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = FigureImage.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_Image__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, 'figure-img')
+    }));
+  };
+
+  return FigureImage;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+FigureImage.defaultProps = {
+  fluid: true
+};
+/* harmony default export */ __webpack_exports__["default"] = (FigureImage);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Form.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Form.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _FormGroup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormGroup */ "./node_modules/react-bootstrap/es/FormGroup.js");
+/* harmony import */ var _FormControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormControl */ "./node_modules/react-bootstrap/es/FormControl.js");
+/* harmony import */ var _FormCheck__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormCheck */ "./node_modules/react-bootstrap/es/FormCheck.js");
+/* harmony import */ var _FormLabel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormLabel */ "./node_modules/react-bootstrap/es/FormLabel.js");
+/* harmony import */ var _FormText__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FormText */ "./node_modules/react-bootstrap/es/FormText.js");
+
+
+
+
+
+
+
+
+
+
+
+var defaultProps = {
+  inline: false,
+  as: 'form'
+};
+
+function Form(_ref) {
+  var bsPrefix = _ref.bsPrefix,
+      inline = _ref.inline,
+      className = _ref.className,
+      innerRef = _ref.innerRef,
+      validated = _ref.validated,
+      Component = _ref.as,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["bsPrefix", "inline", "className", "innerRef", "validated", "as"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    ref: innerRef,
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, validated && 'was-validated', inline && bsPrefix + "-inline")
+  }));
+}
+
+Form.defaultProps = defaultProps;
+var DecoratedForm = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Form, 'form');
+DecoratedForm.Row = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_4__["default"])('form-row');
+DecoratedForm.Group = _FormGroup__WEBPACK_IMPORTED_MODULE_6__["default"];
+DecoratedForm.Control = _FormControl__WEBPACK_IMPORTED_MODULE_7__["default"];
+DecoratedForm.Check = _FormCheck__WEBPACK_IMPORTED_MODULE_8__["default"];
+DecoratedForm.Label = _FormLabel__WEBPACK_IMPORTED_MODULE_9__["default"];
+DecoratedForm.Text = _FormText__WEBPACK_IMPORTED_MODULE_10__["default"];
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedForm);
+
+/***/ }),
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+/***/ "./node_modules/react-bootstrap/es/FormCheck.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FormCheck.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+<<<<<<< HEAD
+
+
+var NavDropdown =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(NavDropdown, _React$Component);
+
+  function NavDropdown() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = NavDropdown.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        id = _this$props.id,
+        title = _this$props.title,
+        children = _this$props.children,
+        bsPrefix = _this$props.bsPrefix,
+        rootCloseEvent = _this$props.rootCloseEvent,
+        menuRole = _this$props.menuRole,
+        disabled = _this$props.disabled,
+        active = _this$props.active,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["id", "title", "children", "bsPrefix", "rootCloseEvent", "menuRole", "disabled", "active"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      as: _NavItem__WEBPACK_IMPORTED_MODULE_5__["default"]
+    }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Toggle, {
+      id: id,
+      eventKey: null,
+      active: active,
+      disabled: disabled,
+      childBsPrefix: bsPrefix,
+      as: _NavLink__WEBPACK_IMPORTED_MODULE_6__["default"]
+    }, title), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Menu, {
+      role: menuRole,
+      rootCloseEvent: rootCloseEvent
+    }, children));
+  };
+
+  return NavDropdown;
+}(react__WEBPACK_IMPORTED_MODULE_3___default.a.Component);
+
+NavDropdown.Item = _Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Item;
+NavDropdown.Divider = _Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Divider;
+NavDropdown.Header = _Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Header;
+/* harmony default export */ __webpack_exports__["default"] = (NavDropdown);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/NavItem.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/NavItem.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+var NavItem =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(NavItem, _React$Component);
+
+  function NavItem() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = NavItem.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        children = _this$props.children,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "children", "as"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }), children);
+  };
+
+  return NavItem;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+NavItem.defaultProps = {
+  as: 'div'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(NavItem, 'nav-item'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/NavLink.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/NavLink.js ***!
+  \****************************************************/
+=======
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _FormContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormContext */ "./node_modules/react-bootstrap/es/FormContext.js");
+/* harmony import */ var _Feedback__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Feedback */ "./node_modules/react-bootstrap/es/Feedback.js");
+/* harmony import */ var _FormCheckInput__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormCheckInput */ "./node_modules/react-bootstrap/es/FormCheckInput.js");
+/* harmony import */ var _FormCheckLabel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormCheckLabel */ "./node_modules/react-bootstrap/es/FormCheckLabel.js");
+
+
+
+
+
+
+
+
+
+
+
+var FormCheck =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(FormCheck, _React$Component);
+
+  function FormCheck() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = FormCheck.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        id = _this$props.id,
+        bsPrefix = _this$props.bsPrefix,
+        inline = _this$props.inline,
+        disabled = _this$props.disabled,
+        isValid = _this$props.isValid,
+        isInvalid = _this$props.isInvalid,
+        feedback = _this$props.feedback,
+        inputRef = _this$props.inputRef,
+        className = _this$props.className,
+        style = _this$props.style,
+        title = _this$props.title,
+        type = _this$props.type,
+        label = _this$props.label,
+        children = _this$props.children,
+        custom = _this$props.custom,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["id", "bsPrefix", "inline", "disabled", "isValid", "isInvalid", "feedback", "inputRef", "className", "style", "title", "type", "label", "children", "custom"]);
+
+    var hasLabel = label != null && label !== false && !children;
+    var input = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_FormCheckInput__WEBPACK_IMPORTED_MODULE_8__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      type: type,
+      ref: inputRef,
+      isValid: isValid,
+      isInvalid: isInvalid,
+      isStatic: !hasLabel,
+      disabled: disabled
+    }));
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_FormContext__WEBPACK_IMPORTED_MODULE_6__["default"].Transform, {
+      mapToValue: function mapToValue(_ref) {
+        var controlId = _ref.controlId;
+        return {
+          controlId: id || controlId,
+          custom: custom
+        };
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+      style: style,
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, !custom && bsPrefix, custom && "custom-control custom-" + type, inline && (custom ? 'custom-control' : bsPrefix) + "-inline")
+    }, children || react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, input, hasLabel && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_FormCheckLabel__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      title: title
+    }, label), (isValid || isInvalid) && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_Feedback__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      type: isValid ? 'valid' : 'invalid'
+    }, feedback))));
+  };
+
+  return FormCheck;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+FormCheck.defaultProps = {
+  type: 'checkbox',
+  inline: false,
+  disabled: false,
+  isValid: false,
+  isInvalid: false,
+  title: ''
+};
+var DecoratedFormCheck = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(FormCheck, {
+  forwardRefAs: 'inputRef',
+  prefix: 'form-check'
+});
+DecoratedFormCheck.Input = _FormCheckInput__WEBPACK_IMPORTED_MODULE_8__["default"];
+DecoratedFormCheck.Label = _FormCheckLabel__WEBPACK_IMPORTED_MODULE_9__["default"];
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedFormCheck);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/FormCheckInput.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FormCheckInput.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _FormContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormContext */ "./node_modules/react-bootstrap/es/FormContext.js");
+
+
+
+
+
+
+var defaultProps = {
+  type: 'checkbox'
+};
+
+function FormCheckInput(_ref) {
+  var id = _ref.id,
+      bsPrefix = _ref.bsPrefix,
+      className = _ref.className,
+      isValid = _ref.isValid,
+      isInvalid = _ref.isInvalid,
+      innerRef = _ref.innerRef,
+      isStatic = _ref.isStatic,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["id", "bsPrefix", "className", "isValid", "isInvalid", "innerRef", "isStatic"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_FormContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref2) {
+    var controlId = _ref2.controlId,
+        custom = _ref2.custom;
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      ref: innerRef,
+      id: id || controlId,
+      className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, !custom && bsPrefix, custom && 'custom-control-input', isValid && 'is-valid', isInvalid && 'is-invalid', isStatic && 'position-static')
+    }));
+  });
+}
+
+FormCheckInput.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_4__["createBootstrapComponent"])(FormCheckInput, 'form-check-input'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/FormCheckLabel.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FormCheckLabel.js ***!
+  \***********************************************************/
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+<<<<<<< HEAD
+/* harmony import */ var _SafeAnchor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SafeAnchor */ "./node_modules/react-bootstrap/es/SafeAnchor.js");
+/* harmony import */ var _AbstractNavItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AbstractNavItem */ "./node_modules/react-bootstrap/es/AbstractNavItem.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+=======
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _FormContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormContext */ "./node_modules/react-bootstrap/es/FormContext.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+
+<<<<<<< HEAD
+
+var defaultProps = {
+  disabled: false,
+  as: _SafeAnchor__WEBPACK_IMPORTED_MODULE_4__["default"]
+};
+
+function NavLink(_ref) {
+  var bsPrefix = _ref.bsPrefix,
+      disabled = _ref.disabled,
+      className = _ref.className,
+      href = _ref.href,
+      eventKey = _ref.eventKey,
+      onSelect = _ref.onSelect,
+      innerRef = _ref.innerRef,
+      as = _ref.as,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["bsPrefix", "disabled", "className", "href", "eventKey", "onSelect", "innerRef", "as"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_AbstractNavItem__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    href: href,
+    ref: innerRef,
+    eventKey: eventKey,
+    as: as,
+    disabled: disabled,
+    onSelect: onSelect,
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, bsPrefix, disabled && 'disabled')
+  }));
+}
+
+NavLink.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_6__["createBootstrapComponent"])(NavLink, 'nav-link'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Navbar.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Navbar.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/index.js");
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(uncontrollable__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+/* harmony import */ var _NavbarBrand__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./NavbarBrand */ "./node_modules/react-bootstrap/es/NavbarBrand.js");
+/* harmony import */ var _NavbarCollapse__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./NavbarCollapse */ "./node_modules/react-bootstrap/es/NavbarCollapse.js");
+/* harmony import */ var _NavbarToggle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./NavbarToggle */ "./node_modules/react-bootstrap/es/NavbarToggle.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./NavbarContext */ "./node_modules/react-bootstrap/es/NavbarContext.js");
+/* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/react-bootstrap/es/SelectableContext.js");
+
+
+
+
+=======
+var defaultProps = {
+  type: 'checkbox'
+};
+
+function FormCheckLabel(_ref) {
+  var bsPrefix = _ref.bsPrefix,
+      className = _ref.className,
+      innerRef = _ref.innerRef,
+      htmlFor = _ref.htmlFor,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["bsPrefix", "className", "innerRef", "htmlFor"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_FormContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref2) {
+    var controlId = _ref2.controlId,
+        custom = _ref2.custom;
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      ref: innerRef,
+      htmlFor: htmlFor || controlId,
+      className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, !custom && bsPrefix, custom && 'custom-control-label')
+    }));
+  });
+}
+
+FormCheckLabel.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_4__["createBootstrapComponent"])(FormCheckLabel, 'form-check-label'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/FormContext.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FormContext.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_context_toolbox_transformContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-context-toolbox/transformContext */ "./node_modules/react-context-toolbox/transformContext.js");
+/* harmony import */ var react_context_toolbox_transformContext__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_context_toolbox_transformContext__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var FormContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext({
+  controlId: undefined
+});
+FormContext.Transform = react_context_toolbox_transformContext__WEBPACK_IMPORTED_MODULE_1___default()(FormContext);
+/* harmony default export */ __webpack_exports__["default"] = (FormContext);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/FormControl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FormControl.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var warning__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! warning */ "./node_modules/warning/warning.js");
+/* harmony import */ var warning__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(warning__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-context-toolbox/mapContextToProps */ "./node_modules/react-context-toolbox/mapContextToProps.js");
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _Feedback__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Feedback */ "./node_modules/react-bootstrap/es/Feedback.js");
+/* harmony import */ var _FormContext__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormContext */ "./node_modules/react-bootstrap/es/FormContext.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
+var defaultProps = {
+  as: 'nav',
+  expand: true,
+  variant: 'light',
+  collapseOnSelect: false
+};
+
+var Navbar =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Navbar, _React$Component);
+
+  function Navbar() {
+    var _this;
+
+    for (var _len = arguments.length, _args = new Array(_len), _key = 0; _key < _len; _key++) {
+      _args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(_args)) || this;
+
+    _this.handleCollapse = function () {
+      var _this$props = _this.props,
+          onToggle = _this$props.onToggle,
+          expanded = _this$props.expanded,
+          collapseOnSelect = _this$props.collapseOnSelect,
+          onSelect = _this$props.onSelect;
+      if (onSelect) onSelect.apply(void 0, arguments);
+
+      if (collapseOnSelect && expanded) {
+        onToggle(false);
+      }
+    };
+
+    _this.handleToggle = function () {
+      var _this$props2 = _this.props,
+          onToggle = _this$props2.onToggle,
+          expanded = _this$props2.expanded;
+      onToggle(!expanded);
+    };
+
+    _this.state = {
+      navbarContext: {
+        onToggle: _this.handleToggle
+      }
+    };
+    return _this;
+  }
+
+  Navbar.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
+    var bsPrefix = _ref.bsPrefix,
+        expanded = _ref.expanded;
+    return {
+      navbarContext: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, prevState.navbarContext, {
+        bsPrefix: bsPrefix,
+        expanded: expanded
+      })
+    };
+  };
+
+  var _proto = Navbar.prototype;
+
+  _proto.render = function render() {
+    var _this$props3 = this.props,
+        bsPrefix = _this$props3.bsPrefix,
+        expand = _this$props3.expand,
+        variant = _this$props3.variant,
+        bg = _this$props3.bg,
+        fixed = _this$props3.fixed,
+        sticky = _this$props3.sticky,
+        className = _this$props3.className,
+        children = _this$props3.children,
+        Component = _this$props3.as,
+        _1 = _this$props3.expanded,
+        _2 = _this$props3.onToggle,
+        _3 = _this$props3.onSelect,
+        _4 = _this$props3.collapseOnSelect,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props3, ["bsPrefix", "expand", "variant", "bg", "fixed", "sticky", "className", "children", "as", "expanded", "onToggle", "onSelect", "collapseOnSelect"]); // will result in some false positives but that seems better
+    // than false negatives. strict `undefined` check allows explicit
+    // "nulling" of the role if the user really doesn't want one
+
+
+    if (props.role === undefined && Component !== 'nav') {
+      props.role = 'navigation';
+    }
+
+    var expandClass = bsPrefix + "-expand";
+    if (typeof expand === 'string') expandClass = expandClass + "-" + expand;
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_11__["default"].Provider, {
+      value: this.state.navbarContext
+    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_SelectableContext__WEBPACK_IMPORTED_MODULE_12__["default"].Provider, {
+      value: this.handleCollapse
+    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, expand && expandClass, variant && bsPrefix + "-" + variant, bg && "bg-" + bg, sticky && "sticky-" + sticky, fixed && "fixed-" + fixed)
+    }), children)));
+  };
+
+  return Navbar;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Navbar.defaultProps = defaultProps;
+var DecoratedNavbar = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_10__["createBootstrapComponent"])(uncontrollable__WEBPACK_IMPORTED_MODULE_5___default()(Navbar, {
+  expanded: 'onToggle'
+}), 'navbar');
+DecoratedNavbar.Brand = _NavbarBrand__WEBPACK_IMPORTED_MODULE_7__["default"];
+DecoratedNavbar.Toggle = _NavbarToggle__WEBPACK_IMPORTED_MODULE_9__["default"];
+DecoratedNavbar.Collapse = _NavbarCollapse__WEBPACK_IMPORTED_MODULE_8__["default"];
+DecoratedNavbar.Text = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_6__["default"])('navbar-text', {
+  Component: 'span'
+});
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedNavbar);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/NavbarBrand.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/NavbarBrand.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+=======
+
+var defaultProps = {
+  as: 'input'
+};
+
+var FormControl =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(FormControl, _React$Component);
+
+  function FormControl() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = FormControl.prototype;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        type = _this$props.type,
+        size = _this$props.size,
+        id = _this$props.id,
+        inputRef = _this$props.inputRef,
+        className = _this$props.className,
+        isValid = _this$props.isValid,
+        isInvalid = _this$props.isInvalid,
+        plaintext = _this$props.plaintext,
+        readOnly = _this$props.readOnly,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "type", "size", "id", "inputRef", "className", "isValid", "isInvalid", "plaintext", "readOnly", "as"]);
+
+<<<<<<< HEAD
+
+=======
+    var classes;
+
+    if (plaintext) {
+      var _classes;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+      classes = (_classes = {}, _classes[bsPrefix + "-plaintext"] = true, _classes);
+    } else if (type === 'file') {
+      var _classes2;
+
+<<<<<<< HEAD
+
+
+var NavbarBrand =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(NavbarBrand, _React$Component);
+
+  function NavbarBrand() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = NavbarBrand.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        as = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "as"]);
+
+    var Component = as || (props.href ? 'a' : 'span');
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }));
+  };
+
+  return NavbarBrand;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(NavbarBrand, 'navbar-brand'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/NavbarCollapse.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/NavbarCollapse.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Collapse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Collapse */ "./node_modules/react-bootstrap/es/Collapse.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./NavbarContext */ "./node_modules/react-bootstrap/es/NavbarContext.js");
+=======
+      classes = (_classes2 = {}, _classes2[bsPrefix + "-file"] = true, _classes2);
+    } else {
+      var _classes3;
+
+      classes = (_classes3 = {}, _classes3[bsPrefix] = true, _classes3[bsPrefix + "-" + size] = size, _classes3);
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      type: type,
+      id: id,
+      ref: inputRef,
+      readOnly: readOnly,
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, classes, isValid && "is-valid", isInvalid && "is-invalid")
+    }));
+  };
+
+  return FormControl;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+FormControl.defaultProps = defaultProps;
+
+var mapContext = function mapContext(_ref, _ref2) {
+  var controlId = _ref.controlId;
+  var id = _ref2.id;
+   true ? warning__WEBPACK_IMPORTED_MODULE_5___default()(controlId == null || !id, '`controlId` is ignored on `<FormControl>` when `id` is specified.') : undefined;
+  return {
+    id: id || controlId
+  };
+};
+
+var DecoratedFormControl = react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_6___default()(_FormContext__WEBPACK_IMPORTED_MODULE_8__["default"], mapContext, Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_9__["createBootstrapComponent"])(FormControl, {
+  prefix: 'form-control',
+  forwardRefAs: 'inputRef'
+}));
+DecoratedFormControl.Feedback = _Feedback__WEBPACK_IMPORTED_MODULE_7__["default"];
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedFormControl);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/FormGroup.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FormGroup.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _FormContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormContext */ "./node_modules/react-bootstrap/es/FormContext.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+<<<<<<< HEAD
+
+
+
+var NavbarCollapse =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(NavbarCollapse, _React$Component);
+
+  function NavbarCollapse() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = NavbarCollapse.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        children = _this$props.children,
+        bsPrefix = _this$props.bsPrefix,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["children", "bsPrefix"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_6__["default"].Consumer, null, function (context) {
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Collapse__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        in: !!(context && context.expanded)
+      }, props), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+        className: bsPrefix
+      }, children));
+    });
+  };
+
+  return NavbarCollapse;
+}(react__WEBPACK_IMPORTED_MODULE_3___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(NavbarCollapse, 'navbar-collapse'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/NavbarContext.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/NavbarContext.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/NavbarToggle.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/NavbarToggle.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./NavbarContext */ "./node_modules/react-bootstrap/es/NavbarContext.js");
+
+
+
+
+
+
+
+
+var NavbarToggle =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(NavbarToggle, _React$Component);
+
+  function NavbarToggle() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.handleClick = function (e) {
+      var onClick = _this.props.onClick;
+      var onToggle = _this.navbarContext.onToggle;
+      if (onClick) onClick(e);
+      if (onToggle) onToggle();
+    };
+
+    return _this;
+  }
+
+  var _proto = NavbarToggle.prototype;
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        children = _this$props.children,
+        label = _this$props.label,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "children", "label", "as"]);
+
+    if (Component === 'button') {
+      props.type = 'button';
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_6__["default"].Consumer, null, function (context) {
+      _this2.navbarContext = context || {};
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+        onClick: _this2.handleClick,
+        "aria-label": label,
+        className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, !!(context && context.expanded) && 'collapsed')
+      }), children || react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+        className: bsPrefix + "-icon"
+      }));
+    });
+  };
+
+  return NavbarToggle;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+NavbarToggle.defaultProps = {
+  label: 'Toggle navigation',
+  as: 'button'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(NavbarToggle, 'navbar-toggler'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Overlay.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Overlay.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_overlays_Overlay__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-overlays/Overlay */ "./node_modules/react-overlays/Overlay.js");
+/* harmony import */ var react_overlays_Overlay__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_overlays_Overlay__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Fade__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Fade */ "./node_modules/react-bootstrap/es/Fade.js");
+
+
+
+=======
+var defaultProps = {
+  as: 'div'
+};
+
+function FormGroup(_ref) {
+  var bsPrefix = _ref.bsPrefix,
+      innerRef = _ref.innerRef,
+      className = _ref.className,
+      children = _ref.children,
+      controlId = _ref.controlId,
+      Component = _ref.as,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["bsPrefix", "innerRef", "className", "children", "controlId", "as"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_FormContext__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
+    value: {
+      controlId: controlId
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    ref: innerRef,
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, bsPrefix)
+  }), children));
+}
+
+FormGroup.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(FormGroup, 'form-group'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/FormLabel.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FormLabel.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var warning__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! warning */ "./node_modules/warning/warning.js");
+/* harmony import */ var warning__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(warning__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-context-toolbox/mapContextToProps */ "./node_modules/react-context-toolbox/mapContextToProps.js");
+/* harmony import */ var react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Col__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Col */ "./node_modules/react-bootstrap/es/Col.js");
+/* harmony import */ var _FormContext__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormContext */ "./node_modules/react-bootstrap/es/FormContext.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+
+
+var defaultProps = {
+  column: false,
+  srOnly: false
+};
+
+function FormLabel(_ref) {
+  var bsPrefix = _ref.bsPrefix,
+      column = _ref.column,
+      srOnly = _ref.srOnly,
+      className = _ref.className,
+      innerRef = _ref.innerRef,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["bsPrefix", "column", "srOnly", "className", "innerRef"]);
+
+  var classes = classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, bsPrefix, srOnly && 'sr-only', column && 'col-form-label');
+  if (column) return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Col__WEBPACK_IMPORTED_MODULE_6__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    className: classes,
+    as: "label"
+  })); // eslint-disable-next-line jsx-a11y/label-has-for, jsx-a11y/label-has-associated-control
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    ref: innerRef,
+    className: classes
+  }));
+}
+
+FormLabel.defaultProps = defaultProps;
+
+var mapContext = function mapContext(_ref2, _ref3) {
+  var controlId = _ref2.controlId;
+  var htmlFor = _ref3.htmlFor;
+   true ? warning__WEBPACK_IMPORTED_MODULE_4___default()(controlId == null || !htmlFor, '`controlId` is ignored on `<FormLabel>` when `htmlFor` is specified.') : undefined;
+  return {
+    htmlFor: htmlFor || controlId
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (react_context_toolbox_mapContextToProps__WEBPACK_IMPORTED_MODULE_5___default()(_FormContext__WEBPACK_IMPORTED_MODULE_7__["default"], mapContext, Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_8__["createBootstrapComponent"])(FormLabel, 'form-label')));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/FormText.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/FormText.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+var defaultProps = {
+  as: 'small'
+};
+
+function FormText(_ref) {
+  var bsPrefix = _ref.bsPrefix,
+      className = _ref.className,
+      innerRef = _ref.innerRef,
+      Component = _ref.as,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["bsPrefix", "className", "innerRef", "as"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    ref: innerRef,
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, bsPrefix)
+  }));
+}
+
+FormText.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_4__["createBootstrapComponent"])(FormText, 'form-text'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Image.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Image.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+var Image =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Image, _React$Component);
+
+  function Image() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Image.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        fluid = _this$props.fluid,
+        rounded = _this$props.rounded,
+        roundedCircle = _this$props.roundedCircle,
+        thumbnail = _this$props.thumbnail,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "fluid", "rounded", "roundedCircle", "thumbnail"]);
+
+    var classes = classnames__WEBPACK_IMPORTED_MODULE_3___default()(fluid && bsPrefix + "-fluid", rounded && "rounded", roundedCircle && "rounded-circle", thumbnail && bsPrefix + "-thumbnail");
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("img", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, classes)
+    }));
+  };
+
+  return Image;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Image.defaultProps = {
+  fluid: false,
+  rounded: false,
+  roundedCircle: false,
+  thumbnail: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Image, 'img'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/InputGroup.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/InputGroup.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+<<<<<<< HEAD
+var defaultProps = {
+  transition: _Fade__WEBPACK_IMPORTED_MODULE_6__["default"],
+  rootClose: false,
+  show: false,
+  placement: 'top'
+};
+
+function wrapRefs(props, arrowProps) {
+  var ref = props.ref;
+  var aRef = arrowProps.ref;
+
+  props.ref = ref.__wrapped || (ref.__wrapped = function (r) {
+    return ref(Object(react_dom__WEBPACK_IMPORTED_MODULE_3__["findDOMNode"])(r));
+  });
+
+  arrowProps.ref = aRef.__wrapped || (aRef.__wrapped = function (r) {
+    return aRef(Object(react_dom__WEBPACK_IMPORTED_MODULE_3__["findDOMNode"])(r));
+  });
+}
+
+function Overlay(_ref) {
+  var overlay = _ref.children,
+      transition = _ref.transition,
+      outerProps = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["children", "transition"]);
+
+  transition = transition === true ? _Fade__WEBPACK_IMPORTED_MODULE_6__["default"] : transition || null;
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_overlays_Overlay__WEBPACK_IMPORTED_MODULE_5___default.a, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, outerProps, {
+    transition: transition
+  }), function (_ref2) {
+    var overlayProps = _ref2.props,
+        arrowProps = _ref2.arrowProps,
+        show = _ref2.show,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref2, ["props", "arrowProps", "show"]);
+
+    wrapRefs(overlayProps, arrowProps);
+    if (typeof overlay === 'function') return overlay(Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, overlayProps, {
+      show: show,
+      arrowProps: arrowProps
+    }));
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.cloneElement(overlay, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, overlayProps, {
+      arrowProps: arrowProps,
+      className: classnames__WEBPACK_IMPORTED_MODULE_4___default()(overlay.props.className, !transition && show && 'show'),
+      style: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, overlay.props.style, overlayProps.style)
+    }));
+  });
+}
+
+Overlay.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Overlay);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/OverlayTrigger.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/OverlayTrigger.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var dom_helpers_query_contains__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dom-helpers/query/contains */ "./node_modules/dom-helpers/query/contains.js");
+/* harmony import */ var dom_helpers_query_contains__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_query_contains__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var warning__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! warning */ "./node_modules/warning/warning.js");
+/* harmony import */ var warning__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(warning__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _Overlay__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Overlay */ "./node_modules/react-bootstrap/es/Overlay.js");
+
+
+
+
+=======
+
+
+
+/**
+ *
+ * @property {InputGroupAppend} Append
+ * @property {InputGroupPrepend} Prepend
+ * @property {InputGroupText} Text
+ * @property {InputGroupRadio} Radio
+ * @property {InputGroupCheckbox} Checkbox
+ */
+
+var InputGroup =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(InputGroup, _React$Component);
+
+  function InputGroup() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = InputGroup.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        size = _this$props.size,
+        className = _this$props.className,
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "size", "className", "as"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, size && bsPrefix + "-" + size)
+    }));
+  };
+
+  return InputGroup;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+InputGroup.defaultProps = {
+  as: 'div'
+};
+var InputGroupAppend = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_5__["default"])('input-group-append');
+var InputGroupPrepend = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_5__["default"])('input-group-prepend');
+var InputGroupText = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_5__["default"])('input-group-text', {
+  Component: 'span'
+});
+
+var InputGroupCheckbox = function InputGroupCheckbox(props) {
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(InputGroupText, null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    type: "checkbox"
+  }, props)));
+};
+
+var InputGroupRadio = function InputGroupRadio(props) {
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(InputGroupText, null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    type: "radio"
+  }, props)));
+};
+
+var DecoratedInputGroup = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_6__["createBootstrapComponent"])(InputGroup, 'input-group');
+DecoratedInputGroup.Text = InputGroupText;
+DecoratedInputGroup.Radio = InputGroupRadio;
+DecoratedInputGroup.Checkbox = InputGroupCheckbox;
+DecoratedInputGroup.Append = InputGroupAppend;
+DecoratedInputGroup.Prepend = InputGroupPrepend;
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedInputGroup);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Jumbotron.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Jumbotron.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+<<<<<<< HEAD
+var RefHolder =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(RefHolder, _React$Component);
+
+  function RefHolder() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = RefHolder.prototype;
+
+  _proto.render = function render() {
+    return this.props.children;
+  };
+
+  return RefHolder;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+var normalizeDelay = function normalizeDelay(delay) {
+  return delay && typeof delay === 'object' ? delay : {
+    show: delay,
+    hide: delay
+  };
+};
+
+var defaultProps = {
+  defaultOverlayShown: false,
+  trigger: ['hover', 'focus']
+}; // eslint-disable-next-line react/no-multi-comp
+
+var OverlayTrigger =
+/*#__PURE__*/
+function (_React$Component2) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(OverlayTrigger, _React$Component2);
+
+  function OverlayTrigger(props, context) {
+    var _this;
+
+    _this = _React$Component2.call(this, props, context) || this;
+
+    _this.getTarget = function () {
+      return react_dom__WEBPACK_IMPORTED_MODULE_5___default.a.findDOMNode(_this.trigger.current);
+    };
+
+    _this.handleShow = function () {
+      clearTimeout(_this._timeout);
+      _this._hoverState = 'show';
+      var delay = normalizeDelay(_this.props.delay);
+
+      if (!delay.show) {
+        _this.show();
+
+        return;
+      }
+
+      _this._timeout = setTimeout(function () {
+        if (_this._hoverState === 'show') _this.show();
+      }, delay.show);
+    };
+
+    _this.handleHide = function () {
+      clearTimeout(_this._timeout);
+      _this._hoverState = 'hide';
+      var delay = normalizeDelay(_this.props.delay);
+
+      if (!delay.hide) {
+        _this.hide();
+
+        return;
+      }
+
+      _this._timeout = setTimeout(function () {
+        if (_this._hoverState === 'hide') _this.hide();
+      }, delay.hide);
+    };
+
+    _this.handleFocus = function (e) {
+      var _this$getChildProps = _this.getChildProps(),
+          onFocus = _this$getChildProps.onFocus;
+
+      _this.handleShow(e);
+
+      if (onFocus) onFocus(e);
+    };
+
+    _this.handleBlur = function (e) {
+      var _this$getChildProps2 = _this.getChildProps(),
+          onBlur = _this$getChildProps2.onBlur;
+
+      _this.handleHide(e);
+
+      if (onBlur) onBlur(e);
+    };
+
+    _this.handleClick = function (e) {
+      var _this$getChildProps3 = _this.getChildProps(),
+          onClick = _this$getChildProps3.onClick;
+
+      if (_this.state.show) _this.hide();else _this.show();
+      if (onClick) onClick(e);
+    };
+
+    _this.handleMouseOver = function (e) {
+      _this.handleMouseOverOut(_this.handleShow, e, 'fromElement');
+    };
+
+    _this.handleMouseOut = function (e) {
+      return _this.handleMouseOverOut(_this.handleHide, e, 'toElement');
+    };
+
+    _this.trigger = react__WEBPACK_IMPORTED_MODULE_4___default.a.createRef();
+    _this.state = {
+      show: !!props.defaultShow
+    }; // We add aria-describedby in the case where the overlay is a role="tooltip"
+    // for other cases describedby isn't appropriate (e.g. a popover with inputs) so we don't add it.
+
+    _this.ariaModifier = {
+      enabled: true,
+      order: 900,
+      fn: function fn(data) {
+        var popper = data.instance.popper;
+
+        var target = _this.getTarget();
+
+        if (!_this.state.show || !target) return data;
+        var role = popper.getAttribute('role') || '';
+
+        if (popper.id && role.toLowerCase() === 'tooltip') {
+          target.setAttribute('aria-describedby', popper.id);
+        }
+
+        return data;
+      }
+    };
+    return _this;
+  }
+
+  var _proto2 = OverlayTrigger.prototype;
+
+  _proto2.componentWillUnmount = function componentWillUnmount() {
+    clearTimeout(this._timeout);
+  };
+
+  _proto2.getChildProps = function getChildProps() {
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(this.props.children).props;
+  };
+
+  // Simple implementation of mouseEnter and mouseLeave.
+  // React's built version is broken: https://github.com/facebook/react/issues/4251
+  // for cases when the trigger is disabled and mouseOut/Over can cause flicker
+  // moving from one child element to another.
+  _proto2.handleMouseOverOut = function handleMouseOverOut(handler, e, relatedNative) {
+    var target = e.currentTarget;
+    var related = e.relatedTarget || e.nativeEvent[relatedNative];
+
+    if ((!related || related !== target) && !dom_helpers_query_contains__WEBPACK_IMPORTED_MODULE_3___default()(target, related)) {
+      handler(e);
+    }
+  };
+
+  _proto2.hide = function hide() {
+    this.setState({
+      show: false
+    });
+  };
+
+  _proto2.show = function show() {
+    this.setState({
+      show: true
+    });
+  };
+
+  _proto2.render = function render() {
+    var _this$props = this.props,
+        trigger = _this$props.trigger,
+        overlay = _this$props.overlay,
+        children = _this$props.children,
+        _this$props$popperCon = _this$props.popperConfig,
+        popperConfig = _this$props$popperCon === void 0 ? {} : _this$props$popperCon,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["trigger", "overlay", "children", "popperConfig"]);
+
+    delete props.delay;
+    delete props.defaultShow;
+    var child = react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children);
+    var triggerProps = {};
+    var triggers = trigger == null ? [] : [].concat(trigger);
+
+    if (triggers.indexOf('click') !== -1) {
+      triggerProps.onClick = this.handleClick;
+    }
+
+    if (triggers.indexOf('focus') !== -1) {
+      triggerProps.onFocus = this.handleShow;
+      triggerProps.onBlur = this.handleHide;
+    }
+
+    if (triggers.indexOf('hover') !== -1) {
+       true ? warning__WEBPACK_IMPORTED_MODULE_6___default()(triggers.length >= 1, '[react-bootstrap] Specifying only the `"hover"` trigger limits the ' + 'visibility of the overlay to just mouse users. Consider also ' + 'including the `"focus"` trigger so that touch and keyboard only ' + 'users can see the overlay as well.') : undefined;
+      triggerProps.onMouseOver = this.handleMouseOver;
+      triggerProps.onMouseOut = this.handleMouseOut;
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(RefHolder, {
+      ref: this.trigger
+    }, Object(react__WEBPACK_IMPORTED_MODULE_4__["cloneElement"])(child, triggerProps)), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_Overlay__WEBPACK_IMPORTED_MODULE_7__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      popperConfig: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, popperConfig, {
+        modifiers: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, popperConfig.modifiers, {
+          ariaModifier: this.ariaModifier
+        })
+      }),
+      show: this.state.show,
+      onHide: this.handleHide,
+      target: this.getTarget
+    }), overlay));
+  };
+
+  return OverlayTrigger;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+OverlayTrigger.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (OverlayTrigger);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/PageItem.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/PageItem.js ***!
+  \*****************************************************/
+/*! exports provided: default, First, Prev, Ellipsis, Next, Last */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PageItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "First", function() { return First; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Prev", function() { return Prev; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ellipsis", function() { return Ellipsis; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Next", function() { return Next; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Last", function() { return Last; });
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _SafeAnchor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SafeAnchor */ "./node_modules/react-bootstrap/es/SafeAnchor.js");
+
+
+
+
+/* eslint-disable react/no-multi-comp */
+
+
+
+var defaultProps = {
+  active: false,
+  disabled: false,
+  activeLabel: '(current)'
+};
+function PageItem(_ref) {
+  var active = _ref.active,
+      disabled = _ref.disabled,
+      className = _ref.className,
+      style = _ref.style,
+      activeLabel = _ref.activeLabel,
+      children = _ref.children,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(_ref, ["active", "disabled", "className", "style", "activeLabel", "children"]);
+
+  var Component = active || disabled ? 'span' : _SafeAnchor__WEBPACK_IMPORTED_MODULE_5__["default"];
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
+    style: style,
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, 'page-item', {
+      active: active,
+      disabled: disabled
+    })
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    className: "page-link",
+    disabled: disabled
+  }, props), children, active && activeLabel && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+    className: "sr-only"
+  }, activeLabel)));
+}
+PageItem.defaultProps = defaultProps;
+
+function createButton(name, defaultValue, label) {
+  var _class, _temp;
+
+  if (label === void 0) {
+    label = name;
+  }
+
+  return _temp = _class =
+  /*#__PURE__*/
+  function (_React$Component) {
+    Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_class, _React$Component);
+
+    function _class() {
+      return _React$Component.apply(this, arguments) || this;
+    }
+
+    var _proto = _class.prototype;
+
+    _proto.render = function render() {
+      var _this$props = this.props,
+          children = _this$props.children,
+          props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(_this$props, ["children"]);
+
+      delete props.active;
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(PageItem, props, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+        "aria-hidden": "true"
+      }, children || defaultValue), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+        className: "sr-only"
+      }, label));
+    };
+
+    return _class;
+  }(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component), _class.displayName = name, _temp;
+}
+
+var First = createButton('First', "\xAB");
+var Prev = createButton('Prev', "\u2039", 'Previous');
+var Ellipsis = createButton('Ellipsis', "\u2026", 'More');
+var Next = createButton('Next', "\u203A");
+var Last = createButton('Last', "\xBB");
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Pagination.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Pagination.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _PageItem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./PageItem */ "./node_modules/react-bootstrap/es/PageItem.js");
+=======
+
+var defaultProps = {
+  as: 'div',
+  fluid: false
+};
+
+var Jumbotron =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Jumbotron, _React$Component);
+
+  function Jumbotron() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Jumbotron.prototype;
+
+  _proto.render = function render() {
+    var _classes;
+
+    var _this$props = this.props,
+        Component = _this$props.as,
+        className = _this$props.className,
+        fluid = _this$props.fluid,
+        bsPrefix = _this$props.bsPrefix,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "className", "fluid", "bsPrefix"]);
+
+    var classes = (_classes = {}, _classes[bsPrefix] = true, _classes[bsPrefix + "-fluid"] = fluid, _classes);
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_4___default()(className, classes)
+    }));
+  };
+
+  return Jumbotron;
+}(react__WEBPACK_IMPORTED_MODULE_3___default.a.Component);
+
+Jumbotron.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Jumbotron, 'jumbotron'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ListGroup.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ListGroup.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/index.js");
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(uncontrollable__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _AbstractNav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./AbstractNav */ "./node_modules/react-bootstrap/es/AbstractNav.js");
+/* harmony import */ var _ListGroupItem__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ListGroupItem */ "./node_modules/react-bootstrap/es/ListGroupItem.js");
+
+
+
+
+
+
+
+
+
+
+var ListGroup =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ListGroup, _React$Component);
+
+  function ListGroup() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ListGroup.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        className = _this$props.className,
+        bsPrefix = _this$props.bsPrefix,
+        variant = _this$props.variant,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["className", "bsPrefix", "variant"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_AbstractNav__WEBPACK_IMPORTED_MODULE_7__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, variant && bsPrefix + "-" + variant)
+    }));
+  };
+
+  return ListGroup;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ListGroup.defaultProps = {
+  as: 'div',
+  variant: null
+};
+var DecoratedListGroup = uncontrollable__WEBPACK_IMPORTED_MODULE_5___default()(Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_6__["createBootstrapComponent"])(ListGroup, 'list-group'), {
+  activeKey: 'onSelect'
+});
+DecoratedListGroup.Item = _ListGroupItem__WEBPACK_IMPORTED_MODULE_8__["default"];
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedListGroup);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ListGroupItem.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ListGroupItem.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _AbstractNavItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./AbstractNavItem */ "./node_modules/react-bootstrap/es/AbstractNavItem.js");
+/* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/react-bootstrap/es/SelectableContext.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+
+
+var ListGroupItem =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ListGroupItem, _React$Component);
+
+  function ListGroupItem() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.handleClick = function (event) {
+      var _this$props = _this.props,
+          onClick = _this$props.onClick,
+          disabled = _this$props.disabled;
+
+      if (disabled) {
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
+
+      if (onClick) onClick(event);
+    };
+
+    return _this;
+  }
+
+  var _proto = ListGroupItem.prototype;
+
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        bsPrefix = _this$props2.bsPrefix,
+        active = _this$props2.active,
+        disabled = _this$props2.disabled,
+        className = _this$props2.className,
+        variant = _this$props2.variant,
+        action = _this$props2.action,
+        as = _this$props2.as,
+        eventKey = _this$props2.eventKey,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props2, ["bsPrefix", "active", "disabled", "className", "variant", "action", "as", "eventKey"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_AbstractNavItem__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      eventKey: Object(_SelectableContext__WEBPACK_IMPORTED_MODULE_6__["makeEventKey"])(eventKey, props.href) // eslint-disable-next-line
+      ,
+      as: as || (action ? props.href ? 'a' : 'button' : 'div'),
+      onClick: this.handleClick,
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, active && 'active', disabled && 'disabled', variant && bsPrefix + "-" + variant, action && bsPrefix + "-action")
+    }));
+  };
+
+  return ListGroupItem;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ListGroupItem.defaultProps = {
+  variant: null,
+  active: false,
+  disabled: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_7__["createBootstrapComponent"])(ListGroupItem, 'list-group-item'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Media.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Media.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/createWithBsPrefix */ "./node_modules/react-bootstrap/es/utils/createWithBsPrefix.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+<<<<<<< HEAD
+
+
+/**
+ * @property {PageItem} Item
+ * @property {PageItem} First
+ * @property {PageItem} Prev
+ * @property {PageItem} Ellipsis
+ * @property {PageItem} Next
+ * @property {PageItem} Last
+ */
+
+var Pagination =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Pagination, _React$Component);
+
+  function Pagination() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Pagination.prototype;
+=======
+var defaultProps = {
+  as: 'div'
+};
+
+var Media =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Media, _React$Component);
+
+  function Media() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Media.prototype;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+<<<<<<< HEAD
+        children = _this$props.children,
+        size = _this$props.size,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "children", "size"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("ul", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, size && bsPrefix + "-" + size)
+    }), children);
+  };
+
+  return Pagination;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+var DecoratedPagination = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Pagination, 'pagination');
+DecoratedPagination.First = _PageItem__WEBPACK_IMPORTED_MODULE_6__["First"];
+DecoratedPagination.Prev = _PageItem__WEBPACK_IMPORTED_MODULE_6__["Prev"];
+DecoratedPagination.Ellipsis = _PageItem__WEBPACK_IMPORTED_MODULE_6__["Ellipsis"];
+DecoratedPagination.Item = _PageItem__WEBPACK_IMPORTED_MODULE_6__["default"];
+DecoratedPagination.Next = _PageItem__WEBPACK_IMPORTED_MODULE_6__["Next"];
+DecoratedPagination.Last = _PageItem__WEBPACK_IMPORTED_MODULE_6__["Last"];
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedPagination);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Popover.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Popover.js ***!
+  \****************************************************/
+=======
+        Component = _this$props.as,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "as"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }));
+  };
+
+  return Media;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Media.defaultProps = defaultProps;
+var DecoratedMedia = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_6__["createBootstrapComponent"])(Media, 'media');
+DecoratedMedia.Body = Object(_utils_createWithBsPrefix__WEBPACK_IMPORTED_MODULE_5__["default"])('media-body');
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedMedia);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Modal.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Modal.js ***!
+  \**************************************************/
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types_extra_lib_isRequiredForA11y__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types-extra/lib/isRequiredForA11y */ "./node_modules/prop-types-extra/lib/isRequiredForA11y.js");
+/* harmony import */ var prop_types_extra_lib_isRequiredForA11y__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types_extra_lib_isRequiredForA11y__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+=======
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var dom_helpers_events__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! dom-helpers/events */ "./node_modules/dom-helpers/events/index.js");
+/* harmony import */ var dom_helpers_events__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_events__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var dom_helpers_ownerDocument__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! dom-helpers/ownerDocument */ "./node_modules/dom-helpers/ownerDocument.js");
+/* harmony import */ var dom_helpers_ownerDocument__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_ownerDocument__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var dom_helpers_util_inDOM__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! dom-helpers/util/inDOM */ "./node_modules/dom-helpers/util/inDOM.js");
+/* harmony import */ var dom_helpers_util_inDOM__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_util_inDOM__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var dom_helpers_util_scrollbarSize__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! dom-helpers/util/scrollbarSize */ "./node_modules/dom-helpers/util/scrollbarSize.js");
+/* harmony import */ var dom_helpers_util_scrollbarSize__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(dom_helpers_util_scrollbarSize__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_overlays_Modal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-overlays/Modal */ "./node_modules/react-overlays/Modal.js");
+/* harmony import */ var react_overlays_Modal__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_overlays_Modal__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _Fade__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Fade */ "./node_modules/react-bootstrap/es/Fade.js");
+/* harmony import */ var _ModalBody__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ModalBody */ "./node_modules/react-bootstrap/es/ModalBody.js");
+/* harmony import */ var _ModalDialog__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ModalDialog */ "./node_modules/react-bootstrap/es/ModalDialog.js");
+/* harmony import */ var _ModalFooter__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./ModalFooter */ "./node_modules/react-bootstrap/es/ModalFooter.js");
+/* harmony import */ var _ModalHeader__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./ModalHeader */ "./node_modules/react-bootstrap/es/ModalHeader.js");
+/* harmony import */ var _ModalTitle__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./ModalTitle */ "./node_modules/react-bootstrap/es/ModalTitle.js");
+/* harmony import */ var _utils_BootstrapModalManager__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./utils/BootstrapModalManager */ "./node_modules/react-bootstrap/es/utils/BootstrapModalManager.js");
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _ModalContext__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./ModalContext */ "./node_modules/react-bootstrap/es/ModalContext.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+<<<<<<< HEAD
+
+var defaultProps = {
+  placement: 'right'
+};
+
+function Popover(_ref) {
+  var bsPrefix = _ref.bsPrefix,
+      innerRef = _ref.innerRef,
+      placement = _ref.placement,
+      className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      children = _ref.children,
+      arrowProps = _ref.arrowProps,
+      _ = _ref.scheduleUpdate,
+      _1 = _ref.outOfBoundaries,
+      props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["bsPrefix", "innerRef", "placement", "className", "style", "title", "children", "arrowProps", "scheduleUpdate", "outOfBoundaries"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    role: "tooltip",
+    ref: innerRef,
+    style: style,
+    "x-placement": placement,
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(className, bsPrefix, "bs-popover-" + placement)
+  }, props), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    className: "arrow"
+  }, arrowProps)), title && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: bsPrefix + "-header h3"
+  }, title), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: bsPrefix + "-body"
+  }, children));
+}
+
+Popover.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Popover, 'popover'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ProgressBar.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ProgressBar.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+/* harmony import */ var _utils_ElementChildren__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/ElementChildren */ "./node_modules/react-bootstrap/es/utils/ElementChildren.js");
+=======
+
+
+
+
+
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+
+
+
+
+
+<<<<<<< HEAD
+
+var ROUND_PRECISION = 1000;
+/**
+ * Validate that children, if any, are instances of `<ProgressBar>`.
+ */
+
+function onlyProgressBar(props, propName, componentName) {
+  var children = props[propName];
+
+  if (!children) {
+    return null;
+  }
+
+  var error = null;
+  react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.forEach(children, function (child) {
+    if (error) {
+      return;
+    }
+    /**
+     * Compare types in a way that works with libraries that patch and proxy
+     * components like react-hot-loader.
+     *
+     * see https://github.com/gaearon/react-hot-loader#checking-element-types
+     */
+
+
+    var element = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(DecoratedProgressBar, null);
+    if (child.type === element.type) return;
+    var childIdentifier = react__WEBPACK_IMPORTED_MODULE_4___default.a.isValidElement(child) ? child.type.displayName || child.type.name || child.type : child;
+    error = new Error("Children of " + componentName + " can contain only ProgressBar " + ("components. Found " + childIdentifier + "."));
+  });
+  return error;
+=======
+
+
+var defaultProps = {
+  show: false,
+  backdrop: true,
+  keyboard: true,
+  autoFocus: true,
+  enforceFocus: true,
+  restoreFocus: true,
+  animation: true,
+  dialogAs: _ModalDialog__WEBPACK_IMPORTED_MODULE_12__["default"],
+  manager: new _utils_BootstrapModalManager__WEBPACK_IMPORTED_MODULE_16__["default"]()
+};
+/* eslint-disable no-use-before-define, react/no-multi-comp */
+
+function DialogTransition(props) {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_Fade__WEBPACK_IMPORTED_MODULE_10__["default"], props);
+}
+
+function BackdropTransition(props) {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_Fade__WEBPACK_IMPORTED_MODULE_10__["default"], props);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+}
+/* eslint-enable no-use-before-define */
+
+<<<<<<< HEAD
+var defaultProps = {
+  min: 0,
+  max: 100,
+  animated: false,
+  isChild: false,
+  srOnly: false,
+  striped: false
+};
+
+function getPercentage(now, min, max) {
+  var percentage = (now - min) / (max - min) * 100;
+  return Math.round(percentage * ROUND_PRECISION) / ROUND_PRECISION;
+}
+
+var ProgressBar =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ProgressBar, _React$Component);
+
+  function ProgressBar() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ProgressBar.prototype;
+
+  _proto.renderProgressBar = function renderProgressBar(_ref) {
+    var _classNames;
+
+    var min = _ref.min,
+        now = _ref.now,
+        max = _ref.max,
+        label = _ref.label,
+        srOnly = _ref.srOnly,
+        striped = _ref.striped,
+        animated = _ref.animated,
+        className = _ref.className,
+        style = _ref.style,
+        variant = _ref.variant,
+        bsPrefix = _ref.bsPrefix,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["min", "now", "max", "label", "srOnly", "striped", "animated", "className", "style", "variant", "bsPrefix"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      role: "progressbar",
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix + "-bar", (_classNames = {}, _classNames["bg-" + variant] = variant, _classNames[bsPrefix + "-bar-animated"] = animated, _classNames[bsPrefix + "-bar-striped"] = animated || striped, _classNames)),
+      style: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        width: getPercentage(now, min, max) + "%"
+      }, style),
+      "aria-valuenow": now,
+      "aria-valuemin": min,
+      "aria-valuemax": max
+    }), srOnly ? react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+      className: "sr-only"
+    }, label) : label);
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        isChild = _this$props.isChild,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["isChild"]);
+
+    if (isChild) {
+      return this.renderProgressBar(props);
+    }
+
+    var min = props.min,
+        now = props.now,
+        max = props.max,
+        label = props.label,
+        srOnly = props.srOnly,
+        striped = props.striped,
+        animated = props.animated,
+        bsPrefix = props.bsPrefix,
+        variant = props.variant,
+        className = props.className,
+        children = props.children,
+        wrapperProps = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["min", "now", "max", "label", "srOnly", "striped", "animated", "bsPrefix", "variant", "className", "children"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, wrapperProps, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }), children ? Object(_utils_ElementChildren__WEBPACK_IMPORTED_MODULE_6__["map"])(children, function (child) {
+      return Object(react__WEBPACK_IMPORTED_MODULE_4__["cloneElement"])(child, {
+        isChild: true
+      });
+    }) : this.renderProgressBar({
+      min: min,
+      now: now,
+      max: max,
+      label: label,
+      srOnly: srOnly,
+      striped: striped,
+      animated: animated,
+      bsPrefix: bsPrefix,
+      variant: variant
+    }));
+  };
+
+  return ProgressBar;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ProgressBar.defaultProps = defaultProps;
+var DecoratedProgressBar = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(ProgressBar, 'progress');
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedProgressBar);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ResponsiveEmbed.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ResponsiveEmbed.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+var defaultProps = {
+  aspectRatio: '1by1'
+};
+
+var ResponsiveEmbed =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ResponsiveEmbed, _React$Component);
+
+  function ResponsiveEmbed() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ResponsiveEmbed.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        children = _this$props.children,
+        aspectRatio = _this$props.aspectRatio,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "className", "children", "aspectRatio"]);
+
+    var child = react__WEBPACK_IMPORTED_MODULE_4___default.a.Children.only(children);
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(bsPrefix, className, aspectRatio && bsPrefix + "-" + aspectRatio)
+    }), react__WEBPACK_IMPORTED_MODULE_4___default.a.cloneElement(child, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(child.props.className, bsPrefix + "-item")
+    }));
+  };
+
+  return ResponsiveEmbed;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ResponsiveEmbed.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(ResponsiveEmbed, 'embed-responsive'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Row.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Row.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+var Row =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Row, _React$Component);
+
+  function Row() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Row.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        bsPrefix = _this$props.bsPrefix,
+        noGutters = _this$props.noGutters,
+        Component = _this$props.as,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["bsPrefix", "noGutters", "as", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix, noGutters && 'no-gutters')
+    }));
+  };
+
+  return Row;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+Row.defaultProps = {
+  as: 'div',
+  noGutters: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(Row, 'row'));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/SafeAnchor.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/SafeAnchor.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/createChainedFunction */ "./node_modules/react-bootstrap/es/utils/createChainedFunction.js");
+
+
+
+
+
+
+var defaultProps = {
+  as: 'a'
+};
+
+function isTrivialHref(href) {
+  return !href || href.trim() === '#';
+}
+/**
+ * There are situations due to browser quirks or Bootstrap CSS where
+ * an anchor tag is needed, when semantically a button tag is the
+ * better choice. SafeAnchor ensures that when an anchor is used like a
+ * button its accessible. It also emulates input `disabled` behavior for
+ * links, which is usually desirable for Buttons, NavItems, DropdownItems, etc.
+ */
+
+
+var SafeAnchor =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(SafeAnchor, _React$Component);
+
+  function SafeAnchor(props, context) {
+    var _this;
+
+    _this = _React$Component.call(this, props, context) || this;
+    _this.handleClick = _this.handleClick.bind(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this)));
+    _this.handleKeyDown = _this.handleKeyDown.bind(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this)));
+    return _this;
+  }
+
+  var _proto = SafeAnchor.prototype;
+
+  _proto.handleClick = function handleClick(event) {
+    var _this$props = this.props,
+        disabled = _this$props.disabled,
+        href = _this$props.href,
+        onClick = _this$props.onClick;
+
+    if (disabled || isTrivialHref(href)) {
+      event.preventDefault();
+    }
+
+    if (disabled) {
+      event.stopPropagation();
+      return;
+    }
+
+    if (onClick) {
+      onClick(event);
+    }
+  };
+
+  _proto.handleKeyDown = function handleKeyDown(event) {
+    if (event.key === ' ') {
+      event.preventDefault();
+      this.handleClick(event);
+    }
+  };
+
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        Component = _this$props2.as,
+        disabled = _this$props2.disabled,
+        onKeyDown = _this$props2.onKeyDown,
+        innerRef = _this$props2.innerRef,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props2, ["as", "disabled", "onKeyDown", "innerRef"]);
+
+    if (isTrivialHref(props.href)) {
+      props.role = props.role || 'button'; // we want to make sure there is a href attribute on the node
+      // otherwise, the cursor incorrectly styled (except with role='button')
+
+      props.href = props.href || '#';
+    }
+
+    if (disabled) {
+      props.tabIndex = -1;
+      props['aria-disabled'] = true;
+    }
+
+    if (innerRef) props.ref = innerRef;
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      onClick: this.handleClick,
+      onKeyDown: Object(_utils_createChainedFunction__WEBPACK_IMPORTED_MODULE_5__["default"])(this.handleKeyDown, onKeyDown)
+    }));
+  };
+
+  return SafeAnchor;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+SafeAnchor.defaultProps = defaultProps;
+/* harmony default export */ __webpack_exports__["default"] = (SafeAnchor);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/SelectableContext.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/SelectableContext.js ***!
+  \**************************************************************/
+/*! exports provided: makeEventKey, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "makeEventKey", function() { return makeEventKey; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var SelectableContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
+var makeEventKey = function makeEventKey(eventKey, href) {
+  if (eventKey != null) return String(eventKey);
+  return href || null;
+};
+/* harmony default export */ __webpack_exports__["default"] = (SelectableContext);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/SplitButton.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/SplitButton.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Button */ "./node_modules/react-bootstrap/es/Button.js");
+/* harmony import */ var _ButtonGroup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ButtonGroup */ "./node_modules/react-bootstrap/es/ButtonGroup.js");
+/* harmony import */ var _Dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Dropdown */ "./node_modules/react-bootstrap/es/Dropdown.js");
+
+
+
+
+
+
+
+/**
+ * @inherits Button, Dropdown
+ */
+
+var SplitButton =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(SplitButton, _React$Component);
+
+  function SplitButton() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = SplitButton.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        id = _this$props.id,
+        bsPrefix = _this$props.bsPrefix,
+        size = _this$props.size,
+        variant = _this$props.variant,
+        title = _this$props.title,
+        toggleLabel = _this$props.toggleLabel,
+        children = _this$props.children,
+        onClick = _this$props.onClick,
+        href = _this$props.href,
+        target = _this$props.target,
+        menuRole = _this$props.menuRole,
+        rootCloseEvent = _this$props.rootCloseEvent,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["id", "bsPrefix", "size", "variant", "title", "toggleLabel", "children", "onClick", "href", "target", "menuRole", "rootCloseEvent"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Dropdown__WEBPACK_IMPORTED_MODULE_6__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      as: _ButtonGroup__WEBPACK_IMPORTED_MODULE_5__["default"]
+    }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      size: size,
+      variant: variant,
+      disabled: props.disabled,
+      bsPrefix: bsPrefix,
+      href: href,
+      target: target,
+      onClick: onClick
+    }, title), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Dropdown__WEBPACK_IMPORTED_MODULE_6__["default"].Toggle, {
+      split: true,
+      id: id,
+      size: size,
+      variant: variant,
+      disabled: props.disabled,
+      childBsPrefix: bsPrefix
+    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "sr-only"
+    }, toggleLabel)), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Dropdown__WEBPACK_IMPORTED_MODULE_6__["default"].Menu, {
+      role: menuRole,
+      rootCloseEvent: rootCloseEvent
+    }, children));
+  };
+
+  return SplitButton;
+}(react__WEBPACK_IMPORTED_MODULE_3___default.a.Component);
+
+SplitButton.defaultProps = {
+  toggleLabel: 'Toggle dropdown'
+};
+/* harmony default export */ __webpack_exports__["default"] = (SplitButton);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/Tab.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/Tab.js ***!
+  \************************************************/
+=======
+
+var Modal =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(Modal, _React$Component);
+
+  function Modal(_props, context) {
+    var _this;
+
+    _this = _React$Component.call(this, _props, context) || this;
+
+    _this.setModalRef = function (ref) {
+      _this._modal = ref;
+    };
+
+    _this.handleDialogMouseDown = function () {
+      _this._waitingForMouseUp = true;
+    };
+
+    _this.handleMouseUp = function (e) {
+      if (_this._waitingForMouseUp && e.target === _this._modal.dialog) {
+        _this._ignoreBackdropClick = true;
+      }
+
+      _this._waitingForMouseUp = false;
+    };
+
+    _this.handleClick = function (e) {
+      if (_this._ignoreBackdropClick || e.target !== e.currentTarget) {
+        _this._ignoreBackdropClick = false;
+        return;
+      }
+
+      _this.props.onHide();
+    };
+
+    _this.handleEnter = function (node) {
+      var _this$props;
+
+      if (node) {
+        node.style.display = 'block';
+
+        _this.updateDialogStyle(node);
+      }
+
+      for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+      }
+
+      if (_this.props.onEnter) (_this$props = _this.props).onEnter.apply(_this$props, [node].concat(args));
+    };
+
+    _this.handleEntering = function (node) {
+      var _this$props2;
+
+      for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        args[_key2 - 1] = arguments[_key2];
+      }
+
+      if (_this.props.onEntering) (_this$props2 = _this.props).onEntering.apply(_this$props2, [node].concat(args)); // FIXME: This should work even when animation is disabled.
+
+      dom_helpers_events__WEBPACK_IMPORTED_MODULE_4___default.a.on(window, 'resize', _this.handleWindowResize);
+    };
+
+    _this.handleExited = function (node) {
+      var _this$props3;
+
+      if (node) node.style.display = ''; // RHL removes it sometimes
+
+      for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {
+        args[_key3 - 1] = arguments[_key3];
+      }
+
+      if (_this.props.onExited) (_this$props3 = _this.props).onExited.apply(_this$props3, args); // FIXME: This should work even when animation is disabled.
+
+      dom_helpers_events__WEBPACK_IMPORTED_MODULE_4___default.a.off(window, 'resize', _this.handleWindowResize);
+    };
+
+    _this.handleWindowResize = function () {
+      _this.updateDialogStyle(_this._modal.dialog);
+    };
+
+    _this.renderBackdrop = function (props) {
+      var _this$props4 = _this.props,
+          bsPrefix = _this$props4.bsPrefix,
+          backdropClassName = _this$props4.backdropClassName;
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
+        className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(bsPrefix + "-backdrop", backdropClassName)
+      }));
+    };
+
+    _this.state = {
+      style: {}
+    };
+    _this.modalContext = {
+      onHide: function onHide() {
+        return _this.props.onHide();
+      }
+    };
+    return _this;
+  }
+
+  var _proto = Modal.prototype;
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    // Clean up the listener if we need to.
+    dom_helpers_events__WEBPACK_IMPORTED_MODULE_4___default.a.off(window, 'resize', this.handleWindowResize);
+  };
+
+  _proto.updateDialogStyle = function updateDialogStyle(node) {
+    if (!dom_helpers_util_inDOM__WEBPACK_IMPORTED_MODULE_6___default.a) return;
+    var manager = this.props.manager;
+    var containerIsOverflowing = manager.isContainerOverflowing(this._modal);
+    var modalIsOverflowing = node.scrollHeight > dom_helpers_ownerDocument__WEBPACK_IMPORTED_MODULE_5___default()(node).documentElement.clientHeight;
+    this.setState({
+      style: {
+        paddingRight: containerIsOverflowing && !modalIsOverflowing ? dom_helpers_util_scrollbarSize__WEBPACK_IMPORTED_MODULE_7___default()() : undefined,
+        paddingLeft: !containerIsOverflowing && modalIsOverflowing ? dom_helpers_util_scrollbarSize__WEBPACK_IMPORTED_MODULE_7___default()() : undefined
+      }
+    });
+  };
+
+  _proto.render = function render() {
+    var _this$props5 = this.props,
+        bsPrefix = _this$props5.bsPrefix,
+        className = _this$props5.className,
+        style = _this$props5.style,
+        dialogClassName = _this$props5.dialogClassName,
+        children = _this$props5.children,
+        Dialog = _this$props5.dialogAs,
+        show = _this$props5.show,
+        manager = _this$props5.manager,
+        animation = _this$props5.animation,
+        backdrop = _this$props5.backdrop,
+        keyboard = _this$props5.keyboard,
+        onEscapeKeyDown = _this$props5.onEscapeKeyDown,
+        onShow = _this$props5.onShow,
+        onHide = _this$props5.onHide,
+        container = _this$props5.container,
+        autoFocus = _this$props5.autoFocus,
+        enforceFocus = _this$props5.enforceFocus,
+        restoreFocus = _this$props5.restoreFocus,
+        onEntered = _this$props5.onEntered,
+        onExit = _this$props5.onExit,
+        onExiting = _this$props5.onExiting,
+        _ = _this$props5.onExited,
+        _1 = _this$props5.onEntering,
+        _6 = _this$props5.onEnter,
+        _4 = _this$props5.onEntering,
+        _2 = _this$props5.backdropClassName,
+        _3 = _this$props5.backdropStyle,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props5, ["bsPrefix", "className", "style", "dialogClassName", "children", "dialogAs", "show", "manager", "animation", "backdrop", "keyboard", "onEscapeKeyDown", "onShow", "onHide", "container", "autoFocus", "enforceFocus", "restoreFocus", "onEntered", "onExit", "onExiting", "onExited", "onEntering", "onEnter", "onEntering", "backdropClassName", "backdropStyle"]);
+
+    var clickHandler = backdrop === true ? this.handleClick : null;
+    return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_ModalContext__WEBPACK_IMPORTED_MODULE_18__["default"].Provider, {
+      value: this.modalContext
+    }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_overlays_Modal__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      show: show,
+      backdrop: backdrop,
+      container: container,
+      keyboard: keyboard,
+      autoFocus: autoFocus,
+      enforceFocus: enforceFocus,
+      restoreFocus: restoreFocus,
+      onEscapeKeyDown: onEscapeKeyDown,
+      onShow: onShow,
+      onHide: onHide,
+      onEntered: onEntered,
+      onExit: onExit,
+      onExiting: onExiting,
+      manager: manager,
+      ref: this.setModalRef,
+      style: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, style, this.state.style),
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix),
+      containerClassName: bsPrefix + "-open",
+      transition: animation ? DialogTransition : undefined,
+      backdropTransition: animation ? BackdropTransition : undefined,
+      renderBackdrop: this.renderBackdrop,
+      onClick: clickHandler,
+      onMouseUp: this.handleMouseUp,
+      onEnter: this.handleEnter,
+      onEntering: this.handleEntering,
+      onExited: this.handleExited
+    }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Dialog, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
+      onMouseDown: this.handleDialogMouseDown,
+      className: dialogClassName
+    }), children)));
+  };
+
+  return Modal;
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
+
+Modal.defaultProps = defaultProps;
+var DecoratedModal = Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_17__["createBootstrapComponent"])(Modal, 'modal');
+DecoratedModal.Body = _ModalBody__WEBPACK_IMPORTED_MODULE_11__["default"];
+DecoratedModal.Header = _ModalHeader__WEBPACK_IMPORTED_MODULE_14__["default"];
+DecoratedModal.Title = _ModalTitle__WEBPACK_IMPORTED_MODULE_15__["default"];
+DecoratedModal.Footer = _ModalFooter__WEBPACK_IMPORTED_MODULE_13__["default"];
+DecoratedModal.Dialog = _ModalDialog__WEBPACK_IMPORTED_MODULE_12__["default"];
+DecoratedModal.TRANSITION_DURATION = 300;
+DecoratedModal.BACKDROP_TRANSITION_DURATION = 150;
+/* harmony default export */ __webpack_exports__["default"] = (DecoratedModal);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/ModalBody.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/ModalBody.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ThemeProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ThemeProvider */ "./node_modules/react-bootstrap/es/ThemeProvider.js");
+
+
+
+
+
+
+
+var ModalBody =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(ModalBody, _React$Component);
+
+  function ModalBody() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = ModalBody.prototype;
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        Component = _this$props.as,
+        bsPrefix = _this$props.bsPrefix,
+        className = _this$props.className,
+        props = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_this$props, ["as", "bsPrefix", "className"]);
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+      className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, bsPrefix)
+    }));
+  };
+
+  return ModalBody;
+}(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
+
+ModalBody.defaultProps = {
+  as: 'div'
+};
+/* harmony default export */ __webpack_exports__["default"] = (Object(_ThemeProvider__WEBPACK_IMPORTED_MODULE_5__["createBootstrapComponent"])(ModalBody, 'modal-body'));
 
 /***/ }),
 
@@ -14421,11 +20514,56 @@ ModalBody.defaultProps = {
 /*!*********************************************************!*\
   !*** ./node_modules/react-bootstrap/es/ModalContext.js ***!
   \*********************************************************/
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _TabContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TabContainer */ "./node_modules/react-bootstrap/es/TabContainer.js");
+/* harmony import */ var _TabContent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TabContent */ "./node_modules/react-bootstrap/es/TabContent.js");
+/* harmony import */ var _TabPane__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TabPane */ "./node_modules/react-bootstrap/es/TabPane.js");
+
+
+
+
+
+/* eslint-disable react/require-render-return, react/no-unused-prop-types */
+
+var Tab =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(Tab, _React$Component);
+
+  function Tab() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+  var _proto = Tab.prototype;
+
+  _proto.render = function render() {
+    throw new Error('ReactBootstrap: The `Tab` component is not meant to be rendered! ' + "It's an abstract component that is only valid as a direct Child of the `Tabs` Component. " + 'For custom tabs components use TabPane and TabsContainer directly');
+  };
+
+  return Tab;
+}(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
+
+Tab.Container = _TabContainer__WEBPACK_IMPORTED_MODULE_2__["default"];
+Tab.Content = _TabContent__WEBPACK_IMPORTED_MODULE_3__["default"];
+Tab.Pane = _TabPane__WEBPACK_IMPORTED_MODULE_4__["default"];
+/* harmony default export */ __webpack_exports__["default"] = (Tab);
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/TabContainer.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/TabContainer.js ***!
+  \*********************************************************/
+=======
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -14689,12 +20827,22 @@ ModalTitle.defaultProps = {
 /*!************************************************!*\
   !*** ./node_modules/react-bootstrap/es/Nav.js ***!
   \************************************************/
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+<<<<<<< HEAD
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/index.js");
+/* harmony import */ var uncontrollable__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uncontrollable__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _TabContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TabContext */ "./node_modules/react-bootstrap/es/TabContext.js");
+/* harmony import */ var _SelectableContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SelectableContext */ "./node_modules/react-bootstrap/es/SelectableContext.js");
+=======
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
@@ -14713,6 +20861,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AbstractNav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./AbstractNav */ "./node_modules/react-bootstrap/es/AbstractNav.js");
 /* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./NavItem */ "./node_modules/react-bootstrap/es/NavItem.js");
 /* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./NavLink */ "./node_modules/react-bootstrap/es/NavLink.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 
 
@@ -14720,6 +20869,93 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+<<<<<<< HEAD
+var TabContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(TabContainer, _React$Component);
+
+  function TabContainer() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+
+    _this.getControlledId = function (key) {
+      return _this.getKey(key, 'tabpane');
+    };
+
+    _this.getControllerId = function (key) {
+      return _this.getKey(key, 'tab');
+    };
+
+    _this.state = {
+      tabContext: {
+        onSelect: _this.props.onSelect,
+        activeKey: _this.props.activeKey,
+        transition: _this.props.transition,
+        mountOnEnter: _this.props.mountOnEnter,
+        unmountOnExit: _this.props.unmountOnExit,
+        getControlledId: _this.getControlledId,
+        getControllerId: _this.getControllerId
+      }
+    };
+    return _this;
+  }
+
+  TabContainer.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
+    var activeKey = _ref.activeKey,
+        mountOnEnter = _ref.mountOnEnter,
+        unmountOnExit = _ref.unmountOnExit,
+        transition = _ref.transition;
+    return {
+      tabContext: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, prevState.tabContext, {
+        activeKey: activeKey,
+        mountOnEnter: mountOnEnter,
+        unmountOnExit: unmountOnExit,
+        transition: transition
+      })
+    };
+  };
+
+  var _proto = TabContainer.prototype;
+
+  _proto.getKey = function getKey(key, type) {
+    var _this$props = this.props,
+        generateChildId = _this$props.generateChildId,
+        id = _this$props.id;
+    if (generateChildId) return generateChildId(key, type);
+    return id ? id + "-" + type + "-" + key : null;
+  };
+
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        children = _this$props2.children,
+        onSelect = _this$props2.onSelect;
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_TabContext__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
+      value: this.state.tabContext
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_SelectableContext__WEBPACK_IMPORTED_MODULE_5__["default"].Provider, {
+      value: onSelect
+    }, children));
+  };
+
+  return TabContainer;
+}(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (uncontrollable__WEBPACK_IMPORTED_MODULE_3___default()(TabContainer, {
+  activeKey: 'onSelect'
+}));
+
+/***/ }),
+
+/***/ "./node_modules/react-bootstrap/es/TabContent.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-bootstrap/es/TabContent.js ***!
+  \*******************************************************/
+=======
 
 
 
@@ -14887,6 +21123,7 @@ NavDropdown.Header = _Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"].Header;
 /*!****************************************************!*\
   !*** ./node_modules/react-bootstrap/es/NavItem.js ***!
   \****************************************************/
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14907,6 +21144,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+<<<<<<< HEAD
+var TabContent =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__["default"])(TabContent, _React$Component);
+
+  function TabContent() {
+    return _React$Component.apply(this, arguments) || this;
+  }
+
+=======
 var NavItem =
 /*#__PURE__*/
 function (_React$Component) {
@@ -16636,6 +22884,7 @@ function (_React$Component) {
     return _React$Component.apply(this, arguments) || this;
   }
 
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
   var _proto = TabContent.prototype;
 
   _proto.render = function render() {
@@ -33241,6 +39490,1653 @@ function mountLazyComponent(_current, workInProgress, elementType, updateExpirat
         // implementation detail.
         invariant(false, 'Element type is invalid. Received a promise that resolves to: %s. Lazy element type must resolve to a class or function.%s', Component, hint);
       }
+<<<<<<< HEAD
+    }
+    scheduleWork(fiber, _expirationTime);
+  }
+}
+
+var ContextOnlyDispatcher = {
+  readContext: readContext,
+
+  useCallback: throwInvalidHookError,
+  useContext: throwInvalidHookError,
+  useEffect: throwInvalidHookError,
+  useImperativeHandle: throwInvalidHookError,
+  useLayoutEffect: throwInvalidHookError,
+  useMemo: throwInvalidHookError,
+  useReducer: throwInvalidHookError,
+  useRef: throwInvalidHookError,
+  useState: throwInvalidHookError,
+  useDebugValue: throwInvalidHookError
+};
+
+var HooksDispatcherOnMountInDEV = null;
+var HooksDispatcherOnMountWithHookTypesInDEV = null;
+var HooksDispatcherOnUpdateInDEV = null;
+var InvalidNestedHooksDispatcherOnMountInDEV = null;
+var InvalidNestedHooksDispatcherOnUpdateInDEV = null;
+
+{
+  var warnInvalidContextAccess = function () {
+    warning$1(false, 'Context can only be read while React is rendering. ' + 'In classes, you can read it in the render method or getDerivedStateFromProps. ' + 'In function components, you can read it directly in the function body, but not ' + 'inside Hooks like useReducer() or useMemo().');
+  };
+
+  var warnInvalidHookAccess = function () {
+    warning$1(false, 'Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. ' + 'You can only call Hooks at the top level of your React function. ' + 'For more information, see ' + 'https://fb.me/rules-of-hooks');
+  };
+
+  HooksDispatcherOnMountInDEV = {
+    readContext: function (context, observedBits) {
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      mountHookTypesDev();
+      return mountCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      mountHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      mountHookTypesDev();
+      return mountEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      mountHookTypesDev();
+      return mountImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      mountHookTypesDev();
+      return mountLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      mountHookTypesDev();
+      return mountRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      mountHookTypesDev();
+      return mountDebugValue(value, formatterFn);
+    }
+  };
+
+  HooksDispatcherOnMountWithHookTypesInDEV = {
+    readContext: function (context, observedBits) {
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      updateHookTypesDev();
+      return mountCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      updateHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      updateHookTypesDev();
+      return mountEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      updateHookTypesDev();
+      return mountImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      updateHookTypesDev();
+      return mountLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      updateHookTypesDev();
+      return mountRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      updateHookTypesDev();
+      return mountDebugValue(value, formatterFn);
+    }
+  };
+
+  HooksDispatcherOnUpdateInDEV = {
+    readContext: function (context, observedBits) {
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      updateHookTypesDev();
+      return updateCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      updateHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      updateHookTypesDev();
+      return updateEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      updateHookTypesDev();
+      return updateImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      updateHookTypesDev();
+      return updateLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      updateHookTypesDev();
+      return updateRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      updateHookTypesDev();
+      return updateDebugValue(value, formatterFn);
+    }
+  };
+
+  InvalidNestedHooksDispatcherOnMountInDEV = {
+    readContext: function (context, observedBits) {
+      warnInvalidContextAccess();
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountDebugValue(value, formatterFn);
+    }
+  };
+
+  InvalidNestedHooksDispatcherOnUpdateInDEV = {
+    readContext: function (context, observedBits) {
+      warnInvalidContextAccess();
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateDebugValue(value, formatterFn);
+    }
+  };
+}
+
+var commitTime = 0;
+var profilerStartTime = -1;
+
+function getCommitTime() {
+  return commitTime;
+}
+
+function recordCommitTime() {
+  if (!enableProfilerTimer) {
+    return;
+  }
+  commitTime = scheduler.unstable_now();
+}
+
+function startProfilerTimer(fiber) {
+  if (!enableProfilerTimer) {
+    return;
+  }
+
+  profilerStartTime = scheduler.unstable_now();
+
+  if (fiber.actualStartTime < 0) {
+    fiber.actualStartTime = scheduler.unstable_now();
+  }
+}
+
+function stopProfilerTimerIfRunning(fiber) {
+  if (!enableProfilerTimer) {
+    return;
+  }
+  profilerStartTime = -1;
+}
+
+function stopProfilerTimerIfRunningAndRecordDelta(fiber, overrideBaseTime) {
+  if (!enableProfilerTimer) {
+    return;
+  }
+
+  if (profilerStartTime >= 0) {
+    var elapsedTime = scheduler.unstable_now() - profilerStartTime;
+    fiber.actualDuration += elapsedTime;
+    if (overrideBaseTime) {
+      fiber.selfBaseDuration = elapsedTime;
+    }
+    profilerStartTime = -1;
+  }
+}
+
+// The deepest Fiber on the stack involved in a hydration context.
+// This may have been an insertion or a hydration.
+var hydrationParentFiber = null;
+var nextHydratableInstance = null;
+var isHydrating = false;
+
+function enterHydrationState(fiber) {
+  if (!supportsHydration) {
+    return false;
+  }
+
+  var parentInstance = fiber.stateNode.containerInfo;
+  nextHydratableInstance = getFirstHydratableChild(parentInstance);
+  hydrationParentFiber = fiber;
+  isHydrating = true;
+  return true;
+}
+
+function reenterHydrationStateFromDehydratedSuspenseInstance(fiber) {
+  if (!supportsHydration) {
+    return false;
+  }
+
+  var suspenseInstance = fiber.stateNode;
+  nextHydratableInstance = getNextHydratableSibling(suspenseInstance);
+  popToNextHostParent(fiber);
+  isHydrating = true;
+  return true;
+}
+
+function deleteHydratableInstance(returnFiber, instance) {
+  {
+    switch (returnFiber.tag) {
+      case HostRoot:
+        didNotHydrateContainerInstance(returnFiber.stateNode.containerInfo, instance);
+        break;
+      case HostComponent:
+        didNotHydrateInstance(returnFiber.type, returnFiber.memoizedProps, returnFiber.stateNode, instance);
+        break;
+    }
+  }
+
+  var childToDelete = createFiberFromHostInstanceForDeletion();
+  childToDelete.stateNode = instance;
+  childToDelete.return = returnFiber;
+  childToDelete.effectTag = Deletion;
+
+  // This might seem like it belongs on progressedFirstDeletion. However,
+  // these children are not part of the reconciliation list of children.
+  // Even if we abort and rereconcile the children, that will try to hydrate
+  // again and the nodes are still in the host tree so these will be
+  // recreated.
+  if (returnFiber.lastEffect !== null) {
+    returnFiber.lastEffect.nextEffect = childToDelete;
+    returnFiber.lastEffect = childToDelete;
+  } else {
+    returnFiber.firstEffect = returnFiber.lastEffect = childToDelete;
+  }
+}
+
+function insertNonHydratedInstance(returnFiber, fiber) {
+  fiber.effectTag |= Placement;
+  {
+    switch (returnFiber.tag) {
+      case HostRoot:
+        {
+          var parentContainer = returnFiber.stateNode.containerInfo;
+          switch (fiber.tag) {
+            case HostComponent:
+              var type = fiber.type;
+              var props = fiber.pendingProps;
+              didNotFindHydratableContainerInstance(parentContainer, type, props);
+              break;
+            case HostText:
+              var text = fiber.pendingProps;
+              didNotFindHydratableContainerTextInstance(parentContainer, text);
+              break;
+            case SuspenseComponent:
+              
+              break;
+          }
+          break;
+        }
+      case HostComponent:
+        {
+          var parentType = returnFiber.type;
+          var parentProps = returnFiber.memoizedProps;
+          var parentInstance = returnFiber.stateNode;
+          switch (fiber.tag) {
+            case HostComponent:
+              var _type = fiber.type;
+              var _props = fiber.pendingProps;
+              didNotFindHydratableInstance(parentType, parentProps, parentInstance, _type, _props);
+              break;
+            case HostText:
+              var _text = fiber.pendingProps;
+              didNotFindHydratableTextInstance(parentType, parentProps, parentInstance, _text);
+              break;
+            case SuspenseComponent:
+              didNotFindHydratableSuspenseInstance(parentType, parentProps, parentInstance);
+              break;
+          }
+          break;
+        }
+      default:
+        return;
+    }
+  }
+}
+
+function tryHydrate(fiber, nextInstance) {
+  switch (fiber.tag) {
+    case HostComponent:
+      {
+        var type = fiber.type;
+        var props = fiber.pendingProps;
+        var instance = canHydrateInstance(nextInstance, type, props);
+        if (instance !== null) {
+          fiber.stateNode = instance;
+          return true;
+        }
+        return false;
+      }
+    case HostText:
+      {
+        var text = fiber.pendingProps;
+        var textInstance = canHydrateTextInstance(nextInstance, text);
+        if (textInstance !== null) {
+          fiber.stateNode = textInstance;
+          return true;
+        }
+        return false;
+      }
+    case SuspenseComponent:
+      {
+        if (enableSuspenseServerRenderer) {
+          var suspenseInstance = canHydrateSuspenseInstance(nextInstance);
+          if (suspenseInstance !== null) {
+            // Downgrade the tag to a dehydrated component until we've hydrated it.
+            fiber.tag = DehydratedSuspenseComponent;
+            fiber.stateNode = suspenseInstance;
+            return true;
+          }
+        }
+        return false;
+      }
+    default:
+      return false;
+  }
+}
+
+function tryToClaimNextHydratableInstance(fiber) {
+  if (!isHydrating) {
+    return;
+  }
+  var nextInstance = nextHydratableInstance;
+  if (!nextInstance) {
+    // Nothing to hydrate. Make it an insertion.
+    insertNonHydratedInstance(hydrationParentFiber, fiber);
+    isHydrating = false;
+    hydrationParentFiber = fiber;
+    return;
+  }
+  var firstAttemptedInstance = nextInstance;
+  if (!tryHydrate(fiber, nextInstance)) {
+    // If we can't hydrate this instance let's try the next one.
+    // We use this as a heuristic. It's based on intuition and not data so it
+    // might be flawed or unnecessary.
+    nextInstance = getNextHydratableSibling(firstAttemptedInstance);
+    if (!nextInstance || !tryHydrate(fiber, nextInstance)) {
+      // Nothing to hydrate. Make it an insertion.
+      insertNonHydratedInstance(hydrationParentFiber, fiber);
+      isHydrating = false;
+      hydrationParentFiber = fiber;
+      return;
+    }
+    // We matched the next one, we'll now assume that the first one was
+    // superfluous and we'll delete it. Since we can't eagerly delete it
+    // we'll have to schedule a deletion. To do that, this node needs a dummy
+    // fiber associated with it.
+    deleteHydratableInstance(hydrationParentFiber, firstAttemptedInstance);
+  }
+  hydrationParentFiber = fiber;
+  nextHydratableInstance = getFirstHydratableChild(nextInstance);
+}
+
+function prepareToHydrateHostInstance(fiber, rootContainerInstance, hostContext) {
+  if (!supportsHydration) {
+    invariant(false, 'Expected prepareToHydrateHostInstance() to never be called. This error is likely caused by a bug in React. Please file an issue.');
+  }
+
+  var instance = fiber.stateNode;
+  var updatePayload = hydrateInstance(instance, fiber.type, fiber.memoizedProps, rootContainerInstance, hostContext, fiber);
+  // TODO: Type this specific to this type of component.
+  fiber.updateQueue = updatePayload;
+  // If the update payload indicates that there is a change or if there
+  // is a new ref we mark this as an update.
+  if (updatePayload !== null) {
+    return true;
+  }
+  return false;
+}
+
+function prepareToHydrateHostTextInstance(fiber) {
+  if (!supportsHydration) {
+    invariant(false, 'Expected prepareToHydrateHostTextInstance() to never be called. This error is likely caused by a bug in React. Please file an issue.');
+  }
+
+  var textInstance = fiber.stateNode;
+  var textContent = fiber.memoizedProps;
+  var shouldUpdate = hydrateTextInstance(textInstance, textContent, fiber);
+  {
+    if (shouldUpdate) {
+      // We assume that prepareToHydrateHostTextInstance is called in a context where the
+      // hydration parent is the parent host component of this host text.
+      var returnFiber = hydrationParentFiber;
+      if (returnFiber !== null) {
+        switch (returnFiber.tag) {
+          case HostRoot:
+            {
+              var parentContainer = returnFiber.stateNode.containerInfo;
+              didNotMatchHydratedContainerTextInstance(parentContainer, textInstance, textContent);
+              break;
+            }
+          case HostComponent:
+            {
+              var parentType = returnFiber.type;
+              var parentProps = returnFiber.memoizedProps;
+              var parentInstance = returnFiber.stateNode;
+              didNotMatchHydratedTextInstance(parentType, parentProps, parentInstance, textInstance, textContent);
+              break;
+            }
+        }
+      }
+    }
+  }
+  return shouldUpdate;
+}
+
+function skipPastDehydratedSuspenseInstance(fiber) {
+  if (!supportsHydration) {
+    invariant(false, 'Expected skipPastDehydratedSuspenseInstance() to never be called. This error is likely caused by a bug in React. Please file an issue.');
+  }
+  var suspenseInstance = fiber.stateNode;
+  !suspenseInstance ? invariant(false, 'Expected to have a hydrated suspense instance. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+  nextHydratableInstance = getNextHydratableInstanceAfterSuspenseInstance(suspenseInstance);
+}
+
+function popToNextHostParent(fiber) {
+  var parent = fiber.return;
+  while (parent !== null && parent.tag !== HostComponent && parent.tag !== HostRoot && parent.tag !== DehydratedSuspenseComponent) {
+    parent = parent.return;
+  }
+  hydrationParentFiber = parent;
+}
+
+function popHydrationState(fiber) {
+  if (!supportsHydration) {
+    return false;
+  }
+  if (fiber !== hydrationParentFiber) {
+    // We're deeper than the current hydration context, inside an inserted
+    // tree.
+    return false;
+  }
+  if (!isHydrating) {
+    // If we're not currently hydrating but we're in a hydration context, then
+    // we were an insertion and now need to pop up reenter hydration of our
+    // siblings.
+    popToNextHostParent(fiber);
+    isHydrating = true;
+    return false;
+  }
+
+  var type = fiber.type;
+
+  // If we have any remaining hydratable nodes, we need to delete them now.
+  // We only do this deeper than head and body since they tend to have random
+  // other nodes in them. We also ignore components with pure text content in
+  // side of them.
+  // TODO: Better heuristic.
+  if (fiber.tag !== HostComponent || type !== 'head' && type !== 'body' && !shouldSetTextContent(type, fiber.memoizedProps)) {
+    var nextInstance = nextHydratableInstance;
+    while (nextInstance) {
+      deleteHydratableInstance(fiber, nextInstance);
+      nextInstance = getNextHydratableSibling(nextInstance);
+    }
+  }
+
+  popToNextHostParent(fiber);
+  nextHydratableInstance = hydrationParentFiber ? getNextHydratableSibling(fiber.stateNode) : null;
+  return true;
+}
+
+function resetHydrationState() {
+  if (!supportsHydration) {
+    return;
+  }
+
+  hydrationParentFiber = null;
+  nextHydratableInstance = null;
+  isHydrating = false;
+}
+
+var ReactCurrentOwner$3 = ReactSharedInternals.ReactCurrentOwner;
+
+var didReceiveUpdate = false;
+
+var didWarnAboutBadClass = void 0;
+var didWarnAboutContextTypeOnFunctionComponent = void 0;
+var didWarnAboutGetDerivedStateOnFunctionComponent = void 0;
+var didWarnAboutFunctionRefs = void 0;
+var didWarnAboutReassigningProps = void 0;
+
+{
+  didWarnAboutBadClass = {};
+  didWarnAboutContextTypeOnFunctionComponent = {};
+  didWarnAboutGetDerivedStateOnFunctionComponent = {};
+  didWarnAboutFunctionRefs = {};
+  didWarnAboutReassigningProps = false;
+}
+
+function reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime) {
+  if (current$$1 === null) {
+    // If this is a fresh new component that hasn't been rendered yet, we
+    // won't update its child set by applying minimal side-effects. Instead,
+    // we will add them all to the child before it gets rendered. That means
+    // we can optimize this reconciliation pass by not tracking side-effects.
+    workInProgress.child = mountChildFibers(workInProgress, null, nextChildren, renderExpirationTime);
+  } else {
+    // If the current child is the same as the work in progress, it means that
+    // we haven't yet started any work on these children. Therefore, we use
+    // the clone algorithm to create a copy of all the current children.
+
+    // If we had any progressed work already, that is invalid at this point so
+    // let's throw it out.
+    workInProgress.child = reconcileChildFibers(workInProgress, current$$1.child, nextChildren, renderExpirationTime);
+  }
+}
+
+function forceUnmountCurrentAndReconcile(current$$1, workInProgress, nextChildren, renderExpirationTime) {
+  // This function is fork of reconcileChildren. It's used in cases where we
+  // want to reconcile without matching against the existing set. This has the
+  // effect of all current children being unmounted; even if the type and key
+  // are the same, the old child is unmounted and a new child is created.
+  //
+  // To do this, we're going to go through the reconcile algorithm twice. In
+  // the first pass, we schedule a deletion for all the current children by
+  // passing null.
+  workInProgress.child = reconcileChildFibers(workInProgress, current$$1.child, null, renderExpirationTime);
+  // In the second pass, we mount the new children. The trick here is that we
+  // pass null in place of where we usually pass the current child set. This has
+  // the effect of remounting all children regardless of whether their their
+  // identity matches.
+  workInProgress.child = reconcileChildFibers(workInProgress, null, nextChildren, renderExpirationTime);
+}
+
+function updateForwardRef(current$$1, workInProgress, Component, nextProps, renderExpirationTime) {
+  // TODO: current can be non-null here even if the component
+  // hasn't yet mounted. This happens after the first render suspends.
+  // We'll need to figure out if this is fine or can cause issues.
+
+  {
+    if (workInProgress.type !== workInProgress.elementType) {
+      // Lazy component props can't be validated in createElement
+      // because they're only guaranteed to be resolved here.
+      var innerPropTypes = Component.propTypes;
+      if (innerPropTypes) {
+        checkPropTypes(innerPropTypes, nextProps, // Resolved props
+        'prop', getComponentName(Component), getCurrentFiberStackInDev);
+      }
+    }
+  }
+
+  var render = Component.render;
+  var ref = workInProgress.ref;
+
+  // The rest is a fork of updateFunctionComponent
+  var nextChildren = void 0;
+  prepareToReadContext(workInProgress, renderExpirationTime);
+  {
+    ReactCurrentOwner$3.current = workInProgress;
+    setCurrentPhase('render');
+    nextChildren = renderWithHooks(current$$1, workInProgress, render, nextProps, ref, renderExpirationTime);
+    if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+      // Only double-render components with Hooks
+      if (workInProgress.memoizedState !== null) {
+        nextChildren = renderWithHooks(current$$1, workInProgress, render, nextProps, ref, renderExpirationTime);
+      }
+    }
+    setCurrentPhase(null);
+  }
+
+  if (current$$1 !== null && !didReceiveUpdate) {
+    bailoutHooks(current$$1, workInProgress, renderExpirationTime);
+    return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+  }
+
+  // React DevTools reads this flag.
+  workInProgress.effectTag |= PerformedWork;
+  reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime);
+  return workInProgress.child;
+}
+
+function updateMemoComponent(current$$1, workInProgress, Component, nextProps, updateExpirationTime, renderExpirationTime) {
+  if (current$$1 === null) {
+    var type = Component.type;
+    if (isSimpleFunctionComponent(type) && Component.compare === null &&
+    // SimpleMemoComponent codepath doesn't resolve outer props either.
+    Component.defaultProps === undefined) {
+      // If this is a plain function component without default props,
+      // and with only the default shallow comparison, we upgrade it
+      // to a SimpleMemoComponent to allow fast path updates.
+      workInProgress.tag = SimpleMemoComponent;
+      workInProgress.type = type;
+      {
+        validateFunctionComponentInDev(workInProgress, type);
+      }
+      return updateSimpleMemoComponent(current$$1, workInProgress, type, nextProps, updateExpirationTime, renderExpirationTime);
+    }
+    {
+      var innerPropTypes = type.propTypes;
+      if (innerPropTypes) {
+        // Inner memo component props aren't currently validated in createElement.
+        // We could move it there, but we'd still need this for lazy code path.
+        checkPropTypes(innerPropTypes, nextProps, // Resolved props
+        'prop', getComponentName(type), getCurrentFiberStackInDev);
+      }
+    }
+    var child = createFiberFromTypeAndProps(Component.type, null, nextProps, null, workInProgress.mode, renderExpirationTime);
+    child.ref = workInProgress.ref;
+    child.return = workInProgress;
+    workInProgress.child = child;
+    return child;
+  }
+  {
+    var _type = Component.type;
+    var _innerPropTypes = _type.propTypes;
+    if (_innerPropTypes) {
+      // Inner memo component props aren't currently validated in createElement.
+      // We could move it there, but we'd still need this for lazy code path.
+      checkPropTypes(_innerPropTypes, nextProps, // Resolved props
+      'prop', getComponentName(_type), getCurrentFiberStackInDev);
+    }
+  }
+  var currentChild = current$$1.child; // This is always exactly one child
+  if (updateExpirationTime < renderExpirationTime) {
+    // This will be the props with resolved defaultProps,
+    // unlike current.memoizedProps which will be the unresolved ones.
+    var prevProps = currentChild.memoizedProps;
+    // Default to shallow comparison
+    var compare = Component.compare;
+    compare = compare !== null ? compare : shallowEqual;
+    if (compare(prevProps, nextProps) && current$$1.ref === workInProgress.ref) {
+      return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+    }
+  }
+  // React DevTools reads this flag.
+  workInProgress.effectTag |= PerformedWork;
+  var newChild = createWorkInProgress(currentChild, nextProps, renderExpirationTime);
+  newChild.ref = workInProgress.ref;
+  newChild.return = workInProgress;
+  workInProgress.child = newChild;
+  return newChild;
+}
+
+function updateSimpleMemoComponent(current$$1, workInProgress, Component, nextProps, updateExpirationTime, renderExpirationTime) {
+  // TODO: current can be non-null here even if the component
+  // hasn't yet mounted. This happens when the inner render suspends.
+  // We'll need to figure out if this is fine or can cause issues.
+
+  {
+    if (workInProgress.type !== workInProgress.elementType) {
+      // Lazy component props can't be validated in createElement
+      // because they're only guaranteed to be resolved here.
+      var outerMemoType = workInProgress.elementType;
+      if (outerMemoType.$$typeof === REACT_LAZY_TYPE) {
+        // We warn when you define propTypes on lazy()
+        // so let's just skip over it to find memo() outer wrapper.
+        // Inner props for memo are validated later.
+        outerMemoType = refineResolvedLazyComponent(outerMemoType);
+      }
+      var outerPropTypes = outerMemoType && outerMemoType.propTypes;
+      if (outerPropTypes) {
+        checkPropTypes(outerPropTypes, nextProps, // Resolved (SimpleMemoComponent has no defaultProps)
+        'prop', getComponentName(outerMemoType), getCurrentFiberStackInDev);
+      }
+      // Inner propTypes will be validated in the function component path.
+    }
+  }
+  if (current$$1 !== null) {
+    var prevProps = current$$1.memoizedProps;
+    if (shallowEqual(prevProps, nextProps) && current$$1.ref === workInProgress.ref) {
+      didReceiveUpdate = false;
+      if (updateExpirationTime < renderExpirationTime) {
+        return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+      }
+    }
+  }
+  return updateFunctionComponent(current$$1, workInProgress, Component, nextProps, renderExpirationTime);
+}
+
+function updateFragment(current$$1, workInProgress, renderExpirationTime) {
+  var nextChildren = workInProgress.pendingProps;
+  reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime);
+  return workInProgress.child;
+}
+
+function updateMode(current$$1, workInProgress, renderExpirationTime) {
+  var nextChildren = workInProgress.pendingProps.children;
+  reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime);
+  return workInProgress.child;
+}
+
+function updateProfiler(current$$1, workInProgress, renderExpirationTime) {
+  if (enableProfilerTimer) {
+    workInProgress.effectTag |= Update;
+  }
+  var nextProps = workInProgress.pendingProps;
+  var nextChildren = nextProps.children;
+  reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime);
+  return workInProgress.child;
+}
+
+function markRef(current$$1, workInProgress) {
+  var ref = workInProgress.ref;
+  if (current$$1 === null && ref !== null || current$$1 !== null && current$$1.ref !== ref) {
+    // Schedule a Ref effect
+    workInProgress.effectTag |= Ref;
+  }
+}
+
+function updateFunctionComponent(current$$1, workInProgress, Component, nextProps, renderExpirationTime) {
+  {
+    if (workInProgress.type !== workInProgress.elementType) {
+      // Lazy component props can't be validated in createElement
+      // because they're only guaranteed to be resolved here.
+      var innerPropTypes = Component.propTypes;
+      if (innerPropTypes) {
+        checkPropTypes(innerPropTypes, nextProps, // Resolved props
+        'prop', getComponentName(Component), getCurrentFiberStackInDev);
+      }
+    }
+  }
+
+  var unmaskedContext = getUnmaskedContext(workInProgress, Component, true);
+  var context = getMaskedContext(workInProgress, unmaskedContext);
+
+  var nextChildren = void 0;
+  prepareToReadContext(workInProgress, renderExpirationTime);
+  {
+    ReactCurrentOwner$3.current = workInProgress;
+    setCurrentPhase('render');
+    nextChildren = renderWithHooks(current$$1, workInProgress, Component, nextProps, context, renderExpirationTime);
+    if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+      // Only double-render components with Hooks
+      if (workInProgress.memoizedState !== null) {
+        nextChildren = renderWithHooks(current$$1, workInProgress, Component, nextProps, context, renderExpirationTime);
+      }
+    }
+    setCurrentPhase(null);
+  }
+
+  if (current$$1 !== null && !didReceiveUpdate) {
+    bailoutHooks(current$$1, workInProgress, renderExpirationTime);
+    return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+  }
+
+  // React DevTools reads this flag.
+  workInProgress.effectTag |= PerformedWork;
+  reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime);
+  return workInProgress.child;
+}
+
+function updateClassComponent(current$$1, workInProgress, Component, nextProps, renderExpirationTime) {
+  {
+    if (workInProgress.type !== workInProgress.elementType) {
+      // Lazy component props can't be validated in createElement
+      // because they're only guaranteed to be resolved here.
+      var innerPropTypes = Component.propTypes;
+      if (innerPropTypes) {
+        checkPropTypes(innerPropTypes, nextProps, // Resolved props
+        'prop', getComponentName(Component), getCurrentFiberStackInDev);
+      }
+    }
+  }
+
+  // Push context providers early to prevent context stack mismatches.
+  // During mounting we don't know the child context yet as the instance doesn't exist.
+  // We will invalidate the child context in finishClassComponent() right after rendering.
+  var hasContext = void 0;
+  if (isContextProvider(Component)) {
+    hasContext = true;
+    pushContextProvider(workInProgress);
+  } else {
+    hasContext = false;
+  }
+  prepareToReadContext(workInProgress, renderExpirationTime);
+
+  var instance = workInProgress.stateNode;
+  var shouldUpdate = void 0;
+  if (instance === null) {
+    if (current$$1 !== null) {
+      // An class component without an instance only mounts if it suspended
+      // inside a non- concurrent tree, in an inconsistent state. We want to
+      // tree it like a new mount, even though an empty version of it already
+      // committed. Disconnect the alternate pointers.
+      current$$1.alternate = null;
+      workInProgress.alternate = null;
+      // Since this is conceptually a new fiber, schedule a Placement effect
+      workInProgress.effectTag |= Placement;
+    }
+    // In the initial pass we might need to construct the instance.
+    constructClassInstance(workInProgress, Component, nextProps, renderExpirationTime);
+    mountClassInstance(workInProgress, Component, nextProps, renderExpirationTime);
+    shouldUpdate = true;
+  } else if (current$$1 === null) {
+    // In a resume, we'll already have an instance we can reuse.
+    shouldUpdate = resumeMountClassInstance(workInProgress, Component, nextProps, renderExpirationTime);
+  } else {
+    shouldUpdate = updateClassInstance(current$$1, workInProgress, Component, nextProps, renderExpirationTime);
+  }
+  var nextUnitOfWork = finishClassComponent(current$$1, workInProgress, Component, shouldUpdate, hasContext, renderExpirationTime);
+  {
+    var inst = workInProgress.stateNode;
+    if (inst.props !== nextProps) {
+      !didWarnAboutReassigningProps ? warning$1(false, 'It looks like %s is reassigning its own `this.props` while rendering. ' + 'This is not supported and can lead to confusing bugs.', getComponentName(workInProgress.type) || 'a component') : void 0;
+      didWarnAboutReassigningProps = true;
+    }
+  }
+  return nextUnitOfWork;
+}
+
+function finishClassComponent(current$$1, workInProgress, Component, shouldUpdate, hasContext, renderExpirationTime) {
+  // Refs should update even if shouldComponentUpdate returns false
+  markRef(current$$1, workInProgress);
+
+  var didCaptureError = (workInProgress.effectTag & DidCapture) !== NoEffect;
+
+  if (!shouldUpdate && !didCaptureError) {
+    // Context providers should defer to sCU for rendering
+    if (hasContext) {
+      invalidateContextProvider(workInProgress, Component, false);
+    }
+
+    return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+  }
+
+  var instance = workInProgress.stateNode;
+
+  // Rerender
+  ReactCurrentOwner$3.current = workInProgress;
+  var nextChildren = void 0;
+  if (didCaptureError && typeof Component.getDerivedStateFromError !== 'function') {
+    // If we captured an error, but getDerivedStateFrom catch is not defined,
+    // unmount all the children. componentDidCatch will schedule an update to
+    // re-render a fallback. This is temporary until we migrate everyone to
+    // the new API.
+    // TODO: Warn in a future release.
+    nextChildren = null;
+
+    if (enableProfilerTimer) {
+      stopProfilerTimerIfRunning(workInProgress);
+    }
+  } else {
+    {
+      setCurrentPhase('render');
+      nextChildren = instance.render();
+      if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+        instance.render();
+      }
+      setCurrentPhase(null);
+    }
+  }
+
+  // React DevTools reads this flag.
+  workInProgress.effectTag |= PerformedWork;
+  if (current$$1 !== null && didCaptureError) {
+    // If we're recovering from an error, reconcile without reusing any of
+    // the existing children. Conceptually, the normal children and the children
+    // that are shown on error are two different sets, so we shouldn't reuse
+    // normal children even if their identities match.
+    forceUnmountCurrentAndReconcile(current$$1, workInProgress, nextChildren, renderExpirationTime);
+  } else {
+    reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime);
+  }
+
+  // Memoize state using the values we just used to render.
+  // TODO: Restructure so we never read values from the instance.
+  workInProgress.memoizedState = instance.state;
+
+  // The context might have changed so we need to recalculate it.
+  if (hasContext) {
+    invalidateContextProvider(workInProgress, Component, true);
+  }
+
+  return workInProgress.child;
+}
+
+function pushHostRootContext(workInProgress) {
+  var root = workInProgress.stateNode;
+  if (root.pendingContext) {
+    pushTopLevelContextObject(workInProgress, root.pendingContext, root.pendingContext !== root.context);
+  } else if (root.context) {
+    // Should always be set
+    pushTopLevelContextObject(workInProgress, root.context, false);
+  }
+  pushHostContainer(workInProgress, root.containerInfo);
+}
+
+function updateHostRoot(current$$1, workInProgress, renderExpirationTime) {
+  pushHostRootContext(workInProgress);
+  var updateQueue = workInProgress.updateQueue;
+  !(updateQueue !== null) ? invariant(false, 'If the root does not have an updateQueue, we should have already bailed out. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+  var nextProps = workInProgress.pendingProps;
+  var prevState = workInProgress.memoizedState;
+  var prevChildren = prevState !== null ? prevState.element : null;
+  processUpdateQueue(workInProgress, updateQueue, nextProps, null, renderExpirationTime);
+  var nextState = workInProgress.memoizedState;
+  // Caution: React DevTools currently depends on this property
+  // being called "element".
+  var nextChildren = nextState.element;
+  if (nextChildren === prevChildren) {
+    // If the state is the same as before, that's a bailout because we had
+    // no work that expires at this time.
+    resetHydrationState();
+    return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+  }
+  var root = workInProgress.stateNode;
+  if ((current$$1 === null || current$$1.child === null) && root.hydrate && enterHydrationState(workInProgress)) {
+    // If we don't have any current children this might be the first pass.
+    // We always try to hydrate. If this isn't a hydration pass there won't
+    // be any children to hydrate which is effectively the same thing as
+    // not hydrating.
+
+    // This is a bit of a hack. We track the host root as a placement to
+    // know that we're currently in a mounting state. That way isMounted
+    // works as expected. We must reset this before committing.
+    // TODO: Delete this when we delete isMounted and findDOMNode.
+    workInProgress.effectTag |= Placement;
+
+    // Ensure that children mount into this root without tracking
+    // side-effects. This ensures that we don't store Placement effects on
+    // nodes that will be hydrated.
+    workInProgress.child = mountChildFibers(workInProgress, null, nextChildren, renderExpirationTime);
+  } else {
+    // Otherwise reset hydration state in case we aborted and resumed another
+    // root.
+    reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime);
+    resetHydrationState();
+=======
+  }
+  return child;
+}
+
+function mountIncompleteClassComponent(_current, workInProgress, Component, nextProps, renderExpirationTime) {
+  if (_current !== null) {
+    // An incomplete component only mounts if it suspended inside a non-
+    // concurrent tree, in an inconsistent state. We want to treat it like
+    // a new mount, even though an empty version of it already committed.
+    // Disconnect the alternate pointers.
+    _current.alternate = null;
+    workInProgress.alternate = null;
+    // Since this is conceptually a new fiber, schedule a Placement effect
+    workInProgress.effectTag |= Placement;
+  }
+
+  // Promote the fiber to a class and try rendering again.
+  workInProgress.tag = ClassComponent;
+
+  // The rest of this function is a fork of `updateClassComponent`
+
+  // Push context providers early to prevent context stack mismatches.
+  // During mounting we don't know the child context yet as the instance doesn't exist.
+  // We will invalidate the child context in finishClassComponent() right after rendering.
+  var hasContext = void 0;
+  if (isContextProvider(Component)) {
+    hasContext = true;
+    pushContextProvider(workInProgress);
+  } else {
+    hasContext = false;
+  }
+  prepareToReadContext(workInProgress, renderExpirationTime);
+
+  constructClassInstance(workInProgress, Component, nextProps, renderExpirationTime);
+  mountClassInstance(workInProgress, Component, nextProps, renderExpirationTime);
+
+  return finishClassComponent(null, workInProgress, Component, true, hasContext, renderExpirationTime);
+}
+
+function mountIndeterminateComponent(_current, workInProgress, Component, renderExpirationTime) {
+  if (_current !== null) {
+    // An indeterminate component only mounts if it suspended inside a non-
+    // concurrent tree, in an inconsistent state. We want to treat it like
+    // a new mount, even though an empty version of it already committed.
+    // Disconnect the alternate pointers.
+    _current.alternate = null;
+    workInProgress.alternate = null;
+    // Since this is conceptually a new fiber, schedule a Placement effect
+    workInProgress.effectTag |= Placement;
+  }
+
+  var props = workInProgress.pendingProps;
+  var unmaskedContext = getUnmaskedContext(workInProgress, Component, false);
+  var context = getMaskedContext(workInProgress, unmaskedContext);
+
+  prepareToReadContext(workInProgress, renderExpirationTime);
+
+  var value = void 0;
+
+  {
+    if (Component.prototype && typeof Component.prototype.render === 'function') {
+      var componentName = getComponentName(Component) || 'Unknown';
+
+      if (!didWarnAboutBadClass[componentName]) {
+        warningWithoutStack$1(false, "The <%s /> component appears to have a render method, but doesn't extend React.Component. " + 'This is likely to cause errors. Change %s to extend React.Component instead.', componentName, componentName);
+        didWarnAboutBadClass[componentName] = true;
+      }
+    }
+
+    if (workInProgress.mode & StrictMode) {
+      ReactStrictModeWarnings.recordLegacyContextWarning(workInProgress, null);
+    }
+
+    ReactCurrentOwner$3.current = workInProgress;
+    value = renderWithHooks(null, workInProgress, Component, props, context, renderExpirationTime);
+  }
+  // React DevTools reads this flag.
+  workInProgress.effectTag |= PerformedWork;
+
+  if (typeof value === 'object' && value !== null && typeof value.render === 'function' && value.$$typeof === undefined) {
+    // Proceed under the assumption that this is a class instance
+    workInProgress.tag = ClassComponent;
+
+    // Throw out any hooks that were used.
+    resetHooks();
+
+    // Push context providers early to prevent context stack mismatches.
+    // During mounting we don't know the child context yet as the instance doesn't exist.
+    // We will invalidate the child context in finishClassComponent() right after rendering.
+    var hasContext = false;
+    if (isContextProvider(Component)) {
+      hasContext = true;
+      pushContextProvider(workInProgress);
+    } else {
+      hasContext = false;
+    }
+
+    workInProgress.memoizedState = value.state !== null && value.state !== undefined ? value.state : null;
+
+    var getDerivedStateFromProps = Component.getDerivedStateFromProps;
+    if (typeof getDerivedStateFromProps === 'function') {
+      applyDerivedStateFromProps(workInProgress, Component, getDerivedStateFromProps, props);
+    }
+
+    adoptClassInstance(workInProgress, value);
+    mountClassInstance(workInProgress, Component, props, renderExpirationTime);
+    return finishClassComponent(null, workInProgress, Component, true, hasContext, renderExpirationTime);
+  } else {
+    // Proceed under the assumption that this is a function component
+    workInProgress.tag = FunctionComponent;
+    {
+      if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+        // Only double-render components with Hooks
+        if (workInProgress.memoizedState !== null) {
+          value = renderWithHooks(null, workInProgress, Component, props, context, renderExpirationTime);
+        }
+      }
+    }
+    reconcileChildren(null, workInProgress, value, renderExpirationTime);
+    {
+      validateFunctionComponentInDev(workInProgress, Component);
+    }
+    return workInProgress.child;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+  return workInProgress.child;
+}
+
+<<<<<<< HEAD
+function updateHostComponent(current$$1, workInProgress, renderExpirationTime) {
+  pushHostContext(workInProgress);
+
+  if (current$$1 === null) {
+    tryToClaimNextHydratableInstance(workInProgress);
+  }
+
+  var type = workInProgress.type;
+  var nextProps = workInProgress.pendingProps;
+  var prevProps = current$$1 !== null ? current$$1.memoizedProps : null;
+
+  var nextChildren = nextProps.children;
+  var isDirectTextChild = shouldSetTextContent(type, nextProps);
+
+  if (isDirectTextChild) {
+    // We special case a direct text child of a host node. This is a common
+    // case. We won't handle it as a reified child. We will instead handle
+    // this in the host environment that also have access to this prop. That
+    // avoids allocating another HostText fiber and traversing it.
+    nextChildren = null;
+  } else if (prevProps !== null && shouldSetTextContent(type, prevProps)) {
+    // If we're switching from a direct text child to a normal child, or to
+    // empty, we need to schedule the text content to be reset.
+    workInProgress.effectTag |= ContentReset;
+  }
+
+  markRef(current$$1, workInProgress);
+
+  // Check the host config to see if the children are offscreen/hidden.
+  if (renderExpirationTime !== Never && workInProgress.mode & ConcurrentMode && shouldDeprioritizeSubtree(type, nextProps)) {
+    // Schedule this fiber to re-render at offscreen priority. Then bailout.
+    workInProgress.expirationTime = workInProgress.childExpirationTime = Never;
+    return null;
+=======
+function validateFunctionComponentInDev(workInProgress, Component) {
+  if (Component) {
+    !!Component.childContextTypes ? warningWithoutStack$1(false, '%s(...): childContextTypes cannot be defined on a function component.', Component.displayName || Component.name || 'Component') : void 0;
+  }
+  if (workInProgress.ref !== null) {
+    var info = '';
+    var ownerName = getCurrentFiberOwnerNameInDevOrNull();
+    if (ownerName) {
+      info += '\n\nCheck the render method of `' + ownerName + '`.';
+    }
+
+    var warningKey = ownerName || workInProgress._debugID || '';
+    var debugSource = workInProgress._debugSource;
+    if (debugSource) {
+      warningKey = debugSource.fileName + ':' + debugSource.lineNumber;
+    }
+    if (!didWarnAboutFunctionRefs[warningKey]) {
+      didWarnAboutFunctionRefs[warningKey] = true;
+      warning$1(false, 'Function components cannot be given refs. ' + 'Attempts to access this ref will fail. ' + 'Did you mean to use React.forwardRef()?%s', info);
+    }
+  }
+
+  if (typeof Component.getDerivedStateFromProps === 'function') {
+    var componentName = getComponentName(Component) || 'Unknown';
+
+    if (!didWarnAboutGetDerivedStateOnFunctionComponent[componentName]) {
+      warningWithoutStack$1(false, '%s: Function components do not support getDerivedStateFromProps.', componentName);
+      didWarnAboutGetDerivedStateOnFunctionComponent[componentName] = true;
+    }
+  }
+
+  if (typeof Component.contextType === 'object' && Component.contextType !== null) {
+    var _componentName = getComponentName(Component) || 'Unknown';
+
+    if (!didWarnAboutContextTypeOnFunctionComponent[_componentName]) {
+      warningWithoutStack$1(false, '%s: Function components do not support contextType.', _componentName);
+      didWarnAboutContextTypeOnFunctionComponent[_componentName] = true;
+    }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+}
+
+<<<<<<< HEAD
+  reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime);
+  return workInProgress.child;
+}
+
+function updateHostText(current$$1, workInProgress) {
+  if (current$$1 === null) {
+    tryToClaimNextHydratableInstance(workInProgress);
+  }
+  // Nothing to do here. This is terminal. We'll do the completion step
+  // immediately after.
+  return null;
+}
+
+function mountLazyComponent(_current, workInProgress, elementType, updateExpirationTime, renderExpirationTime) {
+  if (_current !== null) {
+    // An lazy component only mounts if it suspended inside a non-
+    // concurrent tree, in an inconsistent state. We want to treat it like
+    // a new mount, even though an empty version of it already committed.
+    // Disconnect the alternate pointers.
+    _current.alternate = null;
+    workInProgress.alternate = null;
+    // Since this is conceptually a new fiber, schedule a Placement effect
+    workInProgress.effectTag |= Placement;
+  }
+
+  var props = workInProgress.pendingProps;
+  // We can't start a User Timing measurement with correct label yet.
+  // Cancel and resume right after we know the tag.
+  cancelWorkTimer(workInProgress);
+  var Component = readLazyComponentType(elementType);
+  // Store the unwrapped component in the type.
+  workInProgress.type = Component;
+  var resolvedTag = workInProgress.tag = resolveLazyComponentTag(Component);
+  startWorkTimer(workInProgress);
+  var resolvedProps = resolveDefaultProps(Component, props);
+  var child = void 0;
+  switch (resolvedTag) {
+    case FunctionComponent:
+      {
+        {
+          validateFunctionComponentInDev(workInProgress, Component);
+        }
+        child = updateFunctionComponent(null, workInProgress, Component, resolvedProps, renderExpirationTime);
+        break;
+      }
+    case ClassComponent:
+      {
+        child = updateClassComponent(null, workInProgress, Component, resolvedProps, renderExpirationTime);
+        break;
+      }
+    case ForwardRef:
+      {
+        child = updateForwardRef(null, workInProgress, Component, resolvedProps, renderExpirationTime);
+        break;
+      }
+    case MemoComponent:
+      {
+        {
+          if (workInProgress.type !== workInProgress.elementType) {
+            var outerPropTypes = Component.propTypes;
+            if (outerPropTypes) {
+              checkPropTypes(outerPropTypes, resolvedProps, // Resolved for outer only
+              'prop', getComponentName(Component), getCurrentFiberStackInDev);
+            }
+=======
+function updateSuspenseComponent(current$$1, workInProgress, renderExpirationTime) {
+  var mode = workInProgress.mode;
+  var nextProps = workInProgress.pendingProps;
+
+  // We should attempt to render the primary children unless this boundary
+  // already suspended during this render (`alreadyCaptured` is true).
+  var nextState = workInProgress.memoizedState;
+
+  var nextDidTimeout = void 0;
+  if ((workInProgress.effectTag & DidCapture) === NoEffect) {
+    // This is the first attempt.
+    nextState = null;
+    nextDidTimeout = false;
+  } else {
+    // Something in this boundary's subtree already suspended. Switch to
+    // rendering the fallback children.
+    nextState = {
+      timedOutAt: nextState !== null ? nextState.timedOutAt : NoWork
+    };
+    nextDidTimeout = true;
+    workInProgress.effectTag &= ~DidCapture;
+  }
+
+  // This next part is a bit confusing. If the children timeout, we switch to
+  // showing the fallback children in place of the "primary" children.
+  // However, we don't want to delete the primary children because then their
+  // state will be lost (both the React state and the host state, e.g.
+  // uncontrolled form inputs). Instead we keep them mounted and hide them.
+  // Both the fallback children AND the primary children are rendered at the
+  // same time. Once the primary children are un-suspended, we can delete
+  // the fallback children — don't need to preserve their state.
+  //
+  // The two sets of children are siblings in the host environment, but
+  // semantically, for purposes of reconciliation, they are two separate sets.
+  // So we store them using two fragment fibers.
+  //
+  // However, we want to avoid allocating extra fibers for every placeholder.
+  // They're only necessary when the children time out, because that's the
+  // only time when both sets are mounted.
+  //
+  // So, the extra fragment fibers are only used if the children time out.
+  // Otherwise, we render the primary children directly. This requires some
+  // custom reconciliation logic to preserve the state of the primary
+  // children. It's essentially a very basic form of re-parenting.
+
+  // `child` points to the child fiber. In the normal case, this is the first
+  // fiber of the primary children set. In the timed-out case, it's a
+  // a fragment fiber containing the primary children.
+  var child = void 0;
+  // `next` points to the next fiber React should render. In the normal case,
+  // it's the same as `child`: the first fiber of the primary children set.
+  // In the timed-out case, it's a fragment fiber containing the *fallback*
+  // children -- we skip over the primary children entirely.
+  var next = void 0;
+  if (current$$1 === null) {
+    if (enableSuspenseServerRenderer) {
+      // If we're currently hydrating, try to hydrate this boundary.
+      // But only if this has a fallback.
+      if (nextProps.fallback !== undefined) {
+        tryToClaimNextHydratableInstance(workInProgress);
+        // This could've changed the tag if this was a dehydrated suspense component.
+        if (workInProgress.tag === DehydratedSuspenseComponent) {
+          return updateDehydratedSuspenseComponent(null, workInProgress, renderExpirationTime);
+        }
+      }
+    }
+
+    // This is the initial mount. This branch is pretty simple because there's
+    // no previous state that needs to be preserved.
+    if (nextDidTimeout) {
+      // Mount separate fragments for primary and fallback children.
+      var nextFallbackChildren = nextProps.fallback;
+      var primaryChildFragment = createFiberFromFragment(null, mode, NoWork, null);
+
+      if ((workInProgress.mode & ConcurrentMode) === NoContext) {
+        // Outside of concurrent mode, we commit the effects from the
+        var progressedState = workInProgress.memoizedState;
+        var progressedPrimaryChild = progressedState !== null ? workInProgress.child.child : workInProgress.child;
+        primaryChildFragment.child = progressedPrimaryChild;
+      }
+
+      var fallbackChildFragment = createFiberFromFragment(nextFallbackChildren, mode, renderExpirationTime, null);
+      primaryChildFragment.sibling = fallbackChildFragment;
+      child = primaryChildFragment;
+      // Skip the primary children, and continue working on the
+      // fallback children.
+      next = fallbackChildFragment;
+      child.return = next.return = workInProgress;
+    } else {
+      // Mount the primary children without an intermediate fragment fiber.
+      var nextPrimaryChildren = nextProps.children;
+      child = next = mountChildFibers(workInProgress, null, nextPrimaryChildren, renderExpirationTime);
+    }
+  } else {
+    // This is an update. This branch is more complicated because we need to
+    // ensure the state of the primary children is preserved.
+    var prevState = current$$1.memoizedState;
+    var prevDidTimeout = prevState !== null;
+    if (prevDidTimeout) {
+      // The current tree already timed out. That means each child set is
+      var currentPrimaryChildFragment = current$$1.child;
+      var currentFallbackChildFragment = currentPrimaryChildFragment.sibling;
+      if (nextDidTimeout) {
+        // Still timed out. Reuse the current primary children by cloning
+        // its fragment. We're going to skip over these entirely.
+        var _nextFallbackChildren = nextProps.fallback;
+        var _primaryChildFragment = createWorkInProgress(currentPrimaryChildFragment, currentPrimaryChildFragment.pendingProps, NoWork);
+
+        if ((workInProgress.mode & ConcurrentMode) === NoContext) {
+          // Outside of concurrent mode, we commit the effects from the
+          var _progressedState = workInProgress.memoizedState;
+          var _progressedPrimaryChild = _progressedState !== null ? workInProgress.child.child : workInProgress.child;
+          if (_progressedPrimaryChild !== currentPrimaryChildFragment.child) {
+            _primaryChildFragment.child = _progressedPrimaryChild;
+          }
+        }
+
+        // Because primaryChildFragment is a new fiber that we're inserting as the
+        // parent of a new tree, we need to set its treeBaseDuration.
+        if (enableProfilerTimer && workInProgress.mode & ProfileMode) {
+          // treeBaseDuration is the sum of all the child tree base durations.
+          var treeBaseDuration = 0;
+          var hiddenChild = _primaryChildFragment.child;
+          while (hiddenChild !== null) {
+            treeBaseDuration += hiddenChild.treeBaseDuration;
+            hiddenChild = hiddenChild.sibling;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+          }
+          _primaryChildFragment.treeBaseDuration = treeBaseDuration;
+        }
+<<<<<<< HEAD
+        child = updateMemoComponent(null, workInProgress, Component, resolveDefaultProps(Component.type, resolvedProps), // The inner type can have defaults too
+        updateExpirationTime, renderExpirationTime);
+        break;
+      }
+    default:
+      {
+        var hint = '';
+        {
+          if (Component !== null && typeof Component === 'object' && Component.$$typeof === REACT_LAZY_TYPE) {
+            hint = ' Did you wrap a component in React.lazy() more than once?';
+          }
+        }
+        // This message intentionally doesn't mention ForwardRef or MemoComponent
+        // because the fact that it's a separate type of work is an
+        // implementation detail.
+        invariant(false, 'Element type is invalid. Received a promise that resolves to: %s. Lazy element type must resolve to a class or function.%s', Component, hint);
+      }
   }
   return child;
 }
@@ -33387,17 +41283,142 @@ function validateFunctionComponentInDev(workInProgress, Component) {
       didWarnAboutFunctionRefs[warningKey] = true;
       warning$1(false, 'Function components cannot be given refs. ' + 'Attempts to access this ref will fail. ' + 'Did you mean to use React.forwardRef()?%s', info);
     }
+=======
+
+        // Clone the fallback child fragment, too. These we'll continue
+        // working on.
+        var _fallbackChildFragment = _primaryChildFragment.sibling = createWorkInProgress(currentFallbackChildFragment, _nextFallbackChildren, currentFallbackChildFragment.expirationTime);
+        child = _primaryChildFragment;
+        _primaryChildFragment.childExpirationTime = NoWork;
+        // Skip the primary children, and continue working on the
+        // fallback children.
+        next = _fallbackChildFragment;
+        child.return = next.return = workInProgress;
+      } else {
+        // No longer suspended. Switch back to showing the primary children,
+        // and remove the intermediate fragment fiber.
+        var _nextPrimaryChildren = nextProps.children;
+        var currentPrimaryChild = currentPrimaryChildFragment.child;
+        var primaryChild = reconcileChildFibers(workInProgress, currentPrimaryChild, _nextPrimaryChildren, renderExpirationTime);
+
+        // If this render doesn't suspend, we need to delete the fallback
+        // children. Wait until the complete phase, after we've confirmed the
+        // fallback is no longer needed.
+        // TODO: Would it be better to store the fallback fragment on
+        // the stateNode?
+
+        // Continue rendering the children, like we normally do.
+        child = next = primaryChild;
+      }
+    } else {
+      // The current tree has not already timed out. That means the primary
+      // children are not wrapped in a fragment fiber.
+      var _currentPrimaryChild = current$$1.child;
+      if (nextDidTimeout) {
+        // Timed out. Wrap the children in a fragment fiber to keep them
+        // separate from the fallback children.
+        var _nextFallbackChildren2 = nextProps.fallback;
+        var _primaryChildFragment2 = createFiberFromFragment(
+        // It shouldn't matter what the pending props are because we aren't
+        // going to render this fragment.
+        null, mode, NoWork, null);
+        _primaryChildFragment2.child = _currentPrimaryChild;
+
+        // Even though we're creating a new fiber, there are no new children,
+        // because we're reusing an already mounted tree. So we don't need to
+        // schedule a placement.
+        // primaryChildFragment.effectTag |= Placement;
+
+        if ((workInProgress.mode & ConcurrentMode) === NoContext) {
+          // Outside of concurrent mode, we commit the effects from the
+          var _progressedState2 = workInProgress.memoizedState;
+          var _progressedPrimaryChild2 = _progressedState2 !== null ? workInProgress.child.child : workInProgress.child;
+          _primaryChildFragment2.child = _progressedPrimaryChild2;
+        }
+
+        // Because primaryChildFragment is a new fiber that we're inserting as the
+        // parent of a new tree, we need to set its treeBaseDuration.
+        if (enableProfilerTimer && workInProgress.mode & ProfileMode) {
+          // treeBaseDuration is the sum of all the child tree base durations.
+          var _treeBaseDuration = 0;
+          var _hiddenChild = _primaryChildFragment2.child;
+          while (_hiddenChild !== null) {
+            _treeBaseDuration += _hiddenChild.treeBaseDuration;
+            _hiddenChild = _hiddenChild.sibling;
+          }
+          _primaryChildFragment2.treeBaseDuration = _treeBaseDuration;
+        }
+
+        // Create a fragment from the fallback children, too.
+        var _fallbackChildFragment2 = _primaryChildFragment2.sibling = createFiberFromFragment(_nextFallbackChildren2, mode, renderExpirationTime, null);
+        _fallbackChildFragment2.effectTag |= Placement;
+        child = _primaryChildFragment2;
+        _primaryChildFragment2.childExpirationTime = NoWork;
+        // Skip the primary children, and continue working on the
+        // fallback children.
+        next = _fallbackChildFragment2;
+        child.return = next.return = workInProgress;
+      } else {
+        // Still haven't timed out.  Continue rendering the children, like we
+        // normally do.
+        var _nextPrimaryChildren2 = nextProps.children;
+        next = child = reconcileChildFibers(workInProgress, _currentPrimaryChild, _nextPrimaryChildren2, renderExpirationTime);
+      }
+    }
+    workInProgress.stateNode = current$$1.stateNode;
   }
 
+  workInProgress.memoizedState = nextState;
+  workInProgress.child = child;
+  return next;
+}
+
+function updateDehydratedSuspenseComponent(current$$1, workInProgress, renderExpirationTime) {
+  if (current$$1 === null) {
+    // During the first pass, we'll bail out and not drill into the children.
+    // Instead, we'll leave the content in place and try to hydrate it later.
+    workInProgress.expirationTime = Never;
+    return null;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+  // We use childExpirationTime to indicate that a child might depend on context, so if
+  // any context has changed, we need to treat is as if the input might have changed.
+  var hasContextChanged$$1 = current$$1.childExpirationTime >= renderExpirationTime;
+  if (didReceiveUpdate || hasContextChanged$$1) {
+    // This boundary has changed since the first render. This means that we are now unable to
+    // hydrate it. We might still be able to hydrate it using an earlier expiration time but
+    // during this render we can't. Instead, we're going to delete the whole subtree and
+    // instead inject a new real Suspense boundary to take its place, which may render content
+    // or fallback. The real Suspense boundary will suspend for a while so we have some time
+    // to ensure it can produce real content, but all state and pending events will be lost.
+
+<<<<<<< HEAD
   if (typeof Component.getDerivedStateFromProps === 'function') {
     var componentName = getComponentName(Component) || 'Unknown';
 
     if (!didWarnAboutGetDerivedStateOnFunctionComponent[componentName]) {
       warningWithoutStack$1(false, '%s: Function components do not support getDerivedStateFromProps.', componentName);
       didWarnAboutGetDerivedStateOnFunctionComponent[componentName] = true;
-    }
-  }
+=======
+    // Detach from the current dehydrated boundary.
+    current$$1.alternate = null;
+    workInProgress.alternate = null;
 
+    // Insert a deletion in the effect list.
+    var returnFiber = workInProgress.return;
+    !(returnFiber !== null) ? invariant(false, 'Suspense boundaries are never on the root. This is probably a bug in React.') : void 0;
+    var last = returnFiber.lastEffect;
+    if (last !== null) {
+      last.nextEffect = current$$1;
+      returnFiber.lastEffect = current$$1;
+    } else {
+      returnFiber.firstEffect = returnFiber.lastEffect = current$$1;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+    }
+    current$$1.nextEffect = null;
+    current$$1.effectTag = Deletion;
+
+<<<<<<< HEAD
   if (typeof Component.contextType === 'object' && Component.contextType !== null) {
     var _componentName = getComponentName(Component) || 'Unknown';
 
@@ -33471,9 +41492,113 @@ function updateSuspenseComponent(current$$1, workInProgress, renderExpirationTim
         // This could've changed the tag if this was a dehydrated suspense component.
         if (workInProgress.tag === DehydratedSuspenseComponent) {
           return updateDehydratedSuspenseComponent(null, workInProgress, renderExpirationTime);
+=======
+    // Upgrade this work in progress to a real Suspense component.
+    workInProgress.tag = SuspenseComponent;
+    workInProgress.stateNode = null;
+    workInProgress.memoizedState = null;
+    // This is now an insertion.
+    workInProgress.effectTag |= Placement;
+    // Retry as a real Suspense component.
+    return updateSuspenseComponent(null, workInProgress, renderExpirationTime);
+  }
+  if ((workInProgress.effectTag & DidCapture) === NoEffect) {
+    // This is the first attempt.
+    reenterHydrationStateFromDehydratedSuspenseInstance(workInProgress);
+    var nextProps = workInProgress.pendingProps;
+    var nextChildren = nextProps.children;
+    workInProgress.child = mountChildFibers(workInProgress, null, nextChildren, renderExpirationTime);
+    return workInProgress.child;
+  } else {
+    // Something suspended. Leave the existing children in place.
+    // TODO: In non-concurrent mode, should we commit the nodes we have hydrated so far?
+    workInProgress.child = null;
+    return null;
+  }
+}
+
+function updatePortalComponent(current$$1, workInProgress, renderExpirationTime) {
+  pushHostContainer(workInProgress, workInProgress.stateNode.containerInfo);
+  var nextChildren = workInProgress.pendingProps;
+  if (current$$1 === null) {
+    // Portals are special because we don't append the children during mount
+    // but at commit. Therefore we need to track insertions which the normal
+    // flow doesn't do during mount. This doesn't happen at the root because
+    // the root always starts with a "current" with a null child.
+    // TODO: Consider unifying this with how the root works.
+    workInProgress.child = reconcileChildFibers(workInProgress, null, nextChildren, renderExpirationTime);
+  } else {
+    reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime);
+  }
+  return workInProgress.child;
+}
+
+function updateContextProvider(current$$1, workInProgress, renderExpirationTime) {
+  var providerType = workInProgress.type;
+  var context = providerType._context;
+
+  var newProps = workInProgress.pendingProps;
+  var oldProps = workInProgress.memoizedProps;
+
+  var newValue = newProps.value;
+
+  {
+    var providerPropTypes = workInProgress.type.propTypes;
+
+    if (providerPropTypes) {
+      checkPropTypes(providerPropTypes, newProps, 'prop', 'Context.Provider', getCurrentFiberStackInDev);
+    }
+  }
+
+  pushProvider(workInProgress, newValue);
+
+  if (oldProps !== null) {
+    var oldValue = oldProps.value;
+    var changedBits = calculateChangedBits(context, newValue, oldValue);
+    if (changedBits === 0) {
+      // No change. Bailout early if children are the same.
+      if (oldProps.children === newProps.children && !hasContextChanged()) {
+        return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+      }
+    } else {
+      // The context value changed. Search for matching consumers and schedule
+      // them to update.
+      propagateContextChange(workInProgress, context, changedBits, renderExpirationTime);
+    }
+  }
+
+  var newChildren = newProps.children;
+  reconcileChildren(current$$1, workInProgress, newChildren, renderExpirationTime);
+  return workInProgress.child;
+}
+
+var hasWarnedAboutUsingContextAsConsumer = false;
+
+function updateContextConsumer(current$$1, workInProgress, renderExpirationTime) {
+  var context = workInProgress.type;
+  // The logic below for Context differs depending on PROD or DEV mode. In
+  // DEV mode, we create a separate object for Context.Consumer that acts
+  // like a proxy to Context. This proxy object adds unnecessary code in PROD
+  // so we use the old behaviour (Context.Consumer references Context) to
+  // reduce size and overhead. The separate object references context via
+  // a property called "_context", which also gives us the ability to check
+  // in DEV mode if this property exists or not and warn if it does not.
+  {
+    if (context._context === undefined) {
+      // This may be because it's a Context (rather than a Consumer).
+      // Or it may be because it's older React where they're the same thing.
+      // We only want to warn if we're sure it's a new React.
+      if (context !== context.Consumer) {
+        if (!hasWarnedAboutUsingContextAsConsumer) {
+          hasWarnedAboutUsingContextAsConsumer = true;
+          warning$1(false, 'Rendering <Context> directly is not supported and will be removed in ' + 'a future major release. Did you mean to render <Context.Consumer> instead?');
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
         }
       }
+    } else {
+      context = context._context;
     }
+<<<<<<< HEAD
 
     // This is the initial mount. This branch is pretty simple because there's
     // no previous state that needs to be preserved.
@@ -33716,55 +41841,7 @@ function updateContextProvider(current$$1, workInProgress, renderExpirationTime)
     if (providerPropTypes) {
       checkPropTypes(providerPropTypes, newProps, 'prop', 'Context.Provider', getCurrentFiberStackInDev);
     }
-  }
-
-  pushProvider(workInProgress, newValue);
-
-  if (oldProps !== null) {
-    var oldValue = oldProps.value;
-    var changedBits = calculateChangedBits(context, newValue, oldValue);
-    if (changedBits === 0) {
-      // No change. Bailout early if children are the same.
-      if (oldProps.children === newProps.children && !hasContextChanged()) {
-        return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
-      }
-    } else {
-      // The context value changed. Search for matching consumers and schedule
-      // them to update.
-      propagateContextChange(workInProgress, context, changedBits, renderExpirationTime);
-    }
-  }
-
-  var newChildren = newProps.children;
-  reconcileChildren(current$$1, workInProgress, newChildren, renderExpirationTime);
-  return workInProgress.child;
-}
-
-var hasWarnedAboutUsingContextAsConsumer = false;
-
-function updateContextConsumer(current$$1, workInProgress, renderExpirationTime) {
-  var context = workInProgress.type;
-  // The logic below for Context differs depending on PROD or DEV mode. In
-  // DEV mode, we create a separate object for Context.Consumer that acts
-  // like a proxy to Context. This proxy object adds unnecessary code in PROD
-  // so we use the old behaviour (Context.Consumer references Context) to
-  // reduce size and overhead. The separate object references context via
-  // a property called "_context", which also gives us the ability to check
-  // in DEV mode if this property exists or not and warn if it does not.
-  {
-    if (context._context === undefined) {
-      // This may be because it's a Context (rather than a Consumer).
-      // Or it may be because it's older React where they're the same thing.
-      // We only want to warn if we're sure it's a new React.
-      if (context !== context.Consumer) {
-        if (!hasWarnedAboutUsingContextAsConsumer) {
-          hasWarnedAboutUsingContextAsConsumer = true;
-          warning$1(false, 'Rendering <Context> directly is not supported and will be removed in ' + 'a future major release. Did you mean to render <Context.Consumer> instead?');
-        }
-      }
-    } else {
-      context = context._context;
-    }
+=======
   }
   var newProps = workInProgress.pendingProps;
   var render = newProps.children;
@@ -34042,6 +42119,874 @@ function enterDisallowedContextReadInDEV() {
 function exitDisallowedContextReadInDEV() {
   {
     isDisallowedContextReadInDEV = false;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+}
+
+<<<<<<< HEAD
+  pushProvider(workInProgress, newValue);
+
+  if (oldProps !== null) {
+    var oldValue = oldProps.value;
+    var changedBits = calculateChangedBits(context, newValue, oldValue);
+    if (changedBits === 0) {
+      // No change. Bailout early if children are the same.
+      if (oldProps.children === newProps.children && !hasContextChanged()) {
+        return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+      }
+    } else {
+      // The context value changed. Search for matching consumers and schedule
+      // them to update.
+      propagateContextChange(workInProgress, context, changedBits, renderExpirationTime);
+    }
+=======
+function pushProvider(providerFiber, nextValue) {
+  var context = providerFiber.type._context;
+
+  if (isPrimaryRenderer) {
+    push(valueCursor, context._currentValue, providerFiber);
+
+    context._currentValue = nextValue;
+    {
+      !(context._currentRenderer === undefined || context._currentRenderer === null || context._currentRenderer === rendererSigil) ? warningWithoutStack$1(false, 'Detected multiple renderers concurrently rendering the ' + 'same context provider. This is currently unsupported.') : void 0;
+      context._currentRenderer = rendererSigil;
+    }
+  } else {
+    push(valueCursor, context._currentValue2, providerFiber);
+
+    context._currentValue2 = nextValue;
+    {
+      !(context._currentRenderer2 === undefined || context._currentRenderer2 === null || context._currentRenderer2 === rendererSigil) ? warningWithoutStack$1(false, 'Detected multiple renderers concurrently rendering the ' + 'same context provider. This is currently unsupported.') : void 0;
+      context._currentRenderer2 = rendererSigil;
+    }
+  }
+}
+
+function popProvider(providerFiber) {
+  var currentValue = valueCursor.current;
+
+  pop(valueCursor, providerFiber);
+
+  var context = providerFiber.type._context;
+  if (isPrimaryRenderer) {
+    context._currentValue = currentValue;
+  } else {
+    context._currentValue2 = currentValue;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+}
+
+<<<<<<< HEAD
+  var newChildren = newProps.children;
+  reconcileChildren(current$$1, workInProgress, newChildren, renderExpirationTime);
+  return workInProgress.child;
+}
+
+var hasWarnedAboutUsingContextAsConsumer = false;
+
+function updateContextConsumer(current$$1, workInProgress, renderExpirationTime) {
+  var context = workInProgress.type;
+  // The logic below for Context differs depending on PROD or DEV mode. In
+  // DEV mode, we create a separate object for Context.Consumer that acts
+  // like a proxy to Context. This proxy object adds unnecessary code in PROD
+  // so we use the old behaviour (Context.Consumer references Context) to
+  // reduce size and overhead. The separate object references context via
+  // a property called "_context", which also gives us the ability to check
+  // in DEV mode if this property exists or not and warn if it does not.
+  {
+    if (context._context === undefined) {
+      // This may be because it's a Context (rather than a Consumer).
+      // Or it may be because it's older React where they're the same thing.
+      // We only want to warn if we're sure it's a new React.
+      if (context !== context.Consumer) {
+        if (!hasWarnedAboutUsingContextAsConsumer) {
+          hasWarnedAboutUsingContextAsConsumer = true;
+          warning$1(false, 'Rendering <Context> directly is not supported and will be removed in ' + 'a future major release. Did you mean to render <Context.Consumer> instead?');
+        }
+      }
+    } else {
+      context = context._context;
+=======
+function calculateChangedBits(context, newValue, oldValue) {
+  if (is(oldValue, newValue)) {
+    // No change
+    return 0;
+  } else {
+    var changedBits = typeof context._calculateChangedBits === 'function' ? context._calculateChangedBits(oldValue, newValue) : maxSigned31BitInt;
+
+    {
+      !((changedBits & maxSigned31BitInt) === changedBits) ? warning$1(false, 'calculateChangedBits: Expected the return value to be a ' + '31-bit integer. Instead received: %s', changedBits) : void 0;
+    }
+    return changedBits | 0;
+  }
+}
+
+function scheduleWorkOnParentPath(parent, renderExpirationTime) {
+  // Update the child expiration time of all the ancestors, including
+  // the alternates.
+  var node = parent;
+  while (node !== null) {
+    var alternate = node.alternate;
+    if (node.childExpirationTime < renderExpirationTime) {
+      node.childExpirationTime = renderExpirationTime;
+      if (alternate !== null && alternate.childExpirationTime < renderExpirationTime) {
+        alternate.childExpirationTime = renderExpirationTime;
+      }
+    } else if (alternate !== null && alternate.childExpirationTime < renderExpirationTime) {
+      alternate.childExpirationTime = renderExpirationTime;
+    } else {
+      // Neither alternate was updated, which means the rest of the
+      // ancestor path already has sufficient priority.
+      break;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+    }
+    node = node.return;
+  }
+<<<<<<< HEAD
+  var newProps = workInProgress.pendingProps;
+  var render = newProps.children;
+
+  {
+    !(typeof render === 'function') ? warningWithoutStack$1(false, 'A context consumer was rendered with multiple children, or a child ' + "that isn't a function. A context consumer expects a single child " + 'that is a function. If you did pass a function, make sure there ' + 'is no trailing or leading whitespace around it.') : void 0;
+  }
+
+  prepareToReadContext(workInProgress, renderExpirationTime);
+  var newValue = readContext(context, newProps.unstable_observedBits);
+  var newChildren = void 0;
+  {
+    ReactCurrentOwner$3.current = workInProgress;
+    setCurrentPhase('render');
+    newChildren = render(newValue);
+    setCurrentPhase(null);
+=======
+}
+
+function propagateContextChange(workInProgress, context, changedBits, renderExpirationTime) {
+  var fiber = workInProgress.child;
+  if (fiber !== null) {
+    // Set the return pointer of the child to the work-in-progress fiber.
+    fiber.return = workInProgress;
+  }
+  while (fiber !== null) {
+    var nextFiber = void 0;
+
+    // Visit this fiber.
+    var list = fiber.contextDependencies;
+    if (list !== null) {
+      nextFiber = fiber.child;
+
+      var dependency = list.first;
+      while (dependency !== null) {
+        // Check if the context matches.
+        if (dependency.context === context && (dependency.observedBits & changedBits) !== 0) {
+          // Match! Schedule an update on this fiber.
+
+          if (fiber.tag === ClassComponent) {
+            // Schedule a force update on the work-in-progress.
+            var update = createUpdate(renderExpirationTime);
+            update.tag = ForceUpdate;
+            // TODO: Because we don't have a work-in-progress, this will add the
+            // update to the current fiber, too, which means it will persist even if
+            // this render is thrown away. Since it's a race condition, not sure it's
+            // worth fixing.
+            enqueueUpdate(fiber, update);
+          }
+
+          if (fiber.expirationTime < renderExpirationTime) {
+            fiber.expirationTime = renderExpirationTime;
+          }
+          var alternate = fiber.alternate;
+          if (alternate !== null && alternate.expirationTime < renderExpirationTime) {
+            alternate.expirationTime = renderExpirationTime;
+          }
+
+          scheduleWorkOnParentPath(fiber.return, renderExpirationTime);
+
+          // Mark the expiration time on the list, too.
+          if (list.expirationTime < renderExpirationTime) {
+            list.expirationTime = renderExpirationTime;
+          }
+
+          // Since we already found a match, we can stop traversing the
+          // dependency list.
+          break;
+        }
+        dependency = dependency.next;
+      }
+    } else if (fiber.tag === ContextProvider) {
+      // Don't scan deeper if this is a matching provider
+      nextFiber = fiber.type === workInProgress.type ? null : fiber.child;
+    } else if (enableSuspenseServerRenderer && fiber.tag === DehydratedSuspenseComponent) {
+      // If a dehydrated suspense component is in this subtree, we don't know
+      // if it will have any context consumers in it. The best we can do is
+      // mark it as having updates on its children.
+      if (fiber.expirationTime < renderExpirationTime) {
+        fiber.expirationTime = renderExpirationTime;
+      }
+      var _alternate = fiber.alternate;
+      if (_alternate !== null && _alternate.expirationTime < renderExpirationTime) {
+        _alternate.expirationTime = renderExpirationTime;
+      }
+      // This is intentionally passing this fiber as the parent
+      // because we want to schedule this fiber as having work
+      // on its children. We'll use the childExpirationTime on
+      // this fiber to indicate that a context has changed.
+      scheduleWorkOnParentPath(fiber, renderExpirationTime);
+      nextFiber = fiber.sibling;
+    } else {
+      // Traverse down.
+      nextFiber = fiber.child;
+    }
+
+    if (nextFiber !== null) {
+      // Set the return pointer of the child to the work-in-progress fiber.
+      nextFiber.return = fiber;
+    } else {
+      // No child. Traverse to next sibling.
+      nextFiber = fiber;
+      while (nextFiber !== null) {
+        if (nextFiber === workInProgress) {
+          // We're back to the root of this subtree. Exit.
+          nextFiber = null;
+          break;
+        }
+        var sibling = nextFiber.sibling;
+        if (sibling !== null) {
+          // Set the return pointer of the sibling to the work-in-progress fiber.
+          sibling.return = nextFiber.return;
+          nextFiber = sibling;
+          break;
+        }
+        // No more siblings. Traverse up.
+        nextFiber = nextFiber.return;
+      }
+    }
+    fiber = nextFiber;
+  }
+}
+
+function prepareToReadContext(workInProgress, renderExpirationTime) {
+  currentlyRenderingFiber = workInProgress;
+  lastContextDependency = null;
+  lastContextWithAllBitsObserved = null;
+
+  var currentDependencies = workInProgress.contextDependencies;
+  if (currentDependencies !== null && currentDependencies.expirationTime >= renderExpirationTime) {
+    // Context list has a pending update. Mark that this fiber performed work.
+    markWorkInProgressReceivedUpdate();
+  }
+
+  // Reset the work-in-progress list
+  workInProgress.contextDependencies = null;
+}
+
+function readContext(context, observedBits) {
+  {
+    // This warning would fire if you read context inside a Hook like useMemo.
+    // Unlike the class check below, it's not enforced in production for perf.
+    !!isDisallowedContextReadInDEV ? warning$1(false, 'Context can only be read while React is rendering. ' + 'In classes, you can read it in the render method or getDerivedStateFromProps. ' + 'In function components, you can read it directly in the function body, but not ' + 'inside Hooks like useReducer() or useMemo().') : void 0;
+  }
+
+  if (lastContextWithAllBitsObserved === context) {
+    // Nothing to do. We already observe everything in this context.
+  } else if (observedBits === false || observedBits === 0) {
+    // Do not observe any updates.
+  } else {
+    var resolvedObservedBits = void 0; // Avoid deopting on observable arguments or heterogeneous types.
+    if (typeof observedBits !== 'number' || observedBits === maxSigned31BitInt) {
+      // Observe all updates.
+      lastContextWithAllBitsObserved = context;
+      resolvedObservedBits = maxSigned31BitInt;
+    } else {
+      resolvedObservedBits = observedBits;
+    }
+
+    var contextItem = {
+      context: context,
+      observedBits: resolvedObservedBits,
+      next: null
+    };
+
+    if (lastContextDependency === null) {
+      !(currentlyRenderingFiber !== null) ? invariant(false, 'Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().') : void 0;
+
+      // This is the first dependency for this component. Create a new list.
+      lastContextDependency = contextItem;
+      currentlyRenderingFiber.contextDependencies = {
+        first: contextItem,
+        expirationTime: NoWork
+      };
+    } else {
+      // Append a new context item.
+      lastContextDependency = lastContextDependency.next = contextItem;
+    }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+  return isPrimaryRenderer ? context._currentValue : context._currentValue2;
+}
+
+// UpdateQueue is a linked list of prioritized updates.
+//
+// Like fibers, update queues come in pairs: a current queue, which represents
+// the visible state of the screen, and a work-in-progress queue, which can be
+// mutated and processed asynchronously before it is committed — a form of
+// double buffering. If a work-in-progress render is discarded before finishing,
+// we create a new work-in-progress by cloning the current queue.
+//
+// Both queues share a persistent, singly-linked list structure. To schedule an
+// update, we append it to the end of both queues. Each queue maintains a
+// pointer to first update in the persistent list that hasn't been processed.
+// The work-in-progress pointer always has a position equal to or greater than
+// the current queue, since we always work on that one. The current queue's
+// pointer is only updated during the commit phase, when we swap in the
+// work-in-progress.
+//
+// For example:
+//
+//   Current pointer:           A - B - C - D - E - F
+//   Work-in-progress pointer:              D - E - F
+//                                          ^
+//                                          The work-in-progress queue has
+//                                          processed more updates than current.
+//
+// The reason we append to both queues is because otherwise we might drop
+// updates without ever processing them. For example, if we only add updates to
+// the work-in-progress queue, some updates could be lost whenever a work-in
+// -progress render restarts by cloning from current. Similarly, if we only add
+// updates to the current queue, the updates will be lost whenever an already
+// in-progress queue commits and swaps with the current queue. However, by
+// adding to both queues, we guarantee that the update will be part of the next
+// work-in-progress. (And because the work-in-progress queue becomes the
+// current queue once it commits, there's no danger of applying the same
+// update twice.)
+//
+// Prioritization
+// --------------
+//
+// Updates are not sorted by priority, but by insertion; new updates are always
+// appended to the end of the list.
+//
+// The priority is still important, though. When processing the update queue
+// during the render phase, only the updates with sufficient priority are
+// included in the result. If we skip an update because it has insufficient
+// priority, it remains in the queue to be processed later, during a lower
+// priority render. Crucially, all updates subsequent to a skipped update also
+// remain in the queue *regardless of their priority*. That means high priority
+// updates are sometimes processed twice, at two separate priorities. We also
+// keep track of a base state, that represents the state before the first
+// update in the queue is applied.
+//
+// For example:
+//
+//   Given a base state of '', and the following queue of updates
+//
+//     A1 - B2 - C1 - D2
+//
+//   where the number indicates the priority, and the update is applied to the
+//   previous state by appending a letter, React will process these updates as
+//   two separate renders, one per distinct priority level:
+//
+//   First render, at priority 1:
+//     Base state: ''
+//     Updates: [A1, C1]
+//     Result state: 'AC'
+//
+//   Second render, at priority 2:
+//     Base state: 'A'            <-  The base state does not include C1,
+//                                    because B2 was skipped.
+//     Updates: [B2, C1, D2]      <-  C1 was rebased on top of B2
+//     Result state: 'ABCD'
+//
+// Because we process updates in insertion order, and rebase high priority
+// updates when preceding updates are skipped, the final result is deterministic
+// regardless of priority. Intermediate state may vary according to system
+// resources, but the final state is always the same.
+
+var UpdateState = 0;
+var ReplaceState = 1;
+var ForceUpdate = 2;
+var CaptureUpdate = 3;
+
+// Global state that is reset at the beginning of calling `processUpdateQueue`.
+// It should only be read right after calling `processUpdateQueue`, via
+// `checkHasForceUpdateAfterProcessing`.
+var hasForceUpdate = false;
+
+var didWarnUpdateInsideUpdate = void 0;
+var currentlyProcessingQueue = void 0;
+var resetCurrentlyProcessingQueue = void 0;
+{
+  didWarnUpdateInsideUpdate = false;
+  currentlyProcessingQueue = null;
+  resetCurrentlyProcessingQueue = function () {
+    currentlyProcessingQueue = null;
+  };
+}
+
+function createUpdateQueue(baseState) {
+  var queue = {
+    baseState: baseState,
+    firstUpdate: null,
+    lastUpdate: null,
+    firstCapturedUpdate: null,
+    lastCapturedUpdate: null,
+    firstEffect: null,
+    lastEffect: null,
+    firstCapturedEffect: null,
+    lastCapturedEffect: null
+  };
+  return queue;
+}
+
+<<<<<<< HEAD
+  // React DevTools reads this flag.
+  workInProgress.effectTag |= PerformedWork;
+  reconcileChildren(current$$1, workInProgress, newChildren, renderExpirationTime);
+  return workInProgress.child;
+}
+
+function markWorkInProgressReceivedUpdate() {
+  didReceiveUpdate = true;
+}
+
+function bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime) {
+  cancelWorkTimer(workInProgress);
+
+  if (current$$1 !== null) {
+    // Reuse previous context list
+    workInProgress.contextDependencies = current$$1.contextDependencies;
+  }
+
+  if (enableProfilerTimer) {
+    // Don't update "base" render times for bailouts.
+    stopProfilerTimerIfRunning(workInProgress);
+  }
+
+  // Check if the children have any pending work.
+  var childExpirationTime = workInProgress.childExpirationTime;
+  if (childExpirationTime < renderExpirationTime) {
+    // The children don't have any work either. We can skip them.
+    // TODO: Once we add back resuming, we should check if the children are
+    // a work-in-progress set. If so, we need to transfer their effects.
+    return null;
+  } else {
+    // This fiber doesn't have work, but its subtree does. Clone the child
+    // fibers and continue.
+    cloneChildFibers(current$$1, workInProgress);
+    return workInProgress.child;
+  }
+}
+
+function beginWork(current$$1, workInProgress, renderExpirationTime) {
+  var updateExpirationTime = workInProgress.expirationTime;
+
+  if (current$$1 !== null) {
+    var oldProps = current$$1.memoizedProps;
+    var newProps = workInProgress.pendingProps;
+
+    if (oldProps !== newProps || hasContextChanged()) {
+      // If props or context changed, mark the fiber as having performed work.
+      // This may be unset if the props are determined to be equal later (memo).
+      didReceiveUpdate = true;
+    } else if (updateExpirationTime < renderExpirationTime) {
+      didReceiveUpdate = false;
+      // This fiber does not have any pending work. Bailout without entering
+      // the begin phase. There's still some bookkeeping we that needs to be done
+      // in this optimized path, mostly pushing stuff onto the stack.
+      switch (workInProgress.tag) {
+        case HostRoot:
+          pushHostRootContext(workInProgress);
+          resetHydrationState();
+          break;
+        case HostComponent:
+          pushHostContext(workInProgress);
+          break;
+        case ClassComponent:
+          {
+            var Component = workInProgress.type;
+            if (isContextProvider(Component)) {
+              pushContextProvider(workInProgress);
+            }
+            break;
+          }
+        case HostPortal:
+          pushHostContainer(workInProgress, workInProgress.stateNode.containerInfo);
+          break;
+        case ContextProvider:
+          {
+            var newValue = workInProgress.memoizedProps.value;
+            pushProvider(workInProgress, newValue);
+            break;
+          }
+        case Profiler:
+          if (enableProfilerTimer) {
+            workInProgress.effectTag |= Update;
+          }
+          break;
+        case SuspenseComponent:
+          {
+            var state = workInProgress.memoizedState;
+            var didTimeout = state !== null;
+            if (didTimeout) {
+              // If this boundary is currently timed out, we need to decide
+              // whether to retry the primary children, or to skip over it and
+              // go straight to the fallback. Check the priority of the primary
+              var primaryChildFragment = workInProgress.child;
+              var primaryChildExpirationTime = primaryChildFragment.childExpirationTime;
+              if (primaryChildExpirationTime !== NoWork && primaryChildExpirationTime >= renderExpirationTime) {
+                // The primary children have pending work. Use the normal path
+                // to attempt to render the primary children again.
+                return updateSuspenseComponent(current$$1, workInProgress, renderExpirationTime);
+              } else {
+                // The primary children do not have pending work with sufficient
+                // priority. Bailout.
+                var child = bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+                if (child !== null) {
+                  // The fallback children have pending work. Skip over the
+                  // primary children and work on the fallback.
+                  return child.sibling;
+                } else {
+                  return null;
+                }
+              }
+            }
+            break;
+          }
+        case DehydratedSuspenseComponent:
+          {
+            if (enableSuspenseServerRenderer) {
+              // We know that this component will suspend again because if it has
+              // been unsuspended it has committed as a regular Suspense component.
+              // If it needs to be retried, it should have work scheduled on it.
+              workInProgress.effectTag |= DidCapture;
+              break;
+            }
+          }
+      }
+      return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+    }
+  } else {
+    didReceiveUpdate = false;
+=======
+function cloneUpdateQueue(currentQueue) {
+  var queue = {
+    baseState: currentQueue.baseState,
+    firstUpdate: currentQueue.firstUpdate,
+    lastUpdate: currentQueue.lastUpdate,
+
+    // TODO: With resuming, if we bail out and resuse the child tree, we should
+    // keep these effects.
+    firstCapturedUpdate: null,
+    lastCapturedUpdate: null,
+
+    firstEffect: null,
+    lastEffect: null,
+
+    firstCapturedEffect: null,
+    lastCapturedEffect: null
+  };
+  return queue;
+}
+
+function createUpdate(expirationTime) {
+  return {
+    expirationTime: expirationTime,
+
+    tag: UpdateState,
+    payload: null,
+    callback: null,
+
+    next: null,
+    nextEffect: null
+  };
+}
+
+function appendUpdateToQueue(queue, update) {
+  // Append the update to the end of the list.
+  if (queue.lastUpdate === null) {
+    // Queue is empty
+    queue.firstUpdate = queue.lastUpdate = update;
+  } else {
+    queue.lastUpdate.next = update;
+    queue.lastUpdate = update;
+  }
+}
+
+function enqueueUpdate(fiber, update) {
+  // Update queues are created lazily.
+  var alternate = fiber.alternate;
+  var queue1 = void 0;
+  var queue2 = void 0;
+  if (alternate === null) {
+    // There's only one fiber.
+    queue1 = fiber.updateQueue;
+    queue2 = null;
+    if (queue1 === null) {
+      queue1 = fiber.updateQueue = createUpdateQueue(fiber.memoizedState);
+    }
+  } else {
+    // There are two owners.
+    queue1 = fiber.updateQueue;
+    queue2 = alternate.updateQueue;
+    if (queue1 === null) {
+      if (queue2 === null) {
+        // Neither fiber has an update queue. Create new ones.
+        queue1 = fiber.updateQueue = createUpdateQueue(fiber.memoizedState);
+        queue2 = alternate.updateQueue = createUpdateQueue(alternate.memoizedState);
+      } else {
+        // Only one fiber has an update queue. Clone to create a new one.
+        queue1 = fiber.updateQueue = cloneUpdateQueue(queue2);
+      }
+    } else {
+      if (queue2 === null) {
+        // Only one fiber has an update queue. Clone to create a new one.
+        queue2 = alternate.updateQueue = cloneUpdateQueue(queue1);
+      } else {
+        // Both owners have an update queue.
+      }
+    }
+  }
+  if (queue2 === null || queue1 === queue2) {
+    // There's only a single queue.
+    appendUpdateToQueue(queue1, update);
+  } else {
+    // There are two queues. We need to append the update to both queues,
+    // while accounting for the persistent structure of the list — we don't
+    // want the same update to be added multiple times.
+    if (queue1.lastUpdate === null || queue2.lastUpdate === null) {
+      // One of the queues is not empty. We must add the update to both queues.
+      appendUpdateToQueue(queue1, update);
+      appendUpdateToQueue(queue2, update);
+    } else {
+      // Both queues are non-empty. The last update is the same in both lists,
+      // because of structural sharing. So, only append to one of the lists.
+      appendUpdateToQueue(queue1, update);
+      // But we still need to update the `lastUpdate` pointer of queue2.
+      queue2.lastUpdate = update;
+    }
+  }
+
+  {
+    if (fiber.tag === ClassComponent && (currentlyProcessingQueue === queue1 || queue2 !== null && currentlyProcessingQueue === queue2) && !didWarnUpdateInsideUpdate) {
+      warningWithoutStack$1(false, 'An update (setState, replaceState, or forceUpdate) was scheduled ' + 'from inside an update function. Update functions should be pure, ' + 'with zero side-effects. Consider using componentDidUpdate or a ' + 'callback.');
+      didWarnUpdateInsideUpdate = true;
+    }
+  }
+}
+
+function enqueueCapturedUpdate(workInProgress, update) {
+  // Captured updates go into a separate list, and only on the work-in-
+  // progress queue.
+  var workInProgressQueue = workInProgress.updateQueue;
+  if (workInProgressQueue === null) {
+    workInProgressQueue = workInProgress.updateQueue = createUpdateQueue(workInProgress.memoizedState);
+  } else {
+    // TODO: I put this here rather than createWorkInProgress so that we don't
+    // clone the queue unnecessarily. There's probably a better way to
+    // structure this.
+    workInProgressQueue = ensureWorkInProgressQueueIsAClone(workInProgress, workInProgressQueue);
+  }
+
+  // Append the update to the end of the list.
+  if (workInProgressQueue.lastCapturedUpdate === null) {
+    // This is the first render phase update
+    workInProgressQueue.firstCapturedUpdate = workInProgressQueue.lastCapturedUpdate = update;
+  } else {
+    workInProgressQueue.lastCapturedUpdate.next = update;
+    workInProgressQueue.lastCapturedUpdate = update;
+  }
+}
+
+function ensureWorkInProgressQueueIsAClone(workInProgress, queue) {
+  var current = workInProgress.alternate;
+  if (current !== null) {
+    // If the work-in-progress queue is equal to the current queue,
+    // we need to clone it first.
+    if (queue === current.updateQueue) {
+      queue = workInProgress.updateQueue = cloneUpdateQueue(queue);
+    }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+  return queue;
+}
+
+<<<<<<< HEAD
+  // Before entering the begin phase, clear the expiration time.
+  workInProgress.expirationTime = NoWork;
+
+  switch (workInProgress.tag) {
+    case IndeterminateComponent:
+      {
+        var elementType = workInProgress.elementType;
+        return mountIndeterminateComponent(current$$1, workInProgress, elementType, renderExpirationTime);
+      }
+    case LazyComponent:
+      {
+        var _elementType = workInProgress.elementType;
+        return mountLazyComponent(current$$1, workInProgress, _elementType, updateExpirationTime, renderExpirationTime);
+      }
+    case FunctionComponent:
+      {
+        var _Component = workInProgress.type;
+        var unresolvedProps = workInProgress.pendingProps;
+        var resolvedProps = workInProgress.elementType === _Component ? unresolvedProps : resolveDefaultProps(_Component, unresolvedProps);
+        return updateFunctionComponent(current$$1, workInProgress, _Component, resolvedProps, renderExpirationTime);
+      }
+    case ClassComponent:
+      {
+        var _Component2 = workInProgress.type;
+        var _unresolvedProps = workInProgress.pendingProps;
+        var _resolvedProps = workInProgress.elementType === _Component2 ? _unresolvedProps : resolveDefaultProps(_Component2, _unresolvedProps);
+        return updateClassComponent(current$$1, workInProgress, _Component2, _resolvedProps, renderExpirationTime);
+      }
+    case HostRoot:
+      return updateHostRoot(current$$1, workInProgress, renderExpirationTime);
+    case HostComponent:
+      return updateHostComponent(current$$1, workInProgress, renderExpirationTime);
+    case HostText:
+      return updateHostText(current$$1, workInProgress);
+    case SuspenseComponent:
+      return updateSuspenseComponent(current$$1, workInProgress, renderExpirationTime);
+    case HostPortal:
+      return updatePortalComponent(current$$1, workInProgress, renderExpirationTime);
+    case ForwardRef:
+      {
+        var type = workInProgress.type;
+        var _unresolvedProps2 = workInProgress.pendingProps;
+        var _resolvedProps2 = workInProgress.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
+        return updateForwardRef(current$$1, workInProgress, type, _resolvedProps2, renderExpirationTime);
+      }
+    case Fragment:
+      return updateFragment(current$$1, workInProgress, renderExpirationTime);
+    case Mode:
+      return updateMode(current$$1, workInProgress, renderExpirationTime);
+    case Profiler:
+      return updateProfiler(current$$1, workInProgress, renderExpirationTime);
+    case ContextProvider:
+      return updateContextProvider(current$$1, workInProgress, renderExpirationTime);
+    case ContextConsumer:
+      return updateContextConsumer(current$$1, workInProgress, renderExpirationTime);
+    case MemoComponent:
+      {
+        var _type2 = workInProgress.type;
+        var _unresolvedProps3 = workInProgress.pendingProps;
+        // Resolve outer props first, then resolve inner props.
+        var _resolvedProps3 = resolveDefaultProps(_type2, _unresolvedProps3);
+        {
+          if (workInProgress.type !== workInProgress.elementType) {
+            var outerPropTypes = _type2.propTypes;
+            if (outerPropTypes) {
+              checkPropTypes(outerPropTypes, _resolvedProps3, // Resolved for outer only
+              'prop', getComponentName(_type2), getCurrentFiberStackInDev);
+=======
+function getStateFromUpdate(workInProgress, queue, update, prevState, nextProps, instance) {
+  switch (update.tag) {
+    case ReplaceState:
+      {
+        var _payload = update.payload;
+        if (typeof _payload === 'function') {
+          // Updater function
+          {
+            enterDisallowedContextReadInDEV();
+            if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+              _payload.call(instance, prevState, nextProps);
+            }
+          }
+          var nextState = _payload.call(instance, prevState, nextProps);
+          {
+            exitDisallowedContextReadInDEV();
+          }
+          return nextState;
+        }
+        // State object
+        return _payload;
+      }
+    case CaptureUpdate:
+      {
+        workInProgress.effectTag = workInProgress.effectTag & ~ShouldCapture | DidCapture;
+      }
+    // Intentional fallthrough
+    case UpdateState:
+      {
+        var _payload2 = update.payload;
+        var partialState = void 0;
+        if (typeof _payload2 === 'function') {
+          // Updater function
+          {
+            enterDisallowedContextReadInDEV();
+            if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+              _payload2.call(instance, prevState, nextProps);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+            }
+          }
+          partialState = _payload2.call(instance, prevState, nextProps);
+          {
+            exitDisallowedContextReadInDEV();
+          }
+        } else {
+          // Partial state object
+          partialState = _payload2;
+        }
+<<<<<<< HEAD
+        _resolvedProps3 = resolveDefaultProps(_type2.type, _resolvedProps3);
+        return updateMemoComponent(current$$1, workInProgress, _type2, _resolvedProps3, updateExpirationTime, renderExpirationTime);
+      }
+    case SimpleMemoComponent:
+      {
+        return updateSimpleMemoComponent(current$$1, workInProgress, workInProgress.type, workInProgress.pendingProps, updateExpirationTime, renderExpirationTime);
+      }
+    case IncompleteClassComponent:
+      {
+        var _Component3 = workInProgress.type;
+        var _unresolvedProps4 = workInProgress.pendingProps;
+        var _resolvedProps4 = workInProgress.elementType === _Component3 ? _unresolvedProps4 : resolveDefaultProps(_Component3, _unresolvedProps4);
+        return mountIncompleteClassComponent(current$$1, workInProgress, _Component3, _resolvedProps4, renderExpirationTime);
+      }
+    case DehydratedSuspenseComponent:
+      {
+        if (enableSuspenseServerRenderer) {
+          return updateDehydratedSuspenseComponent(current$$1, workInProgress, renderExpirationTime);
+        }
+        break;
+      }
+  }
+  invariant(false, 'Unknown unit of work tag. This error is likely caused by a bug in React. Please file an issue.');
+}
+
+var valueCursor = createCursor(null);
+
+var rendererSigil = void 0;
+{
+  // Use this to detect multiple renderers using the same context
+  rendererSigil = {};
+}
+
+var currentlyRenderingFiber = null;
+var lastContextDependency = null;
+var lastContextWithAllBitsObserved = null;
+
+var isDisallowedContextReadInDEV = false;
+
+function resetContextDependences() {
+  // This is called right before React yields execution, to ensure `readContext`
+  // cannot be called outside the render phase.
+  currentlyRenderingFiber = null;
+  lastContextDependency = null;
+  lastContextWithAllBitsObserved = null;
+  {
+    isDisallowedContextReadInDEV = false;
+  }
+}
+
+function enterDisallowedContextReadInDEV() {
+  {
+    isDisallowedContextReadInDEV = true;
+  }
+}
+
+function exitDisallowedContextReadInDEV() {
+  {
+    isDisallowedContextReadInDEV = false;
   }
 }
 
@@ -34111,11 +43056,275 @@ function scheduleWorkOnParentPath(parent, renderExpirationTime) {
       // Neither alternate was updated, which means the rest of the
       // ancestor path already has sufficient priority.
       break;
+=======
+        if (partialState === null || partialState === undefined) {
+          // Null and undefined are treated as no-ops.
+          return prevState;
+        }
+        // Merge the partial state and the previous state.
+        return _assign({}, prevState, partialState);
+      }
+    case ForceUpdate:
+      {
+        hasForceUpdate = true;
+        return prevState;
+      }
+  }
+  return prevState;
+}
+
+function processUpdateQueue(workInProgress, queue, props, instance, renderExpirationTime) {
+  hasForceUpdate = false;
+
+  queue = ensureWorkInProgressQueueIsAClone(workInProgress, queue);
+
+  {
+    currentlyProcessingQueue = queue;
+  }
+
+  // These values may change as we process the queue.
+  var newBaseState = queue.baseState;
+  var newFirstUpdate = null;
+  var newExpirationTime = NoWork;
+
+  // Iterate through the list of updates to compute the result.
+  var update = queue.firstUpdate;
+  var resultState = newBaseState;
+  while (update !== null) {
+    var updateExpirationTime = update.expirationTime;
+    if (updateExpirationTime < renderExpirationTime) {
+      // This update does not have sufficient priority. Skip it.
+      if (newFirstUpdate === null) {
+        // This is the first skipped update. It will be the first update in
+        // the new list.
+        newFirstUpdate = update;
+        // Since this is the first update that was skipped, the current result
+        // is the new base state.
+        newBaseState = resultState;
+      }
+      // Since this update will remain in the list, update the remaining
+      // expiration time.
+      if (newExpirationTime < updateExpirationTime) {
+        newExpirationTime = updateExpirationTime;
+      }
+    } else {
+      // This update does have sufficient priority. Process it and compute
+      // a new result.
+      resultState = getStateFromUpdate(workInProgress, queue, update, resultState, props, instance);
+      var _callback = update.callback;
+      if (_callback !== null) {
+        workInProgress.effectTag |= Callback;
+        // Set this to null, in case it was mutated during an aborted render.
+        update.nextEffect = null;
+        if (queue.lastEffect === null) {
+          queue.firstEffect = queue.lastEffect = update;
+        } else {
+          queue.lastEffect.nextEffect = update;
+          queue.lastEffect = update;
+        }
+      }
+    }
+    // Continue to the next update.
+    update = update.next;
+  }
+
+  // Separately, iterate though the list of captured updates.
+  var newFirstCapturedUpdate = null;
+  update = queue.firstCapturedUpdate;
+  while (update !== null) {
+    var _updateExpirationTime = update.expirationTime;
+    if (_updateExpirationTime < renderExpirationTime) {
+      // This update does not have sufficient priority. Skip it.
+      if (newFirstCapturedUpdate === null) {
+        // This is the first skipped captured update. It will be the first
+        // update in the new list.
+        newFirstCapturedUpdate = update;
+        // If this is the first update that was skipped, the current result is
+        // the new base state.
+        if (newFirstUpdate === null) {
+          newBaseState = resultState;
+        }
+      }
+      // Since this update will remain in the list, update the remaining
+      // expiration time.
+      if (newExpirationTime < _updateExpirationTime) {
+        newExpirationTime = _updateExpirationTime;
+      }
+    } else {
+      // This update does have sufficient priority. Process it and compute
+      // a new result.
+      resultState = getStateFromUpdate(workInProgress, queue, update, resultState, props, instance);
+      var _callback2 = update.callback;
+      if (_callback2 !== null) {
+        workInProgress.effectTag |= Callback;
+        // Set this to null, in case it was mutated during an aborted render.
+        update.nextEffect = null;
+        if (queue.lastCapturedEffect === null) {
+          queue.firstCapturedEffect = queue.lastCapturedEffect = update;
+        } else {
+          queue.lastCapturedEffect.nextEffect = update;
+          queue.lastCapturedEffect = update;
+        }
+      }
+    }
+    update = update.next;
+  }
+
+  if (newFirstUpdate === null) {
+    queue.lastUpdate = null;
+  }
+  if (newFirstCapturedUpdate === null) {
+    queue.lastCapturedUpdate = null;
+  } else {
+    workInProgress.effectTag |= Callback;
+  }
+  if (newFirstUpdate === null && newFirstCapturedUpdate === null) {
+    // We processed every update, without skipping. That means the new base
+    // state is the same as the result state.
+    newBaseState = resultState;
+  }
+
+  queue.baseState = newBaseState;
+  queue.firstUpdate = newFirstUpdate;
+  queue.firstCapturedUpdate = newFirstCapturedUpdate;
+
+  // Set the remaining expiration time to be whatever is remaining in the queue.
+  // This should be fine because the only two other things that contribute to
+  // expiration time are props and context. We're already in the middle of the
+  // begin phase by the time we start processing the queue, so we've already
+  // dealt with the props. Context in components that specify
+  // shouldComponentUpdate is tricky; but we'll have to account for
+  // that regardless.
+  workInProgress.expirationTime = newExpirationTime;
+  workInProgress.memoizedState = resultState;
+
+  {
+    currentlyProcessingQueue = null;
+  }
+}
+
+function callCallback(callback, context) {
+  !(typeof callback === 'function') ? invariant(false, 'Invalid argument passed as callback. Expected a function. Instead received: %s', callback) : void 0;
+  callback.call(context);
+}
+
+function resetHasForceUpdateBeforeProcessing() {
+  hasForceUpdate = false;
+}
+
+function checkHasForceUpdateAfterProcessing() {
+  return hasForceUpdate;
+}
+
+function commitUpdateQueue(finishedWork, finishedQueue, instance, renderExpirationTime) {
+  // If the finished render included captured updates, and there are still
+  // lower priority updates left over, we need to keep the captured updates
+  // in the queue so that they are rebased and not dropped once we process the
+  // queue again at the lower priority.
+  if (finishedQueue.firstCapturedUpdate !== null) {
+    // Join the captured update list to the end of the normal list.
+    if (finishedQueue.lastUpdate !== null) {
+      finishedQueue.lastUpdate.next = finishedQueue.firstCapturedUpdate;
+      finishedQueue.lastUpdate = finishedQueue.lastCapturedUpdate;
+    }
+    // Clear the list of captured updates.
+    finishedQueue.firstCapturedUpdate = finishedQueue.lastCapturedUpdate = null;
+  }
+
+  // Commit the effects
+  commitUpdateEffects(finishedQueue.firstEffect, instance);
+  finishedQueue.firstEffect = finishedQueue.lastEffect = null;
+
+  commitUpdateEffects(finishedQueue.firstCapturedEffect, instance);
+  finishedQueue.firstCapturedEffect = finishedQueue.lastCapturedEffect = null;
+}
+
+function commitUpdateEffects(effect, instance) {
+  while (effect !== null) {
+    var _callback3 = effect.callback;
+    if (_callback3 !== null) {
+      effect.callback = null;
+      callCallback(_callback3, instance);
+    }
+    effect = effect.nextEffect;
+  }
+}
+
+function createCapturedValue(value, source) {
+  // If the value is an error, call this function immediately after it is thrown
+  // so the stack is accurate.
+  return {
+    value: value,
+    source: source,
+    stack: getStackByFiberInDevAndProd(source)
+  };
+}
+
+function markUpdate(workInProgress) {
+  // Tag the fiber with an update effect. This turns a Placement into
+  // a PlacementAndUpdate.
+  workInProgress.effectTag |= Update;
+}
+
+function markRef$1(workInProgress) {
+  workInProgress.effectTag |= Ref;
+}
+
+var appendAllChildren = void 0;
+var updateHostContainer = void 0;
+var updateHostComponent$1 = void 0;
+var updateHostText$1 = void 0;
+if (supportsMutation) {
+  // Mutation mode
+
+  appendAllChildren = function (parent, workInProgress, needsVisibilityToggle, isHidden) {
+    // We only have the top Fiber that was created but we need recurse down its
+    // children to find all the terminal nodes.
+    var node = workInProgress.child;
+    while (node !== null) {
+      if (node.tag === HostComponent || node.tag === HostText) {
+        appendInitialChild(parent, node.stateNode);
+      } else if (node.tag === HostPortal) {
+        // If we have a portal child, then we don't want to traverse
+        // down its children. Instead, we'll get insertions from each child in
+        // the portal directly.
+      } else if (node.child !== null) {
+        node.child.return = node;
+        node = node.child;
+        continue;
+      }
+      if (node === workInProgress) {
+        return;
+      }
+      while (node.sibling === null) {
+        if (node.return === null || node.return === workInProgress) {
+          return;
+        }
+        node = node.return;
+      }
+      node.sibling.return = node.return;
+      node = node.sibling;
+    }
+  };
+
+  updateHostContainer = function (workInProgress) {
+    // Noop
+  };
+  updateHostComponent$1 = function (current, workInProgress, type, newProps, rootContainerInstance) {
+    // If we have an alternate, that means this is an update and we need to
+    // schedule a side-effect to do the updates.
+    var oldProps = current.memoizedProps;
+    if (oldProps === newProps) {
+      // In mutation mode, this is sufficient for a bailout because
+      // we won't touch this node even if children changed.
+      return;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     }
     node = node.return;
   }
 }
 
+<<<<<<< HEAD
 function propagateContextChange(workInProgress, context, changedBits, renderExpirationTime) {
   var fiber = workInProgress.child;
   if (fiber !== null) {
@@ -34518,9 +43727,515 @@ function enqueueCapturedUpdate(workInProgress, update) {
   } else {
     workInProgressQueue.lastCapturedUpdate.next = update;
     workInProgressQueue.lastCapturedUpdate = update;
-  }
+=======
+    // If we get updated because one of our children updated, we don't
+    // have newProps so we'll have to reuse them.
+    // TODO: Split the update API as separate for the props vs. children.
+    // Even better would be if children weren't special cased at all tho.
+    var instance = workInProgress.stateNode;
+    var currentHostContext = getHostContext();
+    // TODO: Experiencing an error where oldProps is null. Suggests a host
+    // component is hitting the resume path. Figure out why. Possibly
+    // related to `hidden`.
+    var updatePayload = prepareUpdate(instance, type, oldProps, newProps, rootContainerInstance, currentHostContext);
+    // TODO: Type this specific to this type of component.
+    workInProgress.updateQueue = updatePayload;
+    // If the update payload indicates that there is a change or if there
+    // is a new ref we mark this as an update. All the work is done in commitWork.
+    if (updatePayload) {
+      markUpdate(workInProgress);
+    }
+  };
+  updateHostText$1 = function (current, workInProgress, oldText, newText) {
+    // If the text differs, mark it as an update. All the work in done in commitWork.
+    if (oldText !== newText) {
+      markUpdate(workInProgress);
+    }
+  };
+} else if (supportsPersistence) {
+  // Persistent host tree mode
+
+  appendAllChildren = function (parent, workInProgress, needsVisibilityToggle, isHidden) {
+    // We only have the top Fiber that was created but we need recurse down its
+    // children to find all the terminal nodes.
+    var node = workInProgress.child;
+    while (node !== null) {
+      // eslint-disable-next-line no-labels
+      branches: if (node.tag === HostComponent) {
+        var instance = node.stateNode;
+        if (needsVisibilityToggle) {
+          var props = node.memoizedProps;
+          var type = node.type;
+          if (isHidden) {
+            // This child is inside a timed out tree. Hide it.
+            instance = cloneHiddenInstance(instance, type, props, node);
+          } else {
+            // This child was previously inside a timed out tree. If it was not
+            // updated during this render, it may need to be unhidden. Clone
+            // again to be sure.
+            instance = cloneUnhiddenInstance(instance, type, props, node);
+          }
+          node.stateNode = instance;
+        }
+        appendInitialChild(parent, instance);
+      } else if (node.tag === HostText) {
+        var _instance = node.stateNode;
+        if (needsVisibilityToggle) {
+          var text = node.memoizedProps;
+          var rootContainerInstance = getRootHostContainer();
+          var currentHostContext = getHostContext();
+          if (isHidden) {
+            _instance = createHiddenTextInstance(text, rootContainerInstance, currentHostContext, workInProgress);
+          } else {
+            _instance = createTextInstance(text, rootContainerInstance, currentHostContext, workInProgress);
+          }
+          node.stateNode = _instance;
+        }
+        appendInitialChild(parent, _instance);
+      } else if (node.tag === HostPortal) {
+        // If we have a portal child, then we don't want to traverse
+        // down its children. Instead, we'll get insertions from each child in
+        // the portal directly.
+      } else if (node.tag === SuspenseComponent) {
+        var current = node.alternate;
+        if (current !== null) {
+          var oldState = current.memoizedState;
+          var newState = node.memoizedState;
+          var oldIsHidden = oldState !== null;
+          var newIsHidden = newState !== null;
+          if (oldIsHidden !== newIsHidden) {
+            // The placeholder either just timed out or switched back to the normal
+            // children after having previously timed out. Toggle the visibility of
+            // the direct host children.
+            var primaryChildParent = newIsHidden ? node.child : node;
+            if (primaryChildParent !== null) {
+              appendAllChildren(parent, primaryChildParent, true, newIsHidden);
+            }
+            // eslint-disable-next-line no-labels
+            break branches;
+          }
+        }
+        if (node.child !== null) {
+          // Continue traversing like normal
+          node.child.return = node;
+          node = node.child;
+          continue;
+        }
+      } else if (node.child !== null) {
+        node.child.return = node;
+        node = node.child;
+        continue;
+      }
+      // $FlowFixMe This is correct but Flow is confused by the labeled break.
+      node = node;
+      if (node === workInProgress) {
+        return;
+      }
+      while (node.sibling === null) {
+        if (node.return === null || node.return === workInProgress) {
+          return;
+        }
+        node = node.return;
+      }
+      node.sibling.return = node.return;
+      node = node.sibling;
+    }
+  };
+
+  // An unfortunate fork of appendAllChildren because we have two different parent types.
+  var appendAllChildrenToContainer = function (containerChildSet, workInProgress, needsVisibilityToggle, isHidden) {
+    // We only have the top Fiber that was created but we need recurse down its
+    // children to find all the terminal nodes.
+    var node = workInProgress.child;
+    while (node !== null) {
+      // eslint-disable-next-line no-labels
+      branches: if (node.tag === HostComponent) {
+        var instance = node.stateNode;
+        if (needsVisibilityToggle) {
+          var props = node.memoizedProps;
+          var type = node.type;
+          if (isHidden) {
+            // This child is inside a timed out tree. Hide it.
+            instance = cloneHiddenInstance(instance, type, props, node);
+          } else {
+            // This child was previously inside a timed out tree. If it was not
+            // updated during this render, it may need to be unhidden. Clone
+            // again to be sure.
+            instance = cloneUnhiddenInstance(instance, type, props, node);
+          }
+          node.stateNode = instance;
+        }
+        appendChildToContainerChildSet(containerChildSet, instance);
+      } else if (node.tag === HostText) {
+        var _instance2 = node.stateNode;
+        if (needsVisibilityToggle) {
+          var text = node.memoizedProps;
+          var rootContainerInstance = getRootHostContainer();
+          var currentHostContext = getHostContext();
+          if (isHidden) {
+            _instance2 = createHiddenTextInstance(text, rootContainerInstance, currentHostContext, workInProgress);
+          } else {
+            _instance2 = createTextInstance(text, rootContainerInstance, currentHostContext, workInProgress);
+          }
+          node.stateNode = _instance2;
+        }
+        appendChildToContainerChildSet(containerChildSet, _instance2);
+      } else if (node.tag === HostPortal) {
+        // If we have a portal child, then we don't want to traverse
+        // down its children. Instead, we'll get insertions from each child in
+        // the portal directly.
+      } else if (node.tag === SuspenseComponent) {
+        var current = node.alternate;
+        if (current !== null) {
+          var oldState = current.memoizedState;
+          var newState = node.memoizedState;
+          var oldIsHidden = oldState !== null;
+          var newIsHidden = newState !== null;
+          if (oldIsHidden !== newIsHidden) {
+            // The placeholder either just timed out or switched back to the normal
+            // children after having previously timed out. Toggle the visibility of
+            // the direct host children.
+            var primaryChildParent = newIsHidden ? node.child : node;
+            if (primaryChildParent !== null) {
+              appendAllChildrenToContainer(containerChildSet, primaryChildParent, true, newIsHidden);
+            }
+            // eslint-disable-next-line no-labels
+            break branches;
+          }
+        }
+        if (node.child !== null) {
+          // Continue traversing like normal
+          node.child.return = node;
+          node = node.child;
+          continue;
+        }
+      } else if (node.child !== null) {
+        node.child.return = node;
+        node = node.child;
+        continue;
+      }
+      // $FlowFixMe This is correct but Flow is confused by the labeled break.
+      node = node;
+      if (node === workInProgress) {
+        return;
+      }
+      while (node.sibling === null) {
+        if (node.return === null || node.return === workInProgress) {
+          return;
+        }
+        node = node.return;
+      }
+      node.sibling.return = node.return;
+      node = node.sibling;
+    }
+  };
+  updateHostContainer = function (workInProgress) {
+    var portalOrRoot = workInProgress.stateNode;
+    var childrenUnchanged = workInProgress.firstEffect === null;
+    if (childrenUnchanged) {
+      // No changes, just reuse the existing instance.
+    } else {
+      var container = portalOrRoot.containerInfo;
+      var newChildSet = createContainerChildSet(container);
+      // If children might have changed, we have to add them all to the set.
+      appendAllChildrenToContainer(newChildSet, workInProgress, false, false);
+      portalOrRoot.pendingChildren = newChildSet;
+      // Schedule an update on the container to swap out the container.
+      markUpdate(workInProgress);
+      finalizeContainerChildren(container, newChildSet);
+    }
+  };
+  updateHostComponent$1 = function (current, workInProgress, type, newProps, rootContainerInstance) {
+    var currentInstance = current.stateNode;
+    var oldProps = current.memoizedProps;
+    // If there are no effects associated with this node, then none of our children had any updates.
+    // This guarantees that we can reuse all of them.
+    var childrenUnchanged = workInProgress.firstEffect === null;
+    if (childrenUnchanged && oldProps === newProps) {
+      // No changes, just reuse the existing instance.
+      // Note that this might release a previous clone.
+      workInProgress.stateNode = currentInstance;
+      return;
+    }
+    var recyclableInstance = workInProgress.stateNode;
+    var currentHostContext = getHostContext();
+    var updatePayload = null;
+    if (oldProps !== newProps) {
+      updatePayload = prepareUpdate(recyclableInstance, type, oldProps, newProps, rootContainerInstance, currentHostContext);
+    }
+    if (childrenUnchanged && updatePayload === null) {
+      // No changes, just reuse the existing instance.
+      // Note that this might release a previous clone.
+      workInProgress.stateNode = currentInstance;
+      return;
+    }
+    var newInstance = cloneInstance(currentInstance, updatePayload, type, oldProps, newProps, workInProgress, childrenUnchanged, recyclableInstance);
+    if (finalizeInitialChildren(newInstance, type, newProps, rootContainerInstance, currentHostContext)) {
+      markUpdate(workInProgress);
+    }
+    workInProgress.stateNode = newInstance;
+    if (childrenUnchanged) {
+      // If there are no other effects in this tree, we need to flag this node as having one.
+      // Even though we're not going to use it for anything.
+      // Otherwise parents won't know that there are new children to propagate upwards.
+      markUpdate(workInProgress);
+    } else {
+      // If children might have changed, we have to add them all to the set.
+      appendAllChildren(newInstance, workInProgress, false, false);
+    }
+  };
+  updateHostText$1 = function (current, workInProgress, oldText, newText) {
+    if (oldText !== newText) {
+      // If the text content differs, we'll create a new text instance for it.
+      var rootContainerInstance = getRootHostContainer();
+      var currentHostContext = getHostContext();
+      workInProgress.stateNode = createTextInstance(newText, rootContainerInstance, currentHostContext, workInProgress);
+      // We'll have to mark it as having an effect, even though we won't use the effect for anything.
+      // This lets the parents know that at least one of their children has changed.
+      markUpdate(workInProgress);
+    }
+  };
+} else {
+  // No host operations
+  updateHostContainer = function (workInProgress) {
+    // Noop
+  };
+  updateHostComponent$1 = function (current, workInProgress, type, newProps, rootContainerInstance) {
+    // Noop
+  };
+  updateHostText$1 = function (current, workInProgress, oldText, newText) {
+    // Noop
+  };
 }
 
+function completeWork(current, workInProgress, renderExpirationTime) {
+  var newProps = workInProgress.pendingProps;
+
+  switch (workInProgress.tag) {
+    case IndeterminateComponent:
+      break;
+    case LazyComponent:
+      break;
+    case SimpleMemoComponent:
+    case FunctionComponent:
+      break;
+    case ClassComponent:
+      {
+        var Component = workInProgress.type;
+        if (isContextProvider(Component)) {
+          popContext(workInProgress);
+        }
+        break;
+      }
+    case HostRoot:
+      {
+        popHostContainer(workInProgress);
+        popTopLevelContextObject(workInProgress);
+        var fiberRoot = workInProgress.stateNode;
+        if (fiberRoot.pendingContext) {
+          fiberRoot.context = fiberRoot.pendingContext;
+          fiberRoot.pendingContext = null;
+        }
+        if (current === null || current.child === null) {
+          // If we hydrated, pop so that we can delete any remaining children
+          // that weren't hydrated.
+          popHydrationState(workInProgress);
+          // This resets the hacky state to fix isMounted before committing.
+          // TODO: Delete this when we delete isMounted and findDOMNode.
+          workInProgress.effectTag &= ~Placement;
+        }
+        updateHostContainer(workInProgress);
+        break;
+      }
+    case HostComponent:
+      {
+        popHostContext(workInProgress);
+        var rootContainerInstance = getRootHostContainer();
+        var type = workInProgress.type;
+        if (current !== null && workInProgress.stateNode != null) {
+          updateHostComponent$1(current, workInProgress, type, newProps, rootContainerInstance);
+
+          if (current.ref !== workInProgress.ref) {
+            markRef$1(workInProgress);
+          }
+        } else {
+          if (!newProps) {
+            !(workInProgress.stateNode !== null) ? invariant(false, 'We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+            // This can happen when we abort work.
+            break;
+          }
+
+          var currentHostContext = getHostContext();
+          // TODO: Move createInstance to beginWork and keep it on a context
+          // "stack" as the parent. Then append children as we go in beginWork
+          // or completeWork depending on we want to add then top->down or
+          // bottom->up. Top->down is faster in IE11.
+          var wasHydrated = popHydrationState(workInProgress);
+          if (wasHydrated) {
+            // TODO: Move this and createInstance step into the beginPhase
+            // to consolidate.
+            if (prepareToHydrateHostInstance(workInProgress, rootContainerInstance, currentHostContext)) {
+              // If changes to the hydrated node needs to be applied at the
+              // commit-phase we mark this as such.
+              markUpdate(workInProgress);
+            }
+          } else {
+            var instance = createInstance(type, newProps, rootContainerInstance, currentHostContext, workInProgress);
+
+            appendAllChildren(instance, workInProgress, false, false);
+
+            // Certain renderers require commit-time effects for initial mount.
+            // (eg DOM renderer supports auto-focus for certain elements).
+            // Make sure such renderers get scheduled for later work.
+            if (finalizeInitialChildren(instance, type, newProps, rootContainerInstance, currentHostContext)) {
+              markUpdate(workInProgress);
+            }
+            workInProgress.stateNode = instance;
+          }
+
+          if (workInProgress.ref !== null) {
+            // If there is a ref on a host node we need to schedule a callback
+            markRef$1(workInProgress);
+          }
+        }
+        break;
+      }
+    case HostText:
+      {
+        var newText = newProps;
+        if (current && workInProgress.stateNode != null) {
+          var oldText = current.memoizedProps;
+          // If we have an alternate, that means this is an update and we need
+          // to schedule a side-effect to do the updates.
+          updateHostText$1(current, workInProgress, oldText, newText);
+        } else {
+          if (typeof newText !== 'string') {
+            !(workInProgress.stateNode !== null) ? invariant(false, 'We must have new props for new mounts. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+            // This can happen when we abort work.
+          }
+          var _rootContainerInstance = getRootHostContainer();
+          var _currentHostContext = getHostContext();
+          var _wasHydrated = popHydrationState(workInProgress);
+          if (_wasHydrated) {
+            if (prepareToHydrateHostTextInstance(workInProgress)) {
+              markUpdate(workInProgress);
+            }
+          } else {
+            workInProgress.stateNode = createTextInstance(newText, _rootContainerInstance, _currentHostContext, workInProgress);
+          }
+        }
+        break;
+      }
+    case ForwardRef:
+      break;
+    case SuspenseComponent:
+      {
+        var nextState = workInProgress.memoizedState;
+        if ((workInProgress.effectTag & DidCapture) !== NoEffect) {
+          // Something suspended. Re-render with the fallback children.
+          workInProgress.expirationTime = renderExpirationTime;
+          // Do not reset the effect list.
+          return workInProgress;
+        }
+
+        var nextDidTimeout = nextState !== null;
+        var prevDidTimeout = current !== null && current.memoizedState !== null;
+
+        if (current !== null && !nextDidTimeout && prevDidTimeout) {
+          // We just switched from the fallback to the normal children. Delete
+          // the fallback.
+          // TODO: Would it be better to store the fallback fragment on
+          var currentFallbackChild = current.child.sibling;
+          if (currentFallbackChild !== null) {
+            // Deletions go at the beginning of the return fiber's effect list
+            var first = workInProgress.firstEffect;
+            if (first !== null) {
+              workInProgress.firstEffect = currentFallbackChild;
+              currentFallbackChild.nextEffect = first;
+            } else {
+              workInProgress.firstEffect = workInProgress.lastEffect = currentFallbackChild;
+              currentFallbackChild.nextEffect = null;
+            }
+            currentFallbackChild.effectTag = Deletion;
+          }
+        }
+
+        if (nextDidTimeout || prevDidTimeout) {
+          // If the children are hidden, or if they were previous hidden, schedule
+          // an effect to toggle their visibility. This is also used to attach a
+          // retry listener to the promise.
+          workInProgress.effectTag |= Update;
+        }
+        break;
+      }
+    case Fragment:
+      break;
+    case Mode:
+      break;
+    case Profiler:
+      break;
+    case HostPortal:
+      popHostContainer(workInProgress);
+      updateHostContainer(workInProgress);
+      break;
+    case ContextProvider:
+      // Pop provider fiber
+      popProvider(workInProgress);
+      break;
+    case ContextConsumer:
+      break;
+    case MemoComponent:
+      break;
+    case IncompleteClassComponent:
+      {
+        // Same as class component case. I put it down here so that the tags are
+        // sequential to ensure this switch is compiled to a jump table.
+        var _Component = workInProgress.type;
+        if (isContextProvider(_Component)) {
+          popContext(workInProgress);
+        }
+        break;
+      }
+    case DehydratedSuspenseComponent:
+      {
+        if (enableSuspenseServerRenderer) {
+          if (current === null) {
+            var _wasHydrated2 = popHydrationState(workInProgress);
+            !_wasHydrated2 ? invariant(false, 'A dehydrated suspense component was completed without a hydrated node. This is probably a bug in React.') : void 0;
+            skipPastDehydratedSuspenseInstance(workInProgress);
+          } else if ((workInProgress.effectTag & DidCapture) === NoEffect) {
+            // This boundary did not suspend so it's now hydrated.
+            // To handle any future suspense cases, we're going to now upgrade it
+            // to a Suspense component. We detach it from the existing current fiber.
+            current.alternate = null;
+            workInProgress.alternate = null;
+            workInProgress.tag = SuspenseComponent;
+            workInProgress.memoizedState = null;
+            workInProgress.stateNode = null;
+          }
+        }
+        break;
+      }
+    default:
+      invariant(false, 'Unknown unit of work tag. This error is likely caused by a bug in React. Please file an issue.');
+  }
+
+  return null;
+}
+
+function shouldCaptureSuspense(workInProgress) {
+  // In order to capture, the Suspense component must have a fallback prop.
+  if (workInProgress.memoizedProps.fallback === undefined) {
+    return false;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+  // If it was the primary children that just suspended, capture and render the
+  // fallback. Otherwise, don't capture and bubble to the next boundary.
+  var nextState = workInProgress.memoizedState;
+  return nextState === null;
+}
+
+<<<<<<< HEAD
 function ensureWorkInProgressQueueIsAClone(workInProgress, queue) {
   var current = workInProgress.alternate;
   if (current !== null) {
@@ -34600,8 +44315,27 @@ function processUpdateQueue(workInProgress, queue, props, instance, renderExpira
   hasForceUpdate = false;
 
   queue = ensureWorkInProgressQueueIsAClone(workInProgress, queue);
+=======
+// This module is forked in different environments.
+// By default, return `true` to log errors to the console.
+// Forks can return `false` if this isn't desirable.
+function showErrorDialog(capturedError) {
+  return true;
+}
 
+function logCapturedError(capturedError) {
+  var logError = showErrorDialog(capturedError);
+
+  // Allow injected showErrorDialog() to prevent default console.error logging.
+  // This enables renderers like ReactNative to better manage redbox behavior.
+  if (logError === false) {
+    return;
+  }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+  var error = capturedError.error;
   {
+<<<<<<< HEAD
     currentlyProcessingQueue = queue;
   }
 
@@ -34667,6 +44401,43 @@ function processUpdateQueue(workInProgress, queue, props, instance, renderExpira
         if (newFirstUpdate === null) {
           newBaseState = resultState;
         }
+=======
+    var componentName = capturedError.componentName,
+        componentStack = capturedError.componentStack,
+        errorBoundaryName = capturedError.errorBoundaryName,
+        errorBoundaryFound = capturedError.errorBoundaryFound,
+        willRetry = capturedError.willRetry;
+
+    // Browsers support silencing uncaught errors by calling
+    // `preventDefault()` in window `error` handler.
+    // We record this information as an expando on the error.
+
+    if (error != null && error._suppressLogging) {
+      if (errorBoundaryFound && willRetry) {
+        // The error is recoverable and was silenced.
+        // Ignore it and don't print the stack addendum.
+        // This is handy for testing error boundaries without noise.
+        return;
+      }
+      // The error is fatal. Since the silencing might have
+      // been accidental, we'll surface it anyway.
+      // However, the browser would have silenced the original error
+      // so we'll print it first, and then print the stack addendum.
+      console.error(error);
+      // For a more detailed description of this block, see:
+      // https://github.com/facebook/react/pull/13384
+    }
+
+    var componentNameMessage = componentName ? 'The above error occurred in the <' + componentName + '> component:' : 'The above error occurred in one of your React components:';
+
+    var errorBoundaryMessage = void 0;
+    // errorBoundaryFound check is sufficient; errorBoundaryName check is to satisfy Flow.
+    if (errorBoundaryFound && errorBoundaryName) {
+      if (willRetry) {
+        errorBoundaryMessage = 'React will try to recreate this component tree from scratch ' + ('using the error boundary you provided, ' + errorBoundaryName + '.');
+      } else {
+        errorBoundaryMessage = 'This error was initially handled by the error boundary ' + errorBoundaryName + '.\n' + 'Recreating the tree from scratch failed so React will unmount the tree.';
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
       }
       // Since this update will remain in the list, update the remaining
       // expiration time.
@@ -34674,6 +44445,7 @@ function processUpdateQueue(workInProgress, queue, props, instance, renderExpira
         newExpirationTime = _updateExpirationTime;
       }
     } else {
+<<<<<<< HEAD
       // This update does have sufficient priority. Process it and compute
       // a new result.
       resultState = getStateFromUpdate(workInProgress, queue, update, resultState, props, instance);
@@ -35310,100 +45082,7 @@ function completeWork(current, workInProgress, renderExpirationTime) {
           popContext(workInProgress);
         }
         break;
-      }
-    case DehydratedSuspenseComponent:
-      {
-        if (enableSuspenseServerRenderer) {
-          if (current === null) {
-            var _wasHydrated2 = popHydrationState(workInProgress);
-            !_wasHydrated2 ? invariant(false, 'A dehydrated suspense component was completed without a hydrated node. This is probably a bug in React.') : void 0;
-            skipPastDehydratedSuspenseInstance(workInProgress);
-          } else if ((workInProgress.effectTag & DidCapture) === NoEffect) {
-            // This boundary did not suspend so it's now hydrated.
-            // To handle any future suspense cases, we're going to now upgrade it
-            // to a Suspense component. We detach it from the existing current fiber.
-            current.alternate = null;
-            workInProgress.alternate = null;
-            workInProgress.tag = SuspenseComponent;
-            workInProgress.memoizedState = null;
-            workInProgress.stateNode = null;
-          }
-        }
-        break;
-      }
-    default:
-      invariant(false, 'Unknown unit of work tag. This error is likely caused by a bug in React. Please file an issue.');
-  }
-
-  return null;
-}
-
-function shouldCaptureSuspense(workInProgress) {
-  // In order to capture, the Suspense component must have a fallback prop.
-  if (workInProgress.memoizedProps.fallback === undefined) {
-    return false;
-  }
-  // If it was the primary children that just suspended, capture and render the
-  // fallback. Otherwise, don't capture and bubble to the next boundary.
-  var nextState = workInProgress.memoizedState;
-  return nextState === null;
-}
-
-// This module is forked in different environments.
-// By default, return `true` to log errors to the console.
-// Forks can return `false` if this isn't desirable.
-function showErrorDialog(capturedError) {
-  return true;
-}
-
-function logCapturedError(capturedError) {
-  var logError = showErrorDialog(capturedError);
-
-  // Allow injected showErrorDialog() to prevent default console.error logging.
-  // This enables renderers like ReactNative to better manage redbox behavior.
-  if (logError === false) {
-    return;
-  }
-
-  var error = capturedError.error;
-  {
-    var componentName = capturedError.componentName,
-        componentStack = capturedError.componentStack,
-        errorBoundaryName = capturedError.errorBoundaryName,
-        errorBoundaryFound = capturedError.errorBoundaryFound,
-        willRetry = capturedError.willRetry;
-
-    // Browsers support silencing uncaught errors by calling
-    // `preventDefault()` in window `error` handler.
-    // We record this information as an expando on the error.
-
-    if (error != null && error._suppressLogging) {
-      if (errorBoundaryFound && willRetry) {
-        // The error is recoverable and was silenced.
-        // Ignore it and don't print the stack addendum.
-        // This is handy for testing error boundaries without noise.
-        return;
-      }
-      // The error is fatal. Since the silencing might have
-      // been accidental, we'll surface it anyway.
-      // However, the browser would have silenced the original error
-      // so we'll print it first, and then print the stack addendum.
-      console.error(error);
-      // For a more detailed description of this block, see:
-      // https://github.com/facebook/react/pull/13384
-    }
-
-    var componentNameMessage = componentName ? 'The above error occurred in the <' + componentName + '> component:' : 'The above error occurred in one of your React components:';
-
-    var errorBoundaryMessage = void 0;
-    // errorBoundaryFound check is sufficient; errorBoundaryName check is to satisfy Flow.
-    if (errorBoundaryFound && errorBoundaryName) {
-      if (willRetry) {
-        errorBoundaryMessage = 'React will try to recreate this component tree from scratch ' + ('using the error boundary you provided, ' + errorBoundaryName + '.');
-      } else {
-        errorBoundaryMessage = 'This error was initially handled by the error boundary ' + errorBoundaryName + '.\n' + 'Recreating the tree from scratch failed so React will unmount the tree.';
-      }
-    } else {
+=======
       errorBoundaryMessage = 'Consider adding an error boundary to your tree to customize error handling behavior.\n' + 'Visit https://fb.me/react-error-boundaries to learn more about error boundaries.';
     }
     var combinedMessage = '' + componentNameMessage + componentStack + '\n\n' + ('' + errorBoundaryMessage);
@@ -35662,9 +45341,27 @@ function commitLifeCycles(finishedRoot, current$$1, finishedWork, committedExpir
           commitUpdateQueue(finishedWork, updateQueue, instance, committedExpirationTime);
         }
         return;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
       }
     case HostRoot:
       {
+<<<<<<< HEAD
+        if (enableSuspenseServerRenderer) {
+          if (current === null) {
+            var _wasHydrated2 = popHydrationState(workInProgress);
+            !_wasHydrated2 ? invariant(false, 'A dehydrated suspense component was completed without a hydrated node. This is probably a bug in React.') : void 0;
+            skipPastDehydratedSuspenseInstance(workInProgress);
+          } else if ((workInProgress.effectTag & DidCapture) === NoEffect) {
+            // This boundary did not suspend so it's now hydrated.
+            // To handle any future suspense cases, we're going to now upgrade it
+            // to a Suspense component. We detach it from the existing current fiber.
+            current.alternate = null;
+            workInProgress.alternate = null;
+            workInProgress.tag = SuspenseComponent;
+            workInProgress.memoizedState = null;
+            workInProgress.stateNode = null;
+          }
+=======
         var _updateQueue = finishedWork.updateQueue;
         if (_updateQueue !== null) {
           var _instance = null;
@@ -35679,9 +45376,23 @@ function commitLifeCycles(finishedRoot, current$$1, finishedWork, committedExpir
             }
           }
           commitUpdateQueue(finishedWork, _updateQueue, _instance, committedExpirationTime);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
         }
         return;
       }
+<<<<<<< HEAD
+    default:
+      invariant(false, 'Unknown unit of work tag. This error is likely caused by a bug in React. Please file an issue.');
+  }
+
+  return null;
+}
+
+function shouldCaptureSuspense(workInProgress) {
+  // In order to capture, the Suspense component must have a fallback prop.
+  if (workInProgress.memoizedProps.fallback === undefined) {
+    return false;
+=======
     case HostComponent:
       {
         var _instance2 = finishedWork.stateNode;
@@ -35811,9 +45522,169 @@ function commitDetachRef(current$$1) {
     } else {
       currentRef.current = null;
     }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+  // If it was the primary children that just suspended, capture and render the
+  // fallback. Otherwise, don't capture and bubble to the next boundary.
+  var nextState = workInProgress.memoizedState;
+  return nextState === null;
+}
+
+<<<<<<< HEAD
+// This module is forked in different environments.
+// By default, return `true` to log errors to the console.
+// Forks can return `false` if this isn't desirable.
+function showErrorDialog(capturedError) {
+  return true;
+}
+
+function logCapturedError(capturedError) {
+  var logError = showErrorDialog(capturedError);
+
+  // Allow injected showErrorDialog() to prevent default console.error logging.
+  // This enables renderers like ReactNative to better manage redbox behavior.
+  if (logError === false) {
+    return;
+  }
+
+  var error = capturedError.error;
+  {
+    var componentName = capturedError.componentName,
+        componentStack = capturedError.componentStack,
+        errorBoundaryName = capturedError.errorBoundaryName,
+        errorBoundaryFound = capturedError.errorBoundaryFound,
+        willRetry = capturedError.willRetry;
+
+    // Browsers support silencing uncaught errors by calling
+    // `preventDefault()` in window `error` handler.
+    // We record this information as an expando on the error.
+
+    if (error != null && error._suppressLogging) {
+      if (errorBoundaryFound && willRetry) {
+        // The error is recoverable and was silenced.
+        // Ignore it and don't print the stack addendum.
+        // This is handy for testing error boundaries without noise.
+        return;
+      }
+      // The error is fatal. Since the silencing might have
+      // been accidental, we'll surface it anyway.
+      // However, the browser would have silenced the original error
+      // so we'll print it first, and then print the stack addendum.
+      console.error(error);
+      // For a more detailed description of this block, see:
+      // https://github.com/facebook/react/pull/13384
+    }
+
+    var componentNameMessage = componentName ? 'The above error occurred in the <' + componentName + '> component:' : 'The above error occurred in one of your React components:';
+
+    var errorBoundaryMessage = void 0;
+    // errorBoundaryFound check is sufficient; errorBoundaryName check is to satisfy Flow.
+    if (errorBoundaryFound && errorBoundaryName) {
+      if (willRetry) {
+        errorBoundaryMessage = 'React will try to recreate this component tree from scratch ' + ('using the error boundary you provided, ' + errorBoundaryName + '.');
+      } else {
+        errorBoundaryMessage = 'This error was initially handled by the error boundary ' + errorBoundaryName + '.\n' + 'Recreating the tree from scratch failed so React will unmount the tree.';
+      }
+    } else {
+      errorBoundaryMessage = 'Consider adding an error boundary to your tree to customize error handling behavior.\n' + 'Visit https://fb.me/react-error-boundaries to learn more about error boundaries.';
+    }
+    var combinedMessage = '' + componentNameMessage + componentStack + '\n\n' + ('' + errorBoundaryMessage);
+
+    // In development, we provide our own message with just the component stack.
+    // We don't include the original error message and JS stack because the browser
+    // has already printed it. Even if the application swallows the error, it is still
+    // displayed by the browser thanks to the DEV-only fake event trick in ReactErrorUtils.
+    console.error(combinedMessage);
   }
 }
 
+var didWarnAboutUndefinedSnapshotBeforeUpdate = null;
+{
+  didWarnAboutUndefinedSnapshotBeforeUpdate = new Set();
+}
+
+var PossiblyWeakSet$1 = typeof WeakSet === 'function' ? WeakSet : Set;
+
+function logError(boundary, errorInfo) {
+  var source = errorInfo.source;
+  var stack = errorInfo.stack;
+  if (stack === null && source !== null) {
+    stack = getStackByFiberInDevAndProd(source);
+  }
+
+  var capturedError = {
+    componentName: source !== null ? getComponentName(source.type) : null,
+    componentStack: stack !== null ? stack : '',
+    error: errorInfo.value,
+    errorBoundary: null,
+    errorBoundaryName: null,
+    errorBoundaryFound: false,
+    willRetry: false
+  };
+
+  if (boundary !== null && boundary.tag === ClassComponent) {
+    capturedError.errorBoundary = boundary.stateNode;
+    capturedError.errorBoundaryName = getComponentName(boundary.type);
+    capturedError.errorBoundaryFound = true;
+    capturedError.willRetry = true;
+  }
+
+  try {
+    logCapturedError(capturedError);
+  } catch (e) {
+    // This method must not throw, or React internal state will get messed up.
+    // If console.error is overridden, or logCapturedError() shows a dialog that throws,
+    // we want to report this error outside of the normal stack as a last resort.
+    // https://github.com/facebook/react/issues/13188
+    setTimeout(function () {
+      throw e;
+    });
+  }
+}
+
+var callComponentWillUnmountWithTimer = function (current$$1, instance) {
+  startPhaseTimer(current$$1, 'componentWillUnmount');
+  instance.props = current$$1.memoizedProps;
+  instance.state = current$$1.memoizedState;
+  instance.componentWillUnmount();
+  stopPhaseTimer();
+};
+
+// Capture errors so they don't interrupt unmounting.
+function safelyCallComponentWillUnmount(current$$1, instance) {
+  {
+    invokeGuardedCallback(null, callComponentWillUnmountWithTimer, null, current$$1, instance);
+    if (hasCaughtError()) {
+      var unmountError = clearCaughtError();
+      captureCommitPhaseError(current$$1, unmountError);
+    }
+  }
+}
+
+function safelyDetachRef(current$$1) {
+  var ref = current$$1.ref;
+  if (ref !== null) {
+    if (typeof ref === 'function') {
+      {
+        invokeGuardedCallback(null, ref, null, null);
+        if (hasCaughtError()) {
+          var refError = clearCaughtError();
+          captureCommitPhaseError(current$$1, refError);
+        }
+      }
+    } else {
+      ref.current = null;
+    }
+  }
+}
+
+function safelyCallDestroy(current$$1, destroy) {
+  {
+    invokeGuardedCallback(null, destroy, null);
+    if (hasCaughtError()) {
+      var error = clearCaughtError();
+      captureCommitPhaseError(current$$1, error);
+=======
 // User-originating errors (lifecycles and refs) should not interrupt
 // deletion, so don't let them throw. Host-originating errors should
 // interrupt deletion, so it's okay
@@ -36189,6 +46060,934 @@ function unmountHostComponents(current$$1) {
         // Since we don't keep a stack of them, we will search for it.
         currentParentIsValid = false;
       }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+    }
+    node.sibling.return = node.return;
+    node = node.sibling;
+  }
+}
+
+<<<<<<< HEAD
+function commitBeforeMutationLifeCycles(current$$1, finishedWork) {
+  switch (finishedWork.tag) {
+    case FunctionComponent:
+    case ForwardRef:
+    case SimpleMemoComponent:
+      {
+        commitHookEffectList(UnmountSnapshot, NoEffect$1, finishedWork);
+        return;
+      }
+    case ClassComponent:
+      {
+        if (finishedWork.effectTag & Snapshot) {
+          if (current$$1 !== null) {
+            var prevProps = current$$1.memoizedProps;
+            var prevState = current$$1.memoizedState;
+            startPhaseTimer(finishedWork, 'getSnapshotBeforeUpdate');
+            var instance = finishedWork.stateNode;
+            // We could update instance props and state here,
+            // but instead we rely on them being set during last render.
+            // TODO: revisit this when we implement resuming.
+            {
+              if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
+                !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected %s props to match memoized props before ' + 'getSnapshotBeforeUpdate. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+                !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected %s state to match memoized state before ' + 'getSnapshotBeforeUpdate. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+              }
+            }
+            var snapshot = instance.getSnapshotBeforeUpdate(finishedWork.elementType === finishedWork.type ? prevProps : resolveDefaultProps(finishedWork.type, prevProps), prevState);
+            {
+              var didWarnSet = didWarnAboutUndefinedSnapshotBeforeUpdate;
+              if (snapshot === undefined && !didWarnSet.has(finishedWork.type)) {
+                didWarnSet.add(finishedWork.type);
+                warningWithoutStack$1(false, '%s.getSnapshotBeforeUpdate(): A snapshot value (or null) ' + 'must be returned. You have returned undefined.', getComponentName(finishedWork.type));
+              }
+            }
+            instance.__reactInternalSnapshotBeforeUpdate = snapshot;
+            stopPhaseTimer();
+          }
+        }
+        return;
+      }
+    case HostRoot:
+    case HostComponent:
+    case HostText:
+    case HostPortal:
+    case IncompleteClassComponent:
+      // Nothing to do for these component types
+      return;
+    default:
+      {
+        invariant(false, 'This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.');
+      }
+  }
+}
+
+function commitHookEffectList(unmountTag, mountTag, finishedWork) {
+  var updateQueue = finishedWork.updateQueue;
+  var lastEffect = updateQueue !== null ? updateQueue.lastEffect : null;
+  if (lastEffect !== null) {
+    var firstEffect = lastEffect.next;
+    var effect = firstEffect;
+    do {
+      if ((effect.tag & unmountTag) !== NoEffect$1) {
+        // Unmount
+        var destroy = effect.destroy;
+        effect.destroy = undefined;
+        if (destroy !== undefined) {
+          destroy();
+        }
+      }
+      if ((effect.tag & mountTag) !== NoEffect$1) {
+        // Mount
+        var create = effect.create;
+        effect.destroy = create();
+
+        {
+          var _destroy = effect.destroy;
+          if (_destroy !== undefined && typeof _destroy !== 'function') {
+            var addendum = void 0;
+            if (_destroy === null) {
+              addendum = ' You returned null. If your effect does not require clean ' + 'up, return undefined (or nothing).';
+            } else if (typeof _destroy.then === 'function') {
+              addendum = '\n\nIt looks like you wrote useEffect(async () => ...) or returned a Promise. ' + 'Instead, you may write an async function separately ' + 'and then call it from inside the effect:\n\n' + 'async function fetchComment(commentId) {\n' + '  // You can await here\n' + '}\n\n' + 'useEffect(() => {\n' + '  fetchComment(commentId);\n' + '}, [commentId]);\n\n' + 'In the future, React will provide a more idiomatic solution for data fetching ' + "that doesn't involve writing effects manually.";
+            } else {
+              addendum = ' You returned: ' + _destroy;
+            }
+            warningWithoutStack$1(false, 'An Effect function must not return anything besides a function, ' + 'which is used for clean-up.%s%s', addendum, getStackByFiberInDevAndProd(finishedWork));
+          }
+        }
+      }
+      effect = effect.next;
+    } while (effect !== firstEffect);
+=======
+function commitDeletion(current$$1) {
+  if (supportsMutation) {
+    // Recursively delete all host nodes from the parent.
+    // Detach refs and call componentWillUnmount() on the whole subtree.
+    unmountHostComponents(current$$1);
+  } else {
+    // Detach refs and call componentWillUnmount() on the whole subtree.
+    commitNestedUnmounts(current$$1);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+  detachFiber(current$$1);
+}
+
+<<<<<<< HEAD
+function commitPassiveHookEffects(finishedWork) {
+  commitHookEffectList(UnmountPassive, NoEffect$1, finishedWork);
+  commitHookEffectList(NoEffect$1, MountPassive, finishedWork);
+}
+
+function commitLifeCycles(finishedRoot, current$$1, finishedWork, committedExpirationTime) {
+  switch (finishedWork.tag) {
+    case FunctionComponent:
+    case ForwardRef:
+    case SimpleMemoComponent:
+      {
+        commitHookEffectList(UnmountLayout, MountLayout, finishedWork);
+        break;
+      }
+    case ClassComponent:
+      {
+        var instance = finishedWork.stateNode;
+        if (finishedWork.effectTag & Update) {
+          if (current$$1 === null) {
+            startPhaseTimer(finishedWork, 'componentDidMount');
+            // We could update instance props and state here,
+            // but instead we rely on them being set during last render.
+            // TODO: revisit this when we implement resuming.
+            {
+              if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
+                !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected %s props to match memoized props before ' + 'componentDidMount. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+                !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected %s state to match memoized state before ' + 'componentDidMount. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+              }
+            }
+            instance.componentDidMount();
+            stopPhaseTimer();
+          } else {
+            var prevProps = finishedWork.elementType === finishedWork.type ? current$$1.memoizedProps : resolveDefaultProps(finishedWork.type, current$$1.memoizedProps);
+            var prevState = current$$1.memoizedState;
+            startPhaseTimer(finishedWork, 'componentDidUpdate');
+            // We could update instance props and state here,
+            // but instead we rely on them being set during last render.
+            // TODO: revisit this when we implement resuming.
+            {
+              if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
+                !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected %s props to match memoized props before ' + 'componentDidUpdate. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+                !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected %s state to match memoized state before ' + 'componentDidUpdate. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+              }
+            }
+            instance.componentDidUpdate(prevProps, prevState, instance.__reactInternalSnapshotBeforeUpdate);
+            stopPhaseTimer();
+          }
+        }
+        var updateQueue = finishedWork.updateQueue;
+        if (updateQueue !== null) {
+          {
+            if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
+              !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected %s props to match memoized props before ' + 'processing the update queue. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+              !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected %s state to match memoized state before ' + 'processing the update queue. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+            }
+          }
+          // We could update instance props and state here,
+          // but instead we rely on them being set during last render.
+          // TODO: revisit this when we implement resuming.
+          commitUpdateQueue(finishedWork, updateQueue, instance, committedExpirationTime);
+        }
+        return;
+      }
+    case HostRoot:
+      {
+        var _updateQueue = finishedWork.updateQueue;
+        if (_updateQueue !== null) {
+          var _instance = null;
+          if (finishedWork.child !== null) {
+            switch (finishedWork.child.tag) {
+              case HostComponent:
+                _instance = getPublicInstance(finishedWork.child.stateNode);
+                break;
+              case ClassComponent:
+                _instance = finishedWork.child.stateNode;
+                break;
+            }
+          }
+          commitUpdateQueue(finishedWork, _updateQueue, _instance, committedExpirationTime);
+        }
+        return;
+      }
+    case HostComponent:
+      {
+        var _instance2 = finishedWork.stateNode;
+
+        // Renderers may schedule work to be done after host components are mounted
+        // (eg DOM renderer may schedule auto-focus for inputs and form controls).
+        // These effects should only be committed when components are first mounted,
+        // aka when there is no current/alternate.
+        if (current$$1 === null && finishedWork.effectTag & Update) {
+          var type = finishedWork.type;
+          var props = finishedWork.memoizedProps;
+          commitMount(_instance2, type, props, finishedWork);
+        }
+
+        return;
+      }
+    case HostText:
+      {
+        // We have no life-cycles associated with text.
+        return;
+      }
+    case HostPortal:
+      {
+        // We have no life-cycles associated with portals.
+        return;
+      }
+    case Profiler:
+      {
+        if (enableProfilerTimer) {
+          var onRender = finishedWork.memoizedProps.onRender;
+
+          if (enableSchedulerTracing) {
+            onRender(finishedWork.memoizedProps.id, current$$1 === null ? 'mount' : 'update', finishedWork.actualDuration, finishedWork.treeBaseDuration, finishedWork.actualStartTime, getCommitTime(), finishedRoot.memoizedInteractions);
+          } else {
+            onRender(finishedWork.memoizedProps.id, current$$1 === null ? 'mount' : 'update', finishedWork.actualDuration, finishedWork.treeBaseDuration, finishedWork.actualStartTime, getCommitTime());
+=======
+function commitWork(current$$1, finishedWork) {
+  if (!supportsMutation) {
+    switch (finishedWork.tag) {
+      case FunctionComponent:
+      case ForwardRef:
+      case MemoComponent:
+      case SimpleMemoComponent:
+        {
+          // Note: We currently never use MountMutation, but useLayout uses
+          // UnmountMutation.
+          commitHookEffectList(UnmountMutation, MountMutation, finishedWork);
+          return;
+        }
+    }
+
+    commitContainer(finishedWork);
+    return;
+  }
+
+  switch (finishedWork.tag) {
+    case FunctionComponent:
+    case ForwardRef:
+    case MemoComponent:
+    case SimpleMemoComponent:
+      {
+        // Note: We currently never use MountMutation, but useLayout uses
+        // UnmountMutation.
+        commitHookEffectList(UnmountMutation, MountMutation, finishedWork);
+        return;
+      }
+    case ClassComponent:
+      {
+        return;
+      }
+    case HostComponent:
+      {
+        var instance = finishedWork.stateNode;
+        if (instance != null) {
+          // Commit the work prepared earlier.
+          var newProps = finishedWork.memoizedProps;
+          // For hydration we reuse the update path but we treat the oldProps
+          // as the newProps. The updatePayload will contain the real change in
+          // this case.
+          var oldProps = current$$1 !== null ? current$$1.memoizedProps : newProps;
+          var type = finishedWork.type;
+          // TODO: Type the updateQueue to be specific to host components.
+          var updatePayload = finishedWork.updateQueue;
+          finishedWork.updateQueue = null;
+          if (updatePayload !== null) {
+            commitUpdate(instance, updatePayload, type, oldProps, newProps, finishedWork);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+          }
+        }
+        return;
+      }
+<<<<<<< HEAD
+    case SuspenseComponent:
+      break;
+    case IncompleteClassComponent:
+      break;
+    default:
+      {
+        invariant(false, 'This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.');
+      }
+  }
+}
+
+function hideOrUnhideAllChildren(finishedWork, isHidden) {
+  if (supportsMutation) {
+    // We only have the top Fiber that was inserted but we need to recurse down its
+    var node = finishedWork;
+    while (true) {
+      if (node.tag === HostComponent) {
+        var instance = node.stateNode;
+        if (isHidden) {
+          hideInstance(instance);
+        } else {
+          unhideInstance(node.stateNode, node.memoizedProps);
+        }
+      } else if (node.tag === HostText) {
+        var _instance3 = node.stateNode;
+        if (isHidden) {
+          hideTextInstance(_instance3);
+        } else {
+          unhideTextInstance(_instance3, node.memoizedProps);
+        }
+      } else if (node.tag === SuspenseComponent && node.memoizedState !== null) {
+        // Found a nested Suspense component that timed out. Skip over the
+        var fallbackChildFragment = node.child.sibling;
+        fallbackChildFragment.return = node;
+        node = fallbackChildFragment;
+        continue;
+      } else if (node.child !== null) {
+        node.child.return = node;
+        node = node.child;
+        continue;
+      }
+      if (node === finishedWork) {
+        return;
+      }
+      while (node.sibling === null) {
+        if (node.return === null || node.return === finishedWork) {
+          return;
+        }
+        node = node.return;
+      }
+      node.sibling.return = node.return;
+      node = node.sibling;
+    }
+  }
+}
+
+function commitAttachRef(finishedWork) {
+  var ref = finishedWork.ref;
+  if (ref !== null) {
+    var instance = finishedWork.stateNode;
+    var instanceToUse = void 0;
+    switch (finishedWork.tag) {
+      case HostComponent:
+        instanceToUse = getPublicInstance(instance);
+        break;
+      default:
+        instanceToUse = instance;
+    }
+    if (typeof ref === 'function') {
+      ref(instanceToUse);
+    } else {
+      {
+        if (!ref.hasOwnProperty('current')) {
+          warningWithoutStack$1(false, 'Unexpected ref object provided for %s. ' + 'Use either a ref-setter function or React.createRef().%s', getComponentName(finishedWork.type), getStackByFiberInDevAndProd(finishedWork));
+        }
+      }
+
+      ref.current = instanceToUse;
+    }
+  }
+}
+
+function commitDetachRef(current$$1) {
+  var currentRef = current$$1.ref;
+  if (currentRef !== null) {
+    if (typeof currentRef === 'function') {
+      currentRef(null);
+    } else {
+      currentRef.current = null;
+    }
+  }
+}
+
+// User-originating errors (lifecycles and refs) should not interrupt
+// deletion, so don't let them throw. Host-originating errors should
+// interrupt deletion, so it's okay
+function commitUnmount(current$$1) {
+  onCommitUnmount(current$$1);
+
+  switch (current$$1.tag) {
+    case FunctionComponent:
+    case ForwardRef:
+    case MemoComponent:
+    case SimpleMemoComponent:
+      {
+        var updateQueue = current$$1.updateQueue;
+        if (updateQueue !== null) {
+          var lastEffect = updateQueue.lastEffect;
+          if (lastEffect !== null) {
+            var firstEffect = lastEffect.next;
+            var effect = firstEffect;
+            do {
+              var destroy = effect.destroy;
+              if (destroy !== undefined) {
+                safelyCallDestroy(current$$1, destroy);
+              }
+              effect = effect.next;
+            } while (effect !== firstEffect);
+          }
+        }
+        break;
+      }
+    case ClassComponent:
+      {
+        safelyDetachRef(current$$1);
+        var instance = current$$1.stateNode;
+        if (typeof instance.componentWillUnmount === 'function') {
+          safelyCallComponentWillUnmount(current$$1, instance);
+        }
+        return;
+      }
+    case HostComponent:
+      {
+        safelyDetachRef(current$$1);
+        return;
+      }
+    case HostPortal:
+      {
+        // TODO: this is recursive.
+        // We are also not using this parent because
+        // the portal will get pushed immediately.
+        if (supportsMutation) {
+          unmountHostComponents(current$$1);
+        } else if (supportsPersistence) {
+          emptyPortalContainer(current$$1);
+        }
+        return;
+=======
+    case HostText:
+      {
+        !(finishedWork.stateNode !== null) ? invariant(false, 'This should have a text node initialized. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+        var textInstance = finishedWork.stateNode;
+        var newText = finishedWork.memoizedProps;
+        // For hydration we reuse the update path but we treat the oldProps
+        // as the newProps. The updatePayload will contain the real change in
+        // this case.
+        var oldText = current$$1 !== null ? current$$1.memoizedProps : newText;
+        commitTextUpdate(textInstance, oldText, newText);
+        return;
+      }
+    case HostRoot:
+      {
+        return;
+      }
+    case Profiler:
+      {
+        return;
+      }
+    case SuspenseComponent:
+      {
+        var newState = finishedWork.memoizedState;
+
+        var newDidTimeout = void 0;
+        var primaryChildParent = finishedWork;
+        if (newState === null) {
+          newDidTimeout = false;
+        } else {
+          newDidTimeout = true;
+          primaryChildParent = finishedWork.child;
+          if (newState.timedOutAt === NoWork) {
+            // If the children had not already timed out, record the time.
+            // This is used to compute the elapsed time during subsequent
+            // attempts to render the children.
+            newState.timedOutAt = requestCurrentTime();
+          }
+        }
+
+        if (primaryChildParent !== null) {
+          hideOrUnhideAllChildren(primaryChildParent, newDidTimeout);
+        }
+
+        // If this boundary just timed out, then it will have a set of thenables.
+        // For each thenable, attach a listener so that when it resolves, React
+        // attempts to re-render the boundary in the primary (pre-timeout) state.
+        var thenables = finishedWork.updateQueue;
+        if (thenables !== null) {
+          finishedWork.updateQueue = null;
+          var retryCache = finishedWork.stateNode;
+          if (retryCache === null) {
+            retryCache = finishedWork.stateNode = new PossiblyWeakSet$1();
+          }
+          thenables.forEach(function (thenable) {
+            // Memoize using the boundary fiber to prevent redundant listeners.
+            var retry = retryTimedOutBoundary.bind(null, finishedWork, thenable);
+            if (enableSchedulerTracing) {
+              retry = tracing.unstable_wrap(retry);
+            }
+            if (!retryCache.has(thenable)) {
+              retryCache.add(thenable);
+              thenable.then(retry, retry);
+            }
+          });
+        }
+
+        return;
+      }
+    case IncompleteClassComponent:
+      {
+        return;
+      }
+    default:
+      {
+        invariant(false, 'This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.');
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+      }
+  }
+}
+
+<<<<<<< HEAD
+function commitNestedUnmounts(root) {
+  // While we're inside a removed host node we don't want to call
+  // removeChild on the inner nodes because they're removed by the top
+  // call anyway. We also want to call componentWillUnmount on all
+  // composites before this host node is removed from the tree. Therefore
+  var node = root;
+  while (true) {
+    commitUnmount(node);
+    // Visit children because they may contain more composite or host nodes.
+    // Skip portals because commitUnmount() currently visits them recursively.
+    if (node.child !== null && (
+    // If we use mutation we drill down into portals using commitUnmount above.
+    // If we don't use mutation we drill down into portals here instead.
+    !supportsMutation || node.tag !== HostPortal)) {
+      node.child.return = node;
+      node = node.child;
+      continue;
+    }
+    if (node === root) {
+      return;
+    }
+    while (node.sibling === null) {
+      if (node.return === null || node.return === root) {
+        return;
+      }
+      node = node.return;
+    }
+    node.sibling.return = node.return;
+    node = node.sibling;
+  }
+}
+
+function detachFiber(current$$1) {
+  // Cut off the return pointers to disconnect it from the tree. Ideally, we
+  // should clear the child pointer of the parent alternate to let this
+  // get GC:ed but we don't know which for sure which parent is the current
+  // one so we'll settle for GC:ing the subtree of this child. This child
+  // itself will be GC:ed when the parent updates the next time.
+  current$$1.return = null;
+  current$$1.child = null;
+  current$$1.memoizedState = null;
+  current$$1.updateQueue = null;
+  var alternate = current$$1.alternate;
+  if (alternate !== null) {
+    alternate.return = null;
+    alternate.child = null;
+    alternate.memoizedState = null;
+    alternate.updateQueue = null;
+  }
+}
+
+function emptyPortalContainer(current$$1) {
+  if (!supportsPersistence) {
+    return;
+  }
+
+  var portal = current$$1.stateNode;
+  var containerInfo = portal.containerInfo;
+
+  var emptyChildSet = createContainerChildSet(containerInfo);
+  replaceContainerChildren(containerInfo, emptyChildSet);
+}
+
+function commitContainer(finishedWork) {
+  if (!supportsPersistence) {
+    return;
+=======
+function commitResetTextContent(current$$1) {
+  if (!supportsMutation) {
+    return;
+  }
+  resetTextContent(current$$1.stateNode);
+}
+
+var PossiblyWeakSet = typeof WeakSet === 'function' ? WeakSet : Set;
+var PossiblyWeakMap = typeof WeakMap === 'function' ? WeakMap : Map;
+
+function createRootErrorUpdate(fiber, errorInfo, expirationTime) {
+  var update = createUpdate(expirationTime);
+  // Unmount the root by rendering null.
+  update.tag = CaptureUpdate;
+  // Caution: React DevTools currently depends on this property
+  // being called "element".
+  update.payload = { element: null };
+  var error = errorInfo.value;
+  update.callback = function () {
+    onUncaughtError(error);
+    logError(fiber, errorInfo);
+  };
+  return update;
+}
+
+function createClassErrorUpdate(fiber, errorInfo, expirationTime) {
+  var update = createUpdate(expirationTime);
+  update.tag = CaptureUpdate;
+  var getDerivedStateFromError = fiber.type.getDerivedStateFromError;
+  if (typeof getDerivedStateFromError === 'function') {
+    var error = errorInfo.value;
+    update.payload = function () {
+      return getDerivedStateFromError(error);
+    };
+  }
+
+  var inst = fiber.stateNode;
+  if (inst !== null && typeof inst.componentDidCatch === 'function') {
+    update.callback = function callback() {
+      if (typeof getDerivedStateFromError !== 'function') {
+        // To preserve the preexisting retry behavior of error boundaries,
+        // we keep track of which ones already failed during this batch.
+        // This gets reset before we yield back to the browser.
+        // TODO: Warn in strict mode if getDerivedStateFromError is
+        // not defined.
+        markLegacyErrorBoundaryAsFailed(this);
+      }
+      var error = errorInfo.value;
+      var stack = errorInfo.stack;
+      logError(fiber, errorInfo);
+      this.componentDidCatch(error, {
+        componentStack: stack !== null ? stack : ''
+      });
+      {
+        if (typeof getDerivedStateFromError !== 'function') {
+          // If componentDidCatch is the only error boundary method defined,
+          // then it needs to call setState to recover from errors.
+          // If no state update is scheduled then the boundary will swallow the error.
+          !(fiber.expirationTime === Sync) ? warningWithoutStack$1(false, '%s: Error boundaries should implement getDerivedStateFromError(). ' + 'In that method, return a state update to display an error message or fallback UI.', getComponentName(fiber.type) || 'Unknown') : void 0;
+        }
+      }
+    };
+  }
+  return update;
+}
+
+function attachPingListener(root, renderExpirationTime, thenable) {
+  // Attach a listener to the promise to "ping" the root and retry. But
+  // only if one does not already exist for the current render expiration
+  // time (which acts like a "thread ID" here).
+  var pingCache = root.pingCache;
+  var threadIDs = void 0;
+  if (pingCache === null) {
+    pingCache = root.pingCache = new PossiblyWeakMap();
+    threadIDs = new Set();
+    pingCache.set(thenable, threadIDs);
+  } else {
+    threadIDs = pingCache.get(thenable);
+    if (threadIDs === undefined) {
+      threadIDs = new Set();
+      pingCache.set(thenable, threadIDs);
+    }
+  }
+  if (!threadIDs.has(renderExpirationTime)) {
+    // Memoize using the thread ID to prevent redundant listeners.
+    threadIDs.add(renderExpirationTime);
+    var ping = pingSuspendedRoot.bind(null, root, thenable, renderExpirationTime);
+    if (enableSchedulerTracing) {
+      ping = tracing.unstable_wrap(ping);
+    }
+    thenable.then(ping, ping);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+
+<<<<<<< HEAD
+  switch (finishedWork.tag) {
+    case ClassComponent:
+      {
+        return;
+      }
+    case HostComponent:
+      {
+        return;
+      }
+    case HostText:
+      {
+        return;
+      }
+    case HostRoot:
+    case HostPortal:
+      {
+        var portalOrRoot = finishedWork.stateNode;
+        var containerInfo = portalOrRoot.containerInfo,
+            _pendingChildren = portalOrRoot.pendingChildren;
+
+        replaceContainerChildren(containerInfo, _pendingChildren);
+        return;
+      }
+    default:
+      {
+        invariant(false, 'This unit of work tag should not have side-effects. This error is likely caused by a bug in React. Please file an issue.');
+      }
+  }
+}
+
+function getHostParentFiber(fiber) {
+  var parent = fiber.return;
+  while (parent !== null) {
+    if (isHostParent(parent)) {
+      return parent;
+    }
+    parent = parent.return;
+  }
+  invariant(false, 'Expected to find a host parent. This error is likely caused by a bug in React. Please file an issue.');
+}
+
+function isHostParent(fiber) {
+  return fiber.tag === HostComponent || fiber.tag === HostRoot || fiber.tag === HostPortal;
+}
+
+function getHostSibling(fiber) {
+  // We're going to search forward into the tree until we find a sibling host
+  // node. Unfortunately, if multiple insertions are done in a row we have to
+  // search past them. This leads to exponential search for the next sibling.
+  var node = fiber;
+  siblings: while (true) {
+    // If we didn't find anything, let's try the next sibling.
+    while (node.sibling === null) {
+      if (node.return === null || isHostParent(node.return)) {
+        // If we pop out of the root or hit the parent the fiber we are the
+        // last sibling.
+        return null;
+      }
+      node = node.return;
+    }
+    node.sibling.return = node.return;
+    node = node.sibling;
+    while (node.tag !== HostComponent && node.tag !== HostText && node.tag !== DehydratedSuspenseComponent) {
+      // If it is not host node and, we might have a host node inside it.
+      // Try to search down until we find one.
+      if (node.effectTag & Placement) {
+        // If we don't have a child, try the siblings instead.
+        continue siblings;
+      }
+      // If we don't have a child, try the siblings instead.
+      // We also skip portals because they are not part of this host tree.
+      if (node.child === null || node.tag === HostPortal) {
+        continue siblings;
+      } else {
+        node.child.return = node;
+        node = node.child;
+      }
+    }
+    // Check if this host node is stable or about to be placed.
+    if (!(node.effectTag & Placement)) {
+      // Found it!
+      return node.stateNode;
+    }
+  }
+}
+
+function commitPlacement(finishedWork) {
+  if (!supportsMutation) {
+    return;
+  }
+
+  // Recursively insert all host nodes into the parent.
+  var parentFiber = getHostParentFiber(finishedWork);
+
+  // Note: these two variables *must* always be updated together.
+  var parent = void 0;
+  var isContainer = void 0;
+
+  switch (parentFiber.tag) {
+    case HostComponent:
+      parent = parentFiber.stateNode;
+      isContainer = false;
+      break;
+    case HostRoot:
+      parent = parentFiber.stateNode.containerInfo;
+      isContainer = true;
+      break;
+    case HostPortal:
+      parent = parentFiber.stateNode.containerInfo;
+      isContainer = true;
+      break;
+    default:
+      invariant(false, 'Invalid host parent fiber. This error is likely caused by a bug in React. Please file an issue.');
+  }
+  if (parentFiber.effectTag & ContentReset) {
+    // Reset the text content of the parent before doing any insertions
+    resetTextContent(parent);
+    // Clear ContentReset from the effect tag
+    parentFiber.effectTag &= ~ContentReset;
+  }
+
+  var before = getHostSibling(finishedWork);
+  // We only have the top Fiber that was inserted but we need to recurse down its
+  // children to find all the terminal nodes.
+  var node = finishedWork;
+  while (true) {
+    if (node.tag === HostComponent || node.tag === HostText) {
+      if (before) {
+        if (isContainer) {
+          insertInContainerBefore(parent, node.stateNode, before);
+        } else {
+          insertBefore(parent, node.stateNode, before);
+        }
+      } else {
+        if (isContainer) {
+          appendChildToContainer(parent, node.stateNode);
+        } else {
+          appendChild(parent, node.stateNode);
+        }
+      }
+    } else if (node.tag === HostPortal) {
+      // If the insertion itself is a portal, then we don't want to traverse
+      // down its children. Instead, we'll get insertions from each child in
+      // the portal directly.
+    } else if (node.child !== null) {
+      node.child.return = node;
+      node = node.child;
+      continue;
+    }
+    if (node === finishedWork) {
+      return;
+    }
+    while (node.sibling === null) {
+      if (node.return === null || node.return === finishedWork) {
+        return;
+      }
+      node = node.return;
+    }
+    node.sibling.return = node.return;
+    node = node.sibling;
+  }
+}
+
+function unmountHostComponents(current$$1) {
+  // We only have the top Fiber that was deleted but we need to recurse down its
+  var node = current$$1;
+
+  // Each iteration, currentParent is populated with node's host parent if not
+  // currentParentIsValid.
+  var currentParentIsValid = false;
+
+  // Note: these two variables *must* always be updated together.
+  var currentParent = void 0;
+  var currentParentIsContainer = void 0;
+
+  while (true) {
+    if (!currentParentIsValid) {
+      var parent = node.return;
+      findParent: while (true) {
+        !(parent !== null) ? invariant(false, 'Expected to find a host parent. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+        switch (parent.tag) {
+          case HostComponent:
+            currentParent = parent.stateNode;
+            currentParentIsContainer = false;
+            break findParent;
+          case HostRoot:
+            currentParent = parent.stateNode.containerInfo;
+            currentParentIsContainer = true;
+            break findParent;
+          case HostPortal:
+            currentParent = parent.stateNode.containerInfo;
+            currentParentIsContainer = true;
+            break findParent;
+        }
+        parent = parent.return;
+      }
+      currentParentIsValid = true;
+    }
+
+    if (node.tag === HostComponent || node.tag === HostText) {
+      commitNestedUnmounts(node);
+      // After all the children have unmounted, it is now safe to remove the
+      // node from the tree.
+      if (currentParentIsContainer) {
+        removeChildFromContainer(currentParent, node.stateNode);
+      } else {
+        removeChild(currentParent, node.stateNode);
+      }
+      // Don't visit children because we already visited them.
+    } else if (enableSuspenseServerRenderer && node.tag === DehydratedSuspenseComponent) {
+      // Delete the dehydrated suspense boundary and all of its content.
+      if (currentParentIsContainer) {
+        clearSuspenseBoundaryFromContainer(currentParent, node.stateNode);
+      } else {
+        clearSuspenseBoundary(currentParent, node.stateNode);
+      }
+    } else if (node.tag === HostPortal) {
+      if (node.child !== null) {
+        // When we go into a portal, it becomes the parent to remove from.
+        // We will reassign it back when we pop the portal on the way up.
+        currentParent = node.stateNode.containerInfo;
+        currentParentIsContainer = true;
+        // Visit children because portals might contain host components.
+        node.child.return = node;
+        node = node.child;
+        continue;
+      }
+    } else {
+      commitUnmount(node);
+      // Visit children because we may find more host components below.
+      if (node.child !== null) {
+        node.child.return = node;
+        node = node.child;
+        continue;
+      }
+    }
+    if (node === current$$1) {
+      return;
+    }
+    while (node.sibling === null) {
+      if (node.return === null || node.return === current$$1) {
+        return;
+      }
+      node = node.return;
+      if (node.tag === HostPortal) {
+        // When we go out of the portal, we need to restore the parent.
+        // Since we don't keep a stack of them, we will search for it.
+        currentParentIsValid = false;
+      }
     }
     node.sibling.return = node.return;
     node = node.sibling;
@@ -36236,9 +47035,239 @@ function commitWork(current$$1, finishedWork) {
         // UnmountMutation.
         commitHookEffectList(UnmountMutation, MountMutation, finishedWork);
         return;
+=======
+function throwException(root, returnFiber, sourceFiber, value, renderExpirationTime) {
+  // The source fiber did not complete.
+  sourceFiber.effectTag |= Incomplete;
+  // Its effect list is no longer valid.
+  sourceFiber.firstEffect = sourceFiber.lastEffect = null;
+
+  if (value !== null && typeof value === 'object' && typeof value.then === 'function') {
+    // This is a thenable.
+    var thenable = value;
+
+    // Find the earliest timeout threshold of all the placeholders in the
+    // ancestor path. We could avoid this traversal by storing the thresholds on
+    // the stack, but we choose not to because we only hit this path if we're
+    // IO-bound (i.e. if something suspends). Whereas the stack is used even in
+    // the non-IO- bound case.
+    var _workInProgress = returnFiber;
+    var earliestTimeoutMs = -1;
+    var startTimeMs = -1;
+    do {
+      if (_workInProgress.tag === SuspenseComponent) {
+        var current$$1 = _workInProgress.alternate;
+        if (current$$1 !== null) {
+          var currentState = current$$1.memoizedState;
+          if (currentState !== null) {
+            // Reached a boundary that already timed out. Do not search
+            // any further.
+            var timedOutAt = currentState.timedOutAt;
+            startTimeMs = expirationTimeToMs(timedOutAt);
+            // Do not search any further.
+            break;
+          }
+        }
+        var timeoutPropMs = _workInProgress.pendingProps.maxDuration;
+        if (typeof timeoutPropMs === 'number') {
+          if (timeoutPropMs <= 0) {
+            earliestTimeoutMs = 0;
+          } else if (earliestTimeoutMs === -1 || timeoutPropMs < earliestTimeoutMs) {
+            earliestTimeoutMs = timeoutPropMs;
+          }
+        }
+      }
+      // If there is a DehydratedSuspenseComponent we don't have to do anything because
+      // if something suspends inside it, we will simply leave that as dehydrated. It
+      // will never timeout.
+      _workInProgress = _workInProgress.return;
+    } while (_workInProgress !== null);
+
+    // Schedule the nearest Suspense to re-render the timed out view.
+    _workInProgress = returnFiber;
+    do {
+      if (_workInProgress.tag === SuspenseComponent && shouldCaptureSuspense(_workInProgress)) {
+        // Found the nearest boundary.
+
+        // Stash the promise on the boundary fiber. If the boundary times out, we'll
+        var thenables = _workInProgress.updateQueue;
+        if (thenables === null) {
+          var updateQueue = new Set();
+          updateQueue.add(thenable);
+          _workInProgress.updateQueue = updateQueue;
+        } else {
+          thenables.add(thenable);
+        }
+
+        // If the boundary is outside of concurrent mode, we should *not*
+        // suspend the commit. Pretend as if the suspended component rendered
+        // null and keep rendering. In the commit phase, we'll schedule a
+        // subsequent synchronous update to re-render the Suspense.
+        //
+        // Note: It doesn't matter whether the component that suspended was
+        // inside a concurrent mode tree. If the Suspense is outside of it, we
+        // should *not* suspend the commit.
+        if ((_workInProgress.mode & ConcurrentMode) === NoEffect) {
+          _workInProgress.effectTag |= DidCapture;
+
+          // We're going to commit this fiber even though it didn't complete.
+          // But we shouldn't call any lifecycle methods or callbacks. Remove
+          // all lifecycle effect tags.
+          sourceFiber.effectTag &= ~(LifecycleEffectMask | Incomplete);
+
+          if (sourceFiber.tag === ClassComponent) {
+            var currentSourceFiber = sourceFiber.alternate;
+            if (currentSourceFiber === null) {
+              // This is a new mount. Change the tag so it's not mistaken for a
+              // completed class component. For example, we should not call
+              // componentWillUnmount if it is deleted.
+              sourceFiber.tag = IncompleteClassComponent;
+            } else {
+              // When we try rendering again, we should not reuse the current fiber,
+              // since it's known to be in an inconsistent state. Use a force updte to
+              // prevent a bail out.
+              var update = createUpdate(Sync);
+              update.tag = ForceUpdate;
+              enqueueUpdate(sourceFiber, update);
+            }
+          }
+
+          // The source fiber did not complete. Mark it with Sync priority to
+          // indicate that it still has pending work.
+          sourceFiber.expirationTime = Sync;
+
+          // Exit without suspending.
+          return;
+        }
+
+        // Confirmed that the boundary is in a concurrent mode tree. Continue
+        // with the normal suspend path.
+
+        attachPingListener(root, renderExpirationTime, thenable);
+
+        var absoluteTimeoutMs = void 0;
+        if (earliestTimeoutMs === -1) {
+          // If no explicit threshold is given, default to an arbitrarily large
+          // value. The actual size doesn't matter because the threshold for the
+          // whole tree will be clamped to the expiration time.
+          absoluteTimeoutMs = maxSigned31BitInt;
+        } else {
+          if (startTimeMs === -1) {
+            // This suspend happened outside of any already timed-out
+            // placeholders. We don't know exactly when the update was
+            // scheduled, but we can infer an approximate start time from the
+            // expiration time. First, find the earliest uncommitted expiration
+            // time in the tree, including work that is suspended. Then subtract
+            // the offset used to compute an async update's expiration time.
+            // This will cause high priority (interactive) work to expire
+            // earlier than necessary, but we can account for this by adjusting
+            // for the Just Noticeable Difference.
+            var earliestExpirationTime = findEarliestOutstandingPriorityLevel(root, renderExpirationTime);
+            var earliestExpirationTimeMs = expirationTimeToMs(earliestExpirationTime);
+            startTimeMs = earliestExpirationTimeMs - LOW_PRIORITY_EXPIRATION;
+          }
+          absoluteTimeoutMs = startTimeMs + earliestTimeoutMs;
+        }
+
+        // Mark the earliest timeout in the suspended fiber's ancestor path.
+        // After completing the root, we'll take the largest of all the
+        // suspended fiber's timeouts and use it to compute a timeout for the
+        // whole tree.
+        renderDidSuspend(root, absoluteTimeoutMs, renderExpirationTime);
+
+        _workInProgress.effectTag |= ShouldCapture;
+        _workInProgress.expirationTime = renderExpirationTime;
+        return;
+      } else if (enableSuspenseServerRenderer && _workInProgress.tag === DehydratedSuspenseComponent) {
+        attachPingListener(root, renderExpirationTime, thenable);
+
+        // Since we already have a current fiber, we can eagerly add a retry listener.
+        var retryCache = _workInProgress.memoizedState;
+        if (retryCache === null) {
+          retryCache = _workInProgress.memoizedState = new PossiblyWeakSet();
+          var _current = _workInProgress.alternate;
+          !_current ? invariant(false, 'A dehydrated suspense boundary must commit before trying to render. This is probably a bug in React.') : void 0;
+          _current.memoizedState = retryCache;
+        }
+        // Memoize using the boundary fiber to prevent redundant listeners.
+        if (!retryCache.has(thenable)) {
+          retryCache.add(thenable);
+          var retry = retryTimedOutBoundary.bind(null, _workInProgress, thenable);
+          if (enableSchedulerTracing) {
+            retry = tracing.unstable_wrap(retry);
+          }
+          thenable.then(retry, retry);
+        }
+        _workInProgress.effectTag |= ShouldCapture;
+        _workInProgress.expirationTime = renderExpirationTime;
+        return;
+      }
+      // This boundary already captured during this render. Continue to the next
+      // boundary.
+      _workInProgress = _workInProgress.return;
+    } while (_workInProgress !== null);
+    // No boundary was found. Fallthrough to error mode.
+    // TODO: Use invariant so the message is stripped in prod?
+    value = new Error((getComponentName(sourceFiber.type) || 'A React component') + ' suspended while rendering, but no fallback UI was specified.\n' + '\n' + 'Add a <Suspense fallback=...> component higher in the tree to ' + 'provide a loading indicator or placeholder to display.' + getStackByFiberInDevAndProd(sourceFiber));
+  }
+
+  // We didn't find a boundary that could handle this type of exception. Start
+  // over and traverse parent path again, this time treating the exception
+  // as an error.
+  renderDidError();
+  value = createCapturedValue(value, sourceFiber);
+  var workInProgress = returnFiber;
+  do {
+    switch (workInProgress.tag) {
+      case HostRoot:
+        {
+          var _errorInfo = value;
+          workInProgress.effectTag |= ShouldCapture;
+          workInProgress.expirationTime = renderExpirationTime;
+          var _update = createRootErrorUpdate(workInProgress, _errorInfo, renderExpirationTime);
+          enqueueCapturedUpdate(workInProgress, _update);
+          return;
+        }
+      case ClassComponent:
+        // Capture and retry
+        var errorInfo = value;
+        var ctor = workInProgress.type;
+        var instance = workInProgress.stateNode;
+        if ((workInProgress.effectTag & DidCapture) === NoEffect && (typeof ctor.getDerivedStateFromError === 'function' || instance !== null && typeof instance.componentDidCatch === 'function' && !isAlreadyFailedLegacyErrorBoundary(instance))) {
+          workInProgress.effectTag |= ShouldCapture;
+          workInProgress.expirationTime = renderExpirationTime;
+          // Schedule the error boundary to re-render using updated state
+          var _update2 = createClassErrorUpdate(workInProgress, errorInfo, renderExpirationTime);
+          enqueueCapturedUpdate(workInProgress, _update2);
+          return;
+        }
+        break;
+      default:
+        break;
+    }
+    workInProgress = workInProgress.return;
+  } while (workInProgress !== null);
+}
+
+function unwindWork(workInProgress, renderExpirationTime) {
+  switch (workInProgress.tag) {
+    case ClassComponent:
+      {
+        var Component = workInProgress.type;
+        if (isContextProvider(Component)) {
+          popContext(workInProgress);
+        }
+        var effectTag = workInProgress.effectTag;
+        if (effectTag & ShouldCapture) {
+          workInProgress.effectTag = effectTag & ~ShouldCapture | DidCapture;
+          return workInProgress;
+        }
+        return null;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
       }
     case ClassComponent:
       {
+<<<<<<< HEAD
         return;
       }
     case HostComponent:
@@ -36313,6 +47342,40 @@ function commitWork(current$$1, finishedWork) {
           var retryCache = finishedWork.stateNode;
           if (retryCache === null) {
             retryCache = finishedWork.stateNode = new PossiblyWeakSet$1();
+=======
+        popHostContainer(workInProgress);
+        popTopLevelContextObject(workInProgress);
+        var _effectTag = workInProgress.effectTag;
+        !((_effectTag & DidCapture) === NoEffect) ? invariant(false, 'The root failed to unmount after an error. This is likely a bug in React. Please file an issue.') : void 0;
+        workInProgress.effectTag = _effectTag & ~ShouldCapture | DidCapture;
+        return workInProgress;
+      }
+    case HostComponent:
+      {
+        // TODO: popHydrationState
+        popHostContext(workInProgress);
+        return null;
+      }
+    case SuspenseComponent:
+      {
+        var _effectTag2 = workInProgress.effectTag;
+        if (_effectTag2 & ShouldCapture) {
+          workInProgress.effectTag = _effectTag2 & ~ShouldCapture | DidCapture;
+          // Captured a suspense effect. Re-render the boundary.
+          return workInProgress;
+        }
+        return null;
+      }
+    case DehydratedSuspenseComponent:
+      {
+        if (enableSuspenseServerRenderer) {
+          // TODO: popHydrationState
+          var _effectTag3 = workInProgress.effectTag;
+          if (_effectTag3 & ShouldCapture) {
+            workInProgress.effectTag = _effectTag3 & ~ShouldCapture | DidCapture;
+            // Captured a suspense effect. Re-render the boundary.
+            return workInProgress;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
           }
           thenables.forEach(function (thenable) {
             // Memoize using the boundary fiber to prevent redundant listeners.
@@ -36326,7 +47389,20 @@ function commitWork(current$$1, finishedWork) {
             }
           });
         }
+        return null;
+      }
+    case HostPortal:
+      popHostContainer(workInProgress);
+      return null;
+    case ContextProvider:
+      popProvider(workInProgress);
+      return null;
+    default:
+      return null;
+  }
+}
 
+<<<<<<< HEAD
         return;
       }
     case IncompleteClassComponent:
@@ -36429,11 +47505,243 @@ function attachPingListener(root, renderExpirationTime, thenable) {
     var ping = pingSuspendedRoot.bind(null, root, thenable, renderExpirationTime);
     if (enableSchedulerTracing) {
       ping = tracing.unstable_wrap(ping);
+=======
+function unwindInterruptedWork(interruptedWork) {
+  switch (interruptedWork.tag) {
+    case ClassComponent:
+      {
+        var childContextTypes = interruptedWork.type.childContextTypes;
+        if (childContextTypes !== null && childContextTypes !== undefined) {
+          popContext(interruptedWork);
+        }
+        break;
+      }
+    case HostRoot:
+      {
+        popHostContainer(interruptedWork);
+        popTopLevelContextObject(interruptedWork);
+        break;
+      }
+    case HostComponent:
+      {
+        popHostContext(interruptedWork);
+        break;
+      }
+    case HostPortal:
+      popHostContainer(interruptedWork);
+      break;
+    case ContextProvider:
+      popProvider(interruptedWork);
+      break;
+    default:
+      break;
+  }
+}
+
+var ReactCurrentDispatcher = ReactSharedInternals.ReactCurrentDispatcher;
+var ReactCurrentOwner$2 = ReactSharedInternals.ReactCurrentOwner;
+
+
+var didWarnAboutStateTransition = void 0;
+var didWarnSetStateChildContext = void 0;
+var warnAboutUpdateOnUnmounted = void 0;
+var warnAboutInvalidUpdates = void 0;
+
+if (enableSchedulerTracing) {
+  // Provide explicit error message when production+profiling bundle of e.g. react-dom
+  // is used with production (non-profiling) bundle of scheduler/tracing
+  !(tracing.__interactionsRef != null && tracing.__interactionsRef.current != null) ? invariant(false, 'It is not supported to run the profiling version of a renderer (for example, `react-dom/profiling`) without also replacing the `scheduler/tracing` module with `scheduler/tracing-profiling`. Your bundler might have a setting for aliasing both modules. Learn more at http://fb.me/react-profiling') : void 0;
+}
+
+{
+  didWarnAboutStateTransition = false;
+  didWarnSetStateChildContext = false;
+  var didWarnStateUpdateForUnmountedComponent = {};
+
+  warnAboutUpdateOnUnmounted = function (fiber, isClass) {
+    // We show the whole stack but dedupe on the top component's name because
+    // the problematic code almost always lies inside that component.
+    var componentName = getComponentName(fiber.type) || 'ReactComponent';
+    if (didWarnStateUpdateForUnmountedComponent[componentName]) {
+      return;
+    }
+    warningWithoutStack$1(false, "Can't perform a React state update on an unmounted component. This " + 'is a no-op, but it indicates a memory leak in your application. To ' + 'fix, cancel all subscriptions and asynchronous tasks in %s.%s', isClass ? 'the componentWillUnmount method' : 'a useEffect cleanup function', getStackByFiberInDevAndProd(fiber));
+    didWarnStateUpdateForUnmountedComponent[componentName] = true;
+  };
+
+  warnAboutInvalidUpdates = function (instance) {
+    switch (phase) {
+      case 'getChildContext':
+        if (didWarnSetStateChildContext) {
+          return;
+        }
+        warningWithoutStack$1(false, 'setState(...): Cannot call setState() inside getChildContext()');
+        didWarnSetStateChildContext = true;
+        break;
+      case 'render':
+        if (didWarnAboutStateTransition) {
+          return;
+        }
+        warningWithoutStack$1(false, 'Cannot update during an existing state transition (such as within ' + '`render`). Render methods should be a pure function of props and state.');
+        didWarnAboutStateTransition = true;
+        break;
+    }
+  };
+}
+
+// Used to ensure computeUniqueAsyncExpiration is monotonically decreasing.
+var lastUniqueAsyncExpiration = Sync - 1;
+
+var isWorking = false;
+
+// The next work in progress fiber that we're currently working on.
+var nextUnitOfWork = null;
+var nextRoot = null;
+// The time at which we're currently rendering work.
+var nextRenderExpirationTime = NoWork;
+var nextLatestAbsoluteTimeoutMs = -1;
+var nextRenderDidError = false;
+
+// The next fiber with an effect that we're currently committing.
+var nextEffect = null;
+
+var isCommitting$1 = false;
+var rootWithPendingPassiveEffects = null;
+var passiveEffectCallbackHandle = null;
+var passiveEffectCallback = null;
+
+var legacyErrorBoundariesThatAlreadyFailed = null;
+
+// Used for performance tracking.
+var interruptedBy = null;
+
+var stashedWorkInProgressProperties = void 0;
+var replayUnitOfWork = void 0;
+var mayReplayFailedUnitOfWork = void 0;
+var isReplayingFailedUnitOfWork = void 0;
+var originalReplayError = void 0;
+var rethrowOriginalError = void 0;
+if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
+  stashedWorkInProgressProperties = null;
+  mayReplayFailedUnitOfWork = true;
+  isReplayingFailedUnitOfWork = false;
+  originalReplayError = null;
+  replayUnitOfWork = function (failedUnitOfWork, thrownValue, isYieldy) {
+    if (thrownValue !== null && typeof thrownValue === 'object' && typeof thrownValue.then === 'function') {
+      // Don't replay promises. Treat everything else like an error.
+      // TODO: Need to figure out a different strategy if/when we add
+      // support for catching other types.
+      return;
+    }
+
+    // Restore the original state of the work-in-progress
+    if (stashedWorkInProgressProperties === null) {
+      // This should never happen. Don't throw because this code is DEV-only.
+      warningWithoutStack$1(false, 'Could not replay rendering after an error. This is likely a bug in React. ' + 'Please file an issue.');
+      return;
+    }
+    assignFiberPropertiesInDEV(failedUnitOfWork, stashedWorkInProgressProperties);
+
+    switch (failedUnitOfWork.tag) {
+      case HostRoot:
+        popHostContainer(failedUnitOfWork);
+        popTopLevelContextObject(failedUnitOfWork);
+        break;
+      case HostComponent:
+        popHostContext(failedUnitOfWork);
+        break;
+      case ClassComponent:
+        {
+          var Component = failedUnitOfWork.type;
+          if (isContextProvider(Component)) {
+            popContext(failedUnitOfWork);
+          }
+          break;
+        }
+      case HostPortal:
+        popHostContainer(failedUnitOfWork);
+        break;
+      case ContextProvider:
+        popProvider(failedUnitOfWork);
+        break;
+    }
+    // Replay the begin phase.
+    isReplayingFailedUnitOfWork = true;
+    originalReplayError = thrownValue;
+    invokeGuardedCallback(null, workLoop, null, isYieldy);
+    isReplayingFailedUnitOfWork = false;
+    originalReplayError = null;
+    if (hasCaughtError()) {
+      var replayError = clearCaughtError();
+      if (replayError != null && thrownValue != null) {
+        try {
+          // Reading the expando property is intentionally
+          // inside `try` because it might be a getter or Proxy.
+          if (replayError._suppressLogging) {
+            // Also suppress logging for the original error.
+            thrownValue._suppressLogging = true;
+          }
+        } catch (inner) {
+          // Ignore.
+        }
+      }
+    } else {
+      // If the begin phase did not fail the second time, set this pointer
+      // back to the original value.
+      nextUnitOfWork = failedUnitOfWork;
+    }
+  };
+  rethrowOriginalError = function () {
+    throw originalReplayError;
+  };
+}
+
+function resetStack() {
+  if (nextUnitOfWork !== null) {
+    var interruptedWork = nextUnitOfWork.return;
+    while (interruptedWork !== null) {
+      unwindInterruptedWork(interruptedWork);
+      interruptedWork = interruptedWork.return;
+    }
+  }
+
+  {
+    ReactStrictModeWarnings.discardPendingWarnings();
+    checkThatStackIsEmpty();
+  }
+
+  nextRoot = null;
+  nextRenderExpirationTime = NoWork;
+  nextLatestAbsoluteTimeoutMs = -1;
+  nextRenderDidError = false;
+  nextUnitOfWork = null;
+}
+
+function commitAllHostEffects() {
+  while (nextEffect !== null) {
+    {
+      setCurrentFiber(nextEffect);
+    }
+    recordEffect();
+
+    var effectTag = nextEffect.effectTag;
+
+    if (effectTag & ContentReset) {
+      commitResetTextContent(nextEffect);
+    }
+
+    if (effectTag & Ref) {
+      var current$$1 = nextEffect.alternate;
+      if (current$$1 !== null) {
+        commitDetachRef(current$$1);
+      }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     }
     thenable.then(ping, ping);
   }
 }
 
+<<<<<<< HEAD
 function throwException(root, returnFiber, sourceFiber, value, renderExpirationTime) {
   // The source fiber did not complete.
   sourceFiber.effectTag |= Incomplete;
@@ -36983,6 +48291,48 @@ function commitAllHostEffects() {
           commitDeletion(nextEffect);
           break;
         }
+=======
+    // The following switch statement is only concerned about placement,
+    // updates, and deletions. To avoid needing to add a case for every
+    // possible bitmap value, we remove the secondary effects from the
+    // effect tag and switch on that value.
+    var primaryEffectTag = effectTag & (Placement | Update | Deletion);
+    switch (primaryEffectTag) {
+      case Placement:
+        {
+          commitPlacement(nextEffect);
+          // Clear the "placement" from effect tag so that we know that this is inserted, before
+          // any life-cycles like componentDidMount gets called.
+          // TODO: findDOMNode doesn't rely on this any more but isMounted
+          // does and isMounted is deprecated anyway so we should be able
+          // to kill this.
+          nextEffect.effectTag &= ~Placement;
+          break;
+        }
+      case PlacementAndUpdate:
+        {
+          // Placement
+          commitPlacement(nextEffect);
+          // Clear the "placement" from effect tag so that we know that this is inserted, before
+          // any life-cycles like componentDidMount gets called.
+          nextEffect.effectTag &= ~Placement;
+
+          // Update
+          var _current = nextEffect.alternate;
+          commitWork(_current, nextEffect);
+          break;
+        }
+      case Update:
+        {
+          var _current2 = nextEffect.alternate;
+          commitWork(_current2, nextEffect);
+          break;
+        }
+      case Deletion:
+        {
+          commitDeletion(nextEffect);
+          break;
+        }
     }
     nextEffect = nextEffect.nextEffect;
   }
@@ -37050,6 +48400,374 @@ function commitAllLifeCycles(finishedRoot, committedExpirationTime) {
   }
 }
 
+function commitPassiveEffects(root, firstEffect) {
+  rootWithPendingPassiveEffects = null;
+  passiveEffectCallbackHandle = null;
+  passiveEffectCallback = null;
+
+  // Set this to true to prevent re-entrancy
+  var previousIsRendering = isRendering;
+  isRendering = true;
+
+  var effect = firstEffect;
+  do {
+    {
+      setCurrentFiber(effect);
+    }
+
+    if (effect.effectTag & Passive) {
+      var didError = false;
+      var error = void 0;
+      {
+        invokeGuardedCallback(null, commitPassiveHookEffects, null, effect);
+        if (hasCaughtError()) {
+          didError = true;
+          error = clearCaughtError();
+        }
+      }
+      if (didError) {
+        captureCommitPhaseError(effect, error);
+      }
+    }
+    effect = effect.nextEffect;
+  } while (effect !== null);
+  {
+    resetCurrentFiber();
+  }
+
+  isRendering = previousIsRendering;
+
+  // Check if work was scheduled by one of the effects
+  var rootExpirationTime = root.expirationTime;
+  if (rootExpirationTime !== NoWork) {
+    requestWork(root, rootExpirationTime);
+  }
+  // Flush any sync work that was scheduled by effects
+  if (!isBatchingUpdates && !isRendering) {
+    performSyncWork();
+  }
+}
+
+function isAlreadyFailedLegacyErrorBoundary(instance) {
+  return legacyErrorBoundariesThatAlreadyFailed !== null && legacyErrorBoundariesThatAlreadyFailed.has(instance);
+}
+
+function markLegacyErrorBoundaryAsFailed(instance) {
+  if (legacyErrorBoundariesThatAlreadyFailed === null) {
+    legacyErrorBoundariesThatAlreadyFailed = new Set([instance]);
+  } else {
+    legacyErrorBoundariesThatAlreadyFailed.add(instance);
+  }
+}
+
+function flushPassiveEffects() {
+  if (passiveEffectCallbackHandle !== null) {
+    cancelPassiveEffects(passiveEffectCallbackHandle);
+  }
+  if (passiveEffectCallback !== null) {
+    // We call the scheduled callback instead of commitPassiveEffects directly
+    // to ensure tracing works correctly.
+    passiveEffectCallback();
+  }
+}
+
+function commitRoot(root, finishedWork) {
+  isWorking = true;
+  isCommitting$1 = true;
+  startCommitTimer();
+
+  !(root.current !== finishedWork) ? invariant(false, 'Cannot commit the same tree as before. This is probably a bug related to the return field. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+  var committedExpirationTime = root.pendingCommitExpirationTime;
+  !(committedExpirationTime !== NoWork) ? invariant(false, 'Cannot commit an incomplete root. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+  root.pendingCommitExpirationTime = NoWork;
+
+  // Update the pending priority levels to account for the work that we are
+  // about to commit. This needs to happen before calling the lifecycles, since
+  // they may schedule additional updates.
+  var updateExpirationTimeBeforeCommit = finishedWork.expirationTime;
+  var childExpirationTimeBeforeCommit = finishedWork.childExpirationTime;
+  var earliestRemainingTimeBeforeCommit = childExpirationTimeBeforeCommit > updateExpirationTimeBeforeCommit ? childExpirationTimeBeforeCommit : updateExpirationTimeBeforeCommit;
+  markCommittedPriorityLevels(root, earliestRemainingTimeBeforeCommit);
+
+  var prevInteractions = null;
+  if (enableSchedulerTracing) {
+    // Restore any pending interactions at this point,
+    // So that cascading work triggered during the render phase will be accounted for.
+    prevInteractions = tracing.__interactionsRef.current;
+    tracing.__interactionsRef.current = root.memoizedInteractions;
+  }
+
+  // Reset this to null before calling lifecycles
+  ReactCurrentOwner$2.current = null;
+
+  var firstEffect = void 0;
+  if (finishedWork.effectTag > PerformedWork) {
+    // A fiber's effect list consists only of its children, not itself. So if
+    // the root has an effect, we need to add it to the end of the list. The
+    // resulting list is the set that would belong to the root's parent, if
+    // it had one; that is, all the effects in the tree including the root.
+    if (finishedWork.lastEffect !== null) {
+      finishedWork.lastEffect.nextEffect = finishedWork;
+      firstEffect = finishedWork.firstEffect;
+    } else {
+      firstEffect = finishedWork;
+    }
+  } else {
+    // There is no effect on the root.
+    firstEffect = finishedWork.firstEffect;
+  }
+
+  prepareForCommit(root.containerInfo);
+
+  // Invoke instances of getSnapshotBeforeUpdate before mutation.
+  nextEffect = firstEffect;
+  startCommitSnapshotEffectsTimer();
+  while (nextEffect !== null) {
+    var didError = false;
+    var error = void 0;
+    {
+      invokeGuardedCallback(null, commitBeforeMutationLifecycles, null);
+      if (hasCaughtError()) {
+        didError = true;
+        error = clearCaughtError();
+      }
+    }
+    if (didError) {
+      !(nextEffect !== null) ? invariant(false, 'Should have next effect. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+      captureCommitPhaseError(nextEffect, error);
+      // Clean-up
+      if (nextEffect !== null) {
+        nextEffect = nextEffect.nextEffect;
+      }
+    }
+  }
+  stopCommitSnapshotEffectsTimer();
+
+  if (enableProfilerTimer) {
+    // Mark the current commit time to be shared by all Profilers in this batch.
+    // This enables them to be grouped later.
+    recordCommitTime();
+  }
+
+  // Commit all the side-effects within a tree. We'll do this in two passes.
+  // The first pass performs all the host insertions, updates, deletions and
+  // ref unmounts.
+  nextEffect = firstEffect;
+  startCommitHostEffectsTimer();
+  while (nextEffect !== null) {
+    var _didError = false;
+    var _error = void 0;
+    {
+      invokeGuardedCallback(null, commitAllHostEffects, null);
+      if (hasCaughtError()) {
+        _didError = true;
+        _error = clearCaughtError();
+      }
+    }
+    if (_didError) {
+      !(nextEffect !== null) ? invariant(false, 'Should have next effect. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+      captureCommitPhaseError(nextEffect, _error);
+      // Clean-up
+      if (nextEffect !== null) {
+        nextEffect = nextEffect.nextEffect;
+      }
+    }
+  }
+  stopCommitHostEffectsTimer();
+
+  resetAfterCommit(root.containerInfo);
+
+  // The work-in-progress tree is now the current tree. This must come after
+  // the first pass of the commit phase, so that the previous tree is still
+  // current during componentWillUnmount, but before the second pass, so that
+  // the finished work is current during componentDidMount/Update.
+  root.current = finishedWork;
+
+  // In the second pass we'll perform all life-cycles and ref callbacks.
+  // Life-cycles happen as a separate pass so that all placements, updates,
+  // and deletions in the entire tree have already been invoked.
+  // This pass also triggers any renderer-specific initial effects.
+  nextEffect = firstEffect;
+  startCommitLifeCyclesTimer();
+  while (nextEffect !== null) {
+    var _didError2 = false;
+    var _error2 = void 0;
+    {
+      invokeGuardedCallback(null, commitAllLifeCycles, null, root, committedExpirationTime);
+      if (hasCaughtError()) {
+        _didError2 = true;
+        _error2 = clearCaughtError();
+      }
+    }
+    if (_didError2) {
+      !(nextEffect !== null) ? invariant(false, 'Should have next effect. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+      captureCommitPhaseError(nextEffect, _error2);
+      if (nextEffect !== null) {
+        nextEffect = nextEffect.nextEffect;
+      }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+    }
+    nextEffect = nextEffect.nextEffect;
+  }
+
+  {
+    resetCurrentFiber();
+  }
+
+<<<<<<< HEAD
+function commitBeforeMutationLifecycles() {
+  while (nextEffect !== null) {
+    {
+      setCurrentFiber(nextEffect);
+    }
+
+    var effectTag = nextEffect.effectTag;
+    if (effectTag & Snapshot) {
+      recordEffect();
+      var current$$1 = nextEffect.alternate;
+      commitBeforeMutationLifeCycles(current$$1, nextEffect);
+=======
+  if (firstEffect !== null && rootWithPendingPassiveEffects !== null) {
+    // This commit included a passive effect. These do not need to fire until
+    // after the next paint. Schedule an callback to fire them in an async
+    // event. To ensure serial execution, the callback will be flushed early if
+    // we enter rootWithPendingPassiveEffects commit phase before then.
+    var callback = commitPassiveEffects.bind(null, root, firstEffect);
+    if (enableSchedulerTracing) {
+      // TODO: Avoid this extra callback by mutating the tracing ref directly,
+      // like we do at the beginning of commitRoot. I've opted not to do that
+      // here because that code is still in flux.
+      callback = tracing.unstable_wrap(callback);
+    }
+    passiveEffectCallbackHandle = scheduler.unstable_runWithPriority(scheduler.unstable_NormalPriority, function () {
+      return schedulePassiveEffects(callback);
+    });
+    passiveEffectCallback = callback;
+  }
+
+  isCommitting$1 = false;
+  isWorking = false;
+  stopCommitLifeCyclesTimer();
+  stopCommitTimer();
+  onCommitRoot(finishedWork.stateNode);
+  if ( true && ReactFiberInstrumentation_1.debugTool) {
+    ReactFiberInstrumentation_1.debugTool.onCommitWork(finishedWork);
+  }
+
+  var updateExpirationTimeAfterCommit = finishedWork.expirationTime;
+  var childExpirationTimeAfterCommit = finishedWork.childExpirationTime;
+  var earliestRemainingTimeAfterCommit = childExpirationTimeAfterCommit > updateExpirationTimeAfterCommit ? childExpirationTimeAfterCommit : updateExpirationTimeAfterCommit;
+  if (earliestRemainingTimeAfterCommit === NoWork) {
+    // If there's no remaining work, we can clear the set of already failed
+    // error boundaries.
+    legacyErrorBoundariesThatAlreadyFailed = null;
+  }
+  onCommit(root, earliestRemainingTimeAfterCommit);
+
+  if (enableSchedulerTracing) {
+    tracing.__interactionsRef.current = prevInteractions;
+
+    var subscriber = void 0;
+
+    try {
+      subscriber = tracing.__subscriberRef.current;
+      if (subscriber !== null && root.memoizedInteractions.size > 0) {
+        var threadID = computeThreadID(committedExpirationTime, root.interactionThreadID);
+        subscriber.onWorkStopped(root.memoizedInteractions, threadID);
+      }
+    } catch (error) {
+      // It's not safe for commitRoot() to throw.
+      // Store the error for now and we'll re-throw in finishRendering().
+      if (!hasUnhandledError) {
+        hasUnhandledError = true;
+        unhandledError = error;
+      }
+    } finally {
+      // Clear completed interactions from the pending Map.
+      // Unless the render was suspended or cascading work was scheduled,
+      // In which case– leave pending interactions until the subsequent render.
+      var pendingInteractionMap = root.pendingInteractionMap;
+      pendingInteractionMap.forEach(function (scheduledInteractions, scheduledExpirationTime) {
+        // Only decrement the pending interaction count if we're done.
+        // If there's still work at the current priority,
+        // That indicates that we are waiting for suspense data.
+        if (scheduledExpirationTime > earliestRemainingTimeAfterCommit) {
+          pendingInteractionMap.delete(scheduledExpirationTime);
+
+          scheduledInteractions.forEach(function (interaction) {
+            interaction.__count--;
+
+            if (subscriber !== null && interaction.__count === 0) {
+              try {
+                subscriber.onInteractionScheduledWorkCompleted(interaction);
+              } catch (error) {
+                // It's not safe for commitRoot() to throw.
+                // Store the error for now and we'll re-throw in finishRendering().
+                if (!hasUnhandledError) {
+                  hasUnhandledError = true;
+                  unhandledError = error;
+                }
+              }
+            }
+          });
+        }
+      });
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+    }
+
+    nextEffect = nextEffect.nextEffect;
+  }
+
+  {
+    resetCurrentFiber();
+  }
+}
+
+<<<<<<< HEAD
+function commitAllLifeCycles(finishedRoot, committedExpirationTime) {
+  {
+    ReactStrictModeWarnings.flushPendingUnsafeLifecycleWarnings();
+    ReactStrictModeWarnings.flushLegacyContextWarning();
+
+    if (warnAboutDeprecatedLifecycles) {
+      ReactStrictModeWarnings.flushPendingDeprecationWarnings();
+    }
+  }
+  while (nextEffect !== null) {
+    {
+      setCurrentFiber(nextEffect);
+    }
+    var effectTag = nextEffect.effectTag;
+
+    if (effectTag & (Update | Callback)) {
+      recordEffect();
+      var current$$1 = nextEffect.alternate;
+      commitLifeCycles(finishedRoot, current$$1, nextEffect, committedExpirationTime);
+    }
+
+    if (effectTag & Ref) {
+      recordEffect();
+      commitAttachRef(nextEffect);
+    }
+
+    if (effectTag & Passive) {
+      rootWithPendingPassiveEffects = finishedRoot;
+    }
+
+    nextEffect = nextEffect.nextEffect;
+  }
+  {
+    resetCurrentFiber();
+=======
+function resetChildExpirationTime(workInProgress, renderTime) {
+  if (renderTime !== Never && workInProgress.childExpirationTime === Never) {
+    // The children of this component are hidden. Don't bubble their
+    // expiration times.
+    return;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+
+<<<<<<< HEAD
 function commitPassiveEffects(root, firstEffect) {
   rootWithPendingPassiveEffects = null;
   passiveEffectCallbackHandle = null;
@@ -37344,16 +49062,7 @@ function commitRoot(root, finishedWork) {
         }
       });
     }
-  }
-}
-
-function resetChildExpirationTime(workInProgress, renderTime) {
-  if (renderTime !== Never && workInProgress.childExpirationTime === Never) {
-    // The children of this component are hidden. Don't bubble their
-    // expiration times.
-    return;
-  }
-
+=======
   var newChildExpirationTime = NoWork;
 
   // Bubble up the earliest expiration time.
@@ -37617,6 +49326,375 @@ function performUnitOfWork(workInProgress) {
   } else {
     next = beginWork(current$$1, workInProgress, nextRenderExpirationTime);
     workInProgress.memoizedProps = workInProgress.pendingProps;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+
+<<<<<<< HEAD
+function resetChildExpirationTime(workInProgress, renderTime) {
+  if (renderTime !== Never && workInProgress.childExpirationTime === Never) {
+    // The children of this component are hidden. Don't bubble their
+    // expiration times.
+    return;
+  }
+
+  var newChildExpirationTime = NoWork;
+
+  // Bubble up the earliest expiration time.
+  if (enableProfilerTimer && workInProgress.mode & ProfileMode) {
+    // We're in profiling mode.
+    // Let's use this same traversal to update the render durations.
+    var actualDuration = workInProgress.actualDuration;
+    var treeBaseDuration = workInProgress.selfBaseDuration;
+
+    // When a fiber is cloned, its actualDuration is reset to 0.
+    // This value will only be updated if work is done on the fiber (i.e. it doesn't bailout).
+    // When work is done, it should bubble to the parent's actualDuration.
+    // If the fiber has not been cloned though, (meaning no work was done),
+    // Then this value will reflect the amount of time spent working on a previous render.
+    // In that case it should not bubble.
+    // We determine whether it was cloned by comparing the child pointer.
+    var shouldBubbleActualDurations = workInProgress.alternate === null || workInProgress.child !== workInProgress.alternate.child;
+
+    var child = workInProgress.child;
+    while (child !== null) {
+      var childUpdateExpirationTime = child.expirationTime;
+      var childChildExpirationTime = child.childExpirationTime;
+      if (childUpdateExpirationTime > newChildExpirationTime) {
+        newChildExpirationTime = childUpdateExpirationTime;
+      }
+      if (childChildExpirationTime > newChildExpirationTime) {
+        newChildExpirationTime = childChildExpirationTime;
+      }
+      if (shouldBubbleActualDurations) {
+        actualDuration += child.actualDuration;
+      }
+      treeBaseDuration += child.treeBaseDuration;
+      child = child.sibling;
+    }
+    workInProgress.actualDuration = actualDuration;
+    workInProgress.treeBaseDuration = treeBaseDuration;
+  } else {
+    var _child = workInProgress.child;
+    while (_child !== null) {
+      var _childUpdateExpirationTime = _child.expirationTime;
+      var _childChildExpirationTime = _child.childExpirationTime;
+      if (_childUpdateExpirationTime > newChildExpirationTime) {
+        newChildExpirationTime = _childUpdateExpirationTime;
+      }
+      if (_childChildExpirationTime > newChildExpirationTime) {
+        newChildExpirationTime = _childChildExpirationTime;
+      }
+      _child = _child.sibling;
+=======
+  {
+    resetCurrentFiber();
+    if (isReplayingFailedUnitOfWork) {
+      // Currently replaying a failed unit of work. This should be unreachable,
+      // because the render phase is meant to be idempotent, and it should
+      // have thrown again. Since it didn't, rethrow the original error, so
+      // React's internal stack is not misaligned.
+      rethrowOriginalError();
+    }
+  }
+  if ( true && ReactFiberInstrumentation_1.debugTool) {
+    ReactFiberInstrumentation_1.debugTool.onBeginWork(workInProgress);
+  }
+
+  if (next === null) {
+    // If this doesn't spawn new work, complete the current work.
+    next = completeUnitOfWork(workInProgress);
+  }
+
+  ReactCurrentOwner$2.current = null;
+
+  return next;
+}
+
+function workLoop(isYieldy) {
+  if (!isYieldy) {
+    // Flush work without yielding
+    while (nextUnitOfWork !== null) {
+      nextUnitOfWork = performUnitOfWork(nextUnitOfWork);
+    }
+  } else {
+    // Flush asynchronous work until there's a higher priority event
+    while (nextUnitOfWork !== null && !shouldYieldToRenderer()) {
+      nextUnitOfWork = performUnitOfWork(nextUnitOfWork);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+    }
+  }
+
+<<<<<<< HEAD
+  workInProgress.childExpirationTime = newChildExpirationTime;
+}
+
+function completeUnitOfWork(workInProgress) {
+  // Attempt to complete the current unit of work, then move to the
+  // next sibling. If there are no more siblings, return to the
+  // parent fiber.
+  while (true) {
+    // The current, flushed, state of this fiber is the alternate.
+    // Ideally nothing should rely on this, but relying on it here
+    // means that we don't need an additional field on the work in
+    // progress.
+    var current$$1 = workInProgress.alternate;
+    {
+      setCurrentFiber(workInProgress);
+    }
+
+    var returnFiber = workInProgress.return;
+    var siblingFiber = workInProgress.sibling;
+
+    if ((workInProgress.effectTag & Incomplete) === NoEffect) {
+      if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
+        // Don't replay if it fails during completion phase.
+        mayReplayFailedUnitOfWork = false;
+      }
+      // This fiber completed.
+      // Remember we're completing this unit so we can find a boundary if it fails.
+      nextUnitOfWork = workInProgress;
+      if (enableProfilerTimer) {
+        if (workInProgress.mode & ProfileMode) {
+          startProfilerTimer(workInProgress);
+        }
+        nextUnitOfWork = completeWork(current$$1, workInProgress, nextRenderExpirationTime);
+        if (workInProgress.mode & ProfileMode) {
+          // Update render duration assuming we didn't error.
+          stopProfilerTimerIfRunningAndRecordDelta(workInProgress, false);
+        }
+      } else {
+        nextUnitOfWork = completeWork(current$$1, workInProgress, nextRenderExpirationTime);
+      }
+      if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
+        // We're out of completion phase so replaying is fine now.
+        mayReplayFailedUnitOfWork = true;
+      }
+      stopWorkTimer(workInProgress);
+      resetChildExpirationTime(workInProgress, nextRenderExpirationTime);
+      {
+        resetCurrentFiber();
+      }
+
+      if (nextUnitOfWork !== null) {
+        // Completing this fiber spawned new work. Work on that next.
+        return nextUnitOfWork;
+      }
+
+      if (returnFiber !== null &&
+      // Do not append effects to parents if a sibling failed to complete
+      (returnFiber.effectTag & Incomplete) === NoEffect) {
+        // Append all the effects of the subtree and this fiber onto the effect
+        // list of the parent. The completion order of the children affects the
+        // side-effect order.
+        if (returnFiber.firstEffect === null) {
+          returnFiber.firstEffect = workInProgress.firstEffect;
+        }
+        if (workInProgress.lastEffect !== null) {
+          if (returnFiber.lastEffect !== null) {
+            returnFiber.lastEffect.nextEffect = workInProgress.firstEffect;
+          }
+          returnFiber.lastEffect = workInProgress.lastEffect;
+        }
+
+        // If this fiber had side-effects, we append it AFTER the children's
+        // side-effects. We can perform certain side-effects earlier if
+        // needed, by doing multiple passes over the effect list. We don't want
+        // to schedule our own side-effect on our own list because if end up
+        // reusing children we'll schedule this effect onto itself since we're
+        // at the end.
+        var effectTag = workInProgress.effectTag;
+        // Skip both NoWork and PerformedWork tags when creating the effect list.
+        // PerformedWork effect is read by React DevTools but shouldn't be committed.
+        if (effectTag > PerformedWork) {
+          if (returnFiber.lastEffect !== null) {
+            returnFiber.lastEffect.nextEffect = workInProgress;
+          } else {
+            returnFiber.firstEffect = workInProgress;
+          }
+          returnFiber.lastEffect = workInProgress;
+        }
+      }
+
+      if ( true && ReactFiberInstrumentation_1.debugTool) {
+        ReactFiberInstrumentation_1.debugTool.onCompleteWork(workInProgress);
+      }
+
+      if (siblingFiber !== null) {
+        // If there is more work to do in this returnFiber, do that next.
+        return siblingFiber;
+      } else if (returnFiber !== null) {
+        // If there's no more work in this returnFiber. Complete the returnFiber.
+        workInProgress = returnFiber;
+        continue;
+      } else {
+        // We've reached the root.
+        return null;
+      }
+    } else {
+      if (enableProfilerTimer && workInProgress.mode & ProfileMode) {
+        // Record the render duration for the fiber that errored.
+        stopProfilerTimerIfRunningAndRecordDelta(workInProgress, false);
+
+        // Include the time spent working on failed children before continuing.
+        var actualDuration = workInProgress.actualDuration;
+        var child = workInProgress.child;
+        while (child !== null) {
+          actualDuration += child.actualDuration;
+          child = child.sibling;
+        }
+        workInProgress.actualDuration = actualDuration;
+      }
+
+      // This fiber did not complete because something threw. Pop values off
+      // the stack without entering the complete phase. If this is a boundary,
+      // capture values if possible.
+      var next = unwindWork(workInProgress, nextRenderExpirationTime);
+      // Because this fiber did not complete, don't reset its expiration time.
+      if (workInProgress.effectTag & DidCapture) {
+        // Restarting an error boundary
+        stopFailedWorkTimer(workInProgress);
+      } else {
+        stopWorkTimer(workInProgress);
+      }
+
+      {
+        resetCurrentFiber();
+      }
+
+      if (next !== null) {
+        stopWorkTimer(workInProgress);
+        if ( true && ReactFiberInstrumentation_1.debugTool) {
+          ReactFiberInstrumentation_1.debugTool.onCompleteWork(workInProgress);
+        }
+
+        // If completing this work spawned new work, do that next. We'll come
+        // back here again.
+        // Since we're restarting, remove anything that is not a host effect
+        // from the effect tag.
+        next.effectTag &= HostEffectMask;
+        return next;
+      }
+
+      if (returnFiber !== null) {
+        // Mark the parent fiber as incomplete and clear its effect list.
+        returnFiber.firstEffect = returnFiber.lastEffect = null;
+        returnFiber.effectTag |= Incomplete;
+      }
+
+      if ( true && ReactFiberInstrumentation_1.debugTool) {
+        ReactFiberInstrumentation_1.debugTool.onCompleteWork(workInProgress);
+      }
+
+      if (siblingFiber !== null) {
+        // If there is more work to do in this returnFiber, do that next.
+        return siblingFiber;
+      } else if (returnFiber !== null) {
+        // If there's no more work in this returnFiber. Complete the returnFiber.
+        workInProgress = returnFiber;
+        continue;
+      } else {
+        return null;
+=======
+function renderRoot(root, isYieldy) {
+  !!isWorking ? invariant(false, 'renderRoot was called recursively. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+
+  flushPassiveEffects();
+
+  isWorking = true;
+  var previousDispatcher = ReactCurrentDispatcher.current;
+  ReactCurrentDispatcher.current = ContextOnlyDispatcher;
+
+  var expirationTime = root.nextExpirationTimeToWorkOn;
+
+  // Check if we're starting from a fresh stack, or if we're resuming from
+  // previously yielded work.
+  if (expirationTime !== nextRenderExpirationTime || root !== nextRoot || nextUnitOfWork === null) {
+    // Reset the stack and start working from the root.
+    resetStack();
+    nextRoot = root;
+    nextRenderExpirationTime = expirationTime;
+    nextUnitOfWork = createWorkInProgress(nextRoot.current, null, nextRenderExpirationTime);
+    root.pendingCommitExpirationTime = NoWork;
+
+    if (enableSchedulerTracing) {
+      // Determine which interactions this batch of work currently includes,
+      // So that we can accurately attribute time spent working on it,
+      var interactions = new Set();
+      root.pendingInteractionMap.forEach(function (scheduledInteractions, scheduledExpirationTime) {
+        if (scheduledExpirationTime >= expirationTime) {
+          scheduledInteractions.forEach(function (interaction) {
+            return interactions.add(interaction);
+          });
+        }
+      });
+
+      // Store the current set of interactions on the FiberRoot for a few reasons:
+      // We can re-use it in hot functions like renderRoot() without having to recalculate it.
+      // We will also use it in commitWork() to pass to any Profiler onRender() hooks.
+      // This also provides DevTools with a way to access it when the onCommitRoot() hook is called.
+      root.memoizedInteractions = interactions;
+
+      if (interactions.size > 0) {
+        var subscriber = tracing.__subscriberRef.current;
+        if (subscriber !== null) {
+          var threadID = computeThreadID(expirationTime, root.interactionThreadID);
+          try {
+            subscriber.onWorkStarted(interactions, threadID);
+          } catch (error) {
+            // Work thrown by an interaction tracing subscriber should be rethrown,
+            // But only once it's safe (to avoid leaving the scheduler in an invalid state).
+            // Store the error for now and we'll re-throw in finishRendering().
+            if (!hasUnhandledError) {
+              hasUnhandledError = true;
+              unhandledError = error;
+            }
+          }
+        }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+      }
+    }
+  }
+
+<<<<<<< HEAD
+  // Without this explicit null return Flow complains of invalid return type
+  // TODO Remove the above while(true) loop
+  // eslint-disable-next-line no-unreachable
+  return null;
+}
+
+function performUnitOfWork(workInProgress) {
+  // The current, flushed, state of this fiber is the alternate.
+  // Ideally nothing should rely on this, but relying on it here
+  // means that we don't need an additional field on the work in
+  // progress.
+  var current$$1 = workInProgress.alternate;
+
+  // See if beginning this work spawns more work.
+  startWorkTimer(workInProgress);
+  {
+    setCurrentFiber(workInProgress);
+  }
+
+  if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
+    stashedWorkInProgressProperties = assignFiberPropertiesInDEV(stashedWorkInProgressProperties, workInProgress);
+  }
+
+  var next = void 0;
+  if (enableProfilerTimer) {
+    if (workInProgress.mode & ProfileMode) {
+      startProfilerTimer(workInProgress);
+    }
+
+    next = beginWork(current$$1, workInProgress, nextRenderExpirationTime);
+    workInProgress.memoizedProps = workInProgress.pendingProps;
+
+    if (workInProgress.mode & ProfileMode) {
+      // Record the render duration assuming we didn't bailout (or error).
+      stopProfilerTimerIfRunningAndRecordDelta(workInProgress, true);
+    }
+  } else {
+    next = beginWork(current$$1, workInProgress, nextRenderExpirationTime);
+    workInProgress.memoizedProps = workInProgress.pendingProps;
   }
 
   {
@@ -37716,6 +49794,87 @@ function renderRoot(root, isYieldy) {
     }
   }
 
+  var prevInteractions = null;
+  if (enableSchedulerTracing) {
+    // We're about to start new traced work.
+    // Restore pending interactions so cascading work triggered during the render phase will be accounted for.
+    prevInteractions = tracing.__interactionsRef.current;
+    tracing.__interactionsRef.current = root.memoizedInteractions;
+  }
+
+  var didFatal = false;
+
+  startWorkLoopTimer(nextUnitOfWork);
+
+  do {
+    try {
+      workLoop(isYieldy);
+    } catch (thrownValue) {
+      resetContextDependences();
+      resetHooks();
+
+      // Reset in case completion throws.
+      // This is only used in DEV and when replaying is on.
+      var mayReplay = void 0;
+      if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
+        mayReplay = mayReplayFailedUnitOfWork;
+        mayReplayFailedUnitOfWork = true;
+      }
+
+      if (nextUnitOfWork === null) {
+        // This is a fatal error.
+        didFatal = true;
+        onUncaughtError(thrownValue);
+      } else {
+        if (enableProfilerTimer && nextUnitOfWork.mode & ProfileMode) {
+          // Record the time spent rendering before an error was thrown.
+          // This avoids inaccurate Profiler durations in the case of a suspended render.
+          stopProfilerTimerIfRunningAndRecordDelta(nextUnitOfWork, true);
+        }
+
+        {
+          // Reset global debug state
+          // We assume this is defined in DEV
+          resetCurrentlyProcessingQueue();
+        }
+
+        if ( true && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
+          if (mayReplay) {
+            var failedUnitOfWork = nextUnitOfWork;
+            replayUnitOfWork(failedUnitOfWork, thrownValue, isYieldy);
+          }
+        }
+
+        // TODO: we already know this isn't true in some cases.
+        // At least this shows a nicer error message until we figure out the cause.
+        // https://github.com/facebook/react/issues/12449#issuecomment-386727431
+        !(nextUnitOfWork !== null) ? invariant(false, 'Failed to replay rendering after an error. This is likely caused by a bug in React. Please file an issue with a reproducing case to help us find it.') : void 0;
+
+        var sourceFiber = nextUnitOfWork;
+        var returnFiber = sourceFiber.return;
+        if (returnFiber === null) {
+          // This is the root. The root could capture its own errors. However,
+          // we don't know if it errors before or after we pushed the host
+          // context. This information is needed to avoid a stack mismatch.
+          // Because we're not sure, treat this as a fatal error. We could track
+          // which phase it fails in, but doesn't seem worth it. At least
+          // for now.
+          didFatal = true;
+          onUncaughtError(thrownValue);
+        } else {
+          throwException(root, returnFiber, sourceFiber, thrownValue, nextRenderExpirationTime);
+          nextUnitOfWork = completeUnitOfWork(sourceFiber);
+          continue;
+        }
+      }
+    }
+    break;
+  } while (true);
+
+  if (enableSchedulerTracing) {
+    // Traced work is done for now; restore the previous interactions.
+    tracing.__interactionsRef.current = prevInteractions;
+=======
   var prevInteractions = null;
   if (enableSchedulerTracing) {
     // We're about to start new traced work.
@@ -38212,9 +50371,83 @@ function scheduleWork(fiber, expirationTime) {
     // Reset this back to zero so subsequent updates don't throw.
     nestedUpdateCount = 0;
     invariant(false, 'Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.');
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
   }
-}
 
+<<<<<<< HEAD
+  // We're done performing work. Time to clean up.
+  isWorking = false;
+  ReactCurrentDispatcher.current = previousDispatcher;
+  resetContextDependences();
+  resetHooks();
+
+  // Yield back to main thread.
+  if (didFatal) {
+    var _didCompleteRoot = false;
+    stopWorkLoopTimer(interruptedBy, _didCompleteRoot);
+    interruptedBy = null;
+    // There was a fatal error.
+    {
+      resetStackAfterFatalErrorInDev();
+    }
+    // `nextRoot` points to the in-progress root. A non-null value indicates
+    // that we're in the middle of an async render. Set it to null to indicate
+    // there's no more work to be done in the current batch.
+    nextRoot = null;
+    onFatal(root);
+    return;
+  }
+
+  if (nextUnitOfWork !== null) {
+    // There's still remaining async work in this tree, but we ran out of time
+    // in the current frame. Yield back to the renderer. Unless we're
+    // interrupted by a higher priority update, we'll continue later from where
+    // we left off.
+    var _didCompleteRoot2 = false;
+    stopWorkLoopTimer(interruptedBy, _didCompleteRoot2);
+    interruptedBy = null;
+    onYield(root);
+    return;
+  }
+
+  // We completed the whole tree.
+  var didCompleteRoot = true;
+  stopWorkLoopTimer(interruptedBy, didCompleteRoot);
+  var rootWorkInProgress = root.current.alternate;
+  !(rootWorkInProgress !== null) ? invariant(false, 'Finished root should have a work-in-progress. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+
+  // `nextRoot` points to the in-progress root. A non-null value indicates
+  // that we're in the middle of an async render. Set it to null to indicate
+  // there's no more work to be done in the current batch.
+  nextRoot = null;
+  interruptedBy = null;
+
+  if (nextRenderDidError) {
+    // There was an error
+    if (hasLowerPriorityWork(root, expirationTime)) {
+      // There's lower priority work. If so, it may have the effect of fixing
+      // the exception that was just thrown. Exit without committing. This is
+      // similar to a suspend, but without a timeout because we're not waiting
+      // for a promise to resolve. React will restart at the lower
+      // priority level.
+      markSuspendedPriorityLevel(root, expirationTime);
+      var suspendedExpirationTime = expirationTime;
+      var rootExpirationTime = root.expirationTime;
+      onSuspend(root, rootWorkInProgress, suspendedExpirationTime, rootExpirationTime, -1 // Indicates no timeout
+      );
+      return;
+    } else if (
+    // There's no lower priority work, but we're rendering asynchronously.
+    // Synchronously attempt to render the same level one more time. This is
+    // similar to a suspend, but without a timeout because we're not waiting
+    // for a promise to resolve.
+    !root.didError && isYieldy) {
+      root.didError = true;
+      var _suspendedExpirationTime = root.nextExpirationTimeToWorkOn = expirationTime;
+      var _rootExpirationTime = root.expirationTime = Sync;
+      onSuspend(root, rootWorkInProgress, _suspendedExpirationTime, _rootExpirationTime, -1 // Indicates no timeout
+      );
+=======
 function syncUpdates(fn, a, b, c, d) {
   return scheduler.unstable_runWithPriority(scheduler.unstable_ImmediatePriority, function () {
     return fn(a, b, c, d);
@@ -38261,6 +50494,7 @@ function scheduleCallbackWithExpirationTime(root, expirationTime) {
     // A callback is already scheduled. Check its expiration time (timeout).
     if (expirationTime < callbackExpirationTime) {
       // Existing callback has sufficient timeout. Exit.
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
       return;
     } else {
       if (callbackID !== null) {
@@ -38269,6 +50503,211 @@ function scheduleCallbackWithExpirationTime(root, expirationTime) {
         scheduler.unstable_cancelCallback(callbackID);
       }
     }
+<<<<<<< HEAD
+  }
+
+  if (isYieldy && nextLatestAbsoluteTimeoutMs !== -1) {
+    // The tree was suspended.
+    var _suspendedExpirationTime2 = expirationTime;
+    markSuspendedPriorityLevel(root, _suspendedExpirationTime2);
+
+    // Find the earliest uncommitted expiration time in the tree, including
+    // work that is suspended. The timeout threshold cannot be longer than
+    // the overall expiration.
+    var earliestExpirationTime = findEarliestOutstandingPriorityLevel(root, expirationTime);
+    var earliestExpirationTimeMs = expirationTimeToMs(earliestExpirationTime);
+    if (earliestExpirationTimeMs < nextLatestAbsoluteTimeoutMs) {
+      nextLatestAbsoluteTimeoutMs = earliestExpirationTimeMs;
+    }
+
+    // Subtract the current time from the absolute timeout to get the number
+    // of milliseconds until the timeout. In other words, convert an absolute
+    // timestamp to a relative time. This is the value that is passed
+    // to `setTimeout`.
+    var currentTimeMs = expirationTimeToMs(requestCurrentTime());
+    var msUntilTimeout = nextLatestAbsoluteTimeoutMs - currentTimeMs;
+    msUntilTimeout = msUntilTimeout < 0 ? 0 : msUntilTimeout;
+
+    // TODO: Account for the Just Noticeable Difference
+
+    var _rootExpirationTime2 = root.expirationTime;
+    onSuspend(root, rootWorkInProgress, _suspendedExpirationTime2, _rootExpirationTime2, msUntilTimeout);
+    return;
+  }
+
+  // Ready to commit.
+  onComplete(root, rootWorkInProgress, expirationTime);
+}
+
+function captureCommitPhaseError(sourceFiber, value) {
+  var expirationTime = Sync;
+  var fiber = sourceFiber.return;
+  while (fiber !== null) {
+    switch (fiber.tag) {
+      case ClassComponent:
+        var ctor = fiber.type;
+        var instance = fiber.stateNode;
+        if (typeof ctor.getDerivedStateFromError === 'function' || typeof instance.componentDidCatch === 'function' && !isAlreadyFailedLegacyErrorBoundary(instance)) {
+          var errorInfo = createCapturedValue(value, sourceFiber);
+          var update = createClassErrorUpdate(fiber, errorInfo, expirationTime);
+          enqueueUpdate(fiber, update);
+          scheduleWork(fiber, expirationTime);
+          return;
+        }
+        break;
+      case HostRoot:
+        {
+          var _errorInfo = createCapturedValue(value, sourceFiber);
+          var _update = createRootErrorUpdate(fiber, _errorInfo, expirationTime);
+          enqueueUpdate(fiber, _update);
+          scheduleWork(fiber, expirationTime);
+          return;
+        }
+    }
+    fiber = fiber.return;
+  }
+
+  if (sourceFiber.tag === HostRoot) {
+    // Error was thrown at the root. There is no parent, so the root
+    // itself should capture it.
+    var rootFiber = sourceFiber;
+    var _errorInfo2 = createCapturedValue(value, rootFiber);
+    var _update2 = createRootErrorUpdate(rootFiber, _errorInfo2, expirationTime);
+    enqueueUpdate(rootFiber, _update2);
+    scheduleWork(rootFiber, expirationTime);
+  }
+}
+
+function computeThreadID(expirationTime, interactionThreadID) {
+  // Interaction threads are unique per root and expiration time.
+  return expirationTime * 1000 + interactionThreadID;
+}
+
+// Creates a unique async expiration time.
+function computeUniqueAsyncExpiration() {
+  var currentTime = requestCurrentTime();
+  var result = computeAsyncExpiration(currentTime);
+  if (result >= lastUniqueAsyncExpiration) {
+    // Since we assume the current time monotonically increases, we only hit
+    // this branch when computeUniqueAsyncExpiration is fired multiple times
+    // within a 200ms window (or whatever the async bucket size is).
+    result = lastUniqueAsyncExpiration - 1;
+  }
+  lastUniqueAsyncExpiration = result;
+  return lastUniqueAsyncExpiration;
+}
+
+function computeExpirationForFiber(currentTime, fiber) {
+  var priorityLevel = scheduler.unstable_getCurrentPriorityLevel();
+
+  var expirationTime = void 0;
+  if ((fiber.mode & ConcurrentMode) === NoContext) {
+    // Outside of concurrent mode, updates are always synchronous.
+    expirationTime = Sync;
+  } else if (isWorking && !isCommitting$1) {
+    // During render phase, updates expire during as the current render.
+    expirationTime = nextRenderExpirationTime;
+  } else {
+    switch (priorityLevel) {
+      case scheduler.unstable_ImmediatePriority:
+        expirationTime = Sync;
+        break;
+      case scheduler.unstable_UserBlockingPriority:
+        expirationTime = computeInteractiveExpiration(currentTime);
+        break;
+      case scheduler.unstable_NormalPriority:
+        // This is a normal, concurrent update
+        expirationTime = computeAsyncExpiration(currentTime);
+        break;
+      case scheduler.unstable_LowPriority:
+      case scheduler.unstable_IdlePriority:
+        expirationTime = Never;
+        break;
+      default:
+        invariant(false, 'Unknown priority level. This error is likely caused by a bug in React. Please file an issue.');
+    }
+
+    // If we're in the middle of rendering a tree, do not update at the same
+    // expiration time that is already rendering.
+    if (nextRoot !== null && expirationTime === nextRenderExpirationTime) {
+      expirationTime -= 1;
+    }
+  }
+
+  // Keep track of the lowest pending interactive expiration time. This
+  // allows us to synchronously flush all interactive updates
+  // when needed.
+  // TODO: Move this to renderer?
+  if (priorityLevel === scheduler.unstable_UserBlockingPriority && (lowestPriorityPendingInteractiveExpirationTime === NoWork || expirationTime < lowestPriorityPendingInteractiveExpirationTime)) {
+    lowestPriorityPendingInteractiveExpirationTime = expirationTime;
+  }
+
+  return expirationTime;
+}
+
+function renderDidSuspend(root, absoluteTimeoutMs, suspendedTime) {
+  // Schedule the timeout.
+  if (absoluteTimeoutMs >= 0 && nextLatestAbsoluteTimeoutMs < absoluteTimeoutMs) {
+    nextLatestAbsoluteTimeoutMs = absoluteTimeoutMs;
+  }
+}
+
+function renderDidError() {
+  nextRenderDidError = true;
+}
+
+function pingSuspendedRoot(root, thenable, pingTime) {
+  // A promise that previously suspended React from committing has resolved.
+  // If React is still suspended, try again at the previous level (pingTime).
+
+  var pingCache = root.pingCache;
+  if (pingCache !== null) {
+    // The thenable resolved, so we no longer need to memoize, because it will
+    // never be thrown again.
+    pingCache.delete(thenable);
+  }
+
+  if (nextRoot !== null && nextRenderExpirationTime === pingTime) {
+    // Received a ping at the same priority level at which we're currently
+    // rendering. Restart from the root.
+    nextRoot = null;
+  } else {
+    // Confirm that the root is still suspended at this level. Otherwise exit.
+    if (isPriorityLevelSuspended(root, pingTime)) {
+      // Ping at the original level
+      markPingedPriorityLevel(root, pingTime);
+      var rootExpirationTime = root.expirationTime;
+      if (rootExpirationTime !== NoWork) {
+        requestWork(root, rootExpirationTime);
+      }
+    }
+  }
+}
+
+function retryTimedOutBoundary(boundaryFiber, thenable) {
+  // The boundary fiber (a Suspense component) previously timed out and was
+  // rendered in its fallback state. One of the promises that suspended it has
+  // resolved, which means at least part of the tree was likely unblocked. Try
+  var retryCache = void 0;
+  if (enableSuspenseServerRenderer) {
+    switch (boundaryFiber.tag) {
+      case SuspenseComponent:
+        retryCache = boundaryFiber.stateNode;
+        break;
+      case DehydratedSuspenseComponent:
+        retryCache = boundaryFiber.memoizedState;
+        break;
+      default:
+        invariant(false, 'Pinged unknown suspense boundary type. This is probably a bug in React.');
+    }
+  } else {
+    retryCache = boundaryFiber.stateNode;
+  }
+  if (retryCache !== null) {
+    // The thenable resolved, so we no longer need to memoize, because it will
+    // never be thrown again.
+    retryCache.delete(thenable);
+=======
     // The request callback timer is already running. Don't start a new one.
   } else {
     startRequestCallbackTimer();
@@ -38519,9 +50958,31 @@ function performAsyncWork() {
     performWork(NoWork, true);
   } finally {
     didYield = false;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
   }
 }
 
+<<<<<<< HEAD
+  var currentTime = requestCurrentTime();
+  var retryTime = computeExpirationForFiber(currentTime, boundaryFiber);
+  var root = scheduleWorkToRoot(boundaryFiber, retryTime);
+  if (root !== null) {
+    markPendingPriorityLevel(root, retryTime);
+    var rootExpirationTime = root.expirationTime;
+    if (rootExpirationTime !== NoWork) {
+      requestWork(root, rootExpirationTime);
+    }
+  }
+}
+
+function scheduleWorkToRoot(fiber, expirationTime) {
+  recordScheduleUpdate();
+
+  {
+    if (fiber.tag === ClassComponent) {
+      var instance = fiber.stateNode;
+      warnAboutInvalidUpdates(instance);
+=======
 function performSyncWork() {
   performWork(Sync, false);
 }
@@ -38539,8 +51000,74 @@ function performWork(minExpirationTime, isYieldy) {
       var didExpire = nextFlushedExpirationTime > currentRendererTime;
       var timeout = expirationTimeToMs(nextFlushedExpirationTime);
       stopRequestCallbackTimer(didExpire, timeout);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     }
+  }
 
+<<<<<<< HEAD
+  // Update the source fiber's expiration time
+  if (fiber.expirationTime < expirationTime) {
+    fiber.expirationTime = expirationTime;
+  }
+  var alternate = fiber.alternate;
+  if (alternate !== null && alternate.expirationTime < expirationTime) {
+    alternate.expirationTime = expirationTime;
+  }
+  // Walk the parent path to the root and update the child expiration time.
+  var node = fiber.return;
+  var root = null;
+  if (node === null && fiber.tag === HostRoot) {
+    root = fiber.stateNode;
+  } else {
+    while (node !== null) {
+      alternate = node.alternate;
+      if (node.childExpirationTime < expirationTime) {
+        node.childExpirationTime = expirationTime;
+        if (alternate !== null && alternate.childExpirationTime < expirationTime) {
+          alternate.childExpirationTime = expirationTime;
+        }
+      } else if (alternate !== null && alternate.childExpirationTime < expirationTime) {
+        alternate.childExpirationTime = expirationTime;
+      }
+      if (node.return === null && node.tag === HostRoot) {
+        root = node.stateNode;
+        break;
+      }
+      node = node.return;
+    }
+  }
+
+  if (enableSchedulerTracing) {
+    if (root !== null) {
+      var interactions = tracing.__interactionsRef.current;
+      if (interactions.size > 0) {
+        var pendingInteractionMap = root.pendingInteractionMap;
+        var pendingInteractions = pendingInteractionMap.get(expirationTime);
+        if (pendingInteractions != null) {
+          interactions.forEach(function (interaction) {
+            if (!pendingInteractions.has(interaction)) {
+              // Update the pending async work count for previously unscheduled interaction.
+              interaction.__count++;
+            }
+
+            pendingInteractions.add(interaction);
+          });
+        } else {
+          pendingInteractionMap.set(expirationTime, new Set(interactions));
+
+          // Update the pending async work count for the current interactions.
+          interactions.forEach(function (interaction) {
+            interaction.__count++;
+          });
+        }
+
+        var subscriber = tracing.__subscriberRef.current;
+        if (subscriber !== null) {
+          var threadID = computeThreadID(expirationTime, root.interactionThreadID);
+          subscriber.onWorkScheduled(interactions, threadID);
+        }
+      }
+=======
     while (nextFlushedRoot !== null && nextFlushedExpirationTime !== NoWork && minExpirationTime <= nextFlushedExpirationTime && !(didYield && currentRendererTime > nextFlushedExpirationTime)) {
       performWorkOnRoot(nextFlushedRoot, nextFlushedExpirationTime, currentRendererTime > nextFlushedExpirationTime);
       findHighestPriorityRoot();
@@ -38551,9 +51078,19 @@ function performWork(minExpirationTime, isYieldy) {
     while (nextFlushedRoot !== null && nextFlushedExpirationTime !== NoWork && minExpirationTime <= nextFlushedExpirationTime) {
       performWorkOnRoot(nextFlushedRoot, nextFlushedExpirationTime, false);
       findHighestPriorityRoot();
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     }
   }
+  return root;
+}
 
+<<<<<<< HEAD
+function warnIfNotCurrentlyBatchingInDev(fiber) {
+  {
+    if (isRendering === false && isBatchingUpdates === false) {
+      warningWithoutStack$1(false, 'An update to %s inside a test was not wrapped in act(...).\n\n' + 'When testing, code that causes React state updates should be wrapped into act(...):\n\n' + 'act(() => {\n' + '  /* fire events that update state */\n' + '});\n' + '/* assert on the output */\n\n' + "This ensures that you're testing the behavior the user would see in the browser." + ' Learn more at https://fb.me/react-wrap-tests-with-act' + '%s', getComponentName(fiber.type), getStackByFiberInDevAndProd(fiber));
+    }
+=======
   // We're done flushing work. Either we ran out of time in this callback,
   // or there's no more work left with sufficient priority.
 
@@ -38565,12 +51102,113 @@ function performWork(minExpirationTime, isYieldy) {
   // If there's work left over, schedule a new callback.
   if (nextFlushedExpirationTime !== NoWork) {
     scheduleCallbackWithExpirationTime(nextFlushedRoot, nextFlushedExpirationTime);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
   }
 
   // Clean-up.
   finishRendering();
 }
 
+<<<<<<< HEAD
+function scheduleWork(fiber, expirationTime) {
+  var root = scheduleWorkToRoot(fiber, expirationTime);
+  if (root === null) {
+    {
+      switch (fiber.tag) {
+        case ClassComponent:
+          warnAboutUpdateOnUnmounted(fiber, true);
+          break;
+        case FunctionComponent:
+        case ForwardRef:
+        case MemoComponent:
+        case SimpleMemoComponent:
+          warnAboutUpdateOnUnmounted(fiber, false);
+          break;
+      }
+    }
+    return;
+  }
+
+  if (!isWorking && nextRenderExpirationTime !== NoWork && expirationTime > nextRenderExpirationTime) {
+    // This is an interruption. (Used for performance tracking.)
+    interruptedBy = fiber;
+    resetStack();
+  }
+  markPendingPriorityLevel(root, expirationTime);
+  if (
+  // If we're in the render phase, we don't need to schedule this root
+  // for an update, because we'll do it before we exit...
+  !isWorking || isCommitting$1 ||
+  // ...unless this is a different root than the one we're rendering.
+  nextRoot !== root) {
+    var rootExpirationTime = root.expirationTime;
+    requestWork(root, rootExpirationTime);
+  }
+  if (nestedUpdateCount > NESTED_UPDATE_LIMIT) {
+    // Reset this back to zero so subsequent updates don't throw.
+    nestedUpdateCount = 0;
+    invariant(false, 'Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.');
+  }
+}
+
+function syncUpdates(fn, a, b, c, d) {
+  return scheduler.unstable_runWithPriority(scheduler.unstable_ImmediatePriority, function () {
+    return fn(a, b, c, d);
+  });
+}
+
+// TODO: Everything below this is written as if it has been lifted to the
+// renderers. I'll do this in a follow-up.
+
+// Linked-list of roots
+var firstScheduledRoot = null;
+var lastScheduledRoot = null;
+
+var callbackExpirationTime = NoWork;
+var callbackID = void 0;
+var isRendering = false;
+var nextFlushedRoot = null;
+var nextFlushedExpirationTime = NoWork;
+var lowestPriorityPendingInteractiveExpirationTime = NoWork;
+var hasUnhandledError = false;
+var unhandledError = null;
+
+var isBatchingUpdates = false;
+var isUnbatchingUpdates = false;
+
+var completedBatches = null;
+
+var originalStartTimeMs = scheduler.unstable_now();
+var currentRendererTime = msToExpirationTime(originalStartTimeMs);
+var currentSchedulerTime = currentRendererTime;
+
+// Use these to prevent an infinite loop of nested updates
+var NESTED_UPDATE_LIMIT = 50;
+var nestedUpdateCount = 0;
+var lastCommittedRootDuringThisBatch = null;
+
+function recomputeCurrentRendererTime() {
+  var currentTimeMs = scheduler.unstable_now() - originalStartTimeMs;
+  currentRendererTime = msToExpirationTime(currentTimeMs);
+}
+
+function scheduleCallbackWithExpirationTime(root, expirationTime) {
+  if (callbackExpirationTime !== NoWork) {
+    // A callback is already scheduled. Check its expiration time (timeout).
+    if (expirationTime < callbackExpirationTime) {
+      // Existing callback has sufficient timeout. Exit.
+      return;
+    } else {
+      if (callbackID !== null) {
+        // Existing callback has insufficient timeout. Cancel and schedule a
+        // new one.
+        scheduler.unstable_cancelCallback(callbackID);
+      }
+    }
+    // The request callback timer is already running. Don't start a new one.
+  } else {
+    startRequestCallbackTimer();
+=======
 function flushRoot(root, expirationTime) {
   !!isRendering ? invariant(false, 'work.commit(): Cannot commit while already rendering. This likely means you attempted to commit from inside a lifecycle method.') : void 0;
   // Perform work on root as if the given expiration time is the current time.
@@ -38753,10 +51391,98 @@ function unbatchedUpdates(fn, a) {
     } finally {
       isUnbatchingUpdates = false;
     }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
   }
   return fn(a);
 }
 
+<<<<<<< HEAD
+  callbackExpirationTime = expirationTime;
+  var currentMs = scheduler.unstable_now() - originalStartTimeMs;
+  var expirationTimeMs = expirationTimeToMs(expirationTime);
+  var timeout = expirationTimeMs - currentMs;
+  callbackID = scheduler.unstable_scheduleCallback(performAsyncWork, { timeout: timeout });
+}
+
+// For every call to renderRoot, one of onFatal, onComplete, onSuspend, and
+// onYield is called upon exiting. We use these in lieu of returning a tuple.
+// I've also chosen not to inline them into renderRoot because these will
+// eventually be lifted into the renderer.
+function onFatal(root) {
+  root.finishedWork = null;
+}
+
+function onComplete(root, finishedWork, expirationTime) {
+  root.pendingCommitExpirationTime = expirationTime;
+  root.finishedWork = finishedWork;
+}
+
+function onSuspend(root, finishedWork, suspendedExpirationTime, rootExpirationTime, msUntilTimeout) {
+  root.expirationTime = rootExpirationTime;
+  if (msUntilTimeout === 0 && !shouldYieldToRenderer()) {
+    // Don't wait an additional tick. Commit the tree immediately.
+    root.pendingCommitExpirationTime = suspendedExpirationTime;
+    root.finishedWork = finishedWork;
+  } else if (msUntilTimeout > 0) {
+    // Wait `msUntilTimeout` milliseconds before committing.
+    root.timeoutHandle = scheduleTimeout(onTimeout.bind(null, root, finishedWork, suspendedExpirationTime), msUntilTimeout);
+  }
+}
+
+function onYield(root) {
+  root.finishedWork = null;
+}
+
+function onTimeout(root, finishedWork, suspendedExpirationTime) {
+  // The root timed out. Commit it.
+  root.pendingCommitExpirationTime = suspendedExpirationTime;
+  root.finishedWork = finishedWork;
+  // Read the current time before entering the commit phase. We can be
+  // certain this won't cause tearing related to batching of event updates
+  // because we're at the top of a timer event.
+  recomputeCurrentRendererTime();
+  currentSchedulerTime = currentRendererTime;
+  flushRoot(root, suspendedExpirationTime);
+}
+
+function onCommit(root, expirationTime) {
+  root.expirationTime = expirationTime;
+  root.finishedWork = null;
+}
+
+function requestCurrentTime() {
+  // requestCurrentTime is called by the scheduler to compute an expiration
+  // time.
+  //
+  // Expiration times are computed by adding to the current time (the start
+  // time). However, if two updates are scheduled within the same event, we
+  // should treat their start times as simultaneous, even if the actual clock
+  // time has advanced between the first and second call.
+
+  // In other words, because expiration times determine how updates are batched,
+  // we want all updates of like priority that occur within the same event to
+  // receive the same expiration time. Otherwise we get tearing.
+  //
+  // We keep track of two separate times: the current "renderer" time and the
+  // current "scheduler" time. The renderer time can be updated whenever; it
+  // only exists to minimize the calls performance.now.
+  //
+  // But the scheduler time can only be updated if there's no pending work, or
+  // if we know for certain that we're not in the middle of an event.
+
+  if (isRendering) {
+    // We're already rendering. Return the most recently read time.
+    return currentSchedulerTime;
+  }
+  // Check if there's pending work.
+  findHighestPriorityRoot();
+  if (nextFlushedExpirationTime === NoWork || nextFlushedExpirationTime === Never) {
+    // If there's no pending work, or if the pending work is offscreen, we can
+    // read the current time without risk of tearing.
+    recomputeCurrentRendererTime();
+    currentSchedulerTime = currentRendererTime;
+    return currentSchedulerTime;
+=======
 // TODO: Batching should be implemented at the renderer level, not within
 // the reconciler.
 function flushSync(fn, a) {
@@ -38841,8 +51567,36 @@ function getContextForSubtree(parentComponent) {
     if (isContextProvider(Component)) {
       return processChildContext(fiber, Component, parentContext);
     }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+  // There's already pending work. We might be in the middle of a browser
+  // event. If we were to read the current time, it could cause multiple updates
+  // within the same event to receive different expiration times, leading to
+  // tearing. Return the last read time. During the next idle callback, the
+  // time will be updated.
+  return currentSchedulerTime;
+}
+
+<<<<<<< HEAD
+// requestWork is called by the scheduler whenever a root receives an update.
+// It's up to the renderer to call renderRoot at some point in the future.
+function requestWork(root, expirationTime) {
+  addRootToSchedule(root, expirationTime);
+  if (isRendering) {
+    // Prevent reentrancy. Remaining work will be scheduled at the end of
+    // the currently rendering batch.
+    return;
   }
 
+  if (isBatchingUpdates) {
+    // Flush work at the end of the batch.
+    if (isUnbatchingUpdates) {
+      // ...unless we're inside unbatchedUpdates, in which case we should
+      // flush it now.
+      nextFlushedRoot = root;
+      nextFlushedExpirationTime = Sync;
+      performWorkOnRoot(root, Sync, false);
+=======
   return parentContext;
 }
 
@@ -38851,9 +51605,98 @@ function scheduleRootUpdate(current$$1, element, expirationTime, callback) {
     if (phase === 'render' && current !== null && !didWarnAboutNestedUpdates) {
       didWarnAboutNestedUpdates = true;
       warningWithoutStack$1(false, 'Render methods should be a pure function of props and state; ' + 'triggering nested component updates from render is not allowed. ' + 'If necessary, trigger nested updates in componentDidUpdate.\n\n' + 'Check the render method of %s.', getComponentName(current.type) || 'Unknown');
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     }
+    return;
   }
 
+<<<<<<< HEAD
+  // TODO: Get rid of Sync and use current time?
+  if (expirationTime === Sync) {
+    performSyncWork();
+  } else {
+    scheduleCallbackWithExpirationTime(root, expirationTime);
+  }
+}
+
+function addRootToSchedule(root, expirationTime) {
+  // Add the root to the schedule.
+  // Check if this root is already part of the schedule.
+  if (root.nextScheduledRoot === null) {
+    // This root is not already scheduled. Add it.
+    root.expirationTime = expirationTime;
+    if (lastScheduledRoot === null) {
+      firstScheduledRoot = lastScheduledRoot = root;
+      root.nextScheduledRoot = root;
+    } else {
+      lastScheduledRoot.nextScheduledRoot = root;
+      lastScheduledRoot = root;
+      lastScheduledRoot.nextScheduledRoot = firstScheduledRoot;
+    }
+  } else {
+    // This root is already scheduled, but its priority may have increased.
+    var remainingExpirationTime = root.expirationTime;
+    if (expirationTime > remainingExpirationTime) {
+      // Update the priority.
+      root.expirationTime = expirationTime;
+    }
+  }
+}
+
+function findHighestPriorityRoot() {
+  var highestPriorityWork = NoWork;
+  var highestPriorityRoot = null;
+  if (lastScheduledRoot !== null) {
+    var previousScheduledRoot = lastScheduledRoot;
+    var root = firstScheduledRoot;
+    while (root !== null) {
+      var remainingExpirationTime = root.expirationTime;
+      if (remainingExpirationTime === NoWork) {
+        // This root no longer has work. Remove it from the scheduler.
+
+        // TODO: This check is redudant, but Flow is confused by the branch
+        // below where we set lastScheduledRoot to null, even though we break
+        // from the loop right after.
+        !(previousScheduledRoot !== null && lastScheduledRoot !== null) ? invariant(false, 'Should have a previous and last root. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+        if (root === root.nextScheduledRoot) {
+          // This is the only root in the list.
+          root.nextScheduledRoot = null;
+          firstScheduledRoot = lastScheduledRoot = null;
+          break;
+        } else if (root === firstScheduledRoot) {
+          // This is the first root in the list.
+          var next = root.nextScheduledRoot;
+          firstScheduledRoot = next;
+          lastScheduledRoot.nextScheduledRoot = next;
+          root.nextScheduledRoot = null;
+        } else if (root === lastScheduledRoot) {
+          // This is the last root in the list.
+          lastScheduledRoot = previousScheduledRoot;
+          lastScheduledRoot.nextScheduledRoot = firstScheduledRoot;
+          root.nextScheduledRoot = null;
+          break;
+        } else {
+          previousScheduledRoot.nextScheduledRoot = root.nextScheduledRoot;
+          root.nextScheduledRoot = null;
+        }
+        root = previousScheduledRoot.nextScheduledRoot;
+      } else {
+        if (remainingExpirationTime > highestPriorityWork) {
+          // Update the priority, if it's higher
+          highestPriorityWork = remainingExpirationTime;
+          highestPriorityRoot = root;
+        }
+        if (root === lastScheduledRoot) {
+          break;
+        }
+        if (highestPriorityWork === Sync) {
+          // Sync is highest priority by definition so
+          // we can stop searching.
+          break;
+        }
+        previousScheduledRoot = root;
+        root = root.nextScheduledRoot;
+=======
   var update = createUpdate(expirationTime);
   // Caution: React DevTools currently depends on this property
   // being called "element".
@@ -38884,10 +51727,85 @@ function updateContainerAtExpirationTime(element, container, parentComponent, ex
         ReactFiberInstrumentation_1.debugTool.onUnmountContainer(container);
       } else {
         ReactFiberInstrumentation_1.debugTool.onUpdateContainer(container);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
       }
     }
   }
 
+<<<<<<< HEAD
+  nextFlushedRoot = highestPriorityRoot;
+  nextFlushedExpirationTime = highestPriorityWork;
+}
+
+// TODO: This wrapper exists because many of the older tests (the ones that use
+// flushDeferredPri) rely on the number of times `shouldYield` is called. We
+// should get rid of it.
+var didYield = false;
+function shouldYieldToRenderer() {
+  if (didYield) {
+    return true;
+  }
+  if (scheduler.unstable_shouldYield()) {
+    didYield = true;
+    return true;
+  }
+  return false;
+}
+
+function performAsyncWork() {
+  try {
+    if (!shouldYieldToRenderer()) {
+      // The callback timed out. That means at least one update has expired.
+      // Iterate through the root schedule. If they contain expired work, set
+      // the next render expiration time to the current time. This has the effect
+      // of flushing all expired work in a single batch, instead of flushing each
+      // level one at a time.
+      if (firstScheduledRoot !== null) {
+        recomputeCurrentRendererTime();
+        var root = firstScheduledRoot;
+        do {
+          didExpireAtExpirationTime(root, currentRendererTime);
+          // The root schedule is circular, so this is never null.
+          root = root.nextScheduledRoot;
+        } while (root !== firstScheduledRoot);
+      }
+    }
+    performWork(NoWork, true);
+  } finally {
+    didYield = false;
+  }
+}
+
+function performSyncWork() {
+  performWork(Sync, false);
+}
+
+function performWork(minExpirationTime, isYieldy) {
+  // Keep working on roots until there's no more work, or until there's a higher
+  // priority event.
+  findHighestPriorityRoot();
+
+  if (isYieldy) {
+    recomputeCurrentRendererTime();
+    currentSchedulerTime = currentRendererTime;
+
+    if (enableUserTimingAPI) {
+      var didExpire = nextFlushedExpirationTime > currentRendererTime;
+      var timeout = expirationTimeToMs(nextFlushedExpirationTime);
+      stopRequestCallbackTimer(didExpire, timeout);
+    }
+
+    while (nextFlushedRoot !== null && nextFlushedExpirationTime !== NoWork && minExpirationTime <= nextFlushedExpirationTime && !(didYield && currentRendererTime > nextFlushedExpirationTime)) {
+      performWorkOnRoot(nextFlushedRoot, nextFlushedExpirationTime, currentRendererTime > nextFlushedExpirationTime);
+      findHighestPriorityRoot();
+      recomputeCurrentRendererTime();
+      currentSchedulerTime = currentRendererTime;
+    }
+  } else {
+    while (nextFlushedRoot !== null && nextFlushedExpirationTime !== NoWork && minExpirationTime <= nextFlushedExpirationTime) {
+      performWorkOnRoot(nextFlushedRoot, nextFlushedExpirationTime, false);
+      findHighestPriorityRoot();
+=======
   var context = getContextForSubtree(parentComponent);
   if (container.context === null) {
     container.context = context;
@@ -39026,10 +51944,133 @@ function injectIntoDevTools(devToolsConfig) {
         return null;
       }
       return findFiberByHostInstance(instance);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     }
   }));
 }
 
+<<<<<<< HEAD
+  // We're done flushing work. Either we ran out of time in this callback,
+  // or there's no more work left with sufficient priority.
+
+  // If we're inside a callback, set this to false since we just completed it.
+  if (isYieldy) {
+    callbackExpirationTime = NoWork;
+    callbackID = null;
+  }
+  // If there's work left over, schedule a new callback.
+  if (nextFlushedExpirationTime !== NoWork) {
+    scheduleCallbackWithExpirationTime(nextFlushedRoot, nextFlushedExpirationTime);
+  }
+
+  // Clean-up.
+  finishRendering();
+}
+
+function flushRoot(root, expirationTime) {
+  !!isRendering ? invariant(false, 'work.commit(): Cannot commit while already rendering. This likely means you attempted to commit from inside a lifecycle method.') : void 0;
+  // Perform work on root as if the given expiration time is the current time.
+  // This has the effect of synchronously flushing all work up to and
+  // including the given time.
+  nextFlushedRoot = root;
+  nextFlushedExpirationTime = expirationTime;
+  performWorkOnRoot(root, expirationTime, false);
+  // Flush any sync work that was scheduled by lifecycles
+  performSyncWork();
+}
+
+function finishRendering() {
+  nestedUpdateCount = 0;
+  lastCommittedRootDuringThisBatch = null;
+
+  if (completedBatches !== null) {
+    var batches = completedBatches;
+    completedBatches = null;
+    for (var i = 0; i < batches.length; i++) {
+      var batch = batches[i];
+      try {
+        batch._onComplete();
+      } catch (error) {
+        if (!hasUnhandledError) {
+          hasUnhandledError = true;
+          unhandledError = error;
+        }
+      }
+    }
+  }
+
+  if (hasUnhandledError) {
+    var error = unhandledError;
+    unhandledError = null;
+    hasUnhandledError = false;
+    throw error;
+  }
+}
+
+function performWorkOnRoot(root, expirationTime, isYieldy) {
+  !!isRendering ? invariant(false, 'performWorkOnRoot was called recursively. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+
+  isRendering = true;
+
+  // Check if this is async work or sync/expired work.
+  if (!isYieldy) {
+    // Flush work without yielding.
+    // TODO: Non-yieldy work does not necessarily imply expired work. A renderer
+    // may want to perform some work without yielding, but also without
+    // requiring the root to complete (by triggering placeholders).
+
+    var finishedWork = root.finishedWork;
+    if (finishedWork !== null) {
+      // This root is already complete. We can commit it.
+      completeRoot(root, finishedWork, expirationTime);
+    } else {
+      root.finishedWork = null;
+      // If this root previously suspended, clear its existing timeout, since
+      // we're about to try rendering again.
+      var timeoutHandle = root.timeoutHandle;
+      if (timeoutHandle !== noTimeout) {
+        root.timeoutHandle = noTimeout;
+        // $FlowFixMe Complains noTimeout is not a TimeoutID, despite the check above
+        cancelTimeout(timeoutHandle);
+      }
+      renderRoot(root, isYieldy);
+      finishedWork = root.finishedWork;
+      if (finishedWork !== null) {
+        // We've completed the root. Commit it.
+        completeRoot(root, finishedWork, expirationTime);
+      }
+    }
+  } else {
+    // Flush async work.
+    var _finishedWork = root.finishedWork;
+    if (_finishedWork !== null) {
+      // This root is already complete. We can commit it.
+      completeRoot(root, _finishedWork, expirationTime);
+    } else {
+      root.finishedWork = null;
+      // If this root previously suspended, clear its existing timeout, since
+      // we're about to try rendering again.
+      var _timeoutHandle = root.timeoutHandle;
+      if (_timeoutHandle !== noTimeout) {
+        root.timeoutHandle = noTimeout;
+        // $FlowFixMe Complains noTimeout is not a TimeoutID, despite the check above
+        cancelTimeout(_timeoutHandle);
+      }
+      renderRoot(root, isYieldy);
+      _finishedWork = root.finishedWork;
+      if (_finishedWork !== null) {
+        // We've completed the root. Check the if we should yield one more time
+        // before committing.
+        if (!shouldYieldToRenderer()) {
+          // Still time left. Commit the root.
+          completeRoot(root, _finishedWork, expirationTime);
+        } else {
+          // There's no time left. Mark this root as complete. We'll come
+          // back and commit it later.
+          root.finishedWork = _finishedWork;
+        }
+      }
+=======
 // This file intentionally does *not* have the Flow annotation.
 // Don't add it. See `./inline-typed.js` for an explanation.
 
@@ -39131,6 +52172,955 @@ ReactBatch.prototype.commit = function () {
   var firstBatch = internalRoot.firstBatch;
   !(this._defer && firstBatch !== null) ? invariant(false, 'batch.commit: Cannot commit a batch multiple times.') : void 0;
 
+  if (!this._hasChildren) {
+    // This batch is empty. Return.
+    this._next = null;
+    this._defer = false;
+    return;
+  }
+
+  var expirationTime = this._expirationTime;
+
+  // Ensure this is the first batch in the list.
+  if (firstBatch !== this) {
+    // This batch is not the earliest batch. We need to move it to the front.
+    // Update its expiration time to be the expiration time of the earliest
+    // batch, so that we can flush it without flushing the other batches.
+    if (this._hasChildren) {
+      expirationTime = this._expirationTime = firstBatch._expirationTime;
+      // Rendering this batch again ensures its children will be the final state
+      // when we flush (updates are processed in insertion order: last
+      // update wins).
+      // TODO: This forces a restart. Should we print a warning?
+      this.render(this._children);
+    }
+
+    // Remove the batch from the list.
+    var previous = null;
+    var batch = firstBatch;
+    while (batch !== this) {
+      previous = batch;
+      batch = batch._next;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+    }
+    !(previous !== null) ? invariant(false, 'batch.commit: Cannot commit a batch multiple times.') : void 0;
+    previous._next = batch._next;
+
+    // Add it to the front.
+    this._next = firstBatch;
+    firstBatch = internalRoot.firstBatch = this;
+  }
+
+<<<<<<< HEAD
+  isRendering = false;
+}
+
+function completeRoot(root, finishedWork, expirationTime) {
+  // Check if there's a batch that matches this expiration time.
+  var firstBatch = root.firstBatch;
+  if (firstBatch !== null && firstBatch._expirationTime >= expirationTime) {
+    if (completedBatches === null) {
+      completedBatches = [firstBatch];
+    } else {
+      completedBatches.push(firstBatch);
+    }
+    if (firstBatch._defer) {
+      // This root is blocked from committing by a batch. Unschedule it until
+      // we receive another update.
+      root.finishedWork = finishedWork;
+      root.expirationTime = NoWork;
+      return;
+    }
+  }
+
+  // Commit the root.
+  root.finishedWork = null;
+
+  // Check if this is a nested update (a sync update scheduled during the
+  // commit phase).
+  if (root === lastCommittedRootDuringThisBatch) {
+    // If the next root is the same as the previous root, this is a nested
+    // update. To prevent an infinite loop, increment the nested update count.
+    nestedUpdateCount++;
+  } else {
+    // Reset whenever we switch roots.
+    lastCommittedRootDuringThisBatch = root;
+    nestedUpdateCount = 0;
+  }
+  scheduler.unstable_runWithPriority(scheduler.unstable_ImmediatePriority, function () {
+    commitRoot(root, finishedWork);
+  });
+}
+
+function onUncaughtError(error) {
+  !(nextFlushedRoot !== null) ? invariant(false, 'Should be working on a root. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+  // Unschedule this root so we don't work on it again until there's
+  // another update.
+  nextFlushedRoot.expirationTime = NoWork;
+  if (!hasUnhandledError) {
+    hasUnhandledError = true;
+    unhandledError = error;
+  }
+}
+
+// TODO: Batching should be implemented at the renderer level, not inside
+// the reconciler.
+function batchedUpdates$1(fn, a) {
+  var previousIsBatchingUpdates = isBatchingUpdates;
+  isBatchingUpdates = true;
+  try {
+    return fn(a);
+  } finally {
+    isBatchingUpdates = previousIsBatchingUpdates;
+    if (!isBatchingUpdates && !isRendering) {
+      performSyncWork();
+    }
+  }
+}
+
+// TODO: Batching should be implemented at the renderer level, not inside
+// the reconciler.
+function unbatchedUpdates(fn, a) {
+  if (isBatchingUpdates && !isUnbatchingUpdates) {
+    isUnbatchingUpdates = true;
+    try {
+      return fn(a);
+    } finally {
+      isUnbatchingUpdates = false;
+    }
+  }
+  return fn(a);
+}
+
+// TODO: Batching should be implemented at the renderer level, not within
+// the reconciler.
+function flushSync(fn, a) {
+  !!isRendering ? invariant(false, 'flushSync was called from inside a lifecycle method. It cannot be called when React is already rendering.') : void 0;
+  var previousIsBatchingUpdates = isBatchingUpdates;
+  isBatchingUpdates = true;
+  try {
+    return syncUpdates(fn, a);
+  } finally {
+    isBatchingUpdates = previousIsBatchingUpdates;
+    performSyncWork();
+  }
+}
+
+function interactiveUpdates$1(fn, a, b) {
+  // If there are any pending interactive updates, synchronously flush them.
+  // This needs to happen before we read any handlers, because the effect of
+  // the previous event may influence which handlers are called during
+  // this event.
+  if (!isBatchingUpdates && !isRendering && lowestPriorityPendingInteractiveExpirationTime !== NoWork) {
+    // Synchronously flush pending interactive updates.
+    performWork(lowestPriorityPendingInteractiveExpirationTime, false);
+    lowestPriorityPendingInteractiveExpirationTime = NoWork;
+  }
+  var previousIsBatchingUpdates = isBatchingUpdates;
+  isBatchingUpdates = true;
+  try {
+    return scheduler.unstable_runWithPriority(scheduler.unstable_UserBlockingPriority, function () {
+      return fn(a, b);
+    });
+  } finally {
+    isBatchingUpdates = previousIsBatchingUpdates;
+    if (!isBatchingUpdates && !isRendering) {
+      performSyncWork();
+    }
+  }
+}
+
+function flushInteractiveUpdates$1() {
+  if (!isRendering && lowestPriorityPendingInteractiveExpirationTime !== NoWork) {
+    // Synchronously flush pending interactive updates.
+    performWork(lowestPriorityPendingInteractiveExpirationTime, false);
+    lowestPriorityPendingInteractiveExpirationTime = NoWork;
+  }
+}
+
+function flushControlled(fn) {
+  var previousIsBatchingUpdates = isBatchingUpdates;
+  isBatchingUpdates = true;
+  try {
+    syncUpdates(fn);
+  } finally {
+    isBatchingUpdates = previousIsBatchingUpdates;
+    if (!isBatchingUpdates && !isRendering) {
+      performSyncWork();
+    }
+=======
+  // Synchronously flush all the work up to this batch's expiration time.
+  this._defer = false;
+  flushRoot(internalRoot, expirationTime);
+
+  // Pop the batch from the list.
+  var next = this._next;
+  this._next = null;
+  firstBatch = internalRoot.firstBatch = next;
+
+  // Append the next earliest batch's children to the update queue.
+  if (firstBatch !== null && firstBatch._hasChildren) {
+    firstBatch.render(firstBatch._children);
+  }
+};
+ReactBatch.prototype._onComplete = function () {
+  if (this._didComplete) {
+    return;
+  }
+  this._didComplete = true;
+  var callbacks = this._callbacks;
+  if (callbacks === null) {
+    return;
+  }
+  // TODO: Error handling.
+  for (var i = 0; i < callbacks.length; i++) {
+    var _callback = callbacks[i];
+    _callback();
+  }
+};
+
+function ReactWork() {
+  this._callbacks = null;
+  this._didCommit = false;
+  // TODO: Avoid need to bind by replacing callbacks in the update queue with
+  // list of Work objects.
+  this._onCommit = this._onCommit.bind(this);
+}
+ReactWork.prototype.then = function (onCommit) {
+  if (this._didCommit) {
+    onCommit();
+    return;
+  }
+  var callbacks = this._callbacks;
+  if (callbacks === null) {
+    callbacks = this._callbacks = [];
+  }
+  callbacks.push(onCommit);
+};
+ReactWork.prototype._onCommit = function () {
+  if (this._didCommit) {
+    return;
+  }
+  this._didCommit = true;
+  var callbacks = this._callbacks;
+  if (callbacks === null) {
+    return;
+  }
+  // TODO: Error handling.
+  for (var i = 0; i < callbacks.length; i++) {
+    var _callback2 = callbacks[i];
+    !(typeof _callback2 === 'function') ? invariant(false, 'Invalid argument passed as callback. Expected a function. Instead received: %s', _callback2) : void 0;
+    _callback2();
+  }
+};
+
+function ReactRoot(container, isConcurrent, hydrate) {
+  var root = createContainer(container, isConcurrent, hydrate);
+  this._internalRoot = root;
+}
+ReactRoot.prototype.render = function (children, callback) {
+  var root = this._internalRoot;
+  var work = new ReactWork();
+  callback = callback === undefined ? null : callback;
+  {
+    warnOnInvalidCallback(callback, 'render');
+  }
+  if (callback !== null) {
+    work.then(callback);
+  }
+  updateContainer(children, root, null, work._onCommit);
+  return work;
+};
+ReactRoot.prototype.unmount = function (callback) {
+  var root = this._internalRoot;
+  var work = new ReactWork();
+  callback = callback === undefined ? null : callback;
+  {
+    warnOnInvalidCallback(callback, 'render');
+  }
+  if (callback !== null) {
+    work.then(callback);
+  }
+  updateContainer(null, root, null, work._onCommit);
+  return work;
+};
+ReactRoot.prototype.legacy_renderSubtreeIntoContainer = function (parentComponent, children, callback) {
+  var root = this._internalRoot;
+  var work = new ReactWork();
+  callback = callback === undefined ? null : callback;
+  {
+    warnOnInvalidCallback(callback, 'render');
+  }
+  if (callback !== null) {
+    work.then(callback);
+  }
+  updateContainer(children, root, parentComponent, work._onCommit);
+  return work;
+};
+ReactRoot.prototype.createBatch = function () {
+  var batch = new ReactBatch(this);
+  var expirationTime = batch._expirationTime;
+
+  var internalRoot = this._internalRoot;
+  var firstBatch = internalRoot.firstBatch;
+  if (firstBatch === null) {
+    internalRoot.firstBatch = batch;
+    batch._next = null;
+  } else {
+    // Insert sorted by expiration time then insertion order
+    var insertAfter = null;
+    var insertBefore = firstBatch;
+    while (insertBefore !== null && insertBefore._expirationTime >= expirationTime) {
+      insertAfter = insertBefore;
+      insertBefore = insertBefore._next;
+    }
+    batch._next = insertBefore;
+    if (insertAfter !== null) {
+      insertAfter._next = batch;
+    }
+  }
+
+  return batch;
+};
+
+/**
+ * True if the supplied DOM node is a valid node element.
+ *
+ * @param {?DOMElement} node The candidate DOM node.
+ * @return {boolean} True if the DOM is a valid DOM node.
+ * @internal
+ */
+function isValidContainer(node) {
+  return !!(node && (node.nodeType === ELEMENT_NODE || node.nodeType === DOCUMENT_NODE || node.nodeType === DOCUMENT_FRAGMENT_NODE || node.nodeType === COMMENT_NODE && node.nodeValue === ' react-mount-point-unstable '));
+}
+
+function getReactRootElementInContainer(container) {
+  if (!container) {
+    return null;
+  }
+
+  if (container.nodeType === DOCUMENT_NODE) {
+    return container.documentElement;
+  } else {
+    return container.firstChild;
+  }
+}
+
+function shouldHydrateDueToLegacyHeuristic(container) {
+  var rootElement = getReactRootElementInContainer(container);
+  return !!(rootElement && rootElement.nodeType === ELEMENT_NODE && rootElement.hasAttribute(ROOT_ATTRIBUTE_NAME));
+}
+
+setBatchingImplementation(batchedUpdates$1, interactiveUpdates$1, flushInteractiveUpdates$1);
+
+var warnedAboutHydrateAPI = false;
+
+function legacyCreateRootFromDOMContainer(container, forceHydrate) {
+  var shouldHydrate = forceHydrate || shouldHydrateDueToLegacyHeuristic(container);
+  // First clear any existing content.
+  if (!shouldHydrate) {
+    var warned = false;
+    var rootSibling = void 0;
+    while (rootSibling = container.lastChild) {
+      {
+        if (!warned && rootSibling.nodeType === ELEMENT_NODE && rootSibling.hasAttribute(ROOT_ATTRIBUTE_NAME)) {
+          warned = true;
+          warningWithoutStack$1(false, 'render(): Target node has markup rendered by React, but there ' + 'are unrelated nodes as well. This is most commonly caused by ' + 'white-space inserted around server-rendered markup.');
+        }
+      }
+      container.removeChild(rootSibling);
+    }
+  }
+  {
+    if (shouldHydrate && !forceHydrate && !warnedAboutHydrateAPI) {
+      warnedAboutHydrateAPI = true;
+      lowPriorityWarning$1(false, 'render(): Calling ReactDOM.render() to hydrate server-rendered markup ' + 'will stop working in React v17. Replace the ReactDOM.render() call ' + 'with ReactDOM.hydrate() if you want React to attach to the server HTML.');
+    }
+  }
+  // Legacy roots are not async by default.
+  var isConcurrent = false;
+  return new ReactRoot(container, isConcurrent, shouldHydrate);
+}
+
+function legacyRenderSubtreeIntoContainer(parentComponent, children, container, forceHydrate, callback) {
+  {
+    topLevelUpdateWarnings(container);
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+  }
+}
+
+<<<<<<< HEAD
+// 0 is PROD, 1 is DEV.
+// Might add PROFILE later.
+
+
+var didWarnAboutNestedUpdates = void 0;
+var didWarnAboutFindNodeInStrictMode = void 0;
+
+{
+  didWarnAboutNestedUpdates = false;
+  didWarnAboutFindNodeInStrictMode = {};
+}
+
+function getContextForSubtree(parentComponent) {
+  if (!parentComponent) {
+    return emptyContextObject;
+  }
+
+  var fiber = get(parentComponent);
+  var parentContext = findCurrentUnmaskedContext(fiber);
+
+  if (fiber.tag === ClassComponent) {
+    var Component = fiber.type;
+    if (isContextProvider(Component)) {
+      return processChildContext(fiber, Component, parentContext);
+    }
+  }
+
+  return parentContext;
+}
+
+function scheduleRootUpdate(current$$1, element, expirationTime, callback) {
+  {
+    if (phase === 'render' && current !== null && !didWarnAboutNestedUpdates) {
+      didWarnAboutNestedUpdates = true;
+      warningWithoutStack$1(false, 'Render methods should be a pure function of props and state; ' + 'triggering nested component updates from render is not allowed. ' + 'If necessary, trigger nested updates in componentDidUpdate.\n\n' + 'Check the render method of %s.', getComponentName(current.type) || 'Unknown');
+    }
+  }
+
+  var update = createUpdate(expirationTime);
+  // Caution: React DevTools currently depends on this property
+  // being called "element".
+  update.payload = { element: element };
+
+  callback = callback === undefined ? null : callback;
+  if (callback !== null) {
+    !(typeof callback === 'function') ? warningWithoutStack$1(false, 'render(...): Expected the last optional `callback` argument to be a ' + 'function. Instead received: %s.', callback) : void 0;
+    update.callback = callback;
+  }
+
+  flushPassiveEffects();
+  enqueueUpdate(current$$1, update);
+  scheduleWork(current$$1, expirationTime);
+
+  return expirationTime;
+}
+
+function updateContainerAtExpirationTime(element, container, parentComponent, expirationTime, callback) {
+  // TODO: If this is a nested container, this won't be the root.
+  var current$$1 = container.current;
+
+  {
+    if (ReactFiberInstrumentation_1.debugTool) {
+      if (current$$1.alternate === null) {
+        ReactFiberInstrumentation_1.debugTool.onMountContainer(container);
+      } else if (element === null) {
+        ReactFiberInstrumentation_1.debugTool.onUnmountContainer(container);
+      } else {
+        ReactFiberInstrumentation_1.debugTool.onUpdateContainer(container);
+      }
+    }
+  }
+
+  var context = getContextForSubtree(parentComponent);
+  if (container.context === null) {
+    container.context = context;
+  } else {
+    container.pendingContext = context;
+  }
+
+  return scheduleRootUpdate(current$$1, element, expirationTime, callback);
+}
+
+function findHostInstance(component) {
+  var fiber = get(component);
+  if (fiber === undefined) {
+    if (typeof component.render === 'function') {
+      invariant(false, 'Unable to find node on an unmounted component.');
+    } else {
+      invariant(false, 'Argument appears to not be a ReactComponent. Keys: %s', Object.keys(component));
+    }
+  }
+  var hostFiber = findCurrentHostFiber(fiber);
+  if (hostFiber === null) {
+    return null;
+  }
+  return hostFiber.stateNode;
+}
+
+function findHostInstanceWithWarning(component, methodName) {
+  {
+    var fiber = get(component);
+    if (fiber === undefined) {
+      if (typeof component.render === 'function') {
+        invariant(false, 'Unable to find node on an unmounted component.');
+      } else {
+        invariant(false, 'Argument appears to not be a ReactComponent. Keys: %s', Object.keys(component));
+      }
+    }
+    var hostFiber = findCurrentHostFiber(fiber);
+    if (hostFiber === null) {
+      return null;
+    }
+    if (hostFiber.mode & StrictMode) {
+      var componentName = getComponentName(fiber.type) || 'Component';
+      if (!didWarnAboutFindNodeInStrictMode[componentName]) {
+        didWarnAboutFindNodeInStrictMode[componentName] = true;
+        if (fiber.mode & StrictMode) {
+          warningWithoutStack$1(false, '%s is deprecated in StrictMode. ' + '%s was passed an instance of %s which is inside StrictMode. ' + 'Instead, add a ref directly to the element you want to reference.' + '\n%s' + '\n\nLearn more about using refs safely here:' + '\nhttps://fb.me/react-strict-mode-find-node', methodName, methodName, componentName, getStackByFiberInDevAndProd(hostFiber));
+        } else {
+          warningWithoutStack$1(false, '%s is deprecated in StrictMode. ' + '%s was passed an instance of %s which renders StrictMode children. ' + 'Instead, add a ref directly to the element you want to reference.' + '\n%s' + '\n\nLearn more about using refs safely here:' + '\nhttps://fb.me/react-strict-mode-find-node', methodName, methodName, componentName, getStackByFiberInDevAndProd(hostFiber));
+        }
+=======
+  // TODO: Without `any` type, Flow says "Property cannot be accessed on any
+  // member of intersection type." Whyyyyyy.
+  var root = container._reactRootContainer;
+  if (!root) {
+    // Initial mount
+    root = container._reactRootContainer = legacyCreateRootFromDOMContainer(container, forceHydrate);
+    if (typeof callback === 'function') {
+      var originalCallback = callback;
+      callback = function () {
+        var instance = getPublicRootInstance(root._internalRoot);
+        originalCallback.call(instance);
+      };
+    }
+    // Initial mount should not be batched.
+    unbatchedUpdates(function () {
+      if (parentComponent != null) {
+        root.legacy_renderSubtreeIntoContainer(parentComponent, children, callback);
+      } else {
+        root.render(children, callback);
+      }
+    });
+  } else {
+    if (typeof callback === 'function') {
+      var _originalCallback = callback;
+      callback = function () {
+        var instance = getPublicRootInstance(root._internalRoot);
+        _originalCallback.call(instance);
+      };
+    }
+    // Update
+    if (parentComponent != null) {
+      root.legacy_renderSubtreeIntoContainer(parentComponent, children, callback);
+    } else {
+      root.render(children, callback);
+    }
+  }
+  return getPublicRootInstance(root._internalRoot);
+}
+
+function createPortal$$1(children, container) {
+  var key = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+  !isValidContainer(container) ? invariant(false, 'Target container is not a DOM element.') : void 0;
+  // TODO: pass ReactDOM portal implementation as third argument
+  return createPortal$1(children, container, null, key);
+}
+
+var ReactDOM = {
+  createPortal: createPortal$$1,
+
+  findDOMNode: function (componentOrElement) {
+    {
+      var owner = ReactCurrentOwner.current;
+      if (owner !== null && owner.stateNode !== null) {
+        var warnedAboutRefsInRender = owner.stateNode._warnedAboutRefsInRender;
+        !warnedAboutRefsInRender ? warningWithoutStack$1(false, '%s is accessing findDOMNode inside its render(). ' + 'render() should be a pure function of props and state. It should ' + 'never access something that requires stale data from the previous ' + 'render, such as refs. Move this logic to componentDidMount and ' + 'componentDidUpdate instead.', getComponentName(owner.type) || 'A component') : void 0;
+        owner.stateNode._warnedAboutRefsInRender = true;
+      }
+    }
+    if (componentOrElement == null) {
+      return null;
+    }
+    if (componentOrElement.nodeType === ELEMENT_NODE) {
+      return componentOrElement;
+    }
+    {
+      return findHostInstanceWithWarning(componentOrElement, 'findDOMNode');
+    }
+    return findHostInstance(componentOrElement);
+  },
+  hydrate: function (element, container, callback) {
+    !isValidContainer(container) ? invariant(false, 'Target container is not a DOM element.') : void 0;
+    {
+      !!container._reactHasBeenPassedToCreateRootDEV ? warningWithoutStack$1(false, 'You are calling ReactDOM.hydrate() on a container that was previously ' + 'passed to ReactDOM.%s(). This is not supported. ' + 'Did you mean to call createRoot(container, {hydrate: true}).render(element)?', enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot') : void 0;
+    }
+    // TODO: throw or warn if we couldn't hydrate?
+    return legacyRenderSubtreeIntoContainer(null, element, container, true, callback);
+  },
+  render: function (element, container, callback) {
+    !isValidContainer(container) ? invariant(false, 'Target container is not a DOM element.') : void 0;
+    {
+      !!container._reactHasBeenPassedToCreateRootDEV ? warningWithoutStack$1(false, 'You are calling ReactDOM.render() on a container that was previously ' + 'passed to ReactDOM.%s(). This is not supported. ' + 'Did you mean to call root.render(element)?', enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot') : void 0;
+    }
+    return legacyRenderSubtreeIntoContainer(null, element, container, false, callback);
+  },
+  unstable_renderSubtreeIntoContainer: function (parentComponent, element, containerNode, callback) {
+    !isValidContainer(containerNode) ? invariant(false, 'Target container is not a DOM element.') : void 0;
+    !(parentComponent != null && has(parentComponent)) ? invariant(false, 'parentComponent must be a valid React Component') : void 0;
+    return legacyRenderSubtreeIntoContainer(parentComponent, element, containerNode, false, callback);
+  },
+  unmountComponentAtNode: function (container) {
+    !isValidContainer(container) ? invariant(false, 'unmountComponentAtNode(...): Target container is not a DOM element.') : void 0;
+
+    {
+      !!container._reactHasBeenPassedToCreateRootDEV ? warningWithoutStack$1(false, 'You are calling ReactDOM.unmountComponentAtNode() on a container that was previously ' + 'passed to ReactDOM.%s(). This is not supported. Did you mean to call root.unmount()?', enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot') : void 0;
+    }
+
+    if (container._reactRootContainer) {
+      {
+        var rootEl = getReactRootElementInContainer(container);
+        var renderedByDifferentReact = rootEl && !getInstanceFromNode$1(rootEl);
+        !!renderedByDifferentReact ? warningWithoutStack$1(false, "unmountComponentAtNode(): The node you're attempting to unmount " + 'was rendered by another copy of React.') : void 0;
+      }
+
+      // Unmount should not be batched.
+      unbatchedUpdates(function () {
+        legacyRenderSubtreeIntoContainer(null, null, container, false, function () {
+          container._reactRootContainer = null;
+        });
+      });
+      // If you call unmountComponentAtNode twice in quick succession, you'll
+      // get `true` twice. That's probably fine?
+      return true;
+    } else {
+      {
+        var _rootEl = getReactRootElementInContainer(container);
+        var hasNonRootReactChild = !!(_rootEl && getInstanceFromNode$1(_rootEl));
+
+        // Check if the container itself is a React root node.
+        var isContainerReactRoot = container.nodeType === ELEMENT_NODE && isValidContainer(container.parentNode) && !!container.parentNode._reactRootContainer;
+
+        !!hasNonRootReactChild ? warningWithoutStack$1(false, "unmountComponentAtNode(): The node you're attempting to unmount " + 'was rendered by React and is not a top-level container. %s', isContainerReactRoot ? 'You may have accidentally passed in a React root node instead ' + 'of its container.' : 'Instead, have the parent component update its state and ' + 'rerender in order to remove this component.') : void 0;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+      }
+
+      return false;
+    }
+<<<<<<< HEAD
+    return hostFiber.stateNode;
+  }
+  return findHostInstance(component);
+}
+
+function createContainer(containerInfo, isConcurrent, hydrate) {
+  return createFiberRoot(containerInfo, isConcurrent, hydrate);
+}
+
+function updateContainer(element, container, parentComponent, callback) {
+  var current$$1 = container.current;
+  var currentTime = requestCurrentTime();
+  var expirationTime = computeExpirationForFiber(currentTime, current$$1);
+  return updateContainerAtExpirationTime(element, container, parentComponent, expirationTime, callback);
+}
+
+function getPublicRootInstance(container) {
+  var containerFiber = container.current;
+  if (!containerFiber.child) {
+    return null;
+  }
+  switch (containerFiber.child.tag) {
+    case HostComponent:
+      return getPublicInstance(containerFiber.child.stateNode);
+    default:
+      return containerFiber.child.stateNode;
+  }
+}
+
+function findHostInstanceWithNoPortals(fiber) {
+  var hostFiber = findCurrentHostFiberWithNoPortals(fiber);
+  if (hostFiber === null) {
+    return null;
+  }
+  return hostFiber.stateNode;
+}
+
+var overrideProps = null;
+
+{
+  var copyWithSetImpl = function (obj, path, idx, value) {
+    if (idx >= path.length) {
+      return value;
+    }
+    var key = path[idx];
+    var updated = Array.isArray(obj) ? obj.slice() : _assign({}, obj);
+    // $FlowFixMe number or string is fine here
+    updated[key] = copyWithSetImpl(obj[key], path, idx + 1, value);
+    return updated;
+  };
+
+  var copyWithSet = function (obj, path, value) {
+    return copyWithSetImpl(obj, path, 0, value);
+  };
+
+  // Support DevTools props for function components, forwardRef, memo, host components, etc.
+  overrideProps = function (fiber, path, value) {
+    flushPassiveEffects();
+    fiber.pendingProps = copyWithSet(fiber.memoizedProps, path, value);
+    if (fiber.alternate) {
+      fiber.alternate.pendingProps = fiber.pendingProps;
+    }
+    scheduleWork(fiber, Sync);
+  };
+}
+
+function injectIntoDevTools(devToolsConfig) {
+  var findFiberByHostInstance = devToolsConfig.findFiberByHostInstance;
+  var ReactCurrentDispatcher = ReactSharedInternals.ReactCurrentDispatcher;
+
+
+  return injectInternals(_assign({}, devToolsConfig, {
+    overrideProps: overrideProps,
+    currentDispatcherRef: ReactCurrentDispatcher,
+    findHostInstanceByFiber: function (fiber) {
+      var hostFiber = findCurrentHostFiber(fiber);
+      if (hostFiber === null) {
+        return null;
+=======
+  },
+
+
+  // Temporary alias since we already shipped React 16 RC with it.
+  // TODO: remove in React 17.
+  unstable_createPortal: function () {
+    if (!didWarnAboutUnstableCreatePortal) {
+      didWarnAboutUnstableCreatePortal = true;
+      lowPriorityWarning$1(false, 'The ReactDOM.unstable_createPortal() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactDOM.createPortal() instead. It has the exact same API, ' + 'but without the "unstable_" prefix.');
+    }
+    return createPortal$$1.apply(undefined, arguments);
+  },
+
+
+  unstable_batchedUpdates: batchedUpdates$1,
+
+  unstable_interactiveUpdates: interactiveUpdates$1,
+
+  flushSync: flushSync,
+
+  unstable_createRoot: createRoot,
+  unstable_flushControlled: flushControlled,
+
+  __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: {
+    // Keep in sync with ReactDOMUnstableNativeDependencies.js
+    // and ReactTestUtils.js. This is an array for better minification.
+    Events: [getInstanceFromNode$1, getNodeFromInstance$1, getFiberCurrentPropsFromNode$1, injection.injectEventPluginsByName, eventNameDispatchConfigs, accumulateTwoPhaseDispatches, accumulateDirectDispatches, enqueueStateRestore, restoreStateIfNeeded, dispatchEvent, runEventsInBatch]
+  }
+};
+
+function createRoot(container, options) {
+  var functionName = enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot';
+  !isValidContainer(container) ? invariant(false, '%s(...): Target container is not a DOM element.', functionName) : void 0;
+  {
+    !!container._reactRootContainer ? warningWithoutStack$1(false, 'You are calling ReactDOM.%s() on a container that was previously ' + 'passed to ReactDOM.render(). This is not supported.', enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot') : void 0;
+    container._reactHasBeenPassedToCreateRootDEV = true;
+  }
+  var hydrate = options != null && options.hydrate === true;
+  return new ReactRoot(container, true, hydrate);
+}
+
+if (enableStableConcurrentModeAPIs) {
+  ReactDOM.createRoot = createRoot;
+  ReactDOM.unstable_createRoot = undefined;
+}
+
+var foundDevTools = injectIntoDevTools({
+  findFiberByHostInstance: getClosestInstanceFromNode,
+  bundleType: 1,
+  version: ReactVersion,
+  rendererPackageName: 'react-dom'
+});
+
+{
+  if (!foundDevTools && canUseDOM && window.top === window.self) {
+    // If we're in Chrome or Firefox, provide a download link if not installed.
+    if (navigator.userAgent.indexOf('Chrome') > -1 && navigator.userAgent.indexOf('Edge') === -1 || navigator.userAgent.indexOf('Firefox') > -1) {
+      var protocol = window.location.protocol;
+      // Don't warn in exotic cases like chrome-extension://.
+      if (/^(https?|file):$/.test(protocol)) {
+        console.info('%cDownload the React DevTools ' + 'for a better development experience: ' + 'https://fb.me/react-devtools' + (protocol === 'file:' ? '\nYou might need to use a local HTTP server (instead of file://): ' + 'https://fb.me/react-devtools-faq' : ''), 'font-weight:bold');
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+      }
+      return hostFiber.stateNode;
+    },
+    findFiberByHostInstance: function (instance) {
+      if (!findFiberByHostInstance) {
+        // Might not be implemented by the renderer.
+        return null;
+      }
+      return findFiberByHostInstance(instance);
+    }
+<<<<<<< HEAD
+  }));
+}
+
+// This file intentionally does *not* have the Flow annotation.
+// Don't add it. See `./inline-typed.js` for an explanation.
+
+function createPortal$1(children, containerInfo,
+// TODO: figure out the API for cross-renderer implementation.
+implementation) {
+  var key = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+
+  return {
+    // This tag allow us to uniquely identify this as a React Portal
+    $$typeof: REACT_PORTAL_TYPE,
+    key: key == null ? null : '' + key,
+    children: children,
+    containerInfo: containerInfo,
+    implementation: implementation
+  };
+}
+
+// TODO: this is special because it gets imported during build.
+
+var ReactVersion = '16.8.4';
+
+// TODO: This type is shared between the reconciler and ReactDOM, but will
+// eventually be lifted out to the renderer.
+
+var ReactCurrentOwner = ReactSharedInternals.ReactCurrentOwner;
+
+var topLevelUpdateWarnings = void 0;
+var warnOnInvalidCallback = void 0;
+var didWarnAboutUnstableCreatePortal = false;
+
+{
+  if (typeof Map !== 'function' ||
+  // $FlowIssue Flow incorrectly thinks Map has no prototype
+  Map.prototype == null || typeof Map.prototype.forEach !== 'function' || typeof Set !== 'function' ||
+  // $FlowIssue Flow incorrectly thinks Set has no prototype
+  Set.prototype == null || typeof Set.prototype.clear !== 'function' || typeof Set.prototype.forEach !== 'function') {
+    warningWithoutStack$1(false, 'React depends on Map and Set built-in types. Make sure that you load a ' + 'polyfill in older browsers. https://fb.me/react-polyfills');
+  }
+
+  topLevelUpdateWarnings = function (container) {
+    if (container._reactRootContainer && container.nodeType !== COMMENT_NODE) {
+      var hostInstance = findHostInstanceWithNoPortals(container._reactRootContainer._internalRoot.current);
+      if (hostInstance) {
+        !(hostInstance.parentNode === container) ? warningWithoutStack$1(false, 'render(...): It looks like the React-rendered content of this ' + 'container was removed without using React. This is not ' + 'supported and will cause errors. Instead, call ' + 'ReactDOM.unmountComponentAtNode to empty a container.') : void 0;
+      }
+    }
+
+    var isRootRenderedBySomeReact = !!container._reactRootContainer;
+    var rootEl = getReactRootElementInContainer(container);
+    var hasNonRootReactChild = !!(rootEl && getInstanceFromNode$1(rootEl));
+
+    !(!hasNonRootReactChild || isRootRenderedBySomeReact) ? warningWithoutStack$1(false, 'render(...): Replacing React-rendered children with a new root ' + 'component. If you intended to update the children of this node, ' + 'you should instead have the existing children update their state ' + 'and render the new components instead of calling ReactDOM.render.') : void 0;
+
+    !(container.nodeType !== ELEMENT_NODE || !container.tagName || container.tagName.toUpperCase() !== 'BODY') ? warningWithoutStack$1(false, 'render(): Rendering components directly into document.body is ' + 'discouraged, since its children are often manipulated by third-party ' + 'scripts and browser extensions. This may lead to subtle ' + 'reconciliation issues. Try rendering into a container element created ' + 'for your app.') : void 0;
+  };
+
+  warnOnInvalidCallback = function (callback, callerName) {
+    !(callback === null || typeof callback === 'function') ? warningWithoutStack$1(false, '%s(...): Expected the last optional `callback` argument to be a ' + 'function. Instead received: %s.', callerName, callback) : void 0;
+  };
+}
+
+setRestoreImplementation(restoreControlledState$1);
+
+function ReactBatch(root) {
+  var expirationTime = computeUniqueAsyncExpiration();
+  this._expirationTime = expirationTime;
+  this._root = root;
+  this._next = null;
+  this._callbacks = null;
+  this._didComplete = false;
+  this._hasChildren = false;
+  this._children = null;
+  this._defer = true;
+=======
+  }
+}
+
+
+
+var ReactDOM$2 = Object.freeze({
+	default: ReactDOM
+});
+
+var ReactDOM$3 = ( ReactDOM$2 && ReactDOM ) || ReactDOM$2;
+
+// TODO: decide on the top-level export form.
+// This is hacky but makes it work with both Rollup and Jest.
+var reactDom = ReactDOM$3.default || ReactDOM$3;
+
+module.exports = reactDom;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-dom/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/react-dom/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (true) {
+    // This branch is unreachable because this function is only called
+    // in production, but the condition is true only in development.
+    // Therefore if the branch is still here, dead code elimination wasn't
+    // properly applied.
+    // Don't change the message. React DevTools relies on it. Also make sure
+    // this message doesn't occur elsewhere in this function, or it will cause
+    // a false positive.
+    throw new Error('^_^');
+  }
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/react-dom.development.js */ "./node_modules/react-dom/cjs/react-dom.development.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+}
+ReactBatch.prototype.render = function (children) {
+  !this._defer ? invariant(false, 'batch.render: Cannot render a batch that already committed.') : void 0;
+  this._hasChildren = true;
+  this._children = children;
+  var internalRoot = this._root._internalRoot;
+  var expirationTime = this._expirationTime;
+  var work = new ReactWork();
+  updateContainerAtExpirationTime(children, internalRoot, null, expirationTime, work._onCommit);
+  return work;
+};
+ReactBatch.prototype.then = function (onComplete) {
+  if (this._didComplete) {
+    onComplete();
+    return;
+  }
+  var callbacks = this._callbacks;
+  if (callbacks === null) {
+    callbacks = this._callbacks = [];
+  }
+  callbacks.push(onComplete);
+};
+ReactBatch.prototype.commit = function () {
+  var internalRoot = this._root._internalRoot;
+  var firstBatch = internalRoot.firstBatch;
+  !(this._defer && firstBatch !== null) ? invariant(false, 'batch.commit: Cannot commit a batch multiple times.') : void 0;
+
+<<<<<<< HEAD
   if (!this._hasChildren) {
     // This batch is empty. Return.
     this._next = null;
@@ -39520,9 +53510,390 @@ var ReactDOM = {
     // Keep in sync with ReactDOMUnstableNativeDependencies.js
     // and ReactTestUtils.js. This is an array for better minification.
     Events: [getInstanceFromNode$1, getNodeFromInstance$1, getFiberCurrentPropsFromNode$1, injection.injectEventPluginsByName, eventNameDispatchConfigs, accumulateTwoPhaseDispatches, accumulateDirectDispatches, enqueueStateRestore, restoreStateIfNeeded, dispatchEvent, runEventsInBatch]
+=======
+
+/***/ }),
+
+/***/ "./node_modules/react-is/cjs/react-is.development.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-is/cjs/react-is.development.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.8.4
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+if (true) {
+  (function() {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+
+var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+
+function isValidElementType(type) {
+  return typeof type === 'string' || typeof type === 'function' ||
+  // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
+}
+
+/**
+ * Forked from fbjs/warning:
+ * https://github.com/facebook/fbjs/blob/e66ba20ad5be433eb54423f2b097d829324d9de6/packages/fbjs/src/__forks__/warning.js
+ *
+ * Only change is we use console.warn instead of console.error,
+ * and do nothing when 'console' is not supported.
+ * This really simplifies the code.
+ * ---
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var lowPriorityWarning = function () {};
+
+{
+  var printWarning = function (format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.warn(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  lowPriorityWarning = function (condition, format) {
+    if (format === undefined) {
+      throw new Error('`lowPriorityWarning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
+      }
+
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
+}
+
+var lowPriorityWarning$1 = lowPriorityWarning;
+
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
+
+        switch (type) {
+          case REACT_ASYNC_MODE_TYPE:
+          case REACT_CONCURRENT_MODE_TYPE:
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+            return type;
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
+              default:
+                return $$typeof;
+            }
+        }
+      case REACT_LAZY_TYPE:
+      case REACT_MEMO_TYPE:
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
+
+  return undefined;
+}
+
+// AsyncMode is deprecated along with isAsyncMode
+var AsyncMode = REACT_ASYNC_MODE_TYPE;
+var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+
+var hasWarnedAboutDeprecatedIsAsyncMode = false;
+
+// AsyncMode should be deprecated
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true;
+      lowPriorityWarning$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+    }
+  }
+  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+}
+function isConcurrentMode(object) {
+  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+exports.typeOf = typeOf;
+exports.AsyncMode = AsyncMode;
+exports.ConcurrentMode = ConcurrentMode;
+exports.ContextConsumer = ContextConsumer;
+exports.ContextProvider = ContextProvider;
+exports.Element = Element;
+exports.ForwardRef = ForwardRef;
+exports.Fragment = Fragment;
+exports.Lazy = Lazy;
+exports.Memo = Memo;
+exports.Portal = Portal;
+exports.Profiler = Profiler;
+exports.StrictMode = StrictMode;
+exports.Suspense = Suspense;
+exports.isValidElementType = isValidElementType;
+exports.isAsyncMode = isAsyncMode;
+exports.isConcurrentMode = isConcurrentMode;
+exports.isContextConsumer = isContextConsumer;
+exports.isContextProvider = isContextProvider;
+exports.isElement = isElement;
+exports.isForwardRef = isForwardRef;
+exports.isFragment = isFragment;
+exports.isLazy = isLazy;
+exports.isMemo = isMemo;
+exports.isPortal = isPortal;
+exports.isProfiler = isProfiler;
+exports.isStrictMode = isStrictMode;
+exports.isSuspense = isSuspense;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-is/index.js":
+/*!****************************************!*\
+  !*** ./node_modules/react-is/index.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js ***!
+  \****************************************************************************/
+/*! exports provided: polyfill */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "polyfill", function() { return polyfill; });
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+function componentWillMount() {
+  // Call this.constructor.gDSFP to support sub-classes.
+  var state = this.constructor.getDerivedStateFromProps(this.props, this.state);
+  if (state !== null && state !== undefined) {
+    this.setState(state);
+  }
+}
+
+function componentWillReceiveProps(nextProps) {
+  // Call this.constructor.gDSFP to support sub-classes.
+  // Use the setState() updater to ensure state isn't stale in certain edge cases.
+  function updater(prevState) {
+    var state = this.constructor.getDerivedStateFromProps(nextProps, prevState);
+    return state !== null && state !== undefined ? state : null;
+  }
+  // Binding "this" is important for shallow renderer support.
+  this.setState(updater.bind(this));
+}
+
+function componentWillUpdate(nextProps, nextState) {
+  try {
+    var prevProps = this.props;
+    var prevState = this.state;
+    this.props = nextProps;
+    this.state = nextState;
+    this.__reactInternalSnapshotFlag = true;
+    this.__reactInternalSnapshot = this.getSnapshotBeforeUpdate(
+      prevProps,
+      prevState
+    );
+  } finally {
+    this.props = prevProps;
+    this.state = prevState;
+  }
+}
+
+// React may warn about cWM/cWRP/cWU methods being deprecated.
+// Add a flag to suppress these warnings for this special case.
+componentWillMount.__suppressDeprecationWarning = true;
+componentWillReceiveProps.__suppressDeprecationWarning = true;
+componentWillUpdate.__suppressDeprecationWarning = true;
+
+function polyfill(Component) {
+  var prototype = Component.prototype;
+
+  if (!prototype || !prototype.isReactComponent) {
+    throw new Error('Can only polyfill class components');
+  }
+
+  if (
+    typeof Component.getDerivedStateFromProps !== 'function' &&
+    typeof prototype.getSnapshotBeforeUpdate !== 'function'
+  ) {
+    return Component;
+  }
+
+  // If new component APIs are defined, "unsafe" lifecycles won't be called.
+  // Error if any of these lifecycles are present,
+  // Because they would work differently between older and newer (16.3+) versions of React.
+  var foundWillMountName = null;
+  var foundWillReceivePropsName = null;
+  var foundWillUpdateName = null;
+  if (typeof prototype.componentWillMount === 'function') {
+    foundWillMountName = 'componentWillMount';
+  } else if (typeof prototype.UNSAFE_componentWillMount === 'function') {
+    foundWillMountName = 'UNSAFE_componentWillMount';
+  }
+  if (typeof prototype.componentWillReceiveProps === 'function') {
+    foundWillReceivePropsName = 'componentWillReceiveProps';
+  } else if (typeof prototype.UNSAFE_componentWillReceiveProps === 'function') {
+    foundWillReceivePropsName = 'UNSAFE_componentWillReceiveProps';
+  }
+  if (typeof prototype.componentWillUpdate === 'function') {
+    foundWillUpdateName = 'componentWillUpdate';
+  } else if (typeof prototype.UNSAFE_componentWillUpdate === 'function') {
+    foundWillUpdateName = 'UNSAFE_componentWillUpdate';
+  }
+  if (
+    foundWillMountName !== null ||
+    foundWillReceivePropsName !== null ||
+    foundWillUpdateName !== null
+  ) {
+    var componentName = Component.displayName || Component.name;
+    var newApiName =
+      typeof Component.getDerivedStateFromProps === 'function'
+        ? 'getDerivedStateFromProps()'
+        : 'getSnapshotBeforeUpdate()';
+
+    throw Error(
+      'Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n' +
+        componentName +
+        ' uses ' +
+        newApiName +
+        ' but also contains the following legacy lifecycles:' +
+        (foundWillMountName !== null ? '\n  ' + foundWillMountName : '') +
+        (foundWillReceivePropsName !== null
+          ? '\n  ' + foundWillReceivePropsName
+          : '') +
+        (foundWillUpdateName !== null ? '\n  ' + foundWillUpdateName : '') +
+        '\n\nThe above lifecycles should be removed. Learn more about this warning here:\n' +
+        'https://fb.me/react-async-component-lifecycle-hooks'
+    );
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
   }
 };
 
+<<<<<<< HEAD
 function createRoot(container, options) {
   var functionName = enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot';
   !isValidContainer(container) ? invariant(false, '%s(...): Target container is not a DOM element.', functionName) : void 0;
@@ -40046,8 +54417,209 @@ function polyfill(Component) {
   return Component;
 }
 
+=======
+  // React <= 16.2 does not support static getDerivedStateFromProps.
+  // As a workaround, use cWM and cWRP to invoke the new static lifecycle.
+  // Newer versions of React will ignore these lifecycles if gDSFP exists.
+  if (typeof Component.getDerivedStateFromProps === 'function') {
+    prototype.componentWillMount = componentWillMount;
+    prototype.componentWillReceiveProps = componentWillReceiveProps;
+  }
+
+  // React <= 16.2 does not support getSnapshotBeforeUpdate.
+  // As a workaround, use cWU to invoke the new lifecycle.
+  // Newer versions of React will ignore that lifecycle if gSBU exists.
+  if (typeof prototype.getSnapshotBeforeUpdate === 'function') {
+    if (typeof prototype.componentDidUpdate !== 'function') {
+      throw new Error(
+        'Cannot polyfill getSnapshotBeforeUpdate() for components that do not define componentDidUpdate() on the prototype'
+      );
+    }
+
+    prototype.componentWillUpdate = componentWillUpdate;
+
+    var componentDidUpdate = prototype.componentDidUpdate;
+
+    prototype.componentDidUpdate = function componentDidUpdatePolyfill(
+      prevProps,
+      prevState,
+      maybeSnapshot
+    ) {
+      // 16.3+ will not execute our will-update method;
+      // It will pass a snapshot value to did-update though.
+      // Older versions will require our polyfilled will-update value.
+      // We need to handle both cases, but can't just check for the presence of "maybeSnapshot",
+      // Because for <= 15.x versions this might be a "prevContext" object.
+      // We also can't just check "__reactInternalSnapshot",
+      // Because get-snapshot might return a falsy value.
+      // So check for the explicit __reactInternalSnapshotFlag flag to determine behavior.
+      var snapshot = this.__reactInternalSnapshotFlag
+        ? this.__reactInternalSnapshot
+        : maybeSnapshot;
+
+      componentDidUpdate.call(this, prevProps, prevState, snapshot);
+    };
+  }
+
+  return Component;
+}
 
 
+
+
+/***/ }),
+
+/***/ "./node_modules/react-overlays/Dropdown.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-overlays/Dropdown.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _matches = _interopRequireDefault(__webpack_require__(/*! dom-helpers/query/matches */ "./node_modules/dom-helpers/query/matches.js"));
+
+var _querySelectorAll = _interopRequireDefault(__webpack_require__(/*! dom-helpers/query/querySelectorAll */ "./node_modules/dom-helpers/query/querySelectorAll.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _reactDom = _interopRequireDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _uncontrollable = _interopRequireDefault(__webpack_require__(/*! uncontrollable */ "./node_modules/uncontrollable/index.js"));
+
+var Popper = _interopRequireWildcard(__webpack_require__(/*! react-popper */ "./node_modules/react-popper/lib/esm/index.js"));
+
+var _DropdownContext = _interopRequireDefault(__webpack_require__(/*! ./DropdownContext */ "./node_modules/react-overlays/DropdownContext.js"));
+
+var _DropdownMenu = _interopRequireDefault(__webpack_require__(/*! ./DropdownMenu */ "./node_modules/react-overlays/DropdownMenu.js"));
+
+var _DropdownToggle = _interopRequireDefault(__webpack_require__(/*! ./DropdownToggle */ "./node_modules/react-overlays/DropdownToggle.js"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var propTypes = {
+  /**
+   * A render prop that returns the root dropdown element. The `props`
+   * argument should spread through to an element containing _both_ the
+   * menu and toggle in order to handle keyboard events for focus management.
+   *
+   * @type {Function ({
+   *   props: {
+   *     onKeyDown: (SyntheticEvent) => void,
+   *   },
+   * }) => React.Element}
+   */
+  children: _propTypes.default.func.isRequired,
+
+  /**
+   * Determines the direction and location of the Menu in relation to it's Toggle.
+   */
+  drop: _propTypes.default.oneOf(['up', 'left', 'right', 'down']),
+
+  /**
+   * Controls the focus behavior for when the Dropdown is opened. Set to
+   * `true` to always focus the first menu item, `keyboard` to focus only when
+   * navigating via the keyboard, or `false` to disable completely
+   *
+   * The Default behavior is `false` **unless** the Menu has a `role="menu"`
+   * where it will default to `keyboard` to match the recommended [ARIA Authoring practices](https://www.w3.org/TR/wai-aria-practices-1.1/#menubutton).
+   */
+  focusFirstItemOnShow: _propTypes.default.oneOf([false, true, 'keyboard']),
+
+  /**
+   * A css slector string that will return __focusable__ menu items.
+   * Selectors should be relative to the menu component:
+   * e.g. ` > li:not('.disabled')`
+   */
+  itemSelector: _propTypes.default.string.isRequired,
+
+  /**
+   * Align the menu to the 'end' side of the placement side of the Dropdown toggle. The default placement is `top-start` or `bottom-start`.
+   */
+  alignEnd: _propTypes.default.bool,
+
+  /**
+   * Whether or not the Dropdown is visible.
+   *
+   * @controllable onToggle
+   */
+  show: _propTypes.default.bool,
+
+  /**
+   * A callback fired when the Dropdown wishes to change visibility. Called with the requested
+   * `show` value, the DOM event, and the source that fired it: `'click'`,`'keydown'`,`'rootClose'`, or `'select'`.
+   *
+   * ```js
+   * function(
+   *   isOpen: boolean,
+   *   event: SyntheticEvent,
+   * ): void
+   * ```
+   *
+   * @controllable show
+   */
+  onToggle: _propTypes.default.func
+};
+var defaultProps = {
+  itemSelector: '* > *'
+};
+/**
+ * `Dropdown` is set of structural components for building, accessible dropdown menus with close-on-click,
+ * keyboard navigation, and correct focus handling. As with all the react-overlay's
+ * components its BYOS (bring your own styles). Dropdown is primarily
+ * built from three base components, you should compose to build your Dropdowns.
+ *
+ * - `Dropdown`, which wraps the menu and toggle, and handles keyboard navigation
+ * - `Dropdown.Toggle` generally a button that triggers the menu opening
+ * - `Dropdown.Menu` The overlaid, menu, positioned to the toggle with PopperJs
+ */
+
+var Dropdown =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(Dropdown, _React$Component);
+
+  Dropdown.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
+    var drop = _ref.drop,
+        alignEnd = _ref.alignEnd,
+        show = _ref.show;
+    var lastShow = prevState.context.show;
+    return {
+      lastShow: lastShow,
+      context: _extends({}, prevState.context, {
+        drop: drop,
+        show: show,
+        alignEnd: alignEnd
+      })
+    };
+  };
+
+  function Dropdown(props, context) {
+    var _this;
+
+    _this = _React$Component.call(this, props, context) || this;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+    _this.handleClick = function (event) {
+      _this.toggleOpen(event);
+    };
+
+<<<<<<< HEAD
 
 /***/ }),
 
@@ -40649,6 +55221,456 @@ var DecoratedDropdownMenu = (0, _mapContextToProps.default)(_DropdownContext.def
   };
 }, DropdownMenu);
 var _default = DecoratedDropdownMenu;
+=======
+    _this.handleKeyDown = function (event) {
+      var key = event.key,
+          target = event.target; // Second only to https://github.com/twbs/bootstrap/blob/8cfbf6933b8a0146ac3fbc369f19e520bd1ebdac/js/src/dropdown.js#L400
+      // in inscrutability
+
+      var isInput = /input|textarea/i.test(target.tagName);
+
+      if (isInput && (key === ' ' || key !== 'Escape' && _this.menu.contains(target))) {
+        return;
+      }
+
+      _this._lastSourceEvent = event.type;
+
+      switch (key) {
+        case 'ArrowUp':
+          {
+            var next = _this.getNextFocusedChild(target, -1);
+
+            if (next && next.focus) next.focus();
+            event.preventDefault();
+            return;
+          }
+
+        case 'ArrowDown':
+          event.preventDefault();
+
+          if (!_this.props.show) {
+            _this.toggleOpen(event);
+          } else {
+            var _next = _this.getNextFocusedChild(target, 1);
+
+            if (_next && _next.focus) _next.focus();
+          }
+
+          return;
+
+        case 'Escape':
+        case 'Tab':
+          _this.props.onToggle(false, event);
+
+          break;
+
+        default:
+      }
+    };
+
+    _this._focusInDropdown = false;
+    _this.menu = null;
+    _this.state = {
+      context: {
+        close: _this.handleClose,
+        toggle: _this.handleClick,
+        menuRef: function menuRef(r) {
+          _this.menu = r;
+        },
+        toggleRef: function toggleRef(r) {
+          var toggleNode = r && _reactDom.default.findDOMNode(r);
+
+          _this.setState(function (_ref2) {
+            var context = _ref2.context;
+            return {
+              context: _extends({}, context, {
+                toggleNode: toggleNode
+              })
+            };
+          });
+        }
+      }
+    };
+    return _this;
+  }
+
+  var _proto = Dropdown.prototype;
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    var show = this.props.show;
+    var prevOpen = prevProps.show;
+
+    if (show && !prevOpen) {
+      this.maybeFocusFirst();
+    }
+
+    this._lastSourceEvent = null;
+
+    if (!show && prevOpen) {
+      // if focus hasn't already moved from the menu let's return it
+      // to the toggle
+      if (this._focusInDropdown) {
+        this._focusInDropdown = false;
+        this.focus();
+      }
+    }
+  };
+
+  _proto.getNextFocusedChild = function getNextFocusedChild(current, offset) {
+    if (!this.menu) return null;
+    var itemSelector = this.props.itemSelector;
+    var items = (0, _querySelectorAll.default)(this.menu, itemSelector);
+    var index = items.indexOf(current) + offset;
+    index = Math.max(0, Math.min(index, items.length));
+    return items[index];
+  };
+
+  _proto.hasMenuRole = function hasMenuRole() {
+    return this.menu && (0, _matches.default)(this.menu, '[role=menu]');
+  };
+
+  _proto.focus = function focus() {
+    var toggleNode = this.state.context.toggleNode;
+
+    if (toggleNode && toggleNode.focus) {
+      toggleNode.focus();
+    }
+  };
+
+  _proto.maybeFocusFirst = function maybeFocusFirst() {
+    var type = this._lastSourceEvent;
+    var focusFirstItemOnShow = this.props.focusFirstItemOnShow;
+
+    if (focusFirstItemOnShow == null) {
+      focusFirstItemOnShow = this.hasMenuRole() ? 'keyboard' : false;
+    }
+
+    if (focusFirstItemOnShow === false || focusFirstItemOnShow === 'keyboard' && !/^key.+$/.test(type)) {
+      return;
+    }
+
+    var itemSelector = this.props.itemSelector;
+    var first = (0, _querySelectorAll.default)(this.menu, itemSelector)[0];
+    if (first && first.focus) first.focus();
+  };
+
+  _proto.toggleOpen = function toggleOpen(event) {
+    var show = !this.props.show;
+    this.props.onToggle(show, event);
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        children = _this$props.children,
+        props = _objectWithoutPropertiesLoose(_this$props, ["children"]);
+
+    delete props.onToggle;
+
+    if (this.menu && this.state.lastShow && !this.props.show) {
+      this._focusInDropdown = this.menu.contains(document.activeElement);
+    }
+
+    return _react.default.createElement(_DropdownContext.default.Provider, {
+      value: this.state.context
+    }, _react.default.createElement(Popper.Manager, null, children({
+      props: {
+        onKeyDown: this.handleKeyDown
+      }
+    })));
+  };
+
+  return Dropdown;
+}(_react.default.Component);
+
+Dropdown.displayName = 'ReactOverlaysDropdown';
+Dropdown.propTypes = propTypes;
+Dropdown.defaultProps = defaultProps;
+var UncontrolledDropdown = (0, _uncontrollable.default)(Dropdown, {
+  show: 'onToggle'
+});
+UncontrolledDropdown.Menu = _DropdownMenu.default;
+UncontrolledDropdown.Toggle = _DropdownToggle.default;
+var _default = UncontrolledDropdown;
+exports.default = _default;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/react-overlays/DropdownContext.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-overlays/DropdownContext.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DropdownContext = _react.default.createContext({
+  menuRef: function menuRef() {},
+  toggleRef: function toggleRef() {},
+  onToggle: function onToggle() {},
+  toggleNode: undefined,
+  alignEnd: null,
+  show: null,
+  drop: null
+});
+
+var _default = DropdownContext;
+exports.default = _default;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/react-overlays/DropdownMenu.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-overlays/DropdownMenu.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _reactPopper = __webpack_require__(/*! react-popper */ "./node_modules/react-popper/lib/esm/index.js");
+
+var _DropdownContext = _interopRequireDefault(__webpack_require__(/*! ./DropdownContext */ "./node_modules/react-overlays/DropdownContext.js"));
+
+var _RootCloseWrapper = _interopRequireDefault(__webpack_require__(/*! ./RootCloseWrapper */ "./node_modules/react-overlays/RootCloseWrapper.js"));
+
+var _mapContextToProps = _interopRequireDefault(__webpack_require__(/*! react-context-toolbox/mapContextToProps */ "./node_modules/react-context-toolbox/mapContextToProps.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var DropdownMenu =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(DropdownMenu, _React$Component);
+
+  function DropdownMenu() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+    _this.state = {
+      toggleId: null
+    };
+    _this.popperIsInitialized = false;
+
+    _this.handleClose = function (e) {
+      if (!_this.props.onToggle) return;
+
+      _this.props.onToggle(false, e);
+    };
+
+    return _this;
+  }
+
+  var _proto = DropdownMenu.prototype;
+
+  _proto.getSnapshotBeforeUpdate = function getSnapshotBeforeUpdate(prevProps) {
+    // If, to the best we can tell, this update won't reinitialize popper,
+    // manually schedule an update
+    var shouldUpdatePopper = !prevProps.show && this.props.show && this.popperIsInitialized && // a new reference node will already trigger this internally
+    prevProps.toggleNode === this.props.toggleNode;
+
+    if (this.props.show && this.props.usePopper && !this.popperIsInitialized) {
+      this.popperIsInitialized = true;
+    }
+
+    return !!shouldUpdatePopper;
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(_, __, shouldUpdatePopper) {
+    if (shouldUpdatePopper && this.scheduleUpdate) {
+      this.scheduleUpdate();
+    }
+  };
+
+  _proto.render = function render() {
+    var _this2 = this;
+
+    var _this$props = this.props,
+        show = _this$props.show,
+        flip = _this$props.flip,
+        menuRef = _this$props.menuRef,
+        alignEnd = _this$props.alignEnd,
+        drop = _this$props.drop,
+        usePopper = _this$props.usePopper,
+        toggleNode = _this$props.toggleNode,
+        rootCloseEvent = _this$props.rootCloseEvent,
+        _this$props$popperCon = _this$props.popperConfig,
+        popperConfig = _this$props$popperCon === void 0 ? {} : _this$props$popperCon;
+    var placement = alignEnd ? 'bottom-end' : 'bottom-start';
+    if (drop === 'up') placement = alignEnd ? 'top-end' : 'top-start';
+    if (drop === 'right') placement = alignEnd ? 'right-end' : 'right-start';
+    if (drop === 'left') placement = alignEnd ? 'left-end' : 'left-start';
+    var menu = null;
+    var menuProps = {
+      ref: menuRef,
+      'aria-labelledby': toggleNode && toggleNode.id
+    };
+    var childArgs = {
+      show: show,
+      alignEnd: alignEnd,
+      close: this.handleClose
+    };
+
+    if (!usePopper) {
+      menu = this.props.children(_extends({}, childArgs, {
+        props: menuProps
+      }));
+    } else if (this.popperIsInitialized || show) {
+      // Add it this way, so it doesn't override someones usage
+      // with react-poppers <Reference>
+      if (toggleNode) popperConfig.referenceElement = toggleNode;
+      menu = _react.default.createElement(_reactPopper.Popper, _extends({}, popperConfig, {
+        innerRef: menuRef,
+        placement: placement,
+        eventsEnabled: !!show,
+        modifiers: _extends({
+          flip: {
+            enabled: !!flip
+          }
+        }, popperConfig.modifiers)
+      }), function (_ref) {
+        var ref = _ref.ref,
+            style = _ref.style,
+            popper = _objectWithoutPropertiesLoose(_ref, ["ref", "style"]);
+
+        _this2.scheduleUpdate = popper.scheduleUpdate;
+        return _this2.props.children(_extends({}, popper, childArgs, {
+          props: _extends({}, menuProps, {
+            ref: ref,
+            style: style
+          })
+        }));
+      });
+    }
+
+    return menu && _react.default.createElement(_RootCloseWrapper.default, {
+      disabled: !show,
+      event: rootCloseEvent,
+      onRootClose: this.handleClose
+    }, menu);
+  };
+
+  return DropdownMenu;
+}(_react.default.Component);
+
+DropdownMenu.displayName = 'ReactOverlaysDropdownMenu';
+DropdownMenu.propTypes = {
+  /**
+   * A render prop that returns a Menu element. The `props`
+   * argument should spread through to **a component that can accept a ref**.
+   *
+   * @type {Function ({
+   *   show: boolean,
+   *   alignEnd: boolean,
+   *   close: (?SyntheticEvent) => void,
+   *   placement: Placement,
+   *   outOfBoundaries: ?boolean,
+   *   scheduleUpdate: () => void,
+   *   props: {
+   *     ref: (?HTMLElement) => void,
+   *     style: { [string]: string | number },
+   *     aria-labelledby: ?string
+   *   },
+   *   arrowProps: {
+   *     ref: (?HTMLElement) => void,
+   *     style: { [string]: string | number },
+   *   },
+   * }) => React.Element}
+   */
+  children: _propTypes.default.func.isRequired,
+
+  /**
+   * Controls the visible state of the menu, generally this is
+   * provided by the parent `Dropdown` component,
+   * but may also be specified as a prop directly.
+   */
+  show: _propTypes.default.bool,
+
+  /**
+   * Aligns the dropdown menu to the 'end' of it's placement position.
+   * Generally this is provided by the parent `Dropdown` component,
+   * but may also be specified as a prop directly.
+   */
+  alignEnd: _propTypes.default.bool,
+
+  /**
+   * Enables the Popper.js `flip` modifier, allowing the Dropdown to
+   * automatically adjust it's placement in case of overlap with the viewport or toggle.
+   * Refer to the [flip docs](https://popper.js.org/popper-documentation.html#modifiers..flip.enabled) for more info
+   */
+  flip: _propTypes.default.bool,
+  usePopper: _propTypes.default.oneOf([true, false]),
+
+  /**
+   * A set of popper options and props passed directly to react-popper's Popper component.
+   */
+  popperConfig: _propTypes.default.object,
+
+  /**
+   * Override the default event used by RootCloseWrapper.
+   */
+  rootCloseEvent: _propTypes.default.string,
+
+  /** @private */
+  onToggle: _propTypes.default.func,
+
+  /** @private */
+  menuRef: _propTypes.default.func,
+
+  /** @private */
+  drop: _propTypes.default.string,
+
+  /** @private */
+  toggleNode: _propTypes.default.any
+};
+DropdownMenu.defaultProps = {
+  usePopper: true
+};
+var DecoratedDropdownMenu = (0, _mapContextToProps.default)(_DropdownContext.default, function (_ref2, props) {
+  var show = _ref2.show,
+      alignEnd = _ref2.alignEnd,
+      toggle = _ref2.toggle,
+      drop = _ref2.drop,
+      menuRef = _ref2.menuRef,
+      toggleNode = _ref2.toggleNode;
+  return {
+    drop: drop,
+    menuRef: menuRef,
+    toggleNode: toggleNode,
+    onToggle: toggle,
+    show: show == null ? props.show : show,
+    alignEnd: alignEnd == null ? props.alignEnd : alignEnd
+  };
+}, DropdownMenu);
+var _default = DecoratedDropdownMenu;
 exports.default = _default;
 module.exports = exports.default;
 
@@ -40715,11 +55737,92 @@ function DropdownToggle(_ref) {
 DropdownToggle.displayName = 'ReactOverlaysDropdownToggle';
 DropdownToggle.propTypes = propTypes;
 var _default = DropdownToggle;
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 exports.default = _default;
 module.exports = exports.default;
 
 /***/ }),
 
+<<<<<<< HEAD
+/***/ "./node_modules/react-overlays/DropdownToggle.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-overlays/DropdownToggle.js ***!
+  \*******************************************************/
+=======
+/***/ "./node_modules/react-overlays/Modal.js":
+/*!**********************************************!*\
+  !*** ./node_modules/react-overlays/Modal.js ***!
+  \**********************************************/
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+<<<<<<< HEAD
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _DropdownContext = _interopRequireDefault(__webpack_require__(/*! ./DropdownContext */ "./node_modules/react-overlays/DropdownContext.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  /**
+   * A render prop that returns a Toggle element. The `props`
+   * argument should spread through to **a component that can accept a ref**. Use
+   * the `onToggle` argument to toggle the menu open or closed
+   *
+   * @type {Function ({
+   *   show: boolean,
+   *   toggle: (show: boolean) => void,
+   *   props: {
+   *     ref: (?HTMLElement) => void,
+   *     aria-haspopup: true
+   *     aria-expanded: boolean
+   *   },
+   * }) => React.Element}
+   */
+  children: _propTypes.default.func.isRequired
+};
+
+function DropdownToggle(_ref) {
+  var children = _ref.children;
+  return _react.default.createElement(_DropdownContext.default.Consumer, null, function (_ref2) {
+    var show = _ref2.show,
+        toggle = _ref2.toggle,
+        toggleRef = _ref2.toggleRef;
+    return children({
+      show: show,
+      toggle: toggle,
+      props: {
+        ref: toggleRef,
+        'aria-haspopup': true,
+        'aria-expanded': !!show
+      }
+    });
+  });
+}
+
+DropdownToggle.displayName = 'ReactOverlaysDropdownToggle';
+DropdownToggle.propTypes = propTypes;
+var _default = DropdownToggle;
+exports.default = _default;
+module.exports = exports.default;
+=======
+var _activeElement = _interopRequireDefault(__webpack_require__(/*! dom-helpers/activeElement */ "./node_modules/dom-helpers/activeElement.js"));
+
+var _contains = _interopRequireDefault(__webpack_require__(/*! dom-helpers/query/contains */ "./node_modules/dom-helpers/query/contains.js"));
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+var _inDOM = _interopRequireDefault(__webpack_require__(/*! dom-helpers/util/inDOM */ "./node_modules/dom-helpers/util/inDOM.js"));
+
+<<<<<<< HEAD
 /***/ "./node_modules/react-overlays/Modal.js":
 /*!**********************************************!*\
   !*** ./node_modules/react-overlays/Modal.js ***!
@@ -40728,8 +55831,17 @@ module.exports = exports.default;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+=======
+var _listen = _interopRequireDefault(__webpack_require__(/*! dom-helpers/events/listen */ "./node_modules/dom-helpers/events/listen.js"));
 
+var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
 
+var _componentOrElement = _interopRequireDefault(__webpack_require__(/*! prop-types-extra/lib/componentOrElement */ "./node_modules/prop-types-extra/lib/componentOrElement.js"));
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+
+var _elementType = _interopRequireDefault(__webpack_require__(/*! prop-types-extra/lib/elementType */ "./node_modules/prop-types-extra/lib/elementType.js"));
+
+<<<<<<< HEAD
 exports.__esModule = true;
 exports.default = void 0;
 
@@ -41163,10 +56275,437 @@ Modal.propTypes = {
    * When `true` The modal will automatically shift focus to itself when it opens, and
    * replace it to the last focused element when it closes. This also
    * works correctly with any Modal children that have the `autoFocus` prop.
+=======
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _reactDom = _interopRequireDefault(__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"));
+
+var _ModalManager = _interopRequireDefault(__webpack_require__(/*! ./ModalManager */ "./node_modules/react-overlays/ModalManager.js"));
+
+var _Portal = _interopRequireDefault(__webpack_require__(/*! ./Portal */ "./node_modules/react-overlays/Portal.js"));
+
+var _getContainer = _interopRequireDefault(__webpack_require__(/*! ./utils/getContainer */ "./node_modules/react-overlays/utils/getContainer.js"));
+
+var _ownerDocument = _interopRequireDefault(__webpack_require__(/*! ./utils/ownerDocument */ "./node_modules/react-overlays/utils/ownerDocument.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+var modalManager = new _ModalManager.default();
+
+function omitProps(props, propTypes) {
+  var keys = Object.keys(props);
+  var newProps = {};
+  keys.map(function (prop) {
+    if (!Object.prototype.hasOwnProperty.call(propTypes, prop)) {
+      newProps[prop] = props[prop];
+    }
+  });
+  return newProps;
+}
+/**
+ * Love them or hate them, `<Modal />` provides a solid foundation for creating dialogs, lightboxes, or whatever else.
+ * The Modal component renders its `children` node in front of a backdrop component.
+ *
+ * The Modal offers a few helpful features over using just a `<Portal/>` component and some styles:
+ *
+ * - Manages dialog stacking when one-at-a-time just isn't enough.
+ * - Creates a backdrop, for disabling interaction below the modal.
+ * - It properly manages focus; moving to the modal content, and keeping it there until the modal is closed.
+ * - It disables scrolling of the page content while open.
+ * - Adds the appropriate ARIA roles are automatically.
+ * - Easily pluggable animations via a `<Transition/>` component.
+ *
+ * Note that, in the same way the backdrop element prevents users from clicking or interacting
+ * with the page content underneath the Modal, Screen readers also need to be signaled to not to
+ * interact with page content while the Modal is open. To do this, we use a common technique of applying
+ * the `aria-hidden='true'` attribute to the non-Modal elements in the Modal `container`. This means that for
+ * a Modal to be truly modal, it should have a `container` that is _outside_ your app's
+ * React hierarchy (such as the default: document.body).
+ */
+
+
+var Modal =
+/*#__PURE__*/
+function (_React$Component) {
+  _inheritsLoose(Modal, _React$Component);
+
+  function Modal() {
+    var _this;
+
+    for (var _len = arguments.length, _args = new Array(_len), _key = 0; _key < _len; _key++) {
+      _args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(_args)) || this;
+    _this.state = {
+      exited: !_this.props.show
+    };
+
+    _this.onPortalRendered = function () {
+      if (_this.props.onShow) {
+        _this.props.onShow();
+      } // autofocus after onShow, to not trigger a focus event for previous
+      // modals before this one is shown.
+
+
+      _this.autoFocus();
+    };
+
+    _this.onShow = function () {
+      var doc = (0, _ownerDocument.default)(_assertThisInitialized(_assertThisInitialized(_this)));
+      var container = (0, _getContainer.default)(_this.props.container, doc.body);
+
+      _this.props.manager.add(_assertThisInitialized(_assertThisInitialized(_this)), container, _this.props.containerClassName);
+
+      _this.removeKeydownListener = (0, _listen.default)(doc, 'keydown', _this.handleDocumentKeyDown);
+      _this.removeFocusListener = (0, _listen.default)(doc, 'focus', // the timeout is necessary b/c this will run before the new modal is mounted
+      // and so steals focus from it
+      function () {
+        return setTimeout(_this.enforceFocus);
+      }, true);
+    };
+
+    _this.onHide = function () {
+      _this.props.manager.remove(_assertThisInitialized(_assertThisInitialized(_this)));
+
+      _this.removeKeydownListener();
+
+      _this.removeFocusListener();
+
+      if (_this.props.restoreFocus) {
+        _this.restoreLastFocus();
+      }
+    };
+
+    _this.setDialogRef = function (ref) {
+      _this.dialog = ref;
+    };
+
+    _this.setBackdropRef = function (ref) {
+      _this.backdrop = ref && _reactDom.default.findDOMNode(ref);
+    };
+
+    _this.handleHidden = function () {
+      _this.setState({
+        exited: true
+      });
+
+      _this.onHide();
+
+      if (_this.props.onExited) {
+        var _this$props;
+
+        (_this$props = _this.props).onExited.apply(_this$props, arguments);
+      }
+    };
+
+    _this.handleBackdropClick = function (e) {
+      if (e.target !== e.currentTarget) {
+        return;
+      }
+
+      if (_this.props.onBackdropClick) {
+        _this.props.onBackdropClick(e);
+      }
+
+      if (_this.props.backdrop === true) {
+        _this.props.onHide();
+      }
+    };
+
+    _this.handleDocumentKeyDown = function (e) {
+      if (_this.props.keyboard && e.keyCode === 27 && _this.isTopModal()) {
+        if (_this.props.onEscapeKeyDown) {
+          _this.props.onEscapeKeyDown(e);
+        }
+
+        _this.props.onHide();
+      }
+    };
+
+    _this.enforceFocus = function () {
+      if (!_this.props.enforceFocus || !_this._isMounted || !_this.isTopModal()) {
+        return;
+      }
+
+      var currentActiveElement = (0, _activeElement.default)((0, _ownerDocument.default)(_assertThisInitialized(_assertThisInitialized(_this))));
+
+      if (_this.dialog && !(0, _contains.default)(_this.dialog, currentActiveElement)) {
+        _this.dialog.focus();
+      }
+    };
+
+    _this.renderBackdrop = function () {
+      var _this$props2 = _this.props,
+          renderBackdrop = _this$props2.renderBackdrop,
+          Transition = _this$props2.backdropTransition;
+      var backdrop = renderBackdrop({
+        ref: _this.setBackdropRef,
+        onClick: _this.handleBackdropClick
+      });
+
+      if (Transition) {
+        backdrop = _react.default.createElement(Transition, {
+          appear: true,
+          in: _this.props.show
+        }, backdrop);
+      }
+
+      return backdrop;
+    };
+
+    return _this;
+  }
+
+  Modal.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps) {
+    if (nextProps.show) {
+      return {
+        exited: false
+      };
+    } else if (!nextProps.transition) {
+      // Otherwise let handleHidden take care of marking exited.
+      return {
+        exited: true
+      };
+    }
+
+    return null;
+  };
+
+  var _proto = Modal.prototype;
+
+  _proto.getSnapshotBeforeUpdate = function getSnapshotBeforeUpdate(prevProps) {
+    if (_inDOM.default && !prevProps.show && this.props.show) {
+      this.lastFocus = (0, _activeElement.default)();
+    }
+
+    return null;
+  };
+
+  _proto.componentDidMount = function componentDidMount() {
+    this._isMounted = true;
+
+    if (this.props.show) {
+      this.onShow();
+    }
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    var transition = this.props.transition;
+
+    if (prevProps.show && !this.props.show && !transition) {
+      // Otherwise handleHidden will call this.
+      this.onHide();
+    } else if (!prevProps.show && this.props.show) {
+      this.onShow();
+    }
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    var _this$props3 = this.props,
+        show = _this$props3.show,
+        transition = _this$props3.transition;
+    this._isMounted = false;
+
+    if (show || transition && !this.state.exited) {
+      this.onHide();
+    }
+  };
+
+  _proto.autoFocus = function autoFocus() {
+    if (!this.props.autoFocus) return;
+    var currentActiveElement = (0, _activeElement.default)((0, _ownerDocument.default)(this));
+
+    if (this.dialog && !(0, _contains.default)(this.dialog, currentActiveElement)) {
+      this.lastFocus = currentActiveElement;
+      this.dialog.focus();
+    }
+  };
+
+  _proto.restoreLastFocus = function restoreLastFocus() {
+    // Support: <=IE11 doesn't support `focus()` on svg elements (RB: #917)
+    if (this.lastFocus && this.lastFocus.focus) {
+      this.lastFocus.focus();
+      this.lastFocus = null;
+    }
+  };
+
+  _proto.isTopModal = function isTopModal() {
+    return this.props.manager.isTopModal(this);
+  };
+
+  _proto.render = function render() {
+    var _this$props4 = this.props,
+        show = _this$props4.show,
+        container = _this$props4.container,
+        children = _this$props4.children,
+        renderDialog = _this$props4.renderDialog,
+        _this$props4$role = _this$props4.role,
+        role = _this$props4$role === void 0 ? 'dialog' : _this$props4$role,
+        Transition = _this$props4.transition,
+        backdrop = _this$props4.backdrop,
+        className = _this$props4.className,
+        style = _this$props4.style,
+        onExit = _this$props4.onExit,
+        onExiting = _this$props4.onExiting,
+        onEnter = _this$props4.onEnter,
+        onEntering = _this$props4.onEntering,
+        onEntered = _this$props4.onEntered,
+        props = _objectWithoutPropertiesLoose(_this$props4, ["show", "container", "children", "renderDialog", "role", "transition", "backdrop", "className", "style", "onExit", "onExiting", "onEnter", "onEntering", "onEntered"]);
+
+    if (!(show || Transition && !this.state.exited)) {
+      return null;
+    }
+
+    var dialogProps = _extends({
+      role: role,
+      ref: this.setDialogRef,
+      // apparently only works on the dialog role element
+      'aria-modal': role === 'dialog' ? true : undefined
+    }, omitProps(props, Modal.propTypes), {
+      style: style,
+      className: className,
+      tabIndex: '-1'
+    });
+
+    var dialog = renderDialog ? renderDialog(dialogProps) : _react.default.createElement("div", dialogProps, _react.default.cloneElement(children, {
+      role: 'document'
+    }));
+
+    if (Transition) {
+      dialog = _react.default.createElement(Transition, {
+        appear: true,
+        unmountOnExit: true,
+        in: show,
+        onExit: onExit,
+        onExiting: onExiting,
+        onExited: this.handleHidden,
+        onEnter: onEnter,
+        onEntering: onEntering,
+        onEntered: onEntered
+      }, dialog);
+    }
+
+    return _react.default.createElement(_Portal.default, {
+      container: container,
+      onRendered: this.onPortalRendered
+    }, _react.default.createElement(_react.default.Fragment, null, backdrop && this.renderBackdrop(), dialog));
+  };
+
+  return Modal;
+}(_react.default.Component);
+
+Modal.propTypes = {
+  /**
+   * Set the visibility of the Modal
+   */
+  show: _propTypes.default.bool,
+
+  /**
+   * A Node, Component instance, or function that returns either. The Modal is appended to it's container element.
+   *
+   * For the sake of assistive technologies, the container should usually be the document body, so that the rest of the
+   * page content can be placed behind a virtual backdrop as well as a visual one.
+   */
+  container: _propTypes.default.oneOfType([_componentOrElement.default, _propTypes.default.func]),
+
+  /**
+   * A callback fired when the Modal is opening.
+   */
+  onShow: _propTypes.default.func,
+
+  /**
+   * A callback fired when either the backdrop is clicked, or the escape key is pressed.
+   *
+   * The `onHide` callback only signals intent from the Modal,
+   * you must actually set the `show` prop to `false` for the Modal to close.
+   */
+  onHide: _propTypes.default.func,
+
+  /**
+   * Include a backdrop component.
+   */
+  backdrop: _propTypes.default.oneOfType([_propTypes.default.bool, _propTypes.default.oneOf(['static'])]),
+
+  /**
+   * A function that returns the dialog component. Useful for custom
+   * rendering. **Note:** the component should make sure to apply the provided ref.
+   *
+   * ```js
+   *  renderDialog={props => <MyDialog {...props} />}
+   * ```
+   */
+  renderDialog: _propTypes.default.func,
+
+  /**
+   * A function that returns a backdrop component. Useful for custom
+   * backdrop rendering.
+   *
+   * ```js
+   *  renderBackdrop={props => <MyBackdrop {...props} />}
+   * ```
+   */
+  renderBackdrop: _propTypes.default.func,
+
+  /**
+   * A callback fired when the escape key, if specified in `keyboard`, is pressed.
+   */
+  onEscapeKeyDown: _propTypes.default.func,
+
+  /**
+   * A callback fired when the backdrop, if specified, is clicked.
+   */
+  onBackdropClick: _propTypes.default.func,
+
+  /**
+   * A css class or set of classes applied to the modal container when the modal is open,
+   * and removed when it is closed.
+   */
+  containerClassName: _propTypes.default.string,
+
+  /**
+   * Close the modal when escape key is pressed
+   */
+  keyboard: _propTypes.default.bool,
+
+  /**
+   * A `react-transition-group@2.0.0` `<Transition/>` component used
+   * to control animations for the dialog component.
+   */
+  transition: _elementType.default,
+
+  /**
+   * A `react-transition-group@2.0.0` `<Transition/>` component used
+   * to control animations for the backdrop components.
+   */
+  backdropTransition: _elementType.default,
+
+  /**
+   * When `true` The modal will automatically shift focus to itself when it opens, and
+   * replace it to the last focused element when it closes. This also
+   * works correctly with any Modal children that have the `autoFocus` prop.
    *
    * Generally this should never be set to `false` as it makes the Modal less
    * accessible to assistive technologies, like screen readers.
    */
+  autoFocus: _propTypes.default.bool,
+
+  /**
+   * When `true` The modal will prevent focus from leaving the Modal while open.
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
+   *
+   * Generally this should never be set to `false` as it makes the Modal less
+   * accessible to assistive technologies, like screen readers.
+   */
+<<<<<<< HEAD
   autoFocus: _propTypes.default.bool,
 
   /**
@@ -41324,6 +56863,157 @@ function () {
       paddingRight: container.style.paddingRight
     };
 
+=======
+  enforceFocus: _propTypes.default.bool,
+
+  /**
+   * When `true` The modal will restore focus to previously focused element once
+   * modal is hidden
+   */
+  restoreFocus: _propTypes.default.bool,
+
+  /**
+   * Callback fired before the Modal transitions in
+   */
+  onEnter: _propTypes.default.func,
+
+  /**
+   * Callback fired as the Modal begins to transition in
+   */
+  onEntering: _propTypes.default.func,
+
+  /**
+   * Callback fired after the Modal finishes transitioning in
+   */
+  onEntered: _propTypes.default.func,
+
+  /**
+   * Callback fired right before the Modal transitions out
+   */
+  onExit: _propTypes.default.func,
+
+  /**
+   * Callback fired as the Modal begins to transition out
+   */
+  onExiting: _propTypes.default.func,
+
+  /**
+   * Callback fired after the Modal finishes transitioning out
+   */
+  onExited: _propTypes.default.func,
+
+  /**
+   * A ModalManager instance used to track and manage the state of open
+   * Modals. Useful when customizing how modals interact within a container
+   */
+  manager: _propTypes.default.object.isRequired
+};
+Modal.defaultProps = {
+  show: false,
+  role: 'dialog',
+  backdrop: true,
+  keyboard: true,
+  autoFocus: true,
+  enforceFocus: true,
+  restoreFocus: true,
+  onHide: function onHide() {},
+  manager: modalManager,
+  renderBackdrop: function renderBackdrop(props) {
+    return _react.default.createElement("div", props);
+  }
+};
+Modal.Manager = _ModalManager.default;
+var _default = Modal;
+exports.default = _default;
+module.exports = exports.default;
+
+/***/ }),
+
+/***/ "./node_modules/react-overlays/ModalManager.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-overlays/ModalManager.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = void 0;
+
+var _class = _interopRequireDefault(__webpack_require__(/*! dom-helpers/class */ "./node_modules/dom-helpers/class/index.js"));
+
+var _style = _interopRequireDefault(__webpack_require__(/*! dom-helpers/style */ "./node_modules/dom-helpers/style/index.js"));
+
+var _scrollbarSize = _interopRequireDefault(__webpack_require__(/*! dom-helpers/util/scrollbarSize */ "./node_modules/dom-helpers/util/scrollbarSize.js"));
+
+var _isOverflowing = _interopRequireDefault(__webpack_require__(/*! ./utils/isOverflowing */ "./node_modules/react-overlays/utils/isOverflowing.js"));
+
+var _manageAriaHidden = __webpack_require__(/*! ./utils/manageAriaHidden */ "./node_modules/react-overlays/utils/manageAriaHidden.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function findIndexOf(arr, cb) {
+  var idx = -1;
+  arr.some(function (d, i) {
+    if (cb(d, i)) {
+      idx = i;
+      return true;
+    }
+  });
+  return idx;
+}
+/**
+ * Proper state managment for containers and the modals in those containers.
+ *
+ * @internal Used by the Modal to ensure proper styling of containers.
+ */
+
+
+var ModalManager =
+/*#__PURE__*/
+function () {
+  function ModalManager(_temp) {
+    var _ref = _temp === void 0 ? {} : _temp,
+        _ref$hideSiblingNodes = _ref.hideSiblingNodes,
+        hideSiblingNodes = _ref$hideSiblingNodes === void 0 ? true : _ref$hideSiblingNodes,
+        _ref$handleContainerO = _ref.handleContainerOverflow,
+        handleContainerOverflow = _ref$handleContainerO === void 0 ? true : _ref$handleContainerO;
+
+    this.hideSiblingNodes = hideSiblingNodes;
+    this.handleContainerOverflow = handleContainerOverflow;
+    this.modals = [];
+    this.containers = [];
+    this.data = [];
+    this.scrollbarSize = (0, _scrollbarSize.default)();
+  }
+
+  var _proto = ModalManager.prototype;
+
+  _proto.isContainerOverflowing = function isContainerOverflowing(modal) {
+    var data = this.data[this.containerIndexFromModal(modal)];
+    return data && data.overflowing;
+  };
+
+  _proto.containerIndexFromModal = function containerIndexFromModal(modal) {
+    return findIndexOf(this.data, function (d) {
+      return d.modals.indexOf(modal) !== -1;
+    });
+  };
+
+  _proto.setContainerStyle = function setContainerStyle(containerState, container) {
+    var style = {
+      overflow: 'hidden' // we are only interested in the actual `style` here
+      // becasue we will override it
+
+    };
+    containerState.style = {
+      overflow: container.style.overflow,
+      paddingRight: container.style.paddingRight
+    };
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     if (containerState.overflowing) {
       // use computed style, here to get the real padding
       // to add our scrollbar width
@@ -41350,6 +57040,7 @@ function () {
 
     modalIdx = this.modals.length;
     this.modals.push(modal);
+<<<<<<< HEAD
 
     if (this.hideSiblingNodes) {
       (0, _manageAriaHidden.hideSiblings)(container, modal);
@@ -41367,6 +57058,25 @@ function () {
       overflowing: (0, _isOverflowing.default)(container)
     };
 
+=======
+
+    if (this.hideSiblingNodes) {
+      (0, _manageAriaHidden.hideSiblings)(container, modal);
+    }
+
+    if (containerIdx !== -1) {
+      this.data[containerIdx].modals.push(modal);
+      return modalIdx;
+    }
+
+    var data = {
+      modals: [modal],
+      //right now only the first modal of a container will have its classes applied
+      classes: className ? className.split(/\s+/) : [],
+      overflowing: (0, _isOverflowing.default)(container)
+    };
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     if (this.handleContainerOverflow) {
       this.setContainerStyle(data, container);
     }
@@ -50891,11 +66601,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 =======
 /* harmony import */ var react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap/Form */ "./node_modules/react-bootstrap/Form.js");
 /* harmony import */ var react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2__);
+<<<<<<< HEAD
 /* harmony import */ var react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap/FormControl */ "./node_modules/react-bootstrap/FormControl.js");
 /* harmony import */ var react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/Button.js");
 /* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_4__);
 >>>>>>> 2fe2309568054f675f7d055e35b5e24db3f9c97c
+=======
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/Button.js");
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
@@ -50915,6 +66634,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -50931,6 +66651,65 @@ function (_React$Component) {
 
     return _possibleConstructorReturn(this, _getPrototypeOf(Header).apply(this, arguments));
   }
+=======
+
+
+
+var Header =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Header, _React$Component);
+
+  function Header() {
+    _classCallCheck(this, Header);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Header).apply(this, arguments));
+  }
+
+  _createClass(Header, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        bg: "dark",
+        expand: "lg"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default.a.Brand, {
+        href: "/home",
+        className: "mr-auto"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        width: "25%",
+        src: "./Logo.jpg",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        inline: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+        to: "/log"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        size: "sm"
+      }, "Sign in/sign Up")))));
+    }
+  }]);
+
+  return Header;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./src/components/Search.jsx":
+/*!***********************************!*\
+  !*** ./src/components/Search.jsx ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
   _createClass(Header, [{
     key: "render",
@@ -50987,32 +66766,11 @@ function mapDispatchToProps(dispatch) {
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_5__["connect"])(mapStateToProps, mapDispatchToProps)(Header));
 =======
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    bg: "light",
-    expand: "lg",
-    className: "space-between"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default.a.Brand, {
-    href: "#home",
-    className: "mr-auto"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    width: "35%",
-    src: "./Logo.jpg",
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    inline: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    placeholder: "Username",
-    "aria-label": "Username",
-    "aria-describedby": "basic-addon1"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    type: "text",
-    placeholder: "Password",
-    className: " mr-sm-4"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    type: "submit"
-  }, "sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "www.gooogle.com"
-  }, "New Customer?Click here")))));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["ButtonGroup"], {
+    vertical: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+    to: "/searchBooks"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Los Mas Vendidoss")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Menor Precio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Mayor Precio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "A\xF1o de publicacion")));
 });
 >>>>>>> 2fe2309568054f675f7d055e35b5e24db3f9c97c
 
@@ -51030,9 +66788,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+<<<<<<< HEAD
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+=======
+/* harmony import */ var react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap/Navbar */ "./node_modules/react-bootstrap/Navbar.js");
+/* harmony import */ var react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap/Nav */ "./node_modules/react-bootstrap/Nav.js");
+/* harmony import */ var react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap/NavDropdown */ "./node_modules/react-bootstrap/NavDropdown.js");
+/* harmony import */ var react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_NavDropdown__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap/Form */ "./node_modules/react-bootstrap/Form.js");
+/* harmony import */ var react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap/FormControl */ "./node_modules/react-bootstrap/FormControl.js");
+/* harmony import */ var react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap/Button */ "./node_modules/react-bootstrap/Button.js");
+/* harmony import */ var react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+var _this = undefined;
+
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -51381,10 +67158,17 @@ var test = [{
 }, {
   name: "test"
 }];
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+/* harmony default export */ __webpack_exports__["default"] = (function (props) {
+  console.log(props);
+
+  var SetChange = function SetChange(e) {
+    _this.props.setSearch(e.target.value);
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default.a, {
     bg: "light",
-    expand: "lg"
+    expand: "lg",
+    width: "10px"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default.a.Toggle, {
     "aria-controls": "basic-navbar-nav"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Navbar__WEBPACK_IMPORTED_MODULE_1___default.a.Collapse, {
@@ -51395,23 +67179,356 @@ var test = [{
     title: "categories",
     id: "basic-nav-dropdown"
   }, test.map(function (items) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_2___default.a.Link, {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Nav__WEBPACK_IMPORTED_MODULE_2___default.a.Link, {
+      key: items.id,
       href: "#home"
-    }, items.name);
+    }, items.name));
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    inline: true
+    inline: true,
+    onSubmit: props.handleSubmit
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_FormControl__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    size: "sm",
+    value: props.SearchQuery,
+    onChange: SetChange,
     style: {
       width: "190px"
     },
     type: "text",
     placeholder: "Search",
     className: "mr-sm-2"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+    to: "/Search"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_6___default.a, {
+    size: "sm",
+    type: "submit",
     variant: "outline-success"
-  }, "Search"))));
+  }, "Search")))));
 });
 >>>>>>> 2fe2309568054f675f7d055e35b5e24db3f9c97c
+
+/***/ }),
+
+/***/ "./src/components/home.jsx":
+/*!*********************************!*\
+  !*** ./src/components/home.jsx ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var Home =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Home, _React$Component);
+
+  function Home() {
+    _classCallCheck(this, Home);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
+  }
+
+  _createClass(Home, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Carousel"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Carousel"].Item, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "d-block w-100",
+        src: "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+        alt: "First slide"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Carousel"].Caption, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "First slide label"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Nulla vitae elit libero, a pharetra augue mollis interdum."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Carousel"].Item, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "d-block w-100",
+        src: "https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg",
+        alt: "Third slide"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Carousel"].Caption, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Second slide label"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Carousel"].Item, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "d-block w-100",
+        src: "https://mdbootstrap.com/img/Photos/Slides/img%20%28143%29.jpg",
+        alt: "Mattonit's item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Carousel"].Caption, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Third slide label"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Praesent commodo cursus magna, vel scelerisque nisl consectetur.")))));
+    }
+  }]);
+
+  return Home;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./src/containers/SearchBarContainer.jsx":
+/*!***********************************************!*\
+  !*** ./src/containers/SearchBarContainer.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_SearchBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SearchBar */ "./src/components/SearchBar.jsx");
+/* harmony import */ var _store_actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/actions/actions */ "./src/store/actions/actions.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var SearchContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(SearchContainer, _React$Component);
+
+  function SearchContainer() {
+    var _this;
+
+    _classCallCheck(this, SearchContainer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SearchContainer).call(this));
+    _this.state = {
+      SearchBarQuery: ""
+    };
+    _this.handleSearchInput = _this.handleSearchInput.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(SearchContainer, [{
+    key: "handleSearchInput",
+    value: function handleSearchInput(Search) {
+      this.setState({
+        SearchBarQuery: Search
+      });
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      event.preventDefault();
+
+      if (this.state.SearchBarQuery) {
+        this.props.fecthSearch(this.state.SearchBarQuery);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SearchBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        setSearch: this.handleSearchInput,
+        SearchBarQuery: this.state.SearchBarQuery,
+        handleSubmit: this.handleSubmit
+      });
+    }
+  }]);
+
+  return SearchContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+function mapStateToProps(state) {
+  return {
+    search: state.search,
+    find: state.find
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setSearch: function setSearch(text) {
+      return dispatch(Object(_store_actions_actions__WEBPACK_IMPORTED_MODULE_3__["setSearch"])(text));
+    }
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(SearchContainer));
+
+/***/ }),
+
+/***/ "./src/containers/SearchContainer.jsx":
+/*!********************************************!*\
+  !*** ./src/containers/SearchContainer.jsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchContainer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Search */ "./src/components/Search.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var SearchContainer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(SearchContainer, _React$Component);
+
+  function SearchContainer() {
+    _classCallCheck(this, SearchContainer);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(SearchContainer).apply(this, arguments));
+  }
+
+  _createClass(SearchContainer, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Search__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+    }
+  }]);
+
+  return SearchContainer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./src/containers/log.jsx":
+/*!********************************!*\
+  !*** ./src/containers/log.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/actions/actions */ "./src/store/actions/actions.js");
+/* harmony import */ var _reg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reg */ "./src/containers/reg.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var Log =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Log, _React$Component);
+
+  function Log() {
+    _classCallCheck(this, Log);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Log).apply(this, arguments));
+  }
+
+  _createClass(Log, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["ButtonToolbar"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+        variant: "primary",
+        onClick: this.props.setShowModal
+      }, "Register new User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reg__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        show: this.props.showModal
+      }));
+    }
+  }]);
+
+  return Log;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+function mapStateToProps(state) {
+  return {
+    showModal: state.showModal
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setShowModal: function setShowModal() {
+      return dispatch(Object(_store_actions_actions__WEBPACK_IMPORTED_MODULE_3__["setShowModal"])());
+    },
+    setHideModal: function setHideModal() {
+      return dispatch(Object(_store_actions_actions__WEBPACK_IMPORTED_MODULE_3__["setHideModal"])());
+    }
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Log));
 
 /***/ }),
 
@@ -51428,6 +67545,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
@@ -51441,6 +67559,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/SearchBar.jsx */ "./src/components/SearchBar.jsx");
 /* harmony import */ var _components_Header_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Header.jsx */ "./src/components/Header.jsx");
 >>>>>>> 2fe2309568054f675f7d055e35b5e24db3f9c97c
+=======
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_home_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/home.jsx */ "./src/components/home.jsx");
+/* harmony import */ var _log__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./log */ "./src/containers/log.jsx");
+/* harmony import */ var _components_Header_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Header.jsx */ "./src/components/Header.jsx");
+/* harmony import */ var _SearchBarContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SearchBarContainer */ "./src/containers/SearchBarContainer.jsx");
+/* harmony import */ var _SearchContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./SearchContainer */ "./src/containers/SearchContainer.jsx");
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51461,10 +67589,17 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  // import { setSearch, setBookFund } from "../store/actions/actions";
 
 =======
 >>>>>>> 2fe2309568054f675f7d055e35b5e24db3f9c97c
+=======
+ // import { setSearch, setBookFund } from "../store/actions/actions";
+
+
+
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 
 
@@ -51483,24 +67618,116 @@ function (_React$Component) {
   }
 
   _createClass(Main, [{
-    key: "handleChange",
-    value: function handleChange(e) {
-      this.props.setSearch(e.target.value);
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBarContainer__WEBPACK_IMPORTED_MODULE_7__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        path: "/home",
+        render: function render() {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_home_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null);
+        }
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        path: "/log",
+        render: function render() {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_log__WEBPACK_IMPORTED_MODULE_5__["default"], null);
+        }
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        path: "/search",
+        render: function render() {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchContainer__WEBPACK_IMPORTED_MODULE_8__["default"], null);
+        }
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Redirect"], {
+        from: "/",
+        to: "/home"
+      })));
     }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevState) {
-      var _this = this;
+  }]);
 
-      if (this.state.search == prevState.search) axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://www.omdbapi.com/?apikey=8c8bfbdc&s=".concat(this.props.search)).then(function (books) {
-        console.log(books);
+  return Main;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-        _this.props.setBookFound(books);
+function mapStateToProps(state) {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {};
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Main));
+
+/***/ }),
+
+/***/ "./src/containers/reg.jsx":
+/*!********************************!*\
+  !*** ./src/containers/reg.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/actions/actions */ "./src/store/actions/actions.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+;
+
+
+
+
+var Reg =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Reg, _React$Component);
+
+  function Reg() {
+    _classCallCheck(this, Reg);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Reg).apply(this, arguments));
+  }
+
+  _createClass(Reg, [{
+    key: "handleClick",
+    value: function handleClick(e) {
+      e.preventDefault();
+      var formData = new FormData(e.target);
+      var email = formData.get('email');
+      var password = FormData.get('password');
+      console.log('pass', password);
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.post('/auth/register', {
+        email: email,
+        password: password
+      }).then(function (status) {
+        console.log(status);
       });
     }
   }, {
     key: "render",
     value: function render() {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header_jsx__WEBPACK_IMPORTED_MODULE_6__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/home",
@@ -51519,21 +67746,48 @@ function (_React$Component) {
 =======
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SearchBar_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 >>>>>>> 2fe2309568054f675f7d055e35b5e24db3f9c97c
+=======
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Modal"], {
+        show: this.props.showModal,
+        size: "lg",
+        "aria-labelledby": "contained-modal-title-vcenter",
+        centered: true
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Modal"].Header, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Modal"].Title, {
+        id: "contained-modal-title-vcenter"
+      }, "Register new user")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Modal"].Body, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"].Group, {
+        controlId: "formBasicEmail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"].Label, null, "Email address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"].Control, {
+        name: "email",
+        type: "email",
+        placeholder: "Enter email"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"].Group, {
+        controlId: "formBasicPassword"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"].Label, null, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Form"].Control, {
+        name: "password",
+        type: "password",
+        placeholder: "Password"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+        variant: "primary",
+        onClick: this.handleClick.bind(this)
+      }, "Register")), ";"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Modal"].Footer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+        onClick: this.props.setHideModal
+      }, "Close")));
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
     }
   }]);
 
-  return Main;
+  return Reg;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 function mapStateToProps(state) {
   return {
-    search: state.search,
-    find: state.find
+    showModal: state.showModal
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
     setSearch: function (_setSearch) {
       function setSearch(_x) {
@@ -51568,11 +67822,18 @@ function mapDispatchToProps(dispatch) {
     }(function (ArrayBOoks) {
       return dispatch(setBookFound(ArrayBOoks));
     })
+=======
+    setShowModal: function setShowModal() {
+      return dispatch(Object(_store_actions_actions__WEBPACK_IMPORTED_MODULE_3__["setShowModal"])());
+    },
+    setHideModal: function setHideModal() {
+      return dispatch(Object(_store_actions_actions__WEBPACK_IMPORTED_MODULE_3__["setHideModal"])());
+    }
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
   };
-} //la tercera es la ultima
+}
 
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Main));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Reg));
 
 /***/ }),
 
@@ -51613,14 +67874,19 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
   !*** ./src/store/actions/actions.js ***!
   \**************************************/
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*! exports provided: setShowModal, setHideModal, setLogin */
 =======
 /*! exports provided: setSearch, setBookFound */
 >>>>>>> 2fe2309568054f675f7d055e35b5e24db3f9c97c
+=======
+/*! exports provided: setShowModal, setHideModal */
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setShowModal", function() { return setShowModal; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setHideModal", function() { return setHideModal; });
@@ -51646,19 +67912,28 @@ var setLogin = function setLogin() {
 =======
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setSearch", function() { return setSearch; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setBookFound", function() { return setBookFound; });
+=======
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setShowModal", function() { return setShowModal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setHideModal", function() { return setHideModal; });
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/store/constants.js");
 
-var setSearch = function setSearch(text) {
+var setShowModal = function setShowModal() {
   return {
-    type: _constants__WEBPACK_IMPORTED_MODULE_0__["SET_SEARCH"],
-    text: text
+    type: _constants__WEBPACK_IMPORTED_MODULE_0__["SET_SHOWMODAL"],
+    show: true
   };
 };
-var setBookFound = function setBookFound(array) {
+var setHideModal = function setHideModal() {
   return {
+<<<<<<< HEAD
     type: _constants__WEBPACK_IMPORTED_MODULE_0__["SET_BOOKSFOUND"],
     find: array
 >>>>>>> 2fe2309568054f675f7d055e35b5e24db3f9c97c
+=======
+    type: _constants__WEBPACK_IMPORTED_MODULE_0__["SET_HIDEMODAL"],
+    hide: false
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
   };
 };
 
@@ -51668,17 +67943,26 @@ var setBookFound = function setBookFound(array) {
 /*!********************************!*\
   !*** ./src/store/constants.js ***!
   \********************************/
+<<<<<<< HEAD
 /*! exports provided: SET_SHOWMODAL, SET_HIDEMODAL, SET_LOGIN */
+=======
+/*! exports provided: SET_SHOWMODAL, SET_HIDEMODAL */
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_SHOWMODAL", function() { return SET_SHOWMODAL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_HIDEMODAL", function() { return SET_HIDEMODAL; });
+<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_LOGIN", function() { return SET_LOGIN; });
 var SET_SHOWMODAL = 'SET_SHOWMODAL';
 var SET_HIDEMODAL = 'SET_HIDEMODAL';
 var SET_LOGIN = 'SET_LOGIN';
+=======
+var SET_SHOWMODAL = 'SET_SHOWMODAL';
+var SET_HIDEMODAL = 'SET_HIDEMODAL';
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 
 /***/ }),
 
@@ -51696,8 +67980,12 @@ __webpack_require__.r(__webpack_exports__);
 var initialState = {
   search: '',
   find: [],
+<<<<<<< HEAD
   showModal: false,
   isLogin: false
+=======
+  showModal: false
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
 };
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -51705,6 +67993,7 @@ var initialState = {
 
   switch (action.type) {
     case _constants__WEBPACK_IMPORTED_MODULE_0__["SET_SHOWMODAL"]:
+<<<<<<< HEAD
       {
         return Object.assign({}, state, {
           showModal: action.show
@@ -51722,6 +68011,18 @@ var initialState = {
       {
         return Object.assign({}, state, {
           isLogin: action.login
+=======
+      {
+        return Object.assign({}, state, {
+          showModal: action.show
+        });
+      }
+
+    case _constants__WEBPACK_IMPORTED_MODULE_0__["SET_HIDEMODAL"]:
+      {
+        return Object.assign({}, state, {
+          showModal: action.hide
+>>>>>>> 22b1c2f323ea136fecb37a2fad52e9f9bf3c34be
         });
       }
 

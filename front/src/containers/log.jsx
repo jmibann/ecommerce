@@ -22,25 +22,26 @@ class Log extends React.Component {
                     Register new User
         </Button>
 
-                <Reg
-                    show={this.props.showModal}
-                />
-            </ButtonToolbar>
-        )
-    }
+        <Reg show={this.props.showModal} />
+      </ButtonToolbar>
+    );
+  }
 }
 
 function mapStateToProps(state) {
-    return {
-        showModal: state.showModal
-    }
+  return {
+    showModal: state.showModal
+  };
 }
 
 function mapDispatchToProps(dispatch) {
-    return {
-        setShowModal: () => dispatch(setShowModal()),
-        setHideModal: () => dispatch(setHideModal()),
-    }
+  return {
+    setShowModal: () => dispatch(setShowModal()),
+    setHideModal: () => dispatch(setHideModal())
+  };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Log)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Log);

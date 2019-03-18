@@ -49,8 +49,9 @@ const logReg = <ButtonToolbar>
       </Navbar>
     );
   }
+}
 
-};
+
 
 
 function mapStateToProps(state) {
