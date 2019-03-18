@@ -12,10 +12,6 @@ import { setLogin } from '../store/actions/actions';
 
 class Main extends React.Component {
   componentDidMount() {
-    const user = localStorage.getItem('user');
-    if (user) {
-      this.props.setLogin(true);
-    }
   }
 
   render() {
