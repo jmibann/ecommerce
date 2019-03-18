@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
+
 import { Link } from 'react-router-dom'
 import { Form, Button, ButtonToolbar, ButtonGroup, DropdownButton, Dropdown } from "react-bootstrap";
 import FormControl from "react-bootstrap/FormControl";
 import { connect } from 'react-redux'
 import {setShowModal, setHideModal} from '../store/actions/actions'
 import LogReg from '../containers/logreg'
+
 
 
 class Header extends React.Component {
@@ -47,6 +49,7 @@ const logReg = <ButtonToolbar>
       </Navbar>
     );
   }
+
 };
 
 
