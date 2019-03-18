@@ -1,37 +1,72 @@
-import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
+import React from "react";
+import Navbar from "react-bootstrap/Navbar";
 
-export default () => {
-  return (
-    <Navbar bg="light" expand="lg" className='space-between'>
-      <Navbar.Brand href="#home" className='mr-auto'>
-        <img
-          src="./Logo.jpg"
-          alt=""
-        />
-      </Navbar.Brand>
-      <div>
-        <Form>
-          <FormControl
-            placeholder="Username"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
-          <FormControl
-            type="text"
-            placeholder="Password"
-            className=" mr-sm-2"
-          />
-          <Button type="submit">sign in</Button>
-          <InputGroup.Prepend>
-            <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-          </InputGroup.Prepend>
-        </Form>
-      </div>
-    </Navbar>
-  );
-};
+import { Link } from 'react-router-dom'
+import { Form, Button, ButtonToolbar, ButtonGroup, DropdownButton, Dropdown } from "react-bootstrap";
+import FormControl from "react-bootstrap/FormControl";
+import { connect } from 'react-redux'
+import { setShowModal, setHideModal } from '../store/actions/actions'
+import LogReg from '../containers/logreg'
+
+
+
+class Header extends React.Component {
+
+
+
+
+
+  render() {
+
+    const userLogin = <ButtonGroup>
+      <DropdownButton as={ButtonGroup} title="Dropdown" id="bg-nested-dropdown">
+        <Dropdown.Item eventKey="1">Profile</Dropdown.Item>
+        <Dropdown.Item eventKey="2">My Purchases</Dropdown.Item>
+      </DropdownButton>
+    </ButtonGroup>
+
+    const logReg = <ButtonToolbar>
+      <Button
+        variant="primary"
+        onClick={this.props.setShowModal}
+      >
+        Sign in/sign Up
+</Button>
+
+      <LogReg />
+    </ButtonToolbar>
+
+    return (
+      <Navbar bg="dark" expand="lg" >
+        <Navbar.Brand className="mr-auto">
+        <Link to='/'> 
+          <img width="25%" src="./Images/BookStore.png" alt="" />
+        </Link>
+        </Navbar.Brand>
+        <div>
+          <Form inline>
+            {this.props.isLogin ? userLogin : logReg}
+          </Form>
+        </div>
+      </Navbar>
+    );
+  }
+}
+
+
+
+
+function mapStateToProps(state) {
+  return {
+    showModal: state.showModal,
+    isLogin: state.isLogin
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setShowModal: () => dispatch(setShowModal()),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

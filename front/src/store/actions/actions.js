@@ -1,15 +1,23 @@
-import { SET_SEARCH, SET_BOOKSFOUND } from '../constants'
+import { SET_SHOWMODAL, SET_HIDEMODAL, SET_LOGIN } from '../constants'
 
-export const setSearch = function (text){
+export const setShowModal = function (){
 return {
-    type: SET_SEARCH,
-    text
+    type: SET_SHOWMODAL,
+    show: true
 }
 }
 
-export const setBookFound = function (array){
+export const setHideModal = function (){
     return {
-        type: SET_BOOKSFOUND,
-        find: array
+        type: SET_HIDEMODAL,
+        hide: false
     }
 }
+
+export const setLogin = function (){
+    return {
+        type: SET_LOGIN,
+        login: true
+    }
+}
+
