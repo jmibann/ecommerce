@@ -15,9 +15,9 @@ const test = [
   { name: 'categoria 3' },
   { name: 'test' },
 ];
-export default () => {
+export default (props) => {
   const SetChange = (e) => {
-    this.props.setSearch(e.target.value);
+    props.setSearch(e.target.value);
   };
   return (
     <Navbar bg="light" expand="lg" width="10px">
@@ -26,18 +26,18 @@ export default () => {
         <Nav className="mr-auto">
           <NavDropdown title="categories" id="basic-nav-dropdown">
             {test.map(items => (
-              <div>
-                <Nav.Link key={items.name} href="#home">
+              <div key={items.name}>
+                <Nav.Link href="#home">
                   {items.name}
                 </Nav.Link>
               </div>
             ))}
           </NavDropdown>
         </Nav>
-        <Form inline onSubmit={this.props.handleSubmit}>
+        <Form inline onSubmit={props.handleSubmit}>
           <FormControl
             size="sm"
-            value={this.props.SearchQuery}
+            value={props.SearchQuery}
             onChange={SetChange}
             style={{ width: '190px' }}
             type="text"
