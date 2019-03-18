@@ -19,9 +19,8 @@ passport.use(
     callbackURL: '/auth/google/redirect',
     clientID: '166580733119-fi5aod04fpu0qp9vtm8pdi1s99so6qqn.apps.googleusercontent.com',
     clientSecret: 'binbUJ0LnnAuvVRD5NT5ndPe'
-  }, (accessToken, refreshToken, profile, email, done) => {
+  }, (accessToken, refreshToken, email, done) => {
     console.log('email', email)
-    console.log('profile', profile)
     User.findOne({ where: { email: email.emails[0].value } })
       .then((user) => {
         if (user) {
@@ -33,7 +32,6 @@ passport.use(
           })
             .then(user => {
               done(null, user)
-              res.sendStatus(201)
             })
         }
       })
@@ -47,7 +45,7 @@ passport.use(new LocalStrategy({ usernameField: 'email' },
       .then(
         function (user) {
           console.log('AUTENTICANDO USUARIO:', user);
-          if (!user || !user.checkPassword(password)) { return done(null, false, { message: 'Incorrect username or password.' }); }
+          if (!user.checkPassword(password) || user === null) { return done(null, false, { message: 'Incorrect username or password.' }); }
           return done(null, user);
         })
       .catch(done);

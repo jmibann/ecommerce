@@ -13,17 +13,16 @@ passport.deserializeUser(function (id, done) { // deserialize: How we look for t
 
 
 router.post('/login', passport.authenticate('local'), (req, res, next) => {
-  console.log('LLEGANDO CORRECTAMENTE', req.body);
-  done(null, user.id)
-  res.send('LLEGANDO CORRECTAMENTE');
+     
+  res.sendStatus(200);
 });
 
 router.post('/register', (req, res) => {
-  User.findOne({ where: { email: req.body.email, password: req.body.password } })
+  User.findOne({ where: { email: req.body.email } })
     .then((user) => {
       if (user) {
         console.log(user)
-        res.sendStatus(400)
+        res.send('no')
       } else {
         User.create({
           email: req.body.email,
@@ -38,17 +37,19 @@ router.post('/register', (req, res) => {
     })
 })
 
-router.get('/logout', (req, res) =>{
+router.get('/logout', (req, res) => {
   req.logout()
   res.sendStatus(200)
 })
 
 router.get('/google', passport.authenticate('google', {
-  scope: ['profile', 'email'],
+  scope: ['email'],
+  accessType: 'offline',
+  prompt: 'consent',
 }));
 
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  res.send('llegaste')
+  res.status(201).redirect('/')
 })
 
 module.exports = router

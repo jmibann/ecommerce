@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import { connect } from 'react-redux'
 import {setShowModal, setHideModal} from '../store/actions/actions'
-import Reg from './reg'
+import Reg from './logreg'
 
 
 
@@ -13,6 +13,7 @@ class Log extends React.Component {
 
     render() {
         return (
+            
             <ButtonToolbar>
                 <Button
                     variant="primary"
