@@ -1,4 +1,4 @@
-import { SET_SHOWMODAL, SET_HIDEMODAL } from '../constants'
+import { SET_SHOWMODAL, SET_HIDEMODAL, SET_LOGIN } from '../constants'
 
 export const setShowModal = function (){
 return {
@@ -13,3 +13,11 @@ export const setHideModal = function (){
         hide: false
     }
 }
+
+export const setLogin = function (){
+    return {
+        type: SET_LOGIN,
+        login: true
+    }
+}
+

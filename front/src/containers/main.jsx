@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-// import { setSearch, setBookFund } from "../store/actions/actions";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Axios from "axios";
 import Home from "../components/home.jsx";
 import Log from "./log";

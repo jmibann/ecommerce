@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import SearchBar from "../components/SearchBar";
-import { setSearch } from "../store/actions/actions";
+// import { setSearch } from "../store/actions/actions";
 import { fecthSearch } from "../store/actions/actions";
 
 class SearchContainer extends React.Component {
@@ -45,7 +45,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    setSearch: text => dispatch(setSearch(text))
+    
   };
 }
 

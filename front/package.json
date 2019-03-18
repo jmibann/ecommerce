@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atralice/omdb.git"
+    "url": "git+https://github.com/jmibann/ecommerce/tree/test4"
   },
-  "author": "plataforma 5",
+  "author": "Titans",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/atralice/omdb/issues"
+    "url": "https://github.com/jmibann/ecommerce/tree/test4/issues"
   },
-  "homepage": "https://github.com/atralice/omdb#readme",
+  "homepage": "https://github.com/jmibann/ecommerce/tree/test4#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "mdbootstrap": "^4.7.4",

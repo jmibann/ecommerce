@@ -1,15 +1,25 @@
-import React from "react";
-import { Button, ButtonToolbar } from "react-bootstrap";
-import { connect } from "react-redux";
-import { setShowModal, setHideModal } from "../store/actions/actions";
-import Reg from "./reg";
+import React from 'react';
+import { Button, ButtonToolbar } from 'react-bootstrap';
+import { connect } from 'react-redux'
+import {setShowModal, setHideModal} from '../store/actions/actions'
+import Reg from './logreg'
+
+
 
 class Log extends React.Component {
-  render() {
-    return (
-      <ButtonToolbar>
-        <Button variant="primary" onClick={this.props.setShowModal}>
-          Register new User
+
+
+
+
+    render() {
+        return (
+            
+            <ButtonToolbar>
+                <Button
+                    variant="primary"
+                    onClick={this.props.setShowModal}
+                >
+                    Register new User
         </Button>
 
         <Reg show={this.props.showModal} />
