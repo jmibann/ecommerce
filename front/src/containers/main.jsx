@@ -1,14 +1,23 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Switch, Route, Redirect } from 'react-router-dom'
-import Axios from "axios";
-import Home from "../components/home.jsx";
-import Log from "./log";
-import Header from "../components/Header.jsx";
-import SearchBarContainer from "./SearchBarContainer";
-import SearchContainer from "./SearchContainer";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+import React from 'react';
+import { connect } from 'react-redux';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Home from '../components/home';
+import Log from './log';
+import Header from '../components/Header';
+import SearchBarContainer from './SearchBarContainer';
+import SearchContainer from './SearchContainer';
+import { setLogin } from '../store/actions/actions';
 
 class Main extends React.Component {
+  componentDidMount() {
+    const user = localStorage.getItem('user');
+    if (user) {
+      this.props.setLogin(true);
+    }
+  }
+
   render() {
     return (
       <div>
@@ -27,15 +36,14 @@ class Main extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps() {
   return {};
 }
 
 function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    setLogin: () => dispatch(setLogin()),
+  };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

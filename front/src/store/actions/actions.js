@@ -14,10 +14,10 @@ export const setHideModal = function (){
     }
 }
 
-export const setLogin = function (){
+export const setLogin = function (boolean){
     return {
         type: SET_LOGIN,
-        login: true
+        login: boolean
     }
 }
 

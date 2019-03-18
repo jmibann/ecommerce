@@ -13,9 +13,16 @@ passport.deserializeUser(function (id, done) { // deserialize: How we look for t
 
 
 router.post('/login', passport.authenticate('local'), (req, res, next) => {
-     
-  res.sendStatus(200);
-});
+  const authenticated = req.isAuthenticated();
+  if (authenticated) {
+    res.send({
+      id: req.user.id,
+      email: req.user.email,
+    })
+  }
+}
+)
+
 
 router.post('/register', (req, res) => {
   User.findOne({ where: { email: req.body.email } })
@@ -49,7 +56,17 @@ router.get('/google', passport.authenticate('google', {
 }));
 
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  res.status(201).redirect('/')
+  const authenticated = req.isAuthenticated();
+  if (authenticated) {
+    res.cookie('user', {
+      id: req.user.id,
+      email: req.user.email,
+    }, maxAge= 24*60*60*1000)
+    res.send({
+      id: req.user.id,
+      email: req.user.email,
+    }).redirect('/')
+  }
 })
 
 module.exports = router

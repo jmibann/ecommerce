@@ -1,14 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
-import SearchBar from "../components/SearchBar";
-// import { setSearch } from "../store/actions/actions";
-import { fecthSearch } from "../store/actions/actions";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+import React from 'react';
+import { connect } from 'react-redux';
+import SearchBar from '../components/SearchBar';
 
 class SearchContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      SearchBarQuery: ""
+      SearchBarQuery: '',
     };
     this.handleSearchInput = this.handleSearchInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -39,17 +39,13 @@ class SearchContainer extends React.Component {
 function mapStateToProps(state) {
   return {
     search: state.search,
-    find: state.find
+    find: state.find,
   };
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps() {
   return {
-    
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SearchContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchContainer);
