@@ -1,57 +1,20 @@
-import React from "react";
-import { connect } from "react-redux";
-import { setSearch, setBookFund } from "../store/actions/actions";
-import Axios from "axios";
-import SearchBar from "../components/SearchBar.jsx";
-import Header from "../components/Header.jsx";
-
-class Main extends React.Component {
-    handleChange(e) {
-      this.props.setSearch(e.target.value);
-    }
-  
-    componentDidUpdate(prevState) {
-      if (this.state.search == prevState.search)
-        Axios.get(
-          `http://www.omdbapi.com/?apikey=8c8bfbdc&s=${this.props.search}`
-        ).then(books => {
-          console.log(books);
-          this.props.setBookFound(books);
-        });
-    }
-  
-    render() {
-      return (
-        <div>
-          {/* Odio a Ramiro */}
-          <section>
-            <Header />
-            </section>
-            <SearchBar />
-        </div>
-      );
-    }
-  }
-  // ESTO ES UNA PRUEBA
-  
-  function mapStateToProps(state) {
-    return {
-      search: state.search,
-      find: state.find
-    };
-  }
-  
-  function mapDispatchToProps(dispatch) {
-    return {
-      setSearch: text => dispatch(setSearch(text)),
-      setBookFound: ArrayBOoks => dispatch(setBookFound(ArrayBOoks))
-    };
-  }
-   //la tercera es la ultima 
-  export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Main);
-
  
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Header from "../components/Header.jsx";
+import SearchBarContainer from "./SearchBarContainer";
+import SearchContainer from "./SearchContainer";
+import SingleBookContainer from "./SingleBookContainer";
 
+export default () => (
+ <div id="main" className="container-fluid">
+  <Header />
+  <SearchBarContainer />
+  <div>
+   <Switch>
+    <Route path="/search" component={SearchContainer} />
+    <Route path="/book" component={SingleBookContainer} />
+   </Switch>
+  </div>
+ </div>
+);

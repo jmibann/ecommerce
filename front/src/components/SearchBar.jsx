@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import SearchContainer from '../containers/SearchContainer'
 
 export default () => {
   return (
@@ -15,7 +16,7 @@ export default () => {
         <Nav className="mr-auto">
           {/* <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link> */}
-          <NavDropdown title="categories" id="basic-nav-dropdown">
+            <NavDropdown title="categories" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -27,10 +28,7 @@ export default () => {
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-success">Search</Button>
-        </Form>
+        <SearchContainer/>
       </Navbar.Collapse>
     </Navbar>
   );
