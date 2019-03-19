@@ -9,10 +9,11 @@ import Header from '../components/Header';
 import SearchBarContainer from './SearchBarContainer';
 import SearchContainer from './SearchContainer';
 import { fetchLogin } from '../store/actions/actions';
+import ABookContainer from './aBookcontainer';
 
 class Main extends React.Component {
   componentDidMount() {
-    this.props.fetchLogin()
+    this.props.fetchLogin();
   }
 
   render() {
@@ -27,6 +28,7 @@ class Main extends React.Component {
           <Route path="/home" render={() => <Home />} />
           <Route path="/log" render={() => <Log />} />
           <Route path="/search" render={() => <SearchContainer />} />
+          <Route path="/book" render={() => <ABookContainer />} />
           <Redirect from="/" to="/home" />
         </Switch>
       </div>
@@ -36,7 +38,7 @@ class Main extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    isLogin: state.login.isLogin
+    isLogin: state.login.isLogin,
   };
 }
 

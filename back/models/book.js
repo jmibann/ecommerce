@@ -40,7 +40,7 @@ const Book = db.define('books', {
   },
 });
 
-Book.belongsToMany(Category, { through: 'bookCategories' });
+//Book.belongsToMany(Category, { through: 'bookCategories' });
 Book.belongsToMany(Purchase, { through: 'bookPurchase' });
 Book.hasMany(Comments, { foreignKey: 'id' });
 
