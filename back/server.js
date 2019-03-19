@@ -1,4 +1,5 @@
 const express = require('express');
+<<<<<<< HEAD
 const bodyParser = require('body-parser');
 const path = require('path');
 const morgan = require('morgan');
@@ -125,5 +126,44 @@ app.post('/send-email', function (req, res) { // Form Data Handling
 
 db.sync({ force: true }).then((con) => {
   console.log(`${con.options.dialect} database ${con.config.database} connected at ${con.config.host}:${con.config.port}`);
+=======
+
+const app = express();
+const bodyParser = require('body-parser');
+
+const morgan = require('morgan');
+
+const passport = require('passport');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+// Local imports
+const db = require('./configure/db');
+const authRoutes = require('./routes/authRoutes');
+
+require('./configure/passport-setup');
+
+
+app.use(morgan('tiny')); // loggin middleware
+app.use(bodyParser.urlencoded({ extended: true })); // HTML submits
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(session({ secret: 'titans' })); // Cookie session middleware
+
+app.use(express.static(`${__dirname}/public`));
+
+
+app.use(passport.initialize()); // passport configuration & session connection
+app.use(passport.session());
+
+
+app.use('/auth', authRoutes);
+
+
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/public/index.html`);
+});
+
+db.sync({ force: false }).then(() => {
+>>>>>>> 636357ccd04050f22812c8f8d69b2266038410a5
   app.listen(3000, () => console.log('SERVER LISTENING AT PORT 3000'));
 });

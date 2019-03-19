@@ -1,14 +1,22 @@
 {
     "env": {
         "browser": true,
+<<<<<<< HEAD
         "es6": true
     },
     "extends": "standard",
+=======
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": "airbnb-base",
+>>>>>>> 636357ccd04050f22812c8f8d69b2266038410a5
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
     "parserOptions": {
+<<<<<<< HEAD
         "ecmaFeatures": {
             "jsx": true
         },
@@ -24,4 +32,10 @@
         "react/jsx-uses-vars": "error",
         "var": "local"
         }
+=======
+        "ecmaVersion": 2018
+    },
+    "rules": {
+    }
+>>>>>>> 636357ccd04050f22812c8f8d69b2266038410a5
 }

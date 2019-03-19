@@ -19,14 +19,21 @@
     "nodemailer": "^5.1.1",
     "nodemon": "^1.18.10",
     "passport": "^0.4.0",
+<<<<<<< HEAD
+=======
+    "passport-google-oauth20": "^2.0.0",
+>>>>>>> 636357ccd04050f22812c8f8d69b2266038410a5
     "passport-local": "^1.0.0",
     "pg": "^7.8.2",
     "sequelize": "^4.43.0"
   },
   "devDependencies": {
-    "eslint": "^5.15.1",
+    "eslint": "^5.15.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.12.4",

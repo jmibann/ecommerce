@@ -1,15 +1,33 @@
-import { SET_SEARCH, SET_BOOKSFOUND } from '../constants'
+import Axios from 'axios';
+import { SET_SHOWMODAL, SET_HIDEMODAL, SET_LOGIN } from '../constants';
 
-export const setSearch = function (text){
-return {
-    type: SET_SEARCH,
-    text
-}
-}
+export const setShowModal = function setShowModal() {
+  return {
+    type: SET_SHOWMODAL,
+    show: true,
+  };
+};
 
-export const setBookFound = function (array){
-    return {
-        type: SET_BOOKSFOUND,
-        find: array
+export const setHideModal = function setHideModal() {
+  return {
+    type: SET_HIDEMODAL,
+    hide: false,
+  };
+};
+
+const setLogin = function setLogin(user) {
+  return {
+    type: SET_LOGIN,
+    login: user,
+  };
+};
+
+export const fetchUser = user => setLogin(user);
+
+export const fetchLogin = () => dispatch => Axios.get('/auth/me')
+  .then((res) => {
+    console.log('resssssss', res);
+    if (res != null) {
+      dispatch(setLogin(res.data));
     }
-}
+  });

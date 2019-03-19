@@ -1,3 +1,8 @@
 node_modules
+<<<<<<< HEAD
 back/public/bundle.js
 back/public/bundle.js.map
+=======
+./back/public/bundle.js
+./back/public/bundle.js.map
+>>>>>>> 636357ccd04050f22812c8f8d69b2266038410a5
