@@ -19,10 +19,7 @@
     "nodemailer": "^5.1.1",
     "nodemon": "^1.18.10",
     "passport": "^0.4.0",
-<<<<<<< HEAD
-=======
     "passport-google-oauth20": "^2.0.0",
->>>>>>> 636357ccd04050f22812c8f8d69b2266038410a5
     "passport-local": "^1.0.0",
     "pg": "^7.8.2",
     "sequelize": "^4.43.0"
