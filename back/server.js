@@ -36,11 +36,11 @@ app.get('/*', (req, res, next) => {
     res.sendFile(__dirname + '/public/index.html')
 });
 
+
+
+
+
 db.sync({ force: false }).then((con) => {
-<<<<<<< HEAD
-    console.log(`${con.options.dialect} database ${con.config.database} connected at ${con.config.host}:${con.config.port}`)
-=======
->>>>>>> f279df1b0fa36d4f3a8b4661f79117e37f037f8a
     app.listen(3000, () => console.log('SERVER LISTENING AT PORT 3000'))
 })
 

@@ -60,3 +60,20 @@ footer {
 
 .album img {
   height: 300px; }
+
+
+.bookContainer {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 10px;
+}
+
+.bookContainer > div{
+  align-items: center;
+  display: block;
+  margin:auto;
+  
+}
