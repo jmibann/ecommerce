@@ -22,6 +22,12 @@ const setLogin = function setLogin(user) {
   };
 };
 
-export const fetchLogin = () => dispatch => Axios.get('/me')
-  .then(res => res.data)
-  .then(user => dispatch(setLogin(user)));
+export const fetchUser = user => setLogin(user);
+
+export const fetchLogin = () => dispatch => Axios.get('/auth/me')
+  .then((res) => {
+    console.log('resssssss', res);
+    if (res != null) {
+      dispatch(setLogin(res.data));
+    }
+  });

@@ -7,7 +7,9 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import { setShowModal, setHideModal, setLogin } from '../store/actions/actions';
+import {
+  setShowModal, setHideModal, fetchLogin, fetchUser,
+} from '../store/actions/actions';
 
 
 class LogReg extends React.Component {
@@ -28,8 +30,7 @@ class LogReg extends React.Component {
       password,
     })
       .then((user) => {
-        localStorage.setItem('user', user.data);
-        this.props.setLogin(true);
+        this.props.fetchUser(user.data);
         this.props.setHideModal();
       });
   }
@@ -83,7 +84,7 @@ class LogReg extends React.Component {
                   <Form.Control ref={(email) => { this.inputEmail = email; }} type="email" placeholder="Enter email" />
                   {this.state.usedEmail === true ? (
                     <Form.Text className="text-muted">
-Email allready used
+                      Email allready used
                     </Form.Text>
                   ) : <span />}
                 </Form.Group>
@@ -113,8 +114,8 @@ Email allready used
 
 function mapStateToProps(state) {
   return {
-    isLogin: state.isLogin,
-    showModal: state.showModal,
+    isLogin: state.login.isLogin,
+    showModal: state.login.showModal,
   };
 }
 
@@ -122,7 +123,8 @@ function mapDispatchToProps(dispatch) {
   return {
     setShowModal: () => dispatch(setShowModal()),
     setHideModal: () => dispatch(setHideModal()),
-    setLogin: boolean => dispatch(setLogin(boolean)),
+    fetchLogin: user => dispatch(fetchLogin(user)),
+    fetchUser: user => dispatch(fetchUser(user)),
   };
 }
 

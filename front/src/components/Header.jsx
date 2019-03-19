@@ -10,7 +10,7 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import Axios from 'axios';
-import { setShowModal, setLogin } from '../store/actions/actions';
+import { setShowModal, fetchLogin, fetchUser } from '../store/actions/actions';
 import LogReg from '../containers/logreg';
 
 
@@ -20,7 +20,7 @@ class Header extends React.Component {
       res.send('logout');
     })
       .then(() => {
-        this.props.setLogin(false);
+        this.props.fetchUser(null);
       });
   }
 
@@ -29,9 +29,12 @@ class Header extends React.Component {
   }
 
   render() {
+    if(this.props.isLogin != null){
+       name = this.props.isLogin.email
+    }
     const userLogin = (
       <ButtonGroup>
-        <DropdownButton as={ButtonGroup} title="Dropdown" id="bg-nested-dropdown" drop="left">
+        <DropdownButton as={ButtonGroup} title={name} id="bg-nested-dropdown" drop="left">
           <Dropdown.Item eventKey="1" name="profile" onClick={this.redirect.bind(this)}>Profile</Dropdown.Item>
           <Dropdown.Item eventKey="2" name="purchases" onClick={this.redirect.bind(this)}> My purchases</Dropdown.Item>
           <Dropdown.Item eventKey="2" onClick={this.logOut.bind(this)}> Log Out </Dropdown.Item>
@@ -62,7 +65,7 @@ class Header extends React.Component {
         </Navbar.Brand>
         <div>
           <Form inline>
-            {this.props.isLogin ? userLogin : logReg}
+            {this.props.isLogin ? userLogin: logReg }
           </Form>
         </div>
       </Navbar>
@@ -73,15 +76,16 @@ class Header extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    showModal: state.showModal,
-    isLogin: state.isLogin,
+    showModal: state.login.showModal,
+    isLogin: state.login.isLogin,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     setShowModal: () => dispatch(setShowModal()),
-    setLogin: boolean => dispatch(setLogin(boolean)),
+    fetchLogin: user => dispatch(fetchLogin(user)),
+    fetchUser: user => dispatch(fetchUser(user)),
   };
 }
 

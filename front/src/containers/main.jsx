@@ -8,10 +8,11 @@ import Log from './log';
 import Header from '../components/Header';
 import SearchBarContainer from './SearchBarContainer';
 import SearchContainer from './SearchContainer';
-import { setLogin } from '../store/actions/actions';
+import { fetchLogin } from '../store/actions/actions';
 
 class Main extends React.Component {
   componentDidMount() {
+    this.props.fetchLogin()
   }
 
   render() {
@@ -19,6 +20,7 @@ class Main extends React.Component {
       <div>
         <section>
           <Header />
+          {console.log(this.props)}
           <SearchBarContainer />
         </section>
         <Switch>
@@ -32,13 +34,15 @@ class Main extends React.Component {
   }
 }
 
-function mapStateToProps() {
-  return {};
+function mapStateToProps(state) {
+  return {
+    isLogin: state.login.isLogin
+  };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    setLogin: () => dispatch(setLogin()),
+    fetchLogin: () => dispatch(fetchLogin()),
   };
 }
 
