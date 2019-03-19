@@ -1,10 +1,12 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
-import Button from "react-bootstrap/Button";
+import {
+  Button,
+  FormControl,
+  Form,
+  NavDropdown,
+  Nav,
+  Navbar
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 const test = [
   { name: "test1" },
@@ -26,9 +28,7 @@ export default props => {
             {test.map(items => {
               return (
                 <div>
-                  <Nav.Link key={items.id} href="#home">
-                    {items.name}
-                  </Nav.Link>
+                  <Nav.Link key={items.id}>{items.name}</Nav.Link>
                 </div>
               );
             })}

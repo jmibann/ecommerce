@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import SearchBar from "../components/SearchBar";
-// import { setSearch } from "../store/actions/actions";
-import { fecthSearch } from "../store/actions/actions";
+import { fetchSearch, fetchSearchs } from "../store/actions/Searchs";
 
 class SearchContainer extends React.Component {
   constructor() {
@@ -21,13 +20,15 @@ class SearchContainer extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     if (this.state.SearchBarQuery) {
-      this.props.fecthSearch(this.state.SearchBarQuery);
+      this.props.fetchSearchs(this.state.SearchBarQuery);
     }
   }
 
   render() {
+    console.log(this.props)
     return (
       <SearchBar
+      search={this.props.search}
         setSearch={this.handleSearchInput}
         SearchBarQuery={this.state.SearchBarQuery}
         handleSubmit={this.handleSubmit}
@@ -39,13 +40,14 @@ class SearchContainer extends React.Component {
 function mapStateToProps(state) {
   return {
     search: state.search,
-    find: state.find
+    searchs: state.searchs
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    
+    fecthSearch: search => dispatch(fetchSearch(search)),
+    fetchSearchs: searchs => dispatch(fetchSearchs(searchs))
   };
 }
 

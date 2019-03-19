@@ -1,14 +1,12 @@
 import React from "react";
-import { connect } from "react-redux";
 import { Switch, Route, Redirect } from 'react-router-dom'
-import Axios from "axios";
 import Home from "../components/home.jsx";
 import Log from "./log";
 import Header from "../components/Header.jsx";
 import SearchBarContainer from "./SearchBarContainer";
 import SearchContainer from "./SearchContainer";
 
-class Main extends React.Component {
+export default class Main extends React.Component {
   render() {
     return (
       <div>
@@ -27,15 +25,3 @@ class Main extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {};
-}
-
-function mapDispatchToProps(dispatch) {
-  return {};
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Main);
