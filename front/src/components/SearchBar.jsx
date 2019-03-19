@@ -1,14 +1,13 @@
-/* eslint-disable react/no-this-in-sfc */
-/* eslint-disable react/destructuring-assignment */
-import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import {
+  Button,
+  FormControl,
+  Form,
+  NavDropdown,
+  Nav,
+  Navbar
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
 const test = [
   { name: 'categoria 1' },
   { name: 'categoria 2' },
@@ -25,13 +24,13 @@ export default (props) => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <NavDropdown title="categories" id="basic-nav-dropdown">
-            {test.map(items => (
-              <div key={items.name}>
-                <Nav.Link href="#home">
-                  {items.name}
-                </Nav.Link>
-              </div>
-            ))}
+            {test.map(items => {
+              return (
+                <div>
+                  <Nav.Link key={items.id}>{items.name}</Nav.Link>
+                </div>
+              );
+            })}
           </NavDropdown>
         </Nav>
         <Form inline onSubmit={props.handleSubmit}>
