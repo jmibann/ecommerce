@@ -1,11 +1,12 @@
-import { SET_SHOWMODAL, SET_HIDEMODAL, SET_LOGIN } from "../constants";
+import { SET_SHOWMODAL, SET_HIDEMODAL, SET_LOGIN } from '../constants';
 
 const initialState = {
   showModal: false,
-  isLogin: false
+  isLogin: null,
+  isAdmin: false,
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case SET_SHOWMODAL: {
       return Object.assign({}, state, { showModal: action.show });

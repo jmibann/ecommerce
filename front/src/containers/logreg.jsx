@@ -1,52 +1,53 @@
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import { Modal, Button, Form, ButtonToolbar, Tabs, Tab } from 'react-bootstrap';;
+import {
+  Modal, Button, Form, Tabs, Tab,
+} from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
-import { setShowModal, setHideModal, setLogin } from '../store/actions/actions';
 import axios from 'axios';
-
+import {
+  setShowModal, setHideModal, fetchLogin, fetchUser,
+} from '../store/actions/actions';
 
 
 class LogReg extends React.Component {
-
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
-      usedEmail: false
-    }
+      usedEmail: false,
+    };
   }
 
   handleLogin(e) {
-    e.preventDefault()
-    const email = this.inputLoginEmail.value
-    const password = this.inputLoginPass.value
-    console.log(email)
-    console.log(password)
+    e.preventDefault();
+    const email = this.inputLoginEmail.value;
+    const password = this.inputLoginPass.value;
     axios.post('/auth/login', {
       email,
-      password
+      password,
     })
-      .then((status) => {
-        this.props.setLogin()
-        this.props.setHideModal()
-      })
+      .then((user) => {
+        this.props.fetchUser(user.data);
+        this.props.setHideModal();
+      });
   }
 
   handleRegister(e) {
-    e.preventDefault()
-    const email = this.inputEmail.value
-    const password = this.inputPass.value
+    e.preventDefault();
+    const email = this.inputEmail.value;
+    const password = this.inputPass.value;
     axios.post('/auth/register', {
       email,
-      password
+      password,
     })
-      .then(status => {
+      .then((status) => {
         if (status.data === 'no') {
-this.setState({usedEmail: true})
+          this.setState({ usedEmail: true });
         }
-        console.log(status)
-      })
+      });
   }
 
   render() {
@@ -64,64 +65,67 @@ this.setState({usedEmail: true})
               <Form>
                 <Form.Group controlId="formBasicLoginEmail">
                   <Form.Label>Email address</Form.Label>
-                  <Form.Control ref={email => { this.inputLoginEmail = email }} type="email" placeholder="Enter email" />
+                  <Form.Control ref={(email) => { this.inputLoginEmail = email; }} type="email" placeholder="Enter email" />
                 </Form.Group>
 
                 <Form.Group controlId="formBasicLoginPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control ref={password => { this.inputLoginPass = password }} type="password" placeholder="Password" />
+                  <Form.Control ref={(password) => { this.inputLoginPass = password; }} type="password" placeholder="Password" />
                 </Form.Group>
                 <Button variant="primary" onClick={this.handleLogin.bind(this)}>
                   Login
-  </Button>
+                </Button>
               </Form>
             </Tab>
             <Tab eventKey="Sign Up" title="Sign Up">
               <Form>
                 <Form.Group controlId="formBasicRegisterEmail">
                   <Form.Label>Email address</Form.Label>
-                  <Form.Control ref={email => { this.inputEmail = email }} type="email" placeholder="Enter email" />
-                  {this.state.usedEmail === true ? <Form.Text className="text-muted" >
-Email allready used
-</Form.Text> : <span></span>}
+                  <Form.Control ref={(email) => { this.inputEmail = email; }} type="email" placeholder="Enter email" />
+                  {this.state.usedEmail === true ? (
+                    <Form.Text className="text-muted">
+                      Email allready used
+                    </Form.Text>
+                  ) : <span />}
                 </Form.Group>
 
                 <Form.Group controlId="formBasicRegisterPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control ref={password => { this.inputPass = password }} type="password" placeholder="Password" />
+                  <Form.Control ref={(password) => { this.inputPass = password; }} type="password" placeholder="Password" />
                 </Form.Group>
                 <Button variant="primary" onClick={this.handleRegister.bind(this)}>
                   Register
-  </Button>
+                </Button>
               </Form>
             </Tab>
           </Tabs>
 
         </Modal.Body>
         <Modal.Footer>
-          <a href='/auth/google'>
-            <Button >Sign in Google</Button>
+          <a href="/auth/google">
+            <Button>Sign in Google</Button>
           </a>
           <Button onClick={this.props.setHideModal}>Close</Button>
         </Modal.Footer>
       </Modal>
-    )
+    );
   }
 }
 
 function mapStateToProps(state) {
   return {
-    isLogin: state.isLogin,
-    showModal: state.showModal
-  }
+    isLogin: state.login.isLogin,
+    showModal: state.login.showModal,
+  };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     setShowModal: () => dispatch(setShowModal()),
     setHideModal: () => dispatch(setHideModal()),
-    setLogin: () => dispatch(setLogin()),
-  }
+    fetchLogin: user => dispatch(fetchLogin(user)),
+    fetchUser: user => dispatch(fetchUser(user)),
+  };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LogReg)
+export default connect(mapStateToProps, mapDispatchToProps)(LogReg);

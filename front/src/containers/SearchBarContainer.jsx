@@ -7,7 +7,7 @@ class SearchContainer extends React.Component {
   constructor() {
     super();
     this.state = {
-      SearchBarQuery: ""
+      SearchBarQuery: '',
     };
     this.handleSearchInput = this.handleSearchInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,14 +44,11 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps() {
   return {
     fecthSearch: search => dispatch(fetchSearch(search)),
     fetchSearchs: searchs => dispatch(fetchSearchs(searchs))
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SearchContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchContainer);

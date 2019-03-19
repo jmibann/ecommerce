@@ -1,10 +1,10 @@
-import { createStore, applyMiddleware, compose } from "redux";
-import { createLogger } from "redux-logger";
-import reducer from "./reducer/login-reducer";
-import thunkMiddleware from "redux-thunk";
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+/* eslint-disable no-underscore-dangle */
+import { createStore, compose, applyMiddleware } from 'redux';
+import { createLogger } from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';
+import reducer from './reducer/combineReducer';
 
-export default createStore(
-  reducer,
-  devTools(applyMiddleware(createLogger(), thunkMiddleware))
-);
+const devtool = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose;
+
+export default createStore(reducer,
+  devtool(applyMiddleware(createLogger(), thunkMiddleware)));

@@ -9,15 +9,14 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const test = [
-  { name: "test1" },
-  { name: "test2" },
-  { name: "test3" },
-  { name: "test" }
+  { name: 'categoria 1' },
+  { name: 'categoria 2' },
+  { name: 'categoria 3' },
+  { name: 'test' },
 ];
-export default props => {
-  console.log(props);
-  const SetChange = e => {
-    this.props.setSearch(e.target.value);
+export default (props) => {
+  const SetChange = (e) => {
+    props.setSearch(e.target.value);
   };
   return (
     <Navbar bg="light" expand="lg" width="10px">
@@ -39,7 +38,7 @@ export default props => {
             size="sm"
             value={props.SearchQuery}
             onChange={SetChange}
-            style={{ width: "190px" }}
+            style={{ width: '190px' }}
             type="text"
             placeholder="Search"
             className="mr-sm-2"
